@@ -166,9 +166,11 @@ section{ position:relative; }
 .logo-card .stage{ aspect-ratio:5/3; display:flex; align-items:center; justify-content:center; padding:1.6rem; }
 .logo-card .stage.dark{ background:var(--forest); }
 .logo-card .stage img{ max-height:100%; max-width:80%; width:auto; object-fit:contain; }
-.logo-card .meta{ padding:.85rem 1rem 1.05rem; border-top:1px solid var(--line); }
+.logo-card .meta{ padding:.85rem 1rem 1.05rem; border-top:1px solid var(--line); display:flex; align-items:flex-end; justify-content:space-between; gap:.7rem; }
 .logo-card .meta .nm{ font-size:.82rem; font-weight:700; }
 .logo-card .meta .us{ font-size:.74rem; color:rgba(31,36,33,.6); margin-top:.2rem; }
+.logo-card .dl{ flex:none; display:inline-flex; align-items:center; gap:.3rem; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--forest); border:1px solid var(--line-2); border-radius:4px; padding:.4rem .55rem; white-space:nowrap; transition:background .2s, border-color .2s, color .2s, transform .2s; }
+.logo-card .dl:hover{ background:var(--forest); border-color:var(--forest); color:var(--cream); transform:translateY(-1px); }
 
 .logo-rules{ display:grid; grid-template-columns:1.2fr 1fr; gap:clamp(1.5rem,3vw,3rem); margin-top:2.5rem; align-items:stretch; }
 @media(max-width:880px){ .logo-rules{ grid-template-columns:1fr; } }
@@ -196,6 +198,24 @@ section{ position:relative; }
 .sw .spec dt{ color:rgba(31,36,33,.45); text-transform:uppercase; letter-spacing:.06em; font-size:.6rem; align-self:center; }
 .sw .spec dd{ margin:0; font-family:var(--serif); color:rgba(31,36,33,.8); }
 .copyhint{ font-size:.72rem; color:rgba(31,36,33,.5); margin-top:1rem; }
+/* colour lightbox */
+.sw-modal{ position:fixed; inset:0; z-index:200; display:none; align-items:center; justify-content:center; padding:clamp(1rem,4vw,3rem); background:rgba(18,62,45,.62); backdrop-filter:blur(3px); }
+.sw-modal.open{ display:flex; }
+.sm-panel{ position:relative; width:min(34rem,100%); background:var(--paper); border-radius:12px; overflow:hidden; box-shadow:var(--sh-lg); }
+.sm-close{ position:absolute; top:.75rem; right:.75rem; z-index:2; width:2.1rem; height:2.1rem; border-radius:50%; border:none; background:rgba(250,248,243,.88); color:var(--ink); font-size:.95rem; cursor:pointer; box-shadow:var(--sh-sm); }
+.sm-close:hover{ background:var(--cream); }
+.sm-color{ height:min(46vh,21rem); width:100%; }
+.sm-foot{ display:flex; align-items:flex-end; justify-content:space-between; gap:1.2rem; padding:1.4rem 1.5rem 1.6rem; }
+.sm-name{ font-size:1.5rem; font-weight:700; letter-spacing:-.02em; }
+.sm-role{ font-size:.74rem; text-transform:uppercase; letter-spacing:.1em; color:rgba(31,36,33,.6); font-weight:700; margin-top:.25rem; }
+.sm-spec{ display:flex; flex-wrap:wrap; gap:.25rem 1.3rem; margin-top:.9rem; }
+.sm-spec div{ display:flex; gap:.5rem; align-items:baseline; }
+.sm-spec .k{ font-size:.58rem; text-transform:uppercase; letter-spacing:.08em; color:rgba(31,36,33,.45); font-weight:700; }
+.sm-spec .v{ font-family:var(--serif); font-size:.86rem; color:rgba(31,36,33,.85); }
+.sm-copy{ flex:none; background:var(--forest); color:var(--cream); border:none; border-radius:5px; font-family:var(--sans); font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:.72rem; padding:.72rem 1.1rem; cursor:pointer; transition:background .2s; }
+.sm-copy:hover{ background:var(--pine); }
+@media (prefers-reduced-motion:no-preference){ .sw-modal.open .sm-panel{ animation:smIn .35s cubic-bezier(.2,.7,.2,1); } }
+@keyframes smIn{ from{ opacity:0; transform:translateY(14px) scale(.985); } to{ opacity:1; transform:none; } }
 
 .prop{ margin-top:3rem; background:var(--paper); border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:var(--sh-sm); }
 .prop .bar{ display:flex; height:3.4rem; }
@@ -299,6 +319,20 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
 <body>
 <div class="grain" aria-hidden="true"></div>
 <button class="to-top" id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+<div class="sw-modal" id="sw-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Colour detail">
+  <div class="sm-panel">
+    <button class="sm-close" type="button" aria-label="Close">✕</button>
+    <div class="sm-color"></div>
+    <div class="sm-foot">
+      <div class="sm-info">
+        <p class="sm-name"></p>
+        <p class="sm-role"></p>
+        <div class="sm-spec"></div>
+      </div>
+      <button class="sm-copy" type="button">Copy HEX</button>
+    </div>
+  </div>
+</div>
 
 <!-- ===== NAV / TABLE OF CONTENTS ===== -->
 <header class="nav">
@@ -315,7 +349,6 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
       <a href="#imagery"><span class="ix">06</span>Imagery</a>
       <a href="#house"><span class="ix">07</span>House</a>
       <a href="#range"><span class="ix">08</span>Range</a>
-      <a href="#kit"><span class="ix">09</span>Live</a>
     </nav>
     <a class="btn btn-forest" href="#logo">Brand Kit</a>
     <button class="nav-toggle" aria-label="Open section menu" aria-controls="tocMobile" aria-expanded="false"><span class="bars"><span></span></span> Menu</button>
@@ -329,7 +362,6 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
     <a href="#imagery"><span class="ix">06</span>Imagery</a>
     <a href="#house"><span class="ix">07</span>House of Brands</a>
     <a href="#range"><span class="ix">08</span>The Range</a>
-    <a href="#kit"><span class="ix">09</span>Live Ecosystem</a>
   </nav>
 </header>
 
@@ -426,7 +458,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
       <p class="measure muted">Every value carries hex, RGB, and CMYK for screen and print. Click any swatch to copy its hex.</p>
     </div>
     <div class="kit reveal" id="palette"></div>
-    <p class="copyhint reveal">Tip: click a swatch to copy its hex to the clipboard.</p>
+    <p class="copyhint reveal">Tip: click any swatch to enlarge it and copy its values.</p>
 
     <div class="prop reveal" id="proportion-wrap">
       <div style="padding:1.2rem 1.3rem 0"><span class="eyebrow" style="color:var(--green)">The 60 · 30 · 10 proportion law</span></div>
@@ -559,37 +591,6 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
   </div>
 </section>
 
-<!-- ===== 09 · THE LIVING ECOSYSTEM ===== -->
-<section id="kit" class="is-pine felt pad">
-  <div class="wrap">
-    <div class="sec-mark reveal"><span class="no">09</span><span class="ln"></span></div>
-    <div class="sec-head reveal" style="margin-bottom:2.4rem">
-      <div>
-        <span class="kicker eyebrow"><span class="bar"></span> The Living Ecosystem · Single Source of Truth</span>
-        <h2 class="sec-title" style="color:var(--cream)">One file, two sites, live.</h2>
-      </div>
-      <p class="measure" style="color:rgba(250,248,243,.74)">Every colour, type rule, and brand fact on this page reads live from one JSON file. Edit it once and both the hub and the franchise site re-skin. No rebuild.</p>
-    </div>
-    <div class="eco reveal">
-      <div class="card">
-        <p class="h">Source of truth</p>
-        <p class="big serif">Site A</p>
-        <p style="color:rgba(250,248,243,.6);font-size:.86rem;margin-top:.5rem">This hub publishes <code style="font-family:ui-monospace,monospace;color:var(--sage-2)">brand-data.json</code>.</p>
-      </div>
-      <div class="card">
-        <p class="h">Consumer</p>
-        <p class="big serif">Site B</p>
-        <p style="color:rgba(250,248,243,.6);font-size:.86rem;margin-top:.5rem">The franchise site fetches the same file and re-skins itself.</p>
-      </div>
-      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between">
-        <p class="h">Status</p>
-        <p class="big" id="kit-version" style="font-size:1.7rem"></p>
-        <p id="kit-status" class="serif" style="color:var(--sage-2);font-size:.82rem;margin-top:.6rem"></p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== FOOTER ===== -->
 <footer class="is-forest felt" style="padding:clamp(3rem,6vw,4.5rem) 0">
   <div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.4rem">
@@ -599,7 +600,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
     </div>
     <div class="col">
       <p class="eyebrow" style="color:var(--sage-2);margin-bottom:.8rem">Guidelines</p>
-      <p><a href="#brand">The Brand</a> · <a href="#logo">Logo</a> · <a href="#colour">Colour</a> · <a href="#type">Type</a> · <a href="#voice">Voice</a> · <a href="#imagery">Imagery</a> · <a href="#house">House of Brands</a> · <a href="#range">The Range</a> · <a href="#kit">Live Ecosystem</a></p>
+      <p><a href="#brand">The Brand</a> · <a href="#logo">Logo</a> · <a href="#colour">Colour</a> · <a href="#type">Type</a> · <a href="#voice">Voice</a> · <a href="#imagery">Imagery</a> · <a href="#house">House of Brands</a> · <a href="#range">The Range</a></p>
     </div>
     <div class="col">
       <p class="eyebrow" style="color:var(--sage-2);margin-bottom:.8rem">Colophon</p>
@@ -657,7 +658,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
   set('logo-wall', (L.variations||[]).map(v=>`
     <div class="logo-card">
       <div class="stage ${v.bg==='dark'?'dark':''}"><img src="${esc(v.file)}" alt="${esc(v.name)}" loading="lazy" onerror="this.parentNode.innerHTML='<span class=&quot;eyebrow&quot; style=&quot;color:${v.bg==='dark'?'var(--cream)':'var(--ink)'}&quot;>${esc(v.name)}</span>'"/></div>
-      <div class="meta"><div class="nm">${esc(v.name)}</div><div class="us">${esc(v.use)}</div></div>
+      <div class="meta"><div><div class="nm">${esc(v.name)}</div><div class="us">${esc(v.use)}</div></div><a class="dl" href="${esc(v.file)}" download="${esc(v.id)}.png" aria-label="Download ${esc(v.name)} PNG">↓ PNG</a></div>
     </div>`).join(''));
   set('logo-misuse', (L.misuse||[]).map((m,i)=>`
     <div class="m"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(m)}</span></div>`).join(''));
@@ -667,7 +668,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
   set('palette', order.filter(k=>C[k]).map(k=>{
     const t=C[k], light=!!t.onLight, tc=light?'#1F2421':'#FAF8F3';
     const rows=[t.rgb?`<dt>RGB</dt><dd>${esc(t.rgb)}</dd>`:'', t.cmyk?`<dt>CMYK</dt><dd>${esc(t.cmyk)}</dd>`:''].join('');
-    return `<button class="sw" data-copy="${esc(t.value)}" title="Copy ${esc(t.value)}">
+    return `<button class="sw" data-copy="${esc(t.value)}" data-name="${esc(t.name)}" data-role="${esc(t.role||'')}" data-rgb="${esc(t.rgb||'')}" data-cmyk="${esc(t.cmyk||'')}" data-light="${light?'1':'0'}" title="${esc(t.name)} — enlarge & copy">
       <span class="chip" style="background:${esc(t.value)};color:${tc}">
         <span class="role">${esc(t.role||'')}</span>
       </span>
@@ -681,13 +682,24 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
     return Promise.resolve(fallbackCopy(t));
   };
   function fallbackCopy(t){ const ta=document.createElement('textarea'); ta.value=t; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.focus(); ta.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(ta); }
-  document.querySelectorAll('.sw').forEach(b=>b.addEventListener('click',()=>{
-    copyHex(b.dataset.copy);
-    const role=b.querySelector('.role'); const prev=role?role.textContent:'';
-    if(role) role.textContent='Copied '+b.dataset.copy+' ✓';
-    b.style.outline='2px solid var(--forest)'; b.style.outlineOffset='2px';
-    clearTimeout(b._t); b._t=setTimeout(()=>{ b.style.outline='none'; if(role) role.textContent=prev; },1100);
-  }));
+  // click a swatch -> enlarge it in a lightbox (with copy inside)
+  const swModal=document.getElementById('sw-modal');
+  const smCopyBtn=swModal.querySelector('.sm-copy');
+  function openSwatch(b){
+    const hex=b.dataset.copy, light=b.dataset.light==='1';
+    swModal.querySelector('.sm-color').style.background=hex;
+    swModal.querySelector('.sm-name').textContent=b.dataset.name;
+    swModal.querySelector('.sm-role').textContent=b.dataset.role;
+    swModal.querySelector('.sm-spec').innerHTML=[['HEX',hex],['RGB',b.dataset.rgb],['CMYK',b.dataset.cmyk]]
+      .filter(p=>p[1]).map(p=>`<div><span class="k">${p[0]}</span><span class="v">${esc(p[1])}</span></div>`).join('');
+    smCopyBtn.dataset.copy=hex; smCopyBtn.textContent='Copy HEX';
+    swModal.classList.add('open'); swModal.setAttribute('aria-hidden','false');
+  }
+  function closeSwatch(){ swModal.classList.remove('open'); swModal.setAttribute('aria-hidden','true'); }
+  document.querySelectorAll('.sw').forEach(b=>b.addEventListener('click',()=>openSwatch(b)));
+  swModal.addEventListener('click',e=>{ if(e.target===swModal||e.target.classList.contains('sm-close')) closeSwatch(); });
+  smCopyBtn.addEventListener('click',e=>{ e.stopPropagation(); copyHex(smCopyBtn.dataset.copy); smCopyBtn.textContent='Copied ✓'; clearTimeout(smCopyBtn._t); smCopyBtn._t=setTimeout(()=>smCopyBtn.textContent='Copy HEX',1100); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeSwatch(); });
   // proportion law
   const P=(D.tokens.proportion)||[];
   if(P.length){
@@ -755,10 +767,8 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
       <div class="body"><h3>${esc(c.name)}</h3><p>${esc(c.blurb)}</p><div class="more">Shop ${esc(c.name)} →</div></div>
     </a>`).join(''));
 
-  // ---- 09 · STATUS ----
+  // ---- colophon ----
   const v='v'+((D.meta&&D.meta.version)||'?');
-  txt('kit-version', v);
-  txt('kit-status', 'Tokens served live · '+((D.meta&&D.meta.lastUpdated)||''));
   txt('foot-status', 'Brand guidelines · '+v+' · '+((D.meta&&D.meta.lastUpdated)||'')+'. Set in Helvetica Neue & Vollkorn.');
 
   // ---- reveal with stagger ----
@@ -774,7 +784,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
 
   // ---- scroll-spy + back-to-top (one throttled passive listener) ----
   const links=document.querySelectorAll('.toc a, .toc-mobile a');
-  const spyIds=['brand','logo','colour','type','voice','imagery','house','range','kit'];
+  const spyIds=['brand','logo','colour','type','voice','imagery','house','range'];
   const top=document.getElementById('toTop');
   if(top) top.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   const spyEls=spyIds.map(id=>document.getElementById(id)).filter(Boolean);
