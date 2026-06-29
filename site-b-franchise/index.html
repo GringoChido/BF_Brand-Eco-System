@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Own the Room · Billiard Factory Franchise Opportunity</title>
+<meta name="description" content="Own the room where families gather. A fifty-year, family-owned, vertically integrated game-room franchise: factory-direct margins, protected territory, and a turnkey demand engine. Request the FDD." />
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<!-- TAILWIND · tokens are CSS variables, fed live from Site A's SSOT -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: {
+        charcoal:'var(--bf-charcoal)', charcoalDeep:'var(--bf-charcoalDeep)',
+        walnut:'var(--bf-walnut)', walnutLight:'var(--bf-walnutLight)',
+        linen:'var(--bf-linen)', linenSoft:'var(--bf-linenSoft)',
+        brass:'var(--bf-brass)', heritageGreen:'var(--bf-heritageGreen)',
+        signalOrange:'var(--bf-signalOrange)', ink:'var(--bf-ink)', mist:'var(--bf-mist)'
+      },
+      fontFamily: { serif:['Vollkorn','Georgia','serif'], sans:['Jost','Helvetica Neue','sans-serif'] },
+      maxWidth: { reading:'64ch' }
+    }}
+  };
+</script>
+<style>
+  /* Token fallbacks: replaced at runtime by Site A's brand-data.json */
+  :root{
+    --bf-charcoal:#1B1A17; --bf-charcoalDeep:#100F0C; --bf-walnut:#6E5039;
+    --bf-walnutLight:#8C6B4F; --bf-linen:#ECE6DA; --bf-linenSoft:#F5F1E9;
+    --bf-brass:#B08A52; --bf-heritageGreen:#185F43; --bf-signalOrange:#F0560C;
+    --bf-ink:#2A2823; --bf-mist:#9A9488;
+  }
+  body{ font-family:'Jost',sans-serif; background:var(--bf-linen); color:var(--bf-ink); -webkit-font-smoothing:antialiased; }
+  .font-display{ font-family:'Vollkorn',Georgia,serif; }
+  .eyebrow{ text-transform:uppercase; letter-spacing:.32em; font-size:.72rem; font-weight:500; }
+  .hairline{ border-color:rgba(27,26,23,.14); }
+  .hairline-dark{ border-color:rgba(236,230,218,.16); }
+  ::selection{ background:var(--bf-brass); color:var(--bf-linenSoft); }
+  pre.snippet{ font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.78rem; line-height:1.6; }
+  /* Sync badge that proves the live link to Site A */
+  .sync-dot{ width:7px;height:7px;border-radius:9999px;background:var(--bf-heritageGreen);box-shadow:0 0 0 0 rgba(24,95,67,.5);animation:pulse 2s infinite; }
+  @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(24,95,67,.45)} 70%{box-shadow:0 0 0 8px rgba(24,95,67,0)} 100%{box-shadow:0 0 0 0 rgba(24,95,67,0)} }
+
+  /* ---- v4 depth + texture: the antidote to flat ---- */
+  .grain{ position:fixed; inset:0; z-index:9999; pointer-events:none; opacity:.06; mix-blend-mode:soft-light;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .felt{ position:relative; }
+  .felt::before{ content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
+    background:radial-gradient(130% 90% at 18% 0%, rgba(176,138,82,.10), transparent 55%); }
+  .felt > *{ position:relative; z-index:1; }
+  .depth{ box-shadow:0 16px 34px -18px rgba(0,0,0,.5), 0 46px 80px -44px rgba(0,0,0,.55); }
+  .depth-soft{ box-shadow:0 12px 26px -16px rgba(27,26,23,.22), 0 34px 64px -42px rgba(110,80,57,.28); }
+  .lift{ transition:transform .28s cubic-bezier(.2,.7,.2,1), box-shadow .28s; }
+  .lift:hover{ transform:translateY(-3px); box-shadow:0 14px 30px -16px rgba(27,26,23,.3); }
+</style>
+</head>
+
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ================================================================= -->
+<!--  NAV                                                              -->
+<!-- ================================================================= -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-charcoal/80 text-linen border-b hairline-dark">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="2" fill="var(--bf-linen)"/>
+        <circle cx="20" cy="20" r="9" fill="none" stroke="var(--bf-charcoal)" stroke-width="1.6"/>
+        <circle cx="20" cy="20" r="2.4" fill="var(--bf-signalOrange)"/>
+      </svg>
+      <span class="font-display text-base">Billiard Factory <span class="text-mist">·</span> <span class="text-brass">Franchising</span></span>
+    </div>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-linen/70">
+      <a href="#pivot" class="hover:text-linen transition">The Pivot</a>
+      <a href="#moat"  class="hover:text-linen transition">The Moat</a>
+      <a href="#engine" class="hover:text-linen transition">Demand Engine</a>
+      <a href="#apply" class="bg-brass text-charcoalDeep px-5 py-2 rounded-[2px] text-xs uppercase tracking-widest font-semibold hover:bg-walnutLight transition">Request FDD</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ================================================================= -->
+<!--  ACT I · THE RETAIL PIVOT HERO                                   -->
+<!-- ================================================================= -->
+<section id="pivot" class="felt relative min-h-screen flex items-center bg-charcoal text-linen pt-16 overflow-hidden">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 w-full py-24">
+    <p class="eyebrow text-brass mb-8 flex items-center gap-3">
+      Act I · The Opportunity <span class="text-mist normal-case tracking-normal text-xs">/ Family-owned since 1975</span>
+    </p>
+
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <!-- Copy -->
+      <div class="lg:col-span-6">
+        <h1 class="font-display font-medium leading-[0.95] tracking-tight" style="font-size:clamp(2.75rem,6.5vw,5.75rem);">
+          Own the room<br/>where<br/>
+          <span class="text-brass italic">families</span><br/>gather.
+        </h1>
+        <p class="mt-8 text-lg text-linen/70 max-w-reading leading-relaxed">
+          For fifty years, Billiard Factory has built the room where families share priceless time together. Now this family-owned, vertically integrated business is licensing that legacy to a select group of multi-unit operators and premium landlords.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="#apply" class="bg-brass text-charcoalDeep px-8 py-4 rounded-[2px] text-sm uppercase tracking-widest font-semibold hover:bg-walnutLight transition">Qualify Your Territory</a>
+          <a href="#moat" class="px-8 py-4 rounded-[2px] text-sm uppercase tracking-widest font-medium border hairline-dark text-linen/80 hover:text-linen transition">See the Moat</a>
+        </div>
+      </div>
+
+      <!-- Old vs New contrast panel -->
+      <div class="lg:col-span-6">
+        <div class="grid grid-cols-2 gap-px bg-linen/10 border hairline-dark rounded-[4px] overflow-hidden">
+          <!-- OLD -->
+          <div class="bg-charcoalDeep p-7 lg:p-9">
+            <p class="eyebrow text-mist mb-5" style="font-size:.6rem;">Yesterday</p>
+            <div class="aspect-square rounded-[2px] mb-6 relative overflow-hidden" style="background:repeating-linear-gradient(45deg,#1c1b17,#1c1b17 8px,#222019 8px,#222019 16px)">
+              <svg viewBox="0 0 100 100" class="absolute inset-0 w-full h-full opacity-40">
+                <rect x="20" y="38" width="60" height="30" rx="2" fill="none" stroke="var(--bf-mist)" stroke-width="2"/>
+                <line x1="14" y1="80" x2="86" y2="80" stroke="var(--bf-mist)" stroke-width="2"/>
+              </svg>
+            </div>
+            <p class="font-display text-lg text-mist line-through decoration-1">The supply store</p>
+            <p class="text-sm text-linen/45 mt-2 leading-relaxed">Fluorescent warehouse. Transactional. Price-shopped. Forgettable.</p>
+          </div>
+          <!-- NEW -->
+          <div class="bg-walnut p-7 lg:p-9 relative">
+            <span class="sync-dot absolute top-5 right-5" title="Live-linked to brand hub"></span>
+            <p class="eyebrow text-linen/90 mb-5" style="font-size:.6rem;">Today</p>
+            <div class="aspect-square rounded-[2px] mb-6 relative overflow-hidden bg-linen">
+              <svg viewBox="0 0 100 100" class="absolute inset-0 w-full h-full">
+                <rect x="0" y="0" width="100" height="100" fill="var(--bf-linenSoft)"/>
+                <rect x="18" y="40" width="64" height="26" rx="2" fill="var(--bf-charcoal)"/>
+                <circle cx="50" cy="53" r="4" fill="var(--bf-brass)"/>
+                <line x1="10" y1="78" x2="90" y2="78" stroke="var(--bf-walnut)" stroke-width="2"/>
+                <circle cx="74" cy="22" r="6" fill="none" stroke="var(--bf-brass)" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <p class="font-display text-lg text-linen">The lifestyle gallery</p>
+            <p class="text-sm text-linen/75 mt-2 leading-relaxed">Airy, interactive, curated. A room you compose, and remember.</p>
+          </div>
+        </div>
+        <p class="text-xs text-mist mt-4 text-center">Hero imagery: SVG placeholders pending art direction from the Creative Hub.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-mist text-xs eyebrow" style="font-size:.6rem;">Scroll · The Manufacturing Moat ↓</div>
+</section>
+
+<!-- ================================================================= -->
+<!--  ACT II · THE MANUFACTURING MOAT  (data pulled from Site A)       -->
+<!-- ================================================================= -->
+<section id="moat" class="bg-linen">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 py-24 lg:py-36">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-6">
+      <div>
+        <p class="eyebrow text-walnut mb-5">Act II · The Manufacturing Moat</p>
+        <h2 class="font-display text-4xl lg:text-5xl text-charcoal max-w-2xl leading-tight">We own the house. You inherit the margin.</h2>
+      </div>
+      <p class="text-ink/60 max-w-sm leading-relaxed">
+        Five owned brands and a curated partner roster: no middleman, protected margins, total territory exclusivity.
+      </p>
+    </div>
+
+    <!-- Live-data provenance badge -->
+    <div class="inline-flex items-center gap-3 mb-14 text-xs text-ink/60 border hairline rounded-full px-4 py-2 bg-linenSoft">
+      <span class="sync-dot"></span>
+      <span id="moat-sync">Brand data synced live from the Creative Hub (Site A) · syncing</span>
+    </div>
+
+    <!-- Moat stat pillars -->
+    <div id="moat-pillars" class="depth-soft grid grid-cols-2 lg:grid-cols-4 gap-px bg-charcoal/10 border hairline rounded-[4px] overflow-hidden mb-20"></div>
+
+    <!-- OWNED BRANDS grid -->
+    <p class="eyebrow text-mist mb-6">Owned Brands · The Manufacturing Moat</p>
+    <div id="owned-grid" class="depth-soft grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-charcoal/10 border hairline rounded-[4px] overflow-hidden">
+      <div class="bg-linenSoft p-16 text-center text-mist col-span-full">Fetching owned brands from Site A…</div>
+    </div>
+
+    <!-- PARTNER BRANDS -->
+    <p class="eyebrow text-mist mt-20 mb-6">Key Partner Brands · Distribution Power</p>
+    <div id="partner-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-charcoal/10 border hairline rounded-[4px] overflow-hidden"></div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!--  ACT III · THE TURNKEY DEMAND ENGINE                             -->
+<!-- ================================================================= -->
+<section id="engine" class="felt bg-charcoal text-linen">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 py-24 lg:py-36">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+      <div>
+        <p class="eyebrow text-brass mb-5">Act III · The Turnkey Demand Engine</p>
+        <h2 class="font-display text-4xl lg:text-5xl text-linen max-w-3xl leading-tight">National brand power. One-click local deployment.</h2>
+      </div>
+      <p class="text-linen/55 max-w-sm leading-relaxed">
+        The parent brand carries national awareness. You get an automated dashboard to deploy pre-built local ad assets, with zero creative overhead.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-10 items-start">
+      <!-- Workflow steps -->
+      <ol id="engine-steps" class="depth lg:col-span-5 space-y-px bg-linen/5 border hairline-dark rounded-[4px] overflow-hidden"></ol>
+
+      <!-- Dashboard mockup -->
+      <div class="lg:col-span-7">
+        <div class="rounded-[6px] border hairline-dark overflow-hidden bg-charcoalDeep shadow-2xl">
+          <!-- window chrome -->
+          <div class="flex items-center justify-between px-5 py-3 bg-linen/[0.04] border-b hairline-dark">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full" style="background:var(--bf-signalOrange)"></span>
+              <span class="w-3 h-3 rounded-full bg-mist/50"></span>
+              <span class="w-3 h-3 rounded-full bg-mist/30"></span>
+            </div>
+            <span class="eyebrow text-mist" style="font-size:.58rem;">franchise-os · campaign deploy</span>
+            <span class="text-[10px] text-heritageGreen flex items-center gap-1"><span class="sync-dot"></span>tokens live</span>
+          </div>
+
+          <!-- dashboard body -->
+          <div class="p-6 lg:p-8 grid sm:grid-cols-3 gap-5">
+            <!-- KPIs -->
+            <div class="sm:col-span-3 grid grid-cols-3 gap-px bg-linen/10 rounded-[4px] overflow-hidden border hairline-dark">
+              <div class="bg-charcoal p-4"><p class="text-2xl font-light text-linen">3.8×</p><p class="text-[11px] text-mist mt-1 uppercase tracking-wider">Blended ROAS</p></div>
+              <div class="bg-charcoal p-4"><p class="text-2xl font-light text-linen">$41</p><p class="text-[11px] text-mist mt-1 uppercase tracking-wider">Cost / Lead</p></div>
+              <div class="bg-charcoal p-4"><p class="text-2xl font-light text-linen">12</p><p class="text-[11px] text-mist mt-1 uppercase tracking-wider">Live Assets</p></div>
+            </div>
+
+            <!-- Campaign card -->
+            <div class="sm:col-span-2 bg-charcoal border hairline-dark rounded-[4px] p-5">
+              <div class="flex items-center justify-between mb-4">
+                <p class="text-sm text-linen font-medium">Spring Great-Room Event</p>
+                <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded-[2px]" style="background:var(--bf-heritageGreen);color:var(--bf-linen)">Ready</span>
+              </div>
+              <!-- ad creative preview -->
+              <div class="aspect-[16/7] rounded-[3px] overflow-hidden relative mb-4" style="background:var(--bf-linenSoft)">
+                <svg viewBox="0 0 320 140" class="absolute inset-0 w-full h-full">
+                  <rect width="320" height="140" fill="var(--bf-linenSoft)"/>
+                  <rect x="0" y="0" width="150" height="140" fill="var(--bf-charcoal)"/>
+                  <rect x="28" y="58" width="96" height="40" rx="2" fill="var(--bf-walnut)"/>
+                  <circle cx="76" cy="78" r="6" fill="var(--bf-brass)"/>
+                  <text x="180" y="56" font-family="Vollkorn,serif" font-size="20" fill="var(--bf-charcoal)">Curate the room.</text>
+                  <text x="180" y="80" font-family="Jost,sans-serif" font-size="10" letter-spacing="2" fill="var(--bf-walnut)">BILLIARD FACTORY · SINCE 1975</text>
+                  <rect x="180" y="96" width="80" height="22" rx="2" fill="var(--bf-brass)"/>
+                  <text x="220" y="111" text-anchor="middle" font-family="Jost,sans-serif" font-size="9" letter-spacing="1.5" fill="var(--bf-charcoalDeep)">VISIT GALLERY</text>
+                </svg>
+                <span class="absolute top-2 left-2 eyebrow text-linen/80" style="font-size:.52rem;">auto-rendered from live tokens</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-[11px] text-mist">
+                  <span class="px-2 py-1 border hairline-dark rounded-[2px]">Meta</span>
+                  <span class="px-2 py-1 border hairline-dark rounded-[2px]">Google</span>
+                  <span class="px-2 py-1 border hairline-dark rounded-[2px]">CTV</span>
+                </div>
+                <button class="bg-brass text-charcoalDeep text-[11px] uppercase tracking-widest font-semibold px-4 py-2 rounded-[2px] hover:bg-walnutLight transition">Deploy ▸</button>
+              </div>
+            </div>
+
+            <!-- Territory radius -->
+            <div class="bg-charcoal border hairline-dark rounded-[4px] p-5 flex flex-col">
+              <p class="eyebrow text-mist mb-3" style="font-size:.56rem;">Local Radius</p>
+              <div class="flex-1 flex items-center justify-center my-2">
+                <svg viewBox="0 0 100 100" class="w-24 h-24">
+                  <circle cx="50" cy="50" r="44" fill="none" stroke="var(--bf-mist)" stroke-opacity=".25" stroke-width="1"/>
+                  <circle cx="50" cy="50" r="30" fill="var(--bf-heritageGreen)" fill-opacity=".18" stroke="var(--bf-heritageGreen)" stroke-width="1.5"/>
+                  <circle cx="50" cy="50" r="3" fill="var(--bf-brass)"/>
+                </svg>
+              </div>
+              <p class="text-sm text-linen">25 mi · Exclusive</p>
+              <p class="text-[11px] text-mist mt-1">No overlap. Contractually yours.</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-mist mt-4">Dashboard mockup: when the Creative Hub updates a token, every franchisee's ad creative re-skins automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!--  ACT IV · THE LEAD CAPTURE PORTAL (FDD)                           -->
+<!-- ================================================================= -->
+<section id="apply" class="bg-linenSoft">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 py-24 lg:py-36">
+    <div class="grid lg:grid-cols-12 gap-14 lg:gap-20 items-start">
+      <!-- Pitch -->
+      <div class="lg:col-span-5">
+        <p class="eyebrow text-walnut mb-5">Act IV · Territory Qualification</p>
+        <h2 class="font-display text-4xl lg:text-5xl text-charcoal leading-tight mb-6">Request the Franchise Disclosure Document.</h2>
+        <p class="text-ink/70 leading-relaxed max-w-reading mb-10">
+          We award a limited number of exclusive territories each year to operators who can execute at the highest standard. Qualify below to receive the FDD and a confidential unit-economics model.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-4 border-t hairline pt-4">
+            <span class="font-display text-2xl text-brass leading-none">01</span>
+            <div><p class="text-charcoal font-medium">Factory-direct economics</p><p class="text-sm text-ink/60">Owned manufacturing, protected margins, no distributor markup.</p></div>
+          </li>
+          <li class="flex items-start gap-4 border-t hairline pt-4">
+            <span class="font-display text-2xl text-brass leading-none">02</span>
+            <div><p class="text-charcoal font-medium">Total territory exclusivity</p><p class="text-sm text-ink/60">A contractually protected radius that is yours alone.</p></div>
+          </li>
+          <li class="flex items-start gap-4 border-t hairline pt-4">
+            <span class="font-display text-2xl text-brass leading-none">03</span>
+            <div><p class="text-charcoal font-medium">Turnkey demand engine</p><p class="text-sm text-ink/60">National awareness plus one-click local deployment.</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Form -->
+      <div class="lg:col-span-7">
+        <form id="fdd-form" class="depth bg-charcoal text-linen rounded-[6px] p-8 lg:p-12 border hairline-dark" novalidate>
+          <p class="eyebrow text-brass mb-2">Secure Territory Qualification</p>
+          <h3 class="font-display text-2xl text-linen mb-8">Request your FDD package</h3>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <label class="block">
+              <span class="text-xs uppercase tracking-widest text-mist">First Name</span>
+              <input required name="first" type="text" class="mt-2 w-full bg-charcoalDeep border hairline-dark rounded-[2px] px-4 py-3 text-linen placeholder-mist/50 focus:border-brass outline-none transition" placeholder="Jane" />
+            </label>
+            <label class="block">
+              <span class="text-xs uppercase tracking-widest text-mist">Last Name</span>
+              <input required name="last" type="text" class="mt-2 w-full bg-charcoalDeep border hairline-dark rounded-[2px] px-4 py-3 text-linen placeholder-mist/50 focus:border-brass outline-none transition" placeholder="Calloway" />
+            </label>
+            <label class="block">
+              <span class="text-xs uppercase tracking-widest text-mist">Work Email</span>
+              <input required name="email" type="email" class="mt-2 w-full bg-charcoalDeep border hairline-dark rounded-[2px] px-4 py-3 text-linen placeholder-mist/50 focus:border-brass outline-none transition" placeholder="jane@operatorgroup.com" />
+            </label>
+            <label class="block">
+              <span class="text-xs uppercase tracking-widest text-mist">Phone</span>
+              <input name="phone" type="tel" class="mt-2 w-full bg-charcoalDeep border hairline-dark rounded-[2px] px-4 py-3 text-linen placeholder-mist/50 focus:border-brass outline-none transition" placeholder="(555) 010-0199" />
+            </label>
+            <label class="block sm:col-span-2">
+              <span class="text-xs uppercase tracking-widest text-mist">Target Metro / Territory</span>
+              <input required name="territory" type="text" class="mt-2 w-full bg-charcoalDeep border hairline-dark rounded-[2px] px-4 py-3 text-linen placeholder-mist/50 focus:border-brass outline-none transition" placeholder="e.g. Scottsdale, AZ" />
+            </label>
+            <label class="block">
+              <span class="text-xs uppercase tracking-widest text-mist">Operator Profile</span>
+              <select name="profile" class="mt-2 w-full bg-charcoalDeep border hairline-dark rounded-[2px] px-4 py-3 text-linen focus:border-brass outline-none transition">
+                <option>Multi-unit operator</option>
+                <option>Premium landlord / developer</option>
+                <option>Single-unit investor</option>
+                <option>Family office</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="text-xs uppercase tracking-widest text-mist">Liquid Capital</span>
+              <select name="capital" class="mt-2 w-full bg-charcoalDeep border hairline-dark rounded-[2px] px-4 py-3 text-linen focus:border-brass outline-none transition">
+                <option>$250k – $500k</option>
+                <option>$500k – $1M</option>
+                <option>$1M+</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="flex items-start gap-3 mt-6 text-xs text-linen/60">
+            <input required type="checkbox" class="mt-1 accent-brass" />
+            <span>I understand this is a request for the Franchise Disclosure Document and not an offer to sell a franchise. Submitting authorizes Billiard Factory to contact me regarding territory availability.</span>
+          </label>
+
+          <button type="submit" class="mt-8 w-full bg-brass text-charcoalDeep py-4 rounded-[2px] text-sm uppercase tracking-widest font-semibold hover:bg-walnutLight transition">
+            Request the FDD →
+          </button>
+
+          <p id="form-status" class="mt-4 text-center text-sm text-heritageGreen hidden">
+            ✓ Received. Your FDD package is on its way. A franchise director will confirm territory availability within two business days.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================================================= -->
+<!--  FOOTER                                                          -->
+<!-- ================================================================= -->
+<footer class="felt bg-charcoalDeep text-linen/55">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid md:grid-cols-3 gap-10">
+    <div>
+      <p class="font-display text-xl text-linen mb-2">Billiard Factory · Franchising</p>
+      <p class="text-sm">A family-owned, vertically integrated game-room franchise. Building the room where families gather since 1975.</p>
+    </div>
+    <div class="text-sm">
+      <p class="eyebrow text-brass mb-3" style="font-size:.6rem;">Live Ecosystem</p>
+      <p>Brand tokens &amp; data served by <span class="text-linen">Site A · Creative Hub</span>.</p>
+      <p class="text-mist mt-1">This page re-skins automatically when the hub updates.</p>
+    </div>
+    <div class="text-sm">
+      <p class="eyebrow text-brass mb-3" style="font-size:.6rem;">Legal</p>
+      <p class="text-mist leading-relaxed">This is not an offer to sell a franchise. An offer can only be made through an FDD in compliance with applicable law.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================================================================= -->
+<!--  THE LIVE LINK · fetch tokens + brand data FROM SITE A           -->
+<!--  Update brand-data.json once → this pitch site re-skins itself.  -->
+<!-- ================================================================= -->
+<!-- Site B includes Site A's published SSOT as a global (works on file://). -->
+<script src="../shared/brand-data.js"></script>
+<script>
+(async function () {
+  // Site B reaches into Site A's published SSOT. window.BF_DATA is guaranteed
+  // via the script tag above; over http we ALSO re-fetch so an edit in the
+  // Creative Hub re-skins this pitch site live. In production point SSOT_URL
+  // at the hub's absolute URL (e.g. https://hub.billiardfactory.com/brand-data.json).
+  const SSOT_URL = '../shared/brand-data.json';
+
+  let DATA = window.BF_DATA;
+  try {
+    const res = await fetch(SSOT_URL, { cache:'no-store' });
+    if (res.ok) DATA = await res.json();
+  } catch (err) { /* file:// fallback: use the global, which is complete */ }
+  if(!DATA){ console.error('[BF Franchise] No SSOT available.'); return; }
+
+  // ---- 1. RE-SKIN: write Site A's tokens into this page's CSS vars ----
+  Object.entries(DATA.tokens.color).forEach(([k, t]) =>
+    document.documentElement.style.setProperty('--bf-' + k, t.value));
+
+  const ver = (DATA.meta && DATA.meta.version) || '?';
+  const sync = document.getElementById('moat-sync');
+  if (sync) sync.textContent = 'Brand data synced live from the Creative Hub (Site A) · v' + ver;
+
+  const swatch = id => (DATA.tokens.color[id] && DATA.tokens.color[id].value) || '#1B1A17';
+
+  // ---- 2. MOAT STAT PILLARS ----
+  const pillars = document.getElementById('moat-pillars');
+  if (pillars && DATA.moatPillars) {
+    pillars.innerHTML = DATA.moatPillars.map(p => `
+      <div class="bg-linenSoft p-7 lg:p-9">
+        <p class="font-display text-4xl lg:text-5xl text-charcoal leading-none">${p.stat}</p>
+        <p class="eyebrow text-walnut mt-2 mb-3" style="font-size:.58rem;">${p.unit}</p>
+        <p class="text-sm text-ink/65 leading-relaxed">${p.label}</p>
+      </div>`).join('');
+  }
+
+  // ---- 3. OWNED BRANDS (the manufacturing moat) ----
+  const ownedGrid = document.getElementById('owned-grid');
+  if (ownedGrid && DATA.ownedBrands && DATA.ownedBrands.length) {
+    ownedGrid.innerHTML = DATA.ownedBrands.map(b => {
+      const sw = swatch(b.swatch);
+      const blurb = (b.copy && b.copy[0]) ? b.copy[0] : '';
+      return `
+      <article class="bg-linenSoft p-8 flex flex-col group hover:bg-linen transition relative z-0 hover:z-10 lift">
+        <div class="aspect-[5/3] rounded-[3px] overflow-hidden mb-6 relative" style="background:${sw}">
+          <svg viewBox="0 0 200 120" class="absolute inset-0 w-full h-full opacity-90">
+            <rect x="34" y="40" width="132" height="46" rx="3" fill="none" stroke="var(--bf-linen)" stroke-opacity=".5" stroke-width="2"/>
+            <circle cx="100" cy="63" r="7" fill="var(--bf-brass)"/>
+            <line x1="46" y1="98" x2="154" y2="98" stroke="var(--bf-linen)" stroke-opacity=".3" stroke-width="2"/>
+          </svg>
+          <span class="absolute top-3 left-3 eyebrow text-linen/80" style="font-size:.52rem;">${b.id}</span>
+        </div>
+        <p class="eyebrow text-walnut mb-2" style="font-size:.56rem;">${b.tier}</p>
+        <h3 class="font-display text-2xl text-charcoal mb-1">${b.name}</h3>
+        <p class="font-display italic text-walnut text-sm mb-4">${b.tagline}</p>
+        <p class="text-sm text-ink/65 leading-relaxed">${blurb}</p>
+      </article>`;
+    }).join('');
+  }
+
+  // ---- 4. PARTNER BRANDS ----
+  const partnerGrid = document.getElementById('partner-grid');
+  if (partnerGrid && DATA.partnerBrands) {
+    partnerGrid.innerHTML = DATA.partnerBrands.map(p => `
+      <div class="bg-linenSoft p-7 flex flex-col gap-4 min-h-[170px]">
+        <svg viewBox="0 0 120 40" class="h-9 w-auto" aria-label="${p.name} logo placeholder">
+          <rect x="1" y="1" width="118" height="38" rx="2" fill="none" stroke="var(--bf-charcoal)" stroke-opacity=".25"/>
+          <text x="60" y="25" text-anchor="middle" font-family="Vollkorn,serif" font-size="13" fill="var(--bf-charcoal)">${p.name}</text>
+        </svg>
+        <div class="mt-auto">
+          <p class="eyebrow text-mist mb-1" style="font-size:.56rem;">${p.category}</p>
+          <p class="text-xs text-ink/55 leading-snug">${p.note}</p>
+        </div>
+      </div>`).join('');
+  }
+
+  // ---- 5. DEMAND ENGINE STEPS ----
+  const steps = document.getElementById('engine-steps');
+  if (steps && DATA.demandEngineSteps) {
+    steps.innerHTML = DATA.demandEngineSteps.map(s => `
+      <li class="bg-charcoal p-7 flex gap-5">
+        <span class="font-display text-3xl text-brass leading-none">${s.step}</span>
+        <div>
+          <p class="text-linen font-medium mb-1">${s.title}</p>
+          <p class="text-sm text-linen/60 leading-relaxed">${s.body}</p>
+        </div>
+      </li>`).join('');
+  }
+
+  // ---- 6. FORM (demo handler) ----
+  const form = document.getElementById('fdd-form');
+  if (form) form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    document.getElementById('form-status').classList.remove('hidden');
+    form.querySelector('button[type=submit]').textContent = '✓ Request Received';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Billiard Factory — Living HTML Ecosystem
+# Static site: the repo root is published so Site A can read the shared SSOT
+# (shared/brand-data.json + .js) and assets/ via its ../ relative paths.
+
+[build]
+  publish = "."
+
+# Serve Site A (the Creative & Brand Hub) at the root URL.
+[[redirects]]
+  from = "/"
+  to = "/site-a-creative-hub/index.html"
+  status = 200
+
+# Site B (franchise recruitment) is not ready for public release.
+# Redirect it home until the franchise model + FDD/compliance work is done.
+[[redirects]]
+  from = "/site-b-franchise/*"
+  to = "/"
+  status = 301
+  force = true
+
+# Light hardening + caching.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/shared/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
