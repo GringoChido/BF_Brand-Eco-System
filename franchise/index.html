@@ -307,24 +307,21 @@ nav.top .links a.cta:hover{ background:var(--pine); transform:translateY(-2px); 
 #qualify .q-link:hover{ text-decoration:underline; }
 
 /* WHY · ledger rows, not cards, with one editorial proof photo riding alongside */
-.why-grid{ display:grid; gap:48px; margin-top:64px; }
-.why-grid .ledger{ margin-top:0; }
-@media(min-width:1000px){
-  .why-grid{ grid-template-columns:7fr 5fr; gap:80px; align-items:start; }
-  .why-grid .ledger{ grid-column:1; grid-row:1; }
-  .why-grid .side-fig{ grid-column:2; grid-row:1; position:sticky; top:116px; }
-}
-.side-fig .frame{ border-radius:4px; overflow:hidden; box-shadow:var(--sh-md); }
-.side-fig img{ width:100%; height:auto; object-fit:cover; }
-@media(min-width:1000px){ .side-fig img{ aspect-ratio:4/5; } }
-.side-fig figcaption{ font-family:var(--serif); font-style:italic; color:var(--walnut); font-size:1rem; margin-top:14px; }
+/* why · one photograph, four reasons.
+   The photo breaks the text column (a width tier between .wrap and full-bleed)
+   so it reads as the section's evidence, not an illustration beside it. */
+.why-fig{ width:min(1400px, 100% - 48px); margin:clamp(44px,5.5vw,72px) auto 0; }
+@media(min-width:1024px){ .why-fig{ width:min(1400px, 100% - 80px); } }
+.why-fig .frame{ border-radius:4px; overflow:hidden; box-shadow:var(--sh-lg); }
+.why-fig img{ width:100%; height:auto; }
 
-.ledger{ margin-top:64px; border-top:1px solid var(--hairline); }
-.ledger .row{ display:grid; gap:10px 48px; padding:38px 0; border-bottom:1px solid var(--hairline); }
-@media(min-width:860px){ .ledger .row{ grid-template-columns:220px 1fr; gap:48px; } }
-.ledger .key{ font-family:var(--serif); font-style:italic; font-size:1.5rem; color:var(--walnut); line-height:1.3; }
-.ledger h3{ font-size:1.25rem; font-weight:700; letter-spacing:-.012em; margin-bottom:10px; }
-.ledger p{ color:var(--ink-72); max-width:56em; }
+.why-ledger{ display:grid; gap:0 72px; margin-top:clamp(28px,4vw,44px); }
+@media(min-width:900px){ .why-ledger{ grid-template-columns:1fr 1fr; } }
+.why-ledger .row{ padding:36px 0 40px; border-top:1px solid var(--hairline); }
+.why-ledger .key{ font-family:var(--serif); font-style:italic; font-size:1.45rem; color:var(--walnut); line-height:1.3; }
+.why-ledger h3{ font-size:1.25rem; font-weight:700; letter-spacing:-.012em; margin:10px 0; }
+.why-ledger p{ color:var(--ink-72); max-width:34em; }
+.why-ledger .evidence{ margin-top:16px; font-family:var(--serif); font-style:italic; font-size:1rem; color:var(--walnut); }
 
 /* house section: light surface, green demoted to labels */
 #house{ background:var(--mist); }
@@ -438,7 +435,7 @@ table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
 #award .art img{ object-position:center top; }
 #award .inner{ width:100%; padding-top:0; padding-bottom:clamp(40px,4.5vw,64px); }
 @media(min-width:701px){
-  #award{ aspect-ratio:1800/1208; min-height:520px; }
+  #award{ aspect-ratio:1800/1208; min-height:520px; max-width:100%; }
 }
 @media(max-width:700px){
   #award .inner{ padding-top:340px; }
@@ -652,41 +649,36 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
       Most franchises sell you a playbook. This one hands you a fifty-year brand, its factory,
       and its demand engine, then protects the ground you build on.
     </p>
-    <div class="why-grid">
-    <figure class="side-fig" data-rv>
-      <div class="frame"><img src="https://ik.imagekit.io/billiardfactory/estoris/images/C.L.%20Bailey%20Co./products/pool-tables/Adrian/Warm_Chestnut/Adrian_Lifestyle/Adrian_Hero?tr=w-1000,q-80" alt="A C.L. Bailey pool table in a family library, firelight on solid hardwood" loading="lazy" width="1000" height="1250" /></div>
-      <figcaption>The moat, made visible: one-inch slate and solid hardwood, built to be inherited.</figcaption>
-    </figure>
-    <div class="ledger">
-      <div class="row" data-rv>
+  </div>
+  <figure class="why-fig" data-rv>
+    <div class="frame"><img src="assets/why-showroom-family.jpg" alt="A family of four at the counter of a Billiard Factory showroom, beneath the green sign, with pool tables on the floor behind them" loading="lazy" width="1376" height="768" /></div>
+  </figure>
+  <div class="wrap">
+    <div class="why-ledger">
+      <div class="row" data-rv style="--rv-d:.0s">
         <p class="key">The head start</p>
-        <div>
-          <h3>Fifty years of brand equity</h3>
-          <p>Larry Stick opened the first store on Telephone Road in Houston in 1975. Half a century later, Billiard Factory is one of the nation's largest billiard and game-room furniture retailers, and the story still belongs to one family. You open with a reputation most retailers spend decades earning.</p>
-        </div>
+        <h3>Fifty years of brand equity</h3>
+        <p>Larry Stick opened the first store on Telephone Road in Houston in 1975. Half a century later, Billiard Factory is one of the nation's largest billiard and game-room furniture retailers, and the story still belongs to one family. You open with a reputation most retailers spend decades earning.</p>
+        <p class="evidence">In the frame: the sign that has meant something in Texas since 1975.</p>
       </div>
-      <div class="row" data-rv>
+      <div class="row" data-rv style="--rv-d:.07s">
         <p class="key">The moat</p>
-        <div>
-          <h3>Factory-direct margins</h3>
-          <p>Most retailers only sell. We manufacture, distribute, and retail, so there is no distributor markup between the workshop and your showroom floor. We own the house. You inherit the margin.</p>
-        </div>
+        <h3>Factory-direct margins</h3>
+        <p>Most retailers only sell. We manufacture, distribute, and retail, so there is no distributor markup between the workshop and your showroom floor. We own the house. You inherit the margin.</p>
+        <p class="evidence">In the frame: tables we built ourselves, waiting on the floor behind the counter.</p>
       </div>
-      <div class="row" data-rv>
+      <div class="row" data-rv style="--rv-d:.14s">
         <p class="key">The territory</p>
-        <div>
-          <h3>Protected, and yours alone</h3>
-          <p>Every franchise is awarded with a contractually protected, radius-based territory. No overlapping stores, and a shared-revenue model for billiardfactory.com orders inside your radius, so the national site works for you, not against you. Final radius and revenue-share terms publish with the FDD. <span class="tbd">Est · terms pending FDD</span></p>
-        </div>
+        <h3>Protected, and yours alone</h3>
+        <p>Every franchise is awarded with a contractually protected, radius-based territory. No overlapping stores, and a shared-revenue model for billiardfactory.com orders inside your radius, so the national site works for you, not against you. Final radius and revenue-share terms publish with the FDD. <span class="tbd">Est · terms pending FDD</span></p>
+        <p class="evidence">In the frame: one showroom, with no second store inside its radius.</p>
       </div>
-      <div class="row" data-rv>
+      <div class="row" data-rv style="--rv-d:.21s">
         <p class="key">The engine</p>
-        <div>
-          <h3>Demand, handled nationally</h3>
-          <p>The parent brand runs national campaigns, PR, and content. You deploy pre-built, pre-approved local creative from a dashboard, and qualified leads arrive with source attribution. You spend your time closing, not making ads.</p>
-        </div>
+        <h3>Demand, handled nationally</h3>
+        <p>The parent brand runs national campaigns, PR, and content. You deploy pre-built, pre-approved local creative from a dashboard, and qualified leads arrive with source attribution. You spend your time closing, not making ads.</p>
+        <p class="evidence">In the frame: a family that walked in already knowing the name.</p>
       </div>
-    </div>
     </div>
   </div>
 </section>
