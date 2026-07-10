@@ -391,8 +391,8 @@ table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
 .lane h3{ font-size:1.15rem; font-weight:700; letter-spacing:-.012em; margin:8px 0 8px; }
 .lane p{ font-size:.92rem; color:var(--ink-72); }
 
-/* conversion band */
-#convert{ background:var(--mist); }
+/* conversion band · cream so it reads as its own beat between the mist numbers and the award band */
+#convert{ background:var(--cream); }
 #convert .inner{ display:grid; gap:36px; padding:clamp(64px,7vw,88px) 0; }
 @media(min-width:1000px){ #convert .inner{ grid-template-columns:7fr 5fr; align-items:center; gap:80px; } }
 #convert h2{ font-family:var(--serif); font-weight:600; font-size:clamp(1.6rem,3vw,2.3rem); line-height:1.3; }
@@ -417,21 +417,26 @@ table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
 .bleed .inner{ position:relative; z-index:2; }
 .bleed .cap{ font-family:var(--serif); font-style:italic; color:var(--cream-80); font-size:1.15rem; max-width:32em; }
 
-/* day one */
-#dayone .art img{ object-position:center 8%; }
-#dayone .inner{ padding:clamp(340px,38vw,500px) 0 clamp(52px,6vw,80px); }
-#dayone h2{ font-family:var(--sans); font-weight:700; letter-spacing:-.022em; font-size:clamp(2rem,4.2vw,3.2rem); line-height:1.06; }
-#dayone .cap{ margin-top:14px; }
+/* statement bands: headline + copy carried on the image */
+#award .art img{ object-position:center 8%; }
+#award .inner{ padding:clamp(340px,38vw,500px) 0 clamp(52px,6vw,80px); }
+#award h2, #design-band h2{ font-family:var(--sans); font-weight:700; letter-spacing:-.022em; font-size:clamp(2rem,4.2vw,3.2rem); line-height:1.06; }
+#award .cap, #design-band .cap{ margin-top:16px; }
 @media(max-width:700px){
-  #dayone .inner{ padding-top:340px; }
+  #award .inner{ padding-top:340px; }
 }
 
 /* design center */
-#design-band{ margin-top:56px; }
 #design-band .art img{ object-position:center 68%; }
-#design-band .inner{ padding:clamp(260px,30vw,400px) 0 clamp(44px,5vw,64px); }
+#design-band .inner{ padding:clamp(280px,32vw,420px) 0 clamp(52px,6vw,80px); }
+#design-band .art::after{
+  background:linear-gradient(to top, rgba(18,62,45,.94) 0%, rgba(18,62,45,.55) 40%, transparent 72%);
+}
 @media(max-width:700px){
   #design-band .inner{ padding-top:300px; }
+  .bleed .art::after{
+    background:linear-gradient(to bottom, rgba(18,62,45,.25) 0%, rgba(18,62,45,.62) 45%, rgba(18,62,45,.94) 100%);
+  }
 }
 
 /* profile + support */
@@ -861,25 +866,23 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
 </section>
 
 <!-- ========================= THE SHOWROOM ========================== -->
-<section id="showroom" class="section-pad" style="padding-bottom:0;">
-  <div class="wrap">
-    <h2 class="headline" data-rv style="max-width:15em;">Nine categories. Everything the room needs.</h2>
-    <p class="lede body-copy" data-rv style="color:var(--ink-72); margin-top:24px;">
-      From tournament-grade tables to the furniture that frames the room, a Billiard Factory
-      showroom sells the whole space a family gathers in, not a single product line. Deep
-      assortment means multiple tickets per household and reasons to come back.
-    </p>
-  </div>
-  <div id="design-band" class="bleed on-dark" aria-label="The design center">
+<section id="showroom" style="border-top:none;">
+  <div id="design-band" class="bleed on-dark" aria-label="Nine categories, everything the room needs">
     <div class="art" aria-hidden="true">
       <img src="assets/design-center.jpg" alt="" loading="lazy" width="1600" height="1073" />
     </div>
     <div class="wrap inner">
-      <p class="cap" data-rv>The design center, where a room is specified, not just sold.</p>
+      <h2 data-rv>Nine categories.<br />Everything the room needs.</h2>
+      <p class="cap" data-rv>
+        From tournament-grade tables to the furniture that frames the room, a Billiard Factory
+        showroom sells the whole space a family gathers in, not a single product line. Deep
+        assortment means multiple tickets per household and reasons to come back.
+      </p>
+      <p class="cap" data-rv style="font-size:.95rem; margin-top:12px;">In the design center, a room is specified, not just sold.</p>
     </div>
   </div>
-  <div class="wrap" style="padding-bottom:clamp(88px,10vw,136px);">
-    <div class="cats" id="cat-grid"><!-- rendered from SSOT --></div>
+  <div class="wrap" style="padding-top:clamp(56px,7vw,88px); padding-bottom:clamp(88px,10vw,136px);">
+    <div class="cats" id="cat-grid" style="margin-top:0;"><!-- rendered from SSOT --></div>
   </div>
 </section>
 
@@ -968,24 +971,6 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
   </div>
 </section>
 
-<!-- =========================== PROCESS ============================= -->
-<section id="process" class="section-pad">
-  <div class="wrap">
-    <h2 class="headline" data-rv style="max-width:15em;">From first call to grand opening.</h2>
-    <div class="steps">
-      <div class="st" data-rv style="--rv-d:.0s"><p class="n">1</p><h3>Introduce yourself</h3><p>Submit the qualification form below. Your request goes straight to Ryan Stick, the owner, who responds within two business days.</p></div>
-      <div class="st" data-rv style="--rv-d:.06s"><p class="n">2</p><h3>Qualify the territory</h3><p>We review your market, your capital position, and your operating background, and confirm territory availability.</p></div>
-      <div class="st" data-rv style="--rv-d:.12s"><p class="n">3</p><h3>Review the FDD</h3><p>You receive the Franchise Disclosure Document and the confidential economics model, with time to review alongside your advisors.</p></div>
-      <div class="st" data-rv style="--rv-d:.0s"><p class="n">4</p><h3>Meet the family</h3><p>A discovery day in Houston: the factory, a flagship showroom, and the leadership team that has run this house for fifty years.</p></div>
-      <div class="st" data-rv style="--rv-d:.06s"><p class="n">5</p><h3>Sign, site, and build</h3><p>Territory agreement, site selection with our real-estate criteria, and a showroom build-out to the brand standard.</p></div>
-      <div class="st" data-rv style="--rv-d:.12s"><p class="n">6</p><h3>Train and open</h3><p>Full operations and sales training for you and your team, opening inventory staged from our distribution centers, grand-opening campaign deployed.</p></div>
-    </div>
-    <p data-rv style="margin-top:30px; font-size:.9rem; color:var(--ink-65);">
-      Stage-by-stage timing is being finalized with the development team and publishes with the FDD. <span class="tbd">Est · timing pending FDD</span>
-    </p>
-  </div>
-</section>
-
 <!-- ========================= CONVERSION BAND ======================= -->
 <section id="convert">
   <div class="wrap inner">
@@ -1006,14 +991,14 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
   </div>
 </section>
 
-<!-- ========================== DAY ONE ============================== -->
-<section id="dayone" class="bleed on-dark" aria-label="Day one as a franchise owner">
+<!-- ===================== WHO WE AWARD · BAND ======================= -->
+<section id="award" class="bleed on-dark" aria-label="Who we award territories to">
   <div class="art" aria-hidden="true">
     <img src="assets/dayone-wide.jpg" alt="" loading="lazy" width="1800" height="1208" />
   </div>
   <div class="wrap inner">
-    <h2 data-rv>Day one looks like this.</h2>
-    <p class="cap" data-rv>The keys, the sign, and fifty years of the house behind you.</p>
+    <h2 data-rv>Who we award territories to.</h2>
+    <p class="cap" data-rv>We are selective on purpose. Fifty years of reputation ride on every door we open.</p>
   </div>
 </section>
 
@@ -1022,11 +1007,8 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
   <div class="wrap">
     <div class="split" style="margin-top:0;">
       <div>
-        <h2 class="headline" data-rv>Who we award territories to.</h2>
-        <p data-rv style="margin-top:20px; color:var(--ink-72);">
-          We are selective on purpose. Fifty years of reputation ride on every door we open.
-        </p>
-        <ul class="check-list">
+        <p class="serif-label" data-rv style="color:var(--walnut);">The profiles we call first</p>
+        <ul class="check-list" style="margin-top:22px;">
           <li data-rv><span class="dot" aria-hidden="true"></span><span><strong>Multi-unit operators</strong> with proven retail or showroom leadership and the team to execute at a high standard.</span></li>
           <li data-rv><span class="dot" aria-hidden="true"></span><span><strong>Premium landlords and developers</strong> who control destination retail space and want a category-anchor tenant they own.</span></li>
           <li data-rv><span class="dot" aria-hidden="true"></span><span><strong>Owner-operators</strong> who will be in the building, know their community, and sell the way a family business sells.</span></li>
@@ -1045,6 +1027,24 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- =========================== PROCESS ============================= -->
+<section id="process" class="section-pad">
+  <div class="wrap">
+    <h2 class="headline" data-rv style="max-width:15em;">From first call to grand opening.</h2>
+    <div class="steps">
+      <div class="st" data-rv style="--rv-d:.0s"><p class="n">1</p><h3>Introduce yourself</h3><p>Submit the qualification form below. Your request goes straight to Ryan Stick, the owner, who responds within two business days.</p></div>
+      <div class="st" data-rv style="--rv-d:.06s"><p class="n">2</p><h3>Qualify the territory</h3><p>We review your market, your capital position, and your operating background, and confirm territory availability.</p></div>
+      <div class="st" data-rv style="--rv-d:.12s"><p class="n">3</p><h3>Review the FDD</h3><p>You receive the Franchise Disclosure Document and the confidential economics model, with time to review alongside your advisors.</p></div>
+      <div class="st" data-rv style="--rv-d:.0s"><p class="n">4</p><h3>Meet the family</h3><p>A discovery day in Houston: the factory, a flagship showroom, and the leadership team that has run this house for fifty years.</p></div>
+      <div class="st" data-rv style="--rv-d:.06s"><p class="n">5</p><h3>Sign, site, and build</h3><p>Territory agreement, site selection with our real-estate criteria, and a showroom build-out to the brand standard.</p></div>
+      <div class="st" data-rv style="--rv-d:.12s"><p class="n">6</p><h3>Train and open</h3><p>Full operations and sales training for you and your team, opening inventory staged from our distribution centers, grand-opening campaign deployed.</p></div>
+    </div>
+    <p data-rv style="margin-top:30px; font-size:.9rem; color:var(--ink-65);">
+      Stage-by-stage timing is being finalized with the development team and publishes with the FDD. <span class="tbd">Est · timing pending FDD</span>
+    </p>
   </div>
 </section>
 
@@ -1223,7 +1223,7 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
     </div>
     <figure class="territory-fig territory-wide" data-rv>
       <div class="frame"><img src="assets/territory-aerial.jpg" alt="Aerial view of a Billiard Factory showroom anchoring a retail development, the surrounding market stretching to the horizon" loading="lazy" width="1600" height="900" /></div>
-      <figcaption>A protected radius, drawn around your door.</figcaption>
+      <figcaption>Day one looks like this: your sign on the building, a protected radius drawn around your door, and fifty years of the house behind you.</figcaption>
     </figure>
   </div>
 </section>
