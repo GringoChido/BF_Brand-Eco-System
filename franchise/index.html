@@ -306,7 +306,19 @@ nav.top .links a.cta:hover{ background:var(--pine); transform:translateY(-2px); 
 #qualify .q-link{ margin-left:auto; font-size:.85rem; font-weight:600; color:var(--forest); text-decoration:none; }
 #qualify .q-link:hover{ text-decoration:underline; }
 
-/* WHY · ledger rows, not cards */
+/* WHY · ledger rows, not cards, with one editorial proof photo riding alongside */
+.why-grid{ display:grid; gap:48px; margin-top:64px; }
+.why-grid .ledger{ margin-top:0; }
+@media(min-width:1000px){
+  .why-grid{ grid-template-columns:7fr 5fr; gap:80px; align-items:start; }
+  .why-grid .ledger{ grid-column:1; grid-row:1; }
+  .why-grid .side-fig{ grid-column:2; grid-row:1; position:sticky; top:116px; }
+}
+.side-fig .frame{ border-radius:4px; overflow:hidden; box-shadow:var(--sh-md); }
+.side-fig img{ width:100%; height:auto; object-fit:cover; }
+@media(min-width:1000px){ .side-fig img{ aspect-ratio:4/5; } }
+.side-fig figcaption{ font-family:var(--serif); font-style:italic; color:var(--walnut); font-size:1rem; margin-top:14px; }
+
 .ledger{ margin-top:64px; border-top:1px solid var(--hairline); }
 .ledger .row{ display:grid; gap:10px 48px; padding:38px 0; border-bottom:1px solid var(--hairline); }
 @media(min-width:860px){ .ledger .row{ grid-template-columns:220px 1fr; gap:48px; } }
@@ -391,8 +403,8 @@ table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
 .lane h3{ font-size:1.15rem; font-weight:700; letter-spacing:-.012em; margin:8px 0 8px; }
 .lane p{ font-size:.92rem; color:var(--ink-72); }
 
-/* conversion band · cream so it reads as its own beat between the mist numbers and the award band */
-#convert{ background:var(--cream); }
+/* conversion band · mist so it reads as its own beat between the cream process and story sections */
+#convert{ background:var(--mist); }
 #convert .inner{ display:grid; gap:36px; padding-block:clamp(64px,7vw,88px); }
 @media(min-width:1000px){ #convert .inner{ grid-template-columns:7fr 5fr; align-items:center; gap:80px; } }
 #convert h2{ font-family:var(--serif); font-weight:600; font-size:clamp(1.6rem,3vw,2.3rem); line-height:1.3; }
@@ -640,6 +652,11 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
       Most franchises sell you a playbook. This one hands you a fifty-year brand, its factory,
       and its demand engine, then protects the ground you build on.
     </p>
+    <div class="why-grid">
+    <figure class="side-fig" data-rv>
+      <div class="frame"><img src="https://ik.imagekit.io/billiardfactory/estoris/images/C.L.%20Bailey%20Co./products/pool-tables/Adrian/Warm_Chestnut/Adrian_Lifestyle/Adrian_Hero?tr=w-1000,q-80" alt="A C.L. Bailey pool table in a family library, firelight on solid hardwood" loading="lazy" width="1000" height="1250" /></div>
+      <figcaption>The moat, made visible: one-inch slate and solid hardwood, built to be inherited.</figcaption>
+    </figure>
     <div class="ledger">
       <div class="row" data-rv>
         <p class="key">The head start</p>
@@ -669,6 +686,7 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
           <p>The parent brand runs national campaigns, PR, and content. You deploy pre-built, pre-approved local creative from a dashboard, and qualified leads arrive with source attribution. You spend your time closing, not making ads.</p>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -901,7 +919,11 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
       designers and builders specifying for clients, and commercial buyers furnishing whole spaces
       at once. Each one opens a different lane of revenue.
     </p>
-    <div class="lanes">
+    <figure class="territory-fig" data-rv style="margin-top:44px;">
+      <div class="frame"><img src="https://ik.imagekit.io/billiardfactory/estoris/images/C.L.%20Bailey%20Co./products/game-tables/Warm_Chestnut/LB_Game_Table_WC_Lifestyle/_A_photorealistic_three-plane__Nano_Banana_2_37756_6XxJVA5EY.jpg?tr=w-1600,q-80" alt="A game table and leather chairs in the foreground, a pool table under its light behind, a bar cart at the window: one room, one order" loading="lazy" width="1600" height="1073" /></div>
+      <figcaption>One delivery, many tickets: the pool table, the game table, the seating, the lighting, and the service calls that come back for decades.</figcaption>
+    </figure>
+    <div class="lanes" style="margin-top:32px;">
       <div class="lane" data-rv style="--rv-d:.0s">
         <p class="tag">The anchor</p>
         <h3>Big-ticket retail</h3>
@@ -977,26 +999,6 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
   </div>
 </section>
 
-<!-- ========================= CONVERSION BAND ======================= -->
-<section id="convert">
-  <div class="wrap inner">
-    <div data-rv>
-      <h2>Already run a billiards or game-room store?</h2>
-      <p>
-        We have brought independent stores into the house before. <span class="proof">Seven Billiards
-        &amp; Barstools locations became Billiard Factory stores in 2007</span>, and that move carried
-        the brand into Dallas–Fort Worth. If you own a game-room, billiards, or specialty furniture
-        business, a conversion may be the fastest path into the franchise, and ownership considers
-        independent operators among the best first partners: your local reputation, our brand,
-        factory, and demand engine. Conversion terms publish with the FDD.
-      </p>
-    </div>
-    <div data-rv style="justify-self:start;">
-      <a href="#apply" class="btn btn-primary">Ask about conversions <span class="arr" aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== WHO WE AWARD · BAND ======================= -->
 <section id="award" class="bleed on-dark" aria-label="Who we award territories to">
   <div class="art" aria-hidden="true">
@@ -1051,6 +1053,26 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
     <p data-rv style="margin-top:30px; font-size:.9rem; color:var(--ink-65);">
       Stage-by-stage timing is being finalized with the development team and publishes with the FDD. <span class="tbd">Est · timing pending FDD</span>
     </p>
+  </div>
+</section>
+
+<!-- ========================= CONVERSION BAND ======================= -->
+<section id="convert">
+  <div class="wrap inner">
+    <div data-rv>
+      <h2>Already run a billiards or game-room store?</h2>
+      <p>
+        We have brought independent stores into the house before. <span class="proof">Seven Billiards
+        &amp; Barstools locations became Billiard Factory stores in 2007</span>, and that move carried
+        the brand into Dallas–Fort Worth. If you own a game-room, billiards, or specialty furniture
+        business, a conversion may be the fastest path into the franchise, and ownership considers
+        independent operators among the best first partners: your local reputation, our brand,
+        factory, and demand engine. Conversion terms publish with the FDD.
+      </p>
+    </div>
+    <div data-rv style="justify-self:start;">
+      <a href="#apply" class="btn btn-primary">Ask about conversions <span class="arr" aria-hidden="true">→</span></a>
+    </div>
   </div>
 </section>
 
