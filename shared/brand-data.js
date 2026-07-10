@@ -2,8 +2,8 @@
 window.BF_DATA = {
   "meta": {
     "ecosystem": "Billiard Factory · Living HTML Ecosystem",
-    "version": "4.0.0",
-    "lastUpdated": "2026-06-28",
+    "version": "4.2.0",
+    "lastUpdated": "2026-07-09",
     "sourceOfTruth": "Site A · Creative & Brand Hub",
     "consumedBy": [
       "Site A · Creative Hub",
@@ -212,6 +212,11 @@ window.BF_DATA = {
         "stack": "'Vollkorn', Georgia, serif",
         "role": "Editorial body, pull quotes",
         "note": "Warm reading serif for story and long-form."
+      },
+      "mono": {
+        "stack": "'Fragment Mono', ui-monospace, Menlo, Consolas, monospace",
+        "role": "Data, specs, and labels",
+        "note": "The spec-sheet voice, a monospaced companion drawn from Helvetica's skeleton. Carries hex values, measurements, economics figures, kickers, and status flags. One weight, used sparingly."
       }
     },
     "scale": [
@@ -268,6 +273,15 @@ window.BF_DATA = {
         "family": "sans",
         "weight": 700,
         "tracking": "0.18em"
+      },
+      {
+        "name": "Spec",
+        "use": "Data, figures, flags",
+        "specimen": "1\" diamond-honed slate · #185F43 · $485K to $785K",
+        "size": "0.85rem",
+        "family": "mono",
+        "weight": 400,
+        "tracking": "0.01em"
       }
     ]
   },
@@ -534,7 +548,7 @@ window.BF_DATA = {
       "established": "1975",
       "tagline": "America's game room since 1975.",
       "swatch": "forest",
-      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/Billiard%20Factory/2100908-0019.jpg?updatedAt=1733760860756",
+      "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-billiard-factory.jpg",
       "copy": [
         "The parent brand and the house line, Challenger shuffleboards, air hockey, foosball, and multi-game tables built to Billiard Factory's own spec.",
         "Fifty years of retail taught us exactly what a family room needs. Now we build it ourselves, factory-direct, with no markup in between."
@@ -547,7 +561,7 @@ window.BF_DATA = {
       "established": "Heritage line",
       "tagline": "Built for homes that endure.",
       "swatch": "walnut",
-      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/C.L.%20Bailey%20Co./products/pool-tables/Addison/Black/addison_vJxW01dqd.jpg?updatedAt=1777486018875",
+      "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-cl-bailey.jpg",
       "copy": [
         "Solid-hardwood game-room furniture on one-inch diamond-honed slate, finished by hand and engineered to be re-leveled, restored, and inherited.",
         "The Skylar, Tunbridge, and Viking collections turn a pool table into furniture first and a game table second."
@@ -560,7 +574,7 @@ window.BF_DATA = {
       "established": "Owned brand",
       "tagline": "Tournament-grade, tailored to the room.",
       "swatch": "green",
-      "image": "",
+      "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-level-best.jpg",
       "copy": [
         "The performance line, tournament-grade cues balanced to competition tolerances and custom-fit covers cut to each table's exact silhouette.",
         "Built in our own factory, so the professional standard carries no luxury tax."
@@ -573,7 +587,7 @@ window.BF_DATA = {
       "established": "Owned brand",
       "tagline": "Architecture you can play on.",
       "swatch": "charcoal",
-      "image": "",
+      "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-velocity.jpg",
       "copy": [
         "The contemporary line, sleek, low, and engineered for modern, minimalist interiors where the table reads as built-in cabinetry, not recreation.",
         "Designed for the loft and the glass-walled great room: a table that holds the sight line instead of interrupting it."
@@ -586,7 +600,7 @@ window.BF_DATA = {
       "established": "Owned brand",
       "tagline": "Commissioned, not configured.",
       "swatch": "walnutLight",
-      "image": "",
+      "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-golden-west.jpg",
       "copy": [
         "The atelier at the top of the house, high-end custom artisanal wood, hand-selected hardwoods and bespoke inlay drawn to a single residence.",
         "The bench where vertical integration becomes visible: a one-of-one object only possible because the factory and the design house share a roof."

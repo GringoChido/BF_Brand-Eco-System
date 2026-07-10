@@ -1,89 +1,350 @@
 {
   "meta": {
     "ecosystem": "Billiard Factory · Living HTML Ecosystem",
-    "version": "4.0.0",
-    "lastUpdated": "2026-06-28",
+    "version": "4.2.0",
+    "lastUpdated": "2026-07-09",
     "sourceOfTruth": "Site A · Creative & Brand Hub",
-    "consumedBy": ["Site A · Creative Hub", "Site B · Franchise Recruitment"],
+    "consumedBy": [
+      "Site A · Creative Hub",
+      "Site B · Franchise Recruitment"
+    ],
     "tagline": "America's game room since 1975.",
     "pivotLine": "From the family game room to the curated social home.",
     "positioning": "Billiard Factory has spent fifty years as one of the nation's largest billiard and game-room furniture retailers. We own manufacturing, we carry the best brands in the category, and we sell through our own showrooms: a vertically integrated house now curating the modern social home."
   },
-
   "brandFoundations": {
     "purpose": "Enabling families and friends to share priceless time together, one game room at a time.",
     "mission": "Since 1975, our mission has been simple: enable families and friends to share priceless time together, one game room at a time. We aren't in the furniture business; we're in the business of the time that turns out to be priceless.",
     "promise": "We work hard to earn your business: the highest-quality game rooms and the kind of top-notch service that comes from a family-owned house that's done this for fifty years.",
     "essence": "Priceless time together.",
     "values": [
-      { "name": "Family Focus", "body": "We respect the family unit as the cornerstone of social and moral development, and we champion family-based recreation for the stronger bonds it builds between people." },
-      { "name": "Customer Commitment", "body": "Our pledge: we work hard to earn your business, striving to give every customer the highest-quality products and top-notch service." },
-      { "name": "Community Support", "body": "When our communities call on us, we answer, giving time, resources, and support, and intertwining compassion with integrity in every endeavor." },
-      { "name": "Employee Care", "body": "Our people are the heartbeat of our success. We want every workday to end in the satisfaction of effort well spent." }
+      {
+        "name": "Family Focus",
+        "body": "We respect the family unit as the cornerstone of social and moral development, and we champion family-based recreation for the stronger bonds it builds between people."
+      },
+      {
+        "name": "Customer Commitment",
+        "body": "Our pledge: we work hard to earn your business, striving to give every customer the highest-quality products and top-notch service."
+      },
+      {
+        "name": "Community Support",
+        "body": "When our communities call on us, we answer, giving time, resources, and support, and intertwining compassion with integrity in every endeavor."
+      },
+      {
+        "name": "Employee Care",
+        "body": "Our people are the heartbeat of our success. We want every workday to end in the satisfaction of effort well spent."
+      }
     ],
     "persona": {
       "name": "The Host",
       "body": "Thirty-five to sixty, building a home they intend to keep and fill with people. They see a game room as where the family actually spends time: birthdays, snow days, the long Friday night. They want quality that lasts and a room the whole family is drawn to, at a price that reads as value, not luxury tax.",
-      "speaksTo": ["Families furnishing a great room or finished basement", "Designers and builders specifying for clients", "Multi-unit operators and premium landlords (franchise)"]
+      "speaksTo": [
+        "Families furnishing a great room or finished basement",
+        "Designers and builders specifying for clients",
+        "Multi-unit operators and premium landlords (franchise)"
+      ]
     }
   },
-
   "tokens": {
     "color": {
-      "forest":      { "value": "#185F43", "name": "Heritage Green", "role": "Primary brand colour, since 1975", "onLight": false, "rgb": "24, 95, 67",   "cmyk": "75, 0, 29, 63" },
-      "forestDeep":  { "value": "#123E2D", "name": "Pine",           "role": "Deep surfaces, footers",          "onLight": false, "rgb": "18, 62, 45",   "cmyk": "71, 0, 28, 76" },
-      "green":       { "value": "#218C62", "name": "Field Green",    "role": "Secondary green, prices on photo","onLight": false, "rgb": "33, 140, 98",  "cmyk": "77, 0, 30, 45" },
-      "sage":        { "value": "#91AEA3", "name": "Sage",           "role": "Muted green, supporting text",     "onLight": false, "rgb": "145, 174, 163","cmyk": "17, 0, 6, 32" },
-      "mint":        { "value": "#EAEEEC", "name": "Mist",           "role": "Pale background tint",             "onLight": true,  "rgb": "234, 238, 236","cmyk": "2, 0, 1, 7" },
-      "cream":       { "value": "#FAF8F3", "name": "Cream",          "role": "Warm paper surface",               "onLight": true,  "rgb": "250, 248, 243","cmyk": "0, 1, 3, 2" },
-      "orange":      { "value": "#F0560C", "name": "Signal Orange",  "role": "Accent, calls to action",          "onLight": false, "rgb": "240, 86, 12",  "cmyk": "0, 64, 95, 6" },
-      "walnut":      { "value": "#6E5039", "name": "Walnut",         "role": "Wood warmth from photography",      "onLight": false, "rgb": "110, 80, 57",  "cmyk": "0, 27, 48, 57" },
-      "charcoal":    { "value": "#1F2421", "name": "Ink",            "role": "Body text, dark surfaces",         "onLight": false, "rgb": "31, 36, 33",   "cmyk": "13, 0, 9, 86" },
-
-      "charcoalDeep":{ "value": "#122019", "name": "Pine Black",     "role": "Legacy key · Site B dark",         "onLight": false },
-      "walnutLight": { "value": "#8C6B4F", "name": "Walnut Light",   "role": "Legacy key",                       "onLight": false },
-      "linen":       { "value": "#EAEEEC", "name": "Mist",           "role": "Legacy key · Site B background",    "onLight": true },
-      "linenSoft":   { "value": "#FAF8F3", "name": "Cream",          "role": "Legacy key · Site B card",         "onLight": true },
-      "brass":       { "value": "#B0894F", "name": "Brass",          "role": "Legacy key · warm metal accent",   "onLight": false },
-      "heritageGreen":{ "value": "#185F43","name": "Heritage Green", "role": "Legacy key · provenance",          "onLight": false },
-      "signalOrange":{ "value": "#F0560C", "name": "Signal Orange",  "role": "Legacy key · urgent CTA",          "onLight": false },
-      "ink":         { "value": "#1F2421", "name": "Ink",            "role": "Legacy key · reading text",        "onLight": true },
-      "mist":        { "value": "#7C8F86", "name": "Sage Gray",      "role": "Legacy key · captions",            "onLight": true }
+      "forest": {
+        "value": "#185F43",
+        "name": "Heritage Green",
+        "role": "Primary brand colour, since 1975",
+        "onLight": false,
+        "rgb": "24, 95, 67",
+        "cmyk": "75, 0, 29, 63"
+      },
+      "forestDeep": {
+        "value": "#123E2D",
+        "name": "Pine",
+        "role": "Deep surfaces, footers",
+        "onLight": false,
+        "rgb": "18, 62, 45",
+        "cmyk": "71, 0, 28, 76"
+      },
+      "green": {
+        "value": "#218C62",
+        "name": "Field Green",
+        "role": "Secondary green, prices on photo",
+        "onLight": false,
+        "rgb": "33, 140, 98",
+        "cmyk": "77, 0, 30, 45"
+      },
+      "sage": {
+        "value": "#91AEA3",
+        "name": "Sage",
+        "role": "Muted green, supporting text",
+        "onLight": false,
+        "rgb": "145, 174, 163",
+        "cmyk": "17, 0, 6, 32"
+      },
+      "mint": {
+        "value": "#EAEEEC",
+        "name": "Mist",
+        "role": "Pale background tint",
+        "onLight": true,
+        "rgb": "234, 238, 236",
+        "cmyk": "2, 0, 1, 7"
+      },
+      "cream": {
+        "value": "#FAF8F3",
+        "name": "Cream",
+        "role": "Warm paper surface",
+        "onLight": true,
+        "rgb": "250, 248, 243",
+        "cmyk": "0, 1, 3, 2"
+      },
+      "orange": {
+        "value": "#F0560C",
+        "name": "Signal Orange",
+        "role": "Accent, calls to action",
+        "onLight": false,
+        "rgb": "240, 86, 12",
+        "cmyk": "0, 64, 95, 6"
+      },
+      "walnut": {
+        "value": "#6E5039",
+        "name": "Walnut",
+        "role": "Wood warmth from photography",
+        "onLight": false,
+        "rgb": "110, 80, 57",
+        "cmyk": "0, 27, 48, 57"
+      },
+      "charcoal": {
+        "value": "#1F2421",
+        "name": "Ink",
+        "role": "Body text, dark surfaces",
+        "onLight": false,
+        "rgb": "31, 36, 33",
+        "cmyk": "13, 0, 9, 86"
+      },
+      "charcoalDeep": {
+        "value": "#122019",
+        "name": "Pine Black",
+        "role": "Legacy key · Site B dark",
+        "onLight": false
+      },
+      "walnutLight": {
+        "value": "#8C6B4F",
+        "name": "Walnut Light",
+        "role": "Legacy key",
+        "onLight": false
+      },
+      "linen": {
+        "value": "#EAEEEC",
+        "name": "Mist",
+        "role": "Legacy key · Site B background",
+        "onLight": true
+      },
+      "linenSoft": {
+        "value": "#FAF8F3",
+        "name": "Cream",
+        "role": "Legacy key · Site B card",
+        "onLight": true
+      },
+      "brass": {
+        "value": "#B0894F",
+        "name": "Brass",
+        "role": "Legacy key · warm metal accent",
+        "onLight": false
+      },
+      "heritageGreen": {
+        "value": "#185F43",
+        "name": "Heritage Green",
+        "role": "Legacy key · provenance",
+        "onLight": false
+      },
+      "signalOrange": {
+        "value": "#F0560C",
+        "name": "Signal Orange",
+        "role": "Legacy key · urgent CTA",
+        "onLight": false
+      },
+      "ink": {
+        "value": "#1F2421",
+        "name": "Ink",
+        "role": "Legacy key · reading text",
+        "onLight": true
+      },
+      "mist": {
+        "value": "#7C8F86",
+        "name": "Sage Gray",
+        "role": "Legacy key · captions",
+        "onLight": true
+      }
     },
     "proportionLaw": "Cream & Mist 60 · Heritage Green + photography 30 · Walnut + Orange 10. Orange never exceeds 5%. It earns attention by being rare.",
     "proportion": [
-      { "label": "Surface", "share": 60, "note": "Cream & Mist, paper, breathing room, the gallery wall.", "swatch": "cream" },
-      { "label": "Brand", "share": 30, "note": "Heritage Green & photography, the colour that carries the story.", "swatch": "forest" },
-      { "label": "Warmth", "share": 7, "note": "Walnut, wood tones pulled from the product itself.", "swatch": "walnut" },
-      { "label": "Signal", "share": 3, "note": "Orange, calls to action only. Rare on purpose.", "swatch": "orange" }
+      {
+        "label": "Surface",
+        "share": 60,
+        "note": "Cream & Mist, paper, breathing room, the gallery wall.",
+        "swatch": "cream"
+      },
+      {
+        "label": "Brand",
+        "share": 30,
+        "note": "Heritage Green & photography, the colour that carries the story.",
+        "swatch": "forest"
+      },
+      {
+        "label": "Warmth",
+        "share": 7,
+        "note": "Walnut, wood tones pulled from the product itself.",
+        "swatch": "walnut"
+      },
+      {
+        "label": "Signal",
+        "share": 3,
+        "note": "Orange, calls to action only. Rare on purpose.",
+        "swatch": "orange"
+      }
     ],
     "type": {
-      "sans": { "stack": "'Helvetica Neue', Helvetica, Arial, sans-serif", "role": "Headlines, subheads, UI", "note": "The brand face. Heavy (85) for headlines at -30 tracking; Light (45) for subheads." },
-      "serif":{ "stack": "'Vollkorn', Georgia, serif", "role": "Editorial body, pull quotes", "note": "Warm reading serif for story and long-form." }
+      "sans": {
+        "stack": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "role": "Headlines, subheads, UI",
+        "note": "The brand face. Heavy (85) for headlines at -30 tracking; Light (45) for subheads."
+      },
+      "serif": {
+        "stack": "'Vollkorn', Georgia, serif",
+        "role": "Editorial body, pull quotes",
+        "note": "Warm reading serif for story and long-form."
+      },
+      "mono": {
+        "stack": "'Fragment Mono', ui-monospace, Menlo, Consolas, monospace",
+        "role": "Data, specs, and labels",
+        "note": "The spec-sheet voice, a monospaced companion drawn from Helvetica's skeleton. Carries hex values, measurements, economics figures, kickers, and status flags. One weight, used sparingly."
+      }
     },
     "scale": [
-      { "name": "Display", "use": "Hero statements", "specimen": "America's game room", "size": "clamp(2.75rem, 6vw, 5rem)", "family": "sans", "weight": 700, "tracking": "-0.03em" },
-      { "name": "Headline", "use": "Section titles", "specimen": "Fifty years in the making", "size": "clamp(1.9rem, 4vw, 3rem)", "family": "sans", "weight": 700, "tracking": "-0.022em" },
-      { "name": "Subhead", "use": "Card titles, leads", "specimen": "We make it. We curate it. We sell it.", "size": "1.35rem", "family": "sans", "weight": 500, "tracking": "-0.01em" },
-      { "name": "Editorial", "use": "Pull quotes, story", "specimen": "The room where a family gathers.", "size": "1.5rem", "family": "serif", "weight": 500, "tracking": "0" },
-      { "name": "Body", "use": "Reading copy", "specimen": "Solid-hardwood game-room furniture, finished by hand and engineered to be inherited.", "size": "1rem", "family": "sans", "weight": 400, "tracking": "0" },
-      { "name": "Eyebrow", "use": "Labels, kickers", "specimen": "BRAND HUB · SINCE 1975", "size": "0.72rem", "family": "sans", "weight": 700, "tracking": "0.18em" }
+      {
+        "name": "Display",
+        "use": "Hero statements",
+        "specimen": "America's game room",
+        "size": "clamp(2.75rem, 6vw, 5rem)",
+        "family": "sans",
+        "weight": 700,
+        "tracking": "-0.03em"
+      },
+      {
+        "name": "Headline",
+        "use": "Section titles",
+        "specimen": "Fifty years in the making",
+        "size": "clamp(1.9rem, 4vw, 3rem)",
+        "family": "sans",
+        "weight": 700,
+        "tracking": "-0.022em"
+      },
+      {
+        "name": "Subhead",
+        "use": "Card titles, leads",
+        "specimen": "We make it. We curate it. We sell it.",
+        "size": "1.35rem",
+        "family": "sans",
+        "weight": 500,
+        "tracking": "-0.01em"
+      },
+      {
+        "name": "Editorial",
+        "use": "Pull quotes, story",
+        "specimen": "The room where a family gathers.",
+        "size": "1.5rem",
+        "family": "serif",
+        "weight": 500,
+        "tracking": "0"
+      },
+      {
+        "name": "Body",
+        "use": "Reading copy",
+        "specimen": "Solid-hardwood game-room furniture, finished by hand and engineered to be inherited.",
+        "size": "1rem",
+        "family": "sans",
+        "weight": 400,
+        "tracking": "0"
+      },
+      {
+        "name": "Eyebrow",
+        "use": "Labels, kickers",
+        "specimen": "BRAND HUB · SINCE 1975",
+        "size": "0.72rem",
+        "family": "sans",
+        "weight": 700,
+        "tracking": "0.18em"
+      },
+      {
+        "name": "Spec",
+        "use": "Data, figures, flags",
+        "specimen": "1\" diamond-honed slate · #185F43 · $485K to $785K",
+        "size": "0.85rem",
+        "family": "mono",
+        "weight": 400,
+        "tracking": "0.01em"
+      }
     ]
   },
-
   "logo": {
     "primary": "bf-logo-full-black",
     "clearSpace": "Keep clear space equal to the height of the cube mark on all four sides. Nothing (type, photo edge, or another logo) enters that zone.",
     "minSize": "Full lockup: 32px tall on screen, 0.5in in print. Simple mark: 20px / 0.25in. Below that, use the simple mark.",
     "variations": [
-      { "id": "bf-logo-full-black",        "name": "Full lockup · black",        "use": "Default. Light backgrounds: Cream, Mist, white.", "file": "../assets/logos/bf-logo-full-black.png",        "bg": "light" },
-      { "id": "bf-logo-full-white",        "name": "Full lockup · white",        "use": "Reversed. Heritage Green, Pine, photography.",     "file": "../assets/logos/bf-logo-full-white.png",        "bg": "dark"  },
-      { "id": "bf-logo-simple-black",      "name": "Simple mark · black",        "use": "Tight spaces, favicons, nav on light.",            "file": "../assets/logos/bf-logo-simple-black.png",      "bg": "light" },
-      { "id": "bf-logo-simple-white",      "name": "Simple mark · white",        "use": "Tight spaces, nav on dark.",                       "file": "../assets/logos/bf-logo-simple-white.png",      "bg": "dark"  },
-      { "id": "bf-since1975-bar-black",    "name": "Since-1975 bar · black",     "use": "Provenance lockup, horizontal, on light.",         "file": "../assets/logos/bf-since1975-bar-black.png",    "bg": "light" },
-      { "id": "bf-since1975-bar-white",    "name": "Since-1975 bar · white",     "use": "Provenance lockup, horizontal, on dark.",          "file": "../assets/logos/bf-since1975-bar-white.png",    "bg": "dark"  },
-      { "id": "bf-since1975-stories-black","name": "Since-1975 stamp · black",   "use": "Storytelling, editorial seals, on light.",         "file": "../assets/logos/bf-since1975-stories-black.png","bg": "light" },
-      { "id": "bf-since1975-stories-white","name": "Since-1975 stamp · white",   "use": "Storytelling seals, on dark.",                     "file": "../assets/logos/bf-since1975-stories-white.png","bg": "dark"  }
+      {
+        "id": "bf-logo-full-black",
+        "name": "Full lockup · black",
+        "use": "Default. Light backgrounds: Cream, Mist, white.",
+        "file": "../assets/logos/bf-logo-full-black.png",
+        "bg": "light"
+      },
+      {
+        "id": "bf-logo-full-white",
+        "name": "Full lockup · white",
+        "use": "Reversed. Heritage Green, Pine, photography.",
+        "file": "../assets/logos/bf-logo-full-white.png",
+        "bg": "dark"
+      },
+      {
+        "id": "bf-logo-simple-black",
+        "name": "Simple mark · black",
+        "use": "Tight spaces, favicons, nav on light.",
+        "file": "../assets/logos/bf-logo-simple-black.png",
+        "bg": "light"
+      },
+      {
+        "id": "bf-logo-simple-white",
+        "name": "Simple mark · white",
+        "use": "Tight spaces, nav on dark.",
+        "file": "../assets/logos/bf-logo-simple-white.png",
+        "bg": "dark"
+      },
+      {
+        "id": "bf-since1975-bar-black",
+        "name": "Since-1975 bar · black",
+        "use": "Provenance lockup, horizontal, on light.",
+        "file": "../assets/logos/bf-since1975-bar-black.png",
+        "bg": "light"
+      },
+      {
+        "id": "bf-since1975-bar-white",
+        "name": "Since-1975 bar · white",
+        "use": "Provenance lockup, horizontal, on dark.",
+        "file": "../assets/logos/bf-since1975-bar-white.png",
+        "bg": "dark"
+      },
+      {
+        "id": "bf-since1975-stories-black",
+        "name": "Since-1975 stamp · black",
+        "use": "Storytelling, editorial seals, on light.",
+        "file": "../assets/logos/bf-since1975-stories-black.png",
+        "bg": "light"
+      },
+      {
+        "id": "bf-since1975-stories-white",
+        "name": "Since-1975 stamp · white",
+        "use": "Storytelling seals, on dark.",
+        "file": "../assets/logos/bf-since1975-stories-white.png",
+        "bg": "dark"
+      }
     ],
     "misuse": [
       "Don't stretch, condense, or skew the lockup, scale proportionally only.",
@@ -94,14 +355,25 @@
       "Don't crowd the clear-space zone with text or graphics."
     ]
   },
-
   "voice": {
     "summary": "Warm, confident, family-rooted, never stuffy. We sell the room a family gathers in, not a unit on a warehouse floor.",
     "principles": [
-      { "name": "Family-rooted, not corporate", "body": "Speak like a maker who knows the customer's name. Plain, warm, specific. Never sound like a press release." },
-      { "name": "Confident, never boastful", "body": "Fifty years and owned manufacturing let us state facts plainly. Show the proof, skip the hype." },
-      { "name": "Concrete over clever", "body": "Name the slate, the hardwood, the tolerance. Specifics earn trust; adjectives don't." },
-      { "name": "Earn the accent", "body": "One exclamation point, ever. Orange and urgency are rare on purpose. Restraint reads as premium." }
+      {
+        "name": "Family-rooted, not corporate",
+        "body": "Speak like a maker who knows the customer's name. Plain, warm, specific. Never sound like a press release."
+      },
+      {
+        "name": "Confident, never boastful",
+        "body": "Fifty years and owned manufacturing let us state facts plainly. Show the proof, skip the hype."
+      },
+      {
+        "name": "Concrete over clever",
+        "body": "Name the slate, the hardwood, the tolerance. Specifics earn trust; adjectives don't."
+      },
+      {
+        "name": "Earn the accent",
+        "body": "One exclamation point, ever. Orange and urgency are rare on purpose. Restraint reads as premium."
+      }
     ],
     "mechanics": [
       "Oxford comma, always.",
@@ -110,14 +382,41 @@
       "Say \"game room\", never \"man cave.\"",
       "If a claim isn't supported, ask or omit it."
     ],
-    "banList": ["delve", "elevate", "seamless", "game-changer", "in today's fast-paced world", "look no further", "nestled", "boasts", "robust", "synergy", "man cave", "game room toys", "cheap", "clearance", "unit"],
+    "banList": [
+      "delve",
+      "elevate",
+      "seamless",
+      "game-changer",
+      "in today's fast-paced world",
+      "look no further",
+      "nestled",
+      "boasts",
+      "robust",
+      "synergy",
+      "man cave",
+      "game room toys",
+      "cheap",
+      "clearance",
+      "unit"
+    ],
     "beforeAfter": [
-      { "context": "Product intro", "before": "Look no further, our robust, game-changing tables boast premium quality!", "after": "One-inch diamond-honed slate, solid hardwood, finished by hand. Built to be re-leveled, restored, and inherited." },
-      { "context": "Brand line", "before": "Nestled in today's fast-paced world, we elevate your man cave experience.", "after": "Fifty years of building the room a family gathers in. Made, curated, and sold under one roof." },
-      { "context": "Offer", "before": "Don't miss our seamless clearance event on game room units!", "after": "Our spring great-room event is on. Factory-direct pricing on the tables that anchor the room." }
+      {
+        "context": "Product intro",
+        "before": "Look no further, our robust, game-changing tables boast premium quality!",
+        "after": "One-inch diamond-honed slate, solid hardwood, finished by hand. Built to be re-leveled, restored, and inherited."
+      },
+      {
+        "context": "Brand line",
+        "before": "Nestled in today's fast-paced world, we elevate your man cave experience.",
+        "after": "Fifty years of building the room a family gathers in. Made, curated, and sold under one roof."
+      },
+      {
+        "context": "Offer",
+        "before": "Don't miss our seamless clearance event on game room units!",
+        "after": "Our spring great-room event is on. Factory-direct pricing on the tables that anchor the room."
+      }
     ]
   },
-
   "imagery": {
     "direction": "Warm, lived-in, architectural. The room reads as a place a family actually gathers, natural light, real materials, the product framed as furniture first. Wood grain and felt are the textures; green and walnut are the tones.",
     "do": [
@@ -134,7 +433,6 @@
     ],
     "negativePrompt": "--no cold studio strobe, white seamless background, clinical catalog cutout, oversaturated showroom lighting, man-cave neon, plastic finish, warped perspective, cartoon, CGI sheen"
   },
-
   "history": {
     "founded": "1975",
     "founder": "Larry Stick",
@@ -142,122 +440,290 @@
     "today": "One of the nation's largest billiard and game-room furniture retailers: 13 showrooms, multiple distribution centers, still family-owned.",
     "anniversary": "2025 marked 50 years.",
     "timeline": [
-      { "year": "1975", "title": "One store, four people", "body": "Larry Stick opens the first Billiard Factory on Telephone Road in Houston, a single showroom built on the belief that a game room is where a family gathers." },
-      { "year": "1980s", "title": "Out of Houston", "body": "Rapid growth adds stores across the Houston suburbs, then the first locations beyond Texas, Scottsdale, Arizona and San Antonio." },
-      { "year": "2007", "title": "Into Dallas–Fort Worth", "body": "The acquisition of seven Billiards & Barstools stores carries the brand into the DFW metroplex, growth through both building and buying." },
-      { "year": "2010s", "title": "The second generation", "body": "Stewardship passes to the Stick family's second generation, Tony and Ryan, committed to one of the widest, deepest product lines in the industry." },
-      { "year": "2020s", "title": "One owner, one vision", "body": "Ryan Stick assumes full ownership and begins integrating manufacturing, distribution, and retail into a single vertically integrated house." },
-      { "year": "2025", "title": "Fifty years", "body": "A half-century in, Billiard Factory turns from the family game room toward the curated social home, recreation, elevated to curation." }
+      {
+        "year": "1975",
+        "title": "One store, four people",
+        "body": "Larry Stick opens the first Billiard Factory on Telephone Road in Houston, a single showroom built on the belief that a game room is where a family gathers."
+      },
+      {
+        "year": "1980s",
+        "title": "Out of Houston",
+        "body": "Rapid growth adds stores across the Houston suburbs, then the first locations beyond Texas, Scottsdale, Arizona and San Antonio."
+      },
+      {
+        "year": "2007",
+        "title": "Into Dallas–Fort Worth",
+        "body": "The acquisition of seven Billiards & Barstools stores carries the brand into the DFW metroplex, growth through both building and buying."
+      },
+      {
+        "year": "2010s",
+        "title": "The second generation",
+        "body": "Stewardship passes to the Stick family's second generation, Tony and Ryan, committed to one of the widest, deepest product lines in the industry."
+      },
+      {
+        "year": "2020s",
+        "title": "One owner, one vision",
+        "body": "Ryan Stick assumes full ownership and begins integrating manufacturing, distribution, and retail into a single vertically integrated house."
+      },
+      {
+        "year": "2025",
+        "title": "Fifty years",
+        "body": "A half-century in, Billiard Factory turns from the family game room toward the curated social home, recreation, elevated to curation."
+      }
     ]
   },
-
   "productRange": {
     "intro": "Nine categories, one of the deepest assortments in the country, from tournament-grade tables to the furniture that frames the room.",
     "categories": [
-      { "name": "Pool Tables",        "blurb": "Masterpiece, dining, tournament, modern, rustic, plus nine signature collections.", "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/1_9M3q8uGCda.png?tr=f-auto,q-80,w-700&updatedAt=1777038592533" },
-      { "name": "Shuffleboard",       "blurb": "Solid-hardwood playfields from 9 to 22 feet, indoor and outdoor.", "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/2_s9pq4YqKhe.png?tr=f-auto,q-80,w-700&updatedAt=1777038592588" },
-      { "name": "Game Tables",        "blurb": "Multi-game sets and convertible dining tops that work for game night and dinner.", "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/3_JaTcIuTt7.png?tr=f-auto,q-80,w-700&updatedAt=1777038592602" },
-      { "name": "Cues & Cases",       "blurb": "McDermott, Lucasi, Players and more, plus cases, chalk, and storage.", "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/4_koQQFEuZN.png?tr=f-auto,q-80,w-700&updatedAt=1777038592599" },
-      { "name": "Air Hockey",         "blurb": "Commercial-grade rails and blowers for true competitive play.", "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/5_y7EeqLQhyh.png?tr=f-auto,q-80,w-700&updatedAt=1777038592607" },
-      { "name": "Foosball",           "blurb": "From the Tornado tournament standard to family-room favorites.", "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/6__2F6aT7UGG.png?tr=f-auto,q-80,w-700&updatedAt=1777038592570" },
-      { "name": "Ping Pong",          "blurb": "Indoor and outdoor table tennis, tournament to backyard.", "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/8_z0dGqjtu2a.png?tr=f-auto,q-80,w-700&updatedAt=1777038592590" },
-      { "name": "Arcade & Pinball",   "blurb": "Pinball machines, arcade cabinets, and golf, the full game room.", "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/11_xFq-qXqZlO.png?tr=f-auto,q-80,w-700&updatedAt=1777038592573" },
-      { "name": "Furniture",          "blurb": "Bar stools, pub tables, theater seating, and the Himalayan Collection.", "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/10_jVpXzyhPGm.png?tr=f-auto,q-80,w-700&updatedAt=1777038592567" }
+      {
+        "name": "Pool Tables",
+        "blurb": "Masterpiece, dining, tournament, modern, rustic, plus nine signature collections.",
+        "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/1_9M3q8uGCda.png?tr=f-auto,q-80,w-700&updatedAt=1777038592533"
+      },
+      {
+        "name": "Shuffleboard",
+        "blurb": "Solid-hardwood playfields from 9 to 22 feet, indoor and outdoor.",
+        "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/2_s9pq4YqKhe.png?tr=f-auto,q-80,w-700&updatedAt=1777038592588"
+      },
+      {
+        "name": "Game Tables",
+        "blurb": "Multi-game sets and convertible dining tops that work for game night and dinner.",
+        "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/3_JaTcIuTt7.png?tr=f-auto,q-80,w-700&updatedAt=1777038592602"
+      },
+      {
+        "name": "Cues & Cases",
+        "blurb": "McDermott, Lucasi, Players and more, plus cases, chalk, and storage.",
+        "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/4_koQQFEuZN.png?tr=f-auto,q-80,w-700&updatedAt=1777038592599"
+      },
+      {
+        "name": "Air Hockey",
+        "blurb": "Commercial-grade rails and blowers for true competitive play.",
+        "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/5_y7EeqLQhyh.png?tr=f-auto,q-80,w-700&updatedAt=1777038592607"
+      },
+      {
+        "name": "Foosball",
+        "blurb": "From the Tornado tournament standard to family-room favorites.",
+        "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/6__2F6aT7UGG.png?tr=f-auto,q-80,w-700&updatedAt=1777038592570"
+      },
+      {
+        "name": "Ping Pong",
+        "blurb": "Indoor and outdoor table tennis, tournament to backyard.",
+        "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/8_z0dGqjtu2a.png?tr=f-auto,q-80,w-700&updatedAt=1777038592590"
+      },
+      {
+        "name": "Arcade & Pinball",
+        "blurb": "Pinball machines, arcade cabinets, and golf, the full game room.",
+        "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/11_xFq-qXqZlO.png?tr=f-auto,q-80,w-700&updatedAt=1777038592573"
+      },
+      {
+        "name": "Furniture",
+        "blurb": "Bar stools, pub tables, theater seating, and the Himalayan Collection.",
+        "image": "https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/10_jVpXzyhPGm.png?tr=f-auto,q-80,w-700&updatedAt=1777038592567"
+      }
     ]
   },
-
   "verticalIntegration": {
     "thesis": "Most retailers only sell. Billiard Factory manufactures, distributes, and retails, so there is no middleman between the workshop and your room.",
     "layers": [
-      { "label": "We Make", "body": "Owned brands engineered and finished in-house, protected margins, tournament tolerances, and a standard no reseller can match." },
-      { "label": "We Curate", "body": "The best manufacturers in the category, carried under one roof and one standard, distribution power that fills the showroom." },
-      { "label": "We Sell", "body": "Thirteen showrooms and a national e-commerce store, and we own the relationship from the factory floor to the family room." }
+      {
+        "label": "We Make",
+        "body": "Owned brands engineered and finished in-house, protected margins, tournament tolerances, and a standard no reseller can match."
+      },
+      {
+        "label": "We Curate",
+        "body": "The best manufacturers in the category, carried under one roof and one standard, distribution power that fills the showroom."
+      },
+      {
+        "label": "We Sell",
+        "body": "Thirteen showrooms and a national e-commerce store, and we own the relationship from the factory floor to the family room."
+      }
     ]
   },
-
   "ownedBrands": [
     {
-      "id": "billiard-factory", "name": "Billiard Factory", "tier": "Hero Parent Brand", "established": "1975",
-      "tagline": "America's game room since 1975.", "swatch": "forest",
-      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/Billiard%20Factory/2100908-0019.jpg?updatedAt=1733760860756",
+      "id": "billiard-factory",
+      "name": "Billiard Factory",
+      "tier": "Hero Parent Brand",
+      "established": "1975",
+      "tagline": "America's game room since 1975.",
+      "swatch": "forest",
+      "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-billiard-factory.jpg",
       "copy": [
         "The parent brand and the house line, Challenger shuffleboards, air hockey, foosball, and multi-game tables built to Billiard Factory's own spec.",
         "Fifty years of retail taught us exactly what a family room needs. Now we build it ourselves, factory-direct, with no markup in between."
       ]
     },
     {
-      "id": "cl-bailey", "name": "C.L. Bailey", "tier": "Owned · Heritage Furniture", "established": "Heritage line",
-      "tagline": "Built for homes that endure.", "swatch": "walnut",
-      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/C.L.%20Bailey%20Co./products/pool-tables/Addison/Black/addison_vJxW01dqd.jpg?updatedAt=1777486018875",
+      "id": "cl-bailey",
+      "name": "C.L. Bailey",
+      "tier": "Owned · Heritage Furniture",
+      "established": "Heritage line",
+      "tagline": "Built for homes that endure.",
+      "swatch": "walnut",
+      "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-cl-bailey.jpg",
       "copy": [
         "Solid-hardwood game-room furniture on one-inch diamond-honed slate, finished by hand and engineered to be re-leveled, restored, and inherited.",
         "The Skylar, Tunbridge, and Viking collections turn a pool table into furniture first and a game table second."
       ]
     },
     {
-      "id": "level-best", "name": "Level Best", "tier": "Owned · Accessories & Tournament Goods", "established": "Owned brand",
-      "tagline": "Tournament-grade, tailored to the room.", "swatch": "green",
-      "image": "",
+      "id": "level-best",
+      "name": "Level Best",
+      "tier": "Owned · Accessories & Tournament Goods",
+      "established": "Owned brand",
+      "tagline": "Tournament-grade, tailored to the room.",
+      "swatch": "green",
+      "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-level-best.jpg",
       "copy": [
         "The performance line, tournament-grade cues balanced to competition tolerances and custom-fit covers cut to each table's exact silhouette.",
         "Built in our own factory, so the professional standard carries no luxury tax."
       ]
     },
     {
-      "id": "velocity", "name": "Velocity", "tier": "Owned · Contemporary Tables", "established": "Owned brand",
-      "tagline": "Architecture you can play on.", "swatch": "charcoal",
-      "image": "",
+      "id": "velocity",
+      "name": "Velocity",
+      "tier": "Owned · Contemporary Tables",
+      "established": "Owned brand",
+      "tagline": "Architecture you can play on.",
+      "swatch": "charcoal",
+      "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-velocity.jpg",
       "copy": [
         "The contemporary line, sleek, low, and engineered for modern, minimalist interiors where the table reads as built-in cabinetry, not recreation.",
         "Designed for the loft and the glass-walled great room: a table that holds the sight line instead of interrupting it."
       ]
     },
     {
-      "id": "golden-west", "name": "Golden West", "tier": "Owned · Custom Artisanal Wood", "established": "Owned brand",
-      "tagline": "Commissioned, not configured.", "swatch": "walnutLight",
-      "image": "",
+      "id": "golden-west",
+      "name": "Golden West",
+      "tier": "Owned · Custom Artisanal Wood",
+      "established": "Owned brand",
+      "tagline": "Commissioned, not configured.",
+      "swatch": "walnutLight",
+      "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-golden-west.jpg",
       "copy": [
         "The atelier at the top of the house, high-end custom artisanal wood, hand-selected hardwoods and bespoke inlay drawn to a single residence.",
         "The bench where vertical integration becomes visible: a one-of-one object only possible because the factory and the design house share a roof."
       ]
     }
   ],
-
   "partnerBrands": [
-    { "id": "mali-cloth",      "name": "Mali Cloth",      "category": "Performance Playing Surfaces", "note": "Worsted tournament cloth, the felt under the game." },
-    { "id": "brunswick",       "name": "Brunswick",       "category": "Iconic Heritage Tables",       "note": "The most storied name in billiards, carried under one roof." },
-    { "id": "california-west", "name": "California West",  "category": "Designer Game Furniture",      "note": "Coastal-contemporary tables and furnishings." },
-    { "id": "rhino-cues",      "name": "Rhino Cues",      "category": "Precision Cues & Hardware",     "note": "Specialist cue line rounding out the wall." }
+    {
+      "id": "mali-cloth",
+      "name": "Mali Cloth",
+      "category": "Performance Playing Surfaces",
+      "note": "Worsted tournament cloth, the felt under the game."
+    },
+    {
+      "id": "brunswick",
+      "name": "Brunswick",
+      "category": "Iconic Heritage Tables",
+      "note": "The most storied name in billiards, carried under one roof."
+    },
+    {
+      "id": "california-west",
+      "name": "California West",
+      "category": "Designer Game Furniture",
+      "note": "Coastal-contemporary tables and furnishings."
+    },
+    {
+      "id": "rhino-cues",
+      "name": "Rhino Cues",
+      "category": "Precision Cues & Hardware",
+      "note": "Specialist cue line rounding out the wall."
+    }
   ],
-
   "carriedBrands": [
-    { "name": "C.L. Bailey",       "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-cl-bailey_63fl8rQh0.jpg?tr=f-auto,q-80,w-500&updatedAt=1758577237024" },
-    { "name": "Brunswick",         "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-brunswick.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573341" },
-    { "name": "Olhausen",          "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-olhausen.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573277" },
-    { "name": "Plank & Hide",      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-plank-hide.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573239" },
-    { "name": "Presidential",      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-presidential.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573119" },
-    { "name": "American Heritage", "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-american-heritage.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573179" },
-    { "name": "True Billiards",    "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-true-billiards.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573275" },
-    { "name": "McDermott",         "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-mcdermott.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573528" }
+    {
+      "name": "C.L. Bailey",
+      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-cl-bailey_63fl8rQh0.jpg?tr=f-auto,q-80,w-500&updatedAt=1758577237024"
+    },
+    {
+      "name": "Brunswick",
+      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-brunswick.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573341"
+    },
+    {
+      "name": "Olhausen",
+      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-olhausen.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573277"
+    },
+    {
+      "name": "Plank & Hide",
+      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-plank-hide.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573239"
+    },
+    {
+      "name": "Presidential",
+      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-presidential.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573119"
+    },
+    {
+      "name": "American Heritage",
+      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-american-heritage.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573179"
+    },
+    {
+      "name": "True Billiards",
+      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-true-billiards.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573275"
+    },
+    {
+      "name": "McDermott",
+      "image": "https://ik.imagekit.io/billiardfactory/estoris/images/categories/brand-mcdermott.jpg?tr=f-auto,q-80,w-500&updatedAt=1744144573528"
+    }
   ],
-
   "moatPillars": [
-    { "stat": "1975", "unit": "the founding",          "label": "Fifty years of game-room expertise, a brand story that sells itself." },
-    { "stat": "13",   "unit": "showrooms",             "label": "A real retail footprint plus national e-commerce and distribution centers." },
-    { "stat": "0",    "unit": "middlemen",             "label": "Owned manufacturing, factory-direct from the bench to the room." },
-    { "stat": "100%", "unit": "territory exclusivity", "label": "Protected operating territory for every qualified operator." }
+    {
+      "stat": "1975",
+      "unit": "the founding",
+      "label": "Fifty years of game-room expertise, a brand story that sells itself."
+    },
+    {
+      "stat": "13",
+      "unit": "showrooms",
+      "label": "A real retail footprint plus national e-commerce and distribution centers."
+    },
+    {
+      "stat": "0",
+      "unit": "middlemen",
+      "label": "Owned manufacturing, factory-direct from the bench to the room."
+    },
+    {
+      "stat": "100%",
+      "unit": "territory exclusivity",
+      "label": "Protected operating territory for every qualified operator."
+    }
   ],
-
   "demandEngineSteps": [
-    { "step": "01", "title": "National Awareness, Handled", "body": "The parent brand runs national campaigns, PR, and content. Demand arrives at your territory pre-warmed." },
-    { "step": "02", "title": "One-Click Local Deployment", "body": "Open the dashboard, choose a pre-built campaign, set your radius. Localized creative renders against the live brand tokens." },
-    { "step": "03", "title": "Zero Creative Overhead", "body": "Every asset is pre-approved and updated centrally. When the brand evolves, your local assets re-skin themselves." },
-    { "step": "04", "title": "Attributed Leads, Routed", "body": "Qualified leads flow into your CRM with source attribution. You spend your time closing, not making creative." }
+    {
+      "step": "01",
+      "title": "National Awareness, Handled",
+      "body": "The parent brand runs national campaigns, PR, and content. Demand arrives at your territory pre-warmed."
+    },
+    {
+      "step": "02",
+      "title": "One-Click Local Deployment",
+      "body": "Open the dashboard, choose a pre-built campaign, set your radius. Localized creative renders against the live brand tokens."
+    },
+    {
+      "step": "03",
+      "title": "Zero Creative Overhead",
+      "body": "Every asset is pre-approved and updated centrally. When the brand evolves, your local assets re-skin themselves."
+    },
+    {
+      "step": "04",
+      "title": "Attributed Leads, Routed",
+      "body": "Qualified leads flow into your CRM with source attribution. You spend your time closing, not making creative."
+    }
   ],
-
   "aiOps": {
     "systemPrompt": "You are the copywriter for Billiard Factory, America's game room since 1975 and a vertically integrated house of game-room brands. Voice: warm, confident, family-rooted, never stuffy. We sell the room a family gathers in. Facts: founded 1975 by Larry Stick in Houston; 13 showrooms; family-owned; owned brands (Billiard Factory, C.L. Bailey, Level Best, Velocity, Golden West) plus the best carried brands (Brunswick, Olhausen, Presidential, and more). Mechanics: Oxford comma always; max one exclamation point; spell one–nine, figures for 10+ and all prices. Banned: man cave, game room toys, cheap, clearance, unit. If a claim isn't supported, ask or omit.",
-    "banList": ["delve", "elevate", "seamless", "game-changer", "in today's fast-paced world", "look no further", "nestled", "boasts", "robust", "synergy"],
+    "banList": [
+      "delve",
+      "elevate",
+      "seamless",
+      "game-changer",
+      "in today's fast-paced world",
+      "look no further",
+      "nestled",
+      "boasts",
+      "robust",
+      "synergy"
+    ],
     "negativePrompt": "--no cold studio strobe, white seamless background, clinical catalog cutout, oversaturated showroom lighting, man-cave neon, plastic finish, warped perspective, cartoon, CGI sheen"
   }
 }

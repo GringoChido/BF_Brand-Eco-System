@@ -26,7 +26,17 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Shared SSOT: cached briefly and CORS-open so satellite sites
+# (e.g. the franchise page on bfspringdashboard) can fetch live tokens.
 [[headers]]
   for = "/shared/*"
   [headers.values]
     Cache-Control = "public, max-age=300"
+    Access-Control-Allow-Origin = "*"
+
+# Logos consumed by satellite sites.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Access-Control-Allow-Origin = "*"
