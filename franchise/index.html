@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Franchise Opportunities · Billiard Factory · America's Game Room Since 1975</title>
+<meta name="description" content="Become a Billiard Factory franchise partner. Fifty years of game-room retail, owned manufacturing, protected territories, and a turnkey demand engine. Request the Franchise Disclosure Document." />
+
+<!-- Canonical + social cards -->
+<link rel="canonical" href="https://billiard-factory-brand-hub.netlify.app/franchise/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Billiard Factory Franchising" />
+<meta property="og:title" content="Own the room where families gather · Billiard Factory Franchise" />
+<meta property="og:description" content="Fifty years of game-room retail, owned manufacturing, protected territories, and a turnkey demand engine. Request the Franchise Disclosure Document." />
+<meta property="og:url" content="https://billiard-factory-brand-hub.netlify.app/franchise/" />
+<meta property="og:image" content="https://billiard-factory-brand-hub.netlify.app/franchise/assets/og-card.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Own the room where families gather · Billiard Factory Franchise" />
+<meta name="twitter:description" content="Fifty years of game-room retail, owned manufacturing, protected territories, and a turnkey demand engine." />
+<meta name="twitter:image" content="https://billiard-factory-brand-hub.netlify.app/franchise/assets/og-card.jpg" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+<!-- FONTS · Vollkorn (editorial serif) · Fragment Mono (data & specs) · Helvetica Neue carried by the system stack -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet" />
+
+<!-- ANALYTICS · gated: set GA4_ID to your measurement ID ('G-XXXXXXXXXX') to activate. No ID, no tag, no requests. -->
+<script>
+window.GA4_ID = '';
+window.track = function(){ if(window.gtag) window.gtag.apply(null, arguments); };
+if (window.GA4_ID) {
+  var gs = document.createElement('script');
+  gs.async = true; gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA4_ID;
+  document.head.appendChild(gs);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  gtag('js', new Date()); gtag('config', window.GA4_ID);
+}
+</script>
+<link rel="preload" as="image" href="assets/hero-golden.jpg" fetchpriority="high" />
+
+<script>/* motion gate: no JS, no hidden content, ever */document.documentElement.classList.add('js-anim');</script>
+
+<style>
+/* =====================================================================
+   BILLIARD FACTORY · FRANCHISE RECRUITMENT · v4 brand system
+   Impeccable pass: contrast ≥ AA, one deliberate kicker, earned motion,
+   full interaction states, reduced-motion respected throughout.
+   Tokens fall back inline; the live SSOT from the Creative Hub
+   overwrites them on load when reachable.
+   ===================================================================== */
+:root{
+  --forest:#185F43;   /* Heritage Green  */
+  --pine:#123E2D;     /* Deep surfaces   */
+  --field:#218C62;    /* Secondary green */
+  --sage:#91AEA3;     /* Muted on pine only (5.0:1); labels on forest need cream */
+  --mist:#EAEEEC;     /* Pale surface    */
+  --cream:#FAF8F3;    /* Warm paper      */
+  --orange:#F0560C;   /* CTA only, rare  */
+  --walnut:#6E5039;   /* Wood warmth     */
+  --ink:#1F2421;      /* Body text       */
+
+  /* verified text ramps (WCAG AA on their surfaces) */
+  --ink-72:rgba(31,36,33,.72);      /* 5.6:1 on cream  */
+  --ink-65:rgba(31,36,33,.65);      /* 4.85:1 on cream, small notes */
+  --cream-80:rgba(250,248,243,.8);  /* 5.2:1 on forest */
+  --cream-75:rgba(250,248,243,.75); /* 7.1:1 on pine   */
+
+  --sans:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --serif:'Vollkorn', Georgia, serif;
+  --mono:'Fragment Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  --sh-sm:0 2px 6px -2px rgba(18,62,45,.14), 0 6px 14px -6px rgba(18,62,45,.10);
+  --sh-md:0 10px 24px -14px rgba(18,62,45,.24), 0 24px 48px -30px rgba(18,62,45,.20);
+  --sh-lg:0 18px 40px -20px rgba(18,62,45,.30), 0 40px 80px -44px rgba(18,62,45,.28);
+
+  --hairline:rgba(31,36,33,.14);
+  --hairline-dark:rgba(250,248,243,.16);
+  --max:1200px;
+
+  --ease-out:cubic-bezier(.19,1,.22,1); /* expo-out */
+  --z-nav:600; --z-skip:700; --z-grain:900;
+}
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family:var(--sans); background:var(--cream); color:var(--ink);
+  font-size:1rem; line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+::selection{ background:var(--forest); color:var(--cream); }
+img{ display:block; max-width:100%; }
+a{ color:inherit; }
+h1,h2,h3{ text-wrap:balance; }
+p{ text-wrap:pretty; }
+
+/* keyboard focus: never removed, always visible */
+:focus-visible{ outline:2px solid var(--field); outline-offset:3px; border-radius:2px; }
+.on-dark :focus-visible, .on-dark:focus-visible{ outline-color:var(--cream); }
+
+/* skip link */
+.skip{
+  position:fixed; top:10px; left:10px; z-index:var(--z-skip);
+  background:var(--pine); color:var(--cream); padding:12px 20px; border-radius:2px;
+  font-size:.9rem; font-weight:500; text-decoration:none;
+  transform:translateY(-200%); transition:transform .2s var(--ease-out);
+}
+.skip:focus-visible{ transform:none; }
+
+/* paper grain on every surface */
+.grain{
+  position:fixed; inset:0; z-index:var(--z-grain); pointer-events:none; opacity:.05; mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+/* felt vignette for dark green panels */
+.felt{ position:relative; }
+.felt::before{
+  content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
+  background:radial-gradient(120% 85% at 20% 0%, rgba(33,140,98,.16), transparent 55%);
+}
+.felt > *{ position:relative; z-index:1; }
+
+/* type system */
+.kicker{
+  font-family:var(--mono); font-size:.72rem; font-weight:400;
+  letter-spacing:.14em; text-transform:uppercase;
+}
+.display{
+  font-family:var(--sans); font-weight:700; letter-spacing:-.03em;
+  font-size:clamp(2.75rem,6vw,5rem); line-height:1.02;
+}
+.headline{
+  font-family:var(--sans); font-weight:700; letter-spacing:-.022em;
+  font-size:clamp(1.9rem,4vw,3rem); line-height:1.08;
+}
+.subhead{ font-family:var(--sans); font-weight:500; letter-spacing:-.01em; font-size:1.35rem; }
+.lede{ font-family:var(--serif); font-size:1.28rem; line-height:1.6; }
+.serif-label{ font-family:var(--serif); font-style:italic; font-size:1.15rem; }
+.body-copy{ max-width:42em; }
+
+/* layout */
+.wrap{ max-width:var(--max); margin:0 auto; padding:0 24px; }
+@media(min-width:1024px){ .wrap{ padding:0 40px; } }
+section{ border-top:1px solid var(--hairline); }
+/* padding-block only: never clobber .wrap's horizontal gutters on combined elements */
+.section-pad{ padding-block:clamp(88px,10vw,136px); }
+
+/* buttons · Signal Orange earns attention by being rare.
+   Primary label is 1.17rem/700 = WCAG large text (3.28:1 ≥ 3:1 on orange). */
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--sans); font-size:1.05rem; font-weight:600; letter-spacing:-.005em;
+  text-decoration:none; padding:16px 32px; border-radius:2px; cursor:pointer;
+  border:1px solid transparent; min-height:56px;
+  transition:transform .25s var(--ease-out), box-shadow .25s var(--ease-out), background .25s;
+}
+.btn .arr{ transition:transform .25s var(--ease-out); }
+.btn:hover .arr{ transform:translateX(4px); }
+.btn:active{ transform:translateY(0) scale(.99); }
+.btn-primary{ background:var(--orange); color:var(--cream); font-size:1.17rem; font-weight:700; box-shadow:var(--sh-sm); }
+.btn-primary:hover{ transform:translateY(-3px); box-shadow:var(--sh-md); }
+.btn-primary:focus-visible{ outline-color:var(--pine); }
+.btn-ghost-dark{ background:transparent; color:var(--cream); border-color:var(--hairline-dark); }
+.btn-ghost-dark:hover{ transform:translateY(-3px); border-color:var(--cream); }
+.btn-forest{ background:var(--forest); color:var(--cream); box-shadow:var(--sh-sm); }
+.btn-forest:hover{ transform:translateY(-3px); background:var(--pine); box-shadow:var(--sh-md); }
+
+/* [TBD] flag */
+.tbd{
+  display:inline-block; font-family:var(--mono); font-size:.68rem; font-weight:400;
+  letter-spacing:.06em; color:var(--walnut); background:rgba(110,80,57,.10);
+  border:1px dashed rgba(110,80,57,.45); border-radius:2px; padding:2px 9px;
+  white-space:nowrap;
+}
+.tbd-dark{ color:var(--mist); background:rgba(234,238,236,.08); border-color:rgba(234,238,236,.4); }
+
+/* draft ribbon */
+#draftbar{
+  background:var(--walnut); color:var(--cream); font-size:.82rem;
+  text-align:center; padding:10px 16px; letter-spacing:.02em;
+}
+#draftbar strong{ letter-spacing:.12em; text-transform:uppercase; font-size:.72rem; }
+
+/* nav */
+nav.top{
+  position:sticky; top:0; z-index:var(--z-nav); background:rgba(250,248,243,.92);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--hairline);
+}
+nav.top .row{ display:flex; align-items:center; justify-content:space-between; gap:16px; height:76px; }
+nav.top .logo{ display:inline-flex; align-items:center; min-height:44px; }
+nav.top .logo img{ height:34px; width:auto; }
+nav.top .links{ display:flex; gap:8px; align-items:center; }
+nav.top .links a.tx{
+  display:none; font-size:.88rem; font-weight:500; text-decoration:none;
+  color:var(--ink-72); padding:12px 12px; border-radius:2px; transition:color .2s;
+}
+nav.top .links a.tx:hover{ color:var(--forest); }
+nav.top .links a.cta{
+  display:inline-flex; align-items:center; min-height:44px;
+  background:var(--forest); color:var(--cream); padding:0 22px; border-radius:2px;
+  font-size:.85rem; font-weight:600; text-decoration:none; transition:background .2s, transform .25s var(--ease-out);
+}
+nav.top .links a.cta:hover{ background:var(--pine); transform:translateY(-2px); }
+@media(min-width:1000px){ nav.top .links a.tx{ display:inline-flex; } nav.top .links{ gap:14px; } }
+
+/* mobile menu */
+.menu-btn{
+  display:inline-flex; align-items:center; gap:9px; min-height:44px;
+  background:none; border:1px solid var(--hairline); border-radius:2px; padding:0 14px;
+  font-family:var(--sans); font-size:.8rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--ink); cursor:pointer;
+}
+.menu-btn .bars{ position:relative; width:16px; height:11px; display:inline-block; }
+.menu-btn .bars::before, .menu-btn .bars::after, .menu-btn .bars span{
+  content:""; position:absolute; left:0; right:0; height:2px; background:var(--ink); border-radius:2px;
+  transition:transform .25s var(--ease-out), opacity .2s;
+}
+.menu-btn .bars::before{ top:0; } .menu-btn .bars span{ top:50%; transform:translateY(-50%); } .menu-btn .bars::after{ bottom:0; }
+.menu-btn[aria-expanded="true"] .bars::before{ transform:translateY(4.5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] .bars span{ opacity:0; }
+.menu-btn[aria-expanded="true"] .bars::after{ transform:translateY(-4.5px) rotate(-45deg); }
+@media(min-width:1000px){ .menu-btn{ display:none; } }
+@media(max-width:560px){
+  nav.top .logo img{ height:26px; }
+  nav.top .links{ gap:8px; }
+  nav.top .links a.cta{ padding:0 14px; font-size:.78rem; }
+  .menu-btn{ padding:0 12px; }
+  .menu-btn .txt{ display:none; }
+}
+.mobile-menu{
+  display:none; position:absolute; left:0; right:0; top:100%;
+  background:var(--cream); border-bottom:1px solid var(--hairline); box-shadow:var(--sh-md);
+  padding:6px 24px 18px;
+}
+.mobile-menu.open{ display:block; }
+.mobile-menu a{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:15px 2px; border-bottom:1px solid var(--hairline);
+  font-size:1rem; font-weight:500; color:var(--ink); text-decoration:none; letter-spacing:-.01em;
+}
+.mobile-menu a:last-of-type{ border-bottom:none; }
+@media(min-width:1000px){ .mobile-menu{ display:none !important; } }
+
+/* hero */
+#hero{ border-top:none; background:var(--pine); color:var(--cream); position:relative; overflow:hidden; }
+#hero .art{ position:absolute; inset:0; }
+#hero .art img{ width:100%; height:100%; object-fit:cover; object-position:center 38%; opacity:.92; }
+#hero .art::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(97deg, rgba(18,62,45,.92) 16%, rgba(18,62,45,.55) 52%, rgba(18,62,45,.08) 84%),
+             linear-gradient(to top, rgba(18,62,45,.55) 0%, rgba(18,62,45,.15) 34%, transparent 55%);
+}
+#hero .inner{ position:relative; z-index:2; padding:clamp(240px,24vw,340px) 0 clamp(70px,8vw,96px); }
+@media(max-width:700px){
+  #hero .art img{ object-position:center 30%; }
+  #hero .art::after{
+    background:linear-gradient(to bottom, rgba(18,62,45,.45) 0%, rgba(18,62,45,.8) 38%, rgba(18,62,45,.93) 100%);
+  }
+  #hero .inner{ padding-top:250px; }
+}
+#hero .sub{ color:var(--cream-75); font-size:1.15rem; line-height:1.7; max-width:36em; margin-top:28px; }
+#hero .provenance{ margin-top:56px; }
+#hero .provenance img{ height:40px; width:auto; opacity:.9; }
+
+/* hero load choreography: additive only, reduced-motion exempt */
+@media (prefers-reduced-motion: no-preference){
+  html.js-anim #hero [data-hero]{ opacity:0; transform:translateY(18px); animation:rise .9s var(--ease-out) forwards; }
+  html.js-anim #hero [data-hero="1"]{ animation-delay:.05s }
+  html.js-anim #hero [data-hero="2"]{ animation-delay:.15s }
+  html.js-anim #hero [data-hero="3"]{ animation-delay:.3s }
+  html.js-anim #hero [data-hero="4"]{ animation-delay:.45s }
+  html.js-anim #hero [data-hero="5"]{ animation-delay:.6s }
+  html.js-anim #hero .art img{ transform:scale(1.05); animation:settle 1.6s var(--ease-out) forwards; }
+}
+@keyframes rise{ to{ opacity:1; transform:none; } }
+@keyframes settle{ to{ transform:none; } }
+
+/* scroll reveals: content is visible by default; js + motion-ok adds the offset */
+@media (prefers-reduced-motion: no-preference){
+  html.js-anim [data-rv]:not(.in){ opacity:0; transform:translateY(16px); }
+  html.js-anim [data-rv]{ transition:opacity .7s var(--ease-out), transform .7s var(--ease-out); transition-delay:var(--rv-d,0s); }
+}
+
+/* stat strip: the brass-plaque band */
+.stats{ background:var(--forest); color:var(--cream); }
+.stats .grid{ display:grid; grid-template-columns:repeat(2,1fr); }
+@media(min-width:900px){ .stats .grid{ grid-template-columns:repeat(5,1fr); } }
+.stats .cell{ padding:36px 26px; border-left:1px solid var(--hairline-dark); }
+.stats .cell:first-child{ border-left:none; }
+@media(max-width:899px){ .stats .cell:nth-child(odd){ border-left:none; } .stats .cell{ border-top:1px solid var(--hairline-dark); } .stats .cell:nth-child(-n+2){ border-top:none; } }
+.stats .num{ font-family:var(--serif); font-weight:600; font-size:2.5rem; line-height:1; }
+.stats .lbl{ color:var(--cream-80); font-size:.85rem; margin-top:8px; }
+
+/* qualification strip */
+#qualify{ background:var(--mist); border-top:1px solid var(--hairline); }
+#qualify .q-row{ display:flex; flex-wrap:wrap; align-items:center; gap:12px 36px; padding:18px 24px; }
+@media(min-width:1024px){ #qualify .q-row{ padding:18px 40px; } }
+#qualify .q-item{ font-size:.9rem; color:var(--ink-72); }
+#qualify .q-item strong{ font-family:var(--mono); font-weight:400; font-size:.86rem; color:var(--ink); letter-spacing:-.02em; }
+#qualify .q-link{ margin-left:auto; font-size:.85rem; font-weight:600; color:var(--forest); text-decoration:none; }
+#qualify .q-link:hover{ text-decoration:underline; }
+
+/* WHY · ledger rows, not cards */
+.ledger{ margin-top:64px; border-top:1px solid var(--hairline); }
+.ledger .row{ display:grid; gap:10px 48px; padding:38px 0; border-bottom:1px solid var(--hairline); }
+@media(min-width:860px){ .ledger .row{ grid-template-columns:220px 1fr; gap:48px; } }
+.ledger .key{ font-family:var(--serif); font-style:italic; font-size:1.5rem; color:var(--walnut); line-height:1.3; }
+.ledger h3{ font-size:1.25rem; font-weight:700; letter-spacing:-.012em; margin-bottom:10px; }
+.ledger p{ color:var(--ink-72); max-width:56em; }
+
+/* house section: light surface, green demoted to labels */
+#house{ background:var(--mist); }
+#house .lede, #house p{ line-height:1.7; }
+.layers{ display:grid; gap:1px; background:var(--hairline); border:1px solid var(--hairline); border-radius:4px; overflow:hidden; margin-top:56px; }
+@media(min-width:900px){ .layers{ grid-template-columns:repeat(3,1fr); } }
+.layers .layer{ background:var(--cream); padding:38px 32px 42px; }
+.layers .layer .lab{ font-family:var(--serif); font-style:italic; font-size:1.6rem; color:var(--forest); }
+.layers .layer p{ color:var(--ink-72); font-size:.95rem; margin-top:14px; }
+
+.roster-label{ font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--walnut); margin-top:84px; }
+
+.owned{ display:grid; gap:22px; margin-top:30px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+@media(min-width:1140px){ .owned{ grid-template-columns:repeat(5,1fr); gap:18px; } .owned .brand .bd{ padding:22px 20px 26px; } }
+.owned .brand{ background:var(--cream); box-shadow:var(--sh-sm); border-radius:4px; overflow:hidden;
+  transition:transform .25s var(--ease-out), box-shadow .25s var(--ease-out); }
+.owned .brand:hover{ transform:translateY(-3px); box-shadow:var(--sh-md); }
+.owned .brand .ph{ aspect-ratio:5/3; background:var(--walnut); position:relative; overflow:hidden; }
+.owned .brand .ph img{ width:100%; height:100%; object-fit:cover; }
+.owned .brand .bd{ padding:26px 26px 30px; }
+.owned .brand .tier{ font-size:.78rem; color:var(--walnut); font-weight:500; }
+.owned .brand h3{ font-family:var(--sans); font-weight:700; font-size:1.35rem; letter-spacing:-.01em; margin:8px 0 2px; }
+.owned .brand .tag{ font-family:var(--serif); font-style:italic; color:var(--walnut); font-size:1.05rem; margin-bottom:12px; }
+.owned .brand p.blurb{ color:var(--ink-72); font-size:.92rem; line-height:1.7; }
+
+/* showroom categories */
+.cats{ display:grid; gap:22px; margin-top:56px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+.cats .cat{ border-radius:4px; overflow:hidden; background:var(--mist); box-shadow:var(--sh-sm);
+  transition:transform .25s var(--ease-out), box-shadow .25s var(--ease-out); }
+.cats .cat:hover{ transform:translateY(-3px); box-shadow:var(--sh-md); }
+.cats .cat .ph{ aspect-ratio:4/3; overflow:hidden; background:var(--mist); }
+.cats .cat img{ width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease-out); }
+.cats .cat:hover img{ transform:scale(1.04); }
+.cats .cat .bd{ padding:20px 22px 24px; }
+.cats .cat h3{ font-size:1.05rem; font-weight:700; letter-spacing:-.01em; }
+.cats .cat p{ font-size:.88rem; color:var(--ink-72); margin-top:6px; }
+/* phones: 2-up compact tiles so nine categories scan in five rows, not nine screens */
+@media(max-width:640px){
+  .cats{ grid-template-columns:repeat(2,1fr); gap:14px; }
+  .cats .cat .bd{ padding:13px 14px 16px; }
+  .cats .cat h3{ font-size:.92rem; }
+  .cats .cat p{ display:none; }
+}
+
+/* economics */
+#economics{ background:var(--mist); }
+.note-box{
+  background:var(--cream); border:1px dashed rgba(110,80,57,.5); border-radius:4px;
+  padding:18px 22px; font-size:.9rem; color:var(--walnut); margin:34px 0 44px; max-width:52em;
+}
+table.econ{ width:100%; border-collapse:collapse; background:var(--cream); border-radius:4px; overflow:hidden; box-shadow:var(--sh-md); }
+table.econ th, table.econ td{ text-align:left; padding:20px 26px; border-top:1px solid var(--hairline); font-size:.95rem; }
+table.econ thead th{ border-top:none; background:var(--forest); color:var(--cream);
+  font-size:.82rem; font-weight:600; letter-spacing:.04em; }
+table.econ td.v{ font-family:var(--mono); font-weight:400; font-size:.9rem; letter-spacing:-.02em; white-space:nowrap; }
+table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
+@media(max-width:700px){
+  table.econ td.n, table.econ thead th:nth-child(3){ display:none; }
+  table.econ th, table.econ td{ padding:16px 18px; }
+  table.econ td.v{ white-space:normal; }
+}
+
+/* process · the one earned numbered sequence on the page */
+.steps{ display:grid; gap:1px; background:var(--hairline); border:1px solid var(--hairline);
+  border-radius:4px; overflow:hidden; margin-top:56px; }
+@media(min-width:900px){ .steps{ grid-template-columns:repeat(3,1fr); } }
+.steps .st{ background:var(--cream); padding:34px 30px 38px; }
+.steps .st .n{ font-family:var(--serif); font-style:italic; font-size:2rem; color:var(--walnut); line-height:1; }
+.steps .st h3{ font-size:1.1rem; font-weight:700; margin:16px 0 8px; letter-spacing:-.01em; }
+.steps .st p{ font-size:.9rem; color:var(--ink-72); }
+
+/* revenue lanes */
+.lanes{ display:grid; gap:0 44px; margin-top:40px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
+.lane{ padding:28px 0 32px; border-top:1px solid var(--hairline); }
+.lane .tag{ font-family:var(--serif); font-style:italic; font-size:1.05rem; color:var(--walnut); }
+.lane h3{ font-size:1.15rem; font-weight:700; letter-spacing:-.012em; margin:8px 0 8px; }
+.lane p{ font-size:.92rem; color:var(--ink-72); }
+
+/* conversion band */
+#convert{ background:var(--mist); }
+#convert .inner{ display:grid; gap:36px; padding:clamp(64px,7vw,88px) 0; }
+@media(min-width:1000px){ #convert .inner{ grid-template-columns:7fr 5fr; align-items:center; gap:80px; } }
+#convert h2{ font-family:var(--serif); font-weight:600; font-size:clamp(1.6rem,3vw,2.3rem); line-height:1.3; }
+#convert p{ color:var(--ink-72); margin-top:16px; line-height:1.7; max-width:38em; }
+#convert .proof{ font-family:var(--serif); font-style:italic; color:var(--walnut); }
+
+/* story timeline */
+.timeline{ display:grid; gap:0 44px; margin-top:48px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
+.timeline .t{ padding:26px 0 30px; border-top:1px solid var(--hairline); }
+.timeline .yr{ font-family:var(--serif); font-style:italic; font-size:1.7rem; color:var(--walnut); line-height:1; }
+.timeline h3{ font-size:1.05rem; font-weight:700; letter-spacing:-.01em; margin:12px 0 6px; }
+.timeline p{ font-size:.9rem; color:var(--ink-72); }
+
+/* full-bleed image bands · cropped and text-aligned to match the hero */
+.bleed{ position:relative; overflow:hidden; border-top:none; background:var(--pine); color:var(--cream); }
+.bleed .art{ position:absolute; inset:0; }
+.bleed .art img{ width:100%; height:100%; object-fit:cover; }
+.bleed .art::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(18,62,45,.9) 0%, rgba(18,62,45,.45) 30%, transparent 60%);
+}
+.bleed .inner{ position:relative; z-index:2; }
+.bleed .cap{ font-family:var(--serif); font-style:italic; color:var(--cream-80); font-size:1.15rem; max-width:32em; }
+
+/* day one */
+#dayone .art img{ object-position:center 8%; }
+#dayone .inner{ padding:clamp(340px,38vw,500px) 0 clamp(52px,6vw,80px); }
+#dayone h2{ font-family:var(--sans); font-weight:700; letter-spacing:-.022em; font-size:clamp(2rem,4.2vw,3.2rem); line-height:1.06; }
+#dayone .cap{ margin-top:14px; }
+@media(max-width:700px){
+  #dayone .inner{ padding-top:340px; }
+}
+
+/* design center */
+#design-band{ margin-top:56px; }
+#design-band .art img{ object-position:center 68%; }
+#design-band .inner{ padding:clamp(260px,30vw,400px) 0 clamp(44px,5vw,64px); }
+@media(max-width:700px){
+  #design-band .inner{ padding-top:300px; }
+}
+
+/* profile + support */
+.split{ display:grid; gap:60px; margin-top:56px; }
+@media(min-width:1000px){ .split{ grid-template-columns:5fr 7fr; gap:80px; } }
+.check-list{ list-style:none; margin-top:30px; }
+.check-list li{ display:flex; gap:16px; padding:18px 0; border-top:1px solid var(--hairline); font-size:.97rem; }
+.check-list li .dot{ flex:none; width:9px; height:9px; border-radius:50%; background:var(--forest); margin-top:8px; }
+.territory-fig{ margin-top:36px; }
+.territory-fig .frame{ border-radius:4px; overflow:hidden; box-shadow:var(--sh-md); }
+.territory-fig img{ width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; }
+.territory-fig figcaption{ font-family:var(--serif); font-style:italic; color:var(--walnut); font-size:1rem; margin-top:14px; }
+/* wide variant: full-split-width closing band under the form */
+.territory-wide{ margin-top:clamp(56px,7vw,84px); }
+.territory-wide img{ aspect-ratio:16/9; }
+@media(min-width:900px){ .territory-wide img{ aspect-ratio:21/9; } }
+
+.support{ margin-top:30px; display:grid; gap:0 44px; }
+@media(min-width:640px){ .support{ grid-template-columns:repeat(2,1fr); } }
+.support .it{ padding:22px 0; border-top:1px solid var(--hairline); }
+.support .it h3{ font-size:1.02rem; font-weight:700; letter-spacing:-.01em; margin-bottom:8px; }
+.support .it h3 .sig{ color:var(--forest); }
+.support .it p{ font-size:.9rem; color:var(--ink-72); }
+
+/* quote */
+#quote{ background:var(--mist); }
+#quote .q{ font-family:var(--serif); font-size:clamp(1.5rem,3vw,2.2rem); line-height:1.55; max-width:26em; }
+#quote .attr{ margin-top:30px; color:var(--ink-65); font-size:.95rem; }
+
+/* faq */
+.faq{ margin-top:56px; border-top:1px solid var(--hairline); }
+.faq details{ border-bottom:1px solid var(--hairline); }
+.faq summary{
+  cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;
+  gap:24px; padding:26px 4px; font-family:var(--sans); font-weight:500; font-size:1.1rem; letter-spacing:-.01em;
+  min-height:44px;
+}
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary .ind{ font-family:var(--serif); font-size:1.5rem; color:var(--walnut); transition:transform .3s var(--ease-out); flex:none; }
+.faq details[open] summary .ind{ transform:rotate(45deg); }
+.faq .ans{ padding:0 4px 30px; max-width:46em; color:var(--ink-72); font-size:.97rem; }
+@media (prefers-reduced-motion: no-preference){
+  .faq details[open] .ans{ animation:rise .45s var(--ease-out); }
+}
+
+/* form */
+#apply{ background:var(--mist); }
+#apply p{ line-height:1.7; }
+.form-card{ background:var(--cream); border:1px solid var(--hairline); border-radius:6px;
+  padding:38px 32px 42px; box-shadow:var(--sh-lg); }
+@media(min-width:760px){ .form-card{ padding:52px 52px 56px; } }
+.form-grid{ display:grid; gap:20px; }
+@media(min-width:640px){ .form-grid{ grid-template-columns:repeat(2,1fr); } .form-grid .full{ grid-column:1/-1; } }
+.form-grid label > span{
+  display:block; font-size:.85rem; color:var(--ink-72); font-weight:500; margin-bottom:8px;
+}
+.form-grid label > span .req{ color:var(--walnut); }
+.form-grid input, .form-grid select{
+  width:100%; background:var(--cream); border:1px solid rgba(31,36,33,.45); border-radius:2px;
+  padding:14px 16px; min-height:50px; color:var(--ink); font-family:var(--sans); font-size:1rem; outline:none;
+  transition:border-color .2s, box-shadow .2s;
+}
+.form-grid input::placeholder{ color:var(--ink-65); }
+.form-grid input:focus-visible, .form-grid select:focus-visible{ border-color:var(--forest); box-shadow:0 0 0 1px var(--forest); outline:none; }
+.form-grid label.err input{ border-color:var(--orange); }
+.form-grid .msg{ display:none; font-size:.8rem; color:var(--walnut); margin-top:6px; }
+.form-grid label.err .msg{ display:block; }
+.consent{ display:flex; gap:12px; align-items:flex-start; margin-top:24px; font-size:.85rem; color:var(--ink-72); line-height:1.6; }
+.consent input{ margin-top:4px; width:18px; height:18px; accent-color:var(--forest); flex:none; }
+button.submit{
+  margin-top:30px; width:100%; background:var(--orange); color:var(--cream); border:none; border-radius:2px;
+  padding:18px; min-height:60px; font-family:var(--sans); font-size:1.17rem; font-weight:700; letter-spacing:-.005em;
+  cursor:pointer; transition:transform .25s var(--ease-out), box-shadow .25s var(--ease-out);
+  box-shadow:var(--sh-sm);
+}
+button.submit:hover{ transform:translateY(-3px); box-shadow:var(--sh-md); }
+button.submit:active{ transform:none; }
+button.submit:focus-visible{ outline:2px solid var(--cream); outline-offset:3px; }
+.form-success{ display:none; text-align:center; padding:40px 10px; }
+.form-success .mark{ font-family:var(--serif); font-size:3rem; color:var(--forest); line-height:1; }
+.form-success h3{ font-family:var(--serif); font-weight:600; font-size:1.6rem; margin:18px 0 10px; }
+.form-success p{ color:var(--ink-72); max-width:30em; margin:0 auto; }
+.form-card.done .form-body{ display:none; }
+.form-card.done .form-success{ display:block; }
+
+/* footer · scoped to the site footer so blockquote <footer class="attr"> stays untouched */
+body > footer{ background:var(--cream); color:var(--ink-72); border-top:1px solid var(--hairline); }
+body > footer .grid{ display:grid; gap:40px; padding:72px 0; }
+@media(min-width:900px){ body > footer .grid{ grid-template-columns:repeat(3,1fr); } }
+body > footer .grid p{ font-size:.9rem; line-height:1.7; }
+body > footer .grid .ttl{ font-family:var(--serif); font-style:italic; font-size:1.05rem; color:var(--walnut); margin-bottom:12px; }
+body > footer img{ height:34px; width:auto; margin-bottom:16px; }
+body > footer a{ color:var(--forest); }
+body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font-size:.8rem; color:var(--ink-65); }
+
+/* reduced motion: everything settles instantly */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+  html{ scroll-behavior:auto; }
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- DRAFT RIBBON · remove before public release -->
+<div id="draftbar">
+  <strong>Internal draft v3</strong> &nbsp;·&nbsp; Economics shown are ownership estimates pending the Franchise Disclosure Document. Not an offer to sell a franchise.
+</div>
+
+<!-- ============================== NAV ============================== -->
+<nav class="top" aria-label="Primary">
+  <div class="wrap row">
+    <a href="#hero" class="logo" aria-label="Billiard Factory Franchising home">
+      <img src="https://billiard-factory-brand-hub.netlify.app/assets/logos/bf-logo-full-black.png" alt="Billiard Factory" width="170" height="34" />
+    </a>
+    <div class="links">
+      <a class="tx" href="#why">Why Billiard Factory</a>
+      <a class="tx" href="#house">The House</a>
+      <a class="tx" href="#lanes">The Business</a>
+      <a class="tx" href="#economics">Investment</a>
+      <a class="tx" href="#process">The Path</a>
+      <a class="tx" href="#faq">FAQ</a>
+      <a href="#apply" class="cta">Request the FDD</a>
+      <button class="menu-btn" type="button" aria-label="Open section menu" aria-controls="mobileMenu" aria-expanded="false"><span class="bars"><span></span></span><span class="txt">Menu</span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" aria-label="Sections">
+    <a href="#why">Why Billiard Factory</a>
+    <a href="#house">The House</a>
+    <a href="#showroom">The Showroom</a>
+    <a href="#lanes">The Business</a>
+    <a href="#economics">Investment</a>
+    <a href="#process">The Path</a>
+    <a href="#faq">FAQ</a>
+    <a href="#apply">Request the FDD</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ============================== HERO ============================= -->
+<section id="hero" class="felt on-dark">
+  <div class="art" aria-hidden="true">
+    <img src="assets/hero-golden.jpg" alt="A Billiard Factory showroom at golden hour, parking spaces full, a couple walking to the entrance" loading="eager" fetchpriority="high" />
+  </div>
+  <div class="wrap inner">
+    <p class="kicker" data-hero="1" style="color:var(--sage); margin-bottom:26px;">Franchise Opportunities · Family-Owned Since 1975</p>
+    <h1 class="display" data-hero="2">Own the room<br />where families gather.</h1>
+    <p class="sub" data-hero="3">
+      For fifty years, Billiard Factory has built America's game rooms: made, curated, and
+      sold under one roof. Now we are awarding a limited number of protected territories to
+      operators who want to own that legacy in their own market. It starts with one document,
+      the Franchise Disclosure Document: the FDD.
+    </p>
+    <div data-hero="4" style="margin-top:44px; display:flex; flex-wrap:wrap; gap:16px;">
+      <a href="#apply" class="btn btn-primary">Request the FDD <span class="arr" aria-hidden="true">→</span></a>
+      <a href="#why" class="btn btn-ghost-dark">Why Billiard Factory</a>
+    </div>
+    <div class="provenance" data-hero="5">
+      <img src="https://billiard-factory-brand-hub.netlify.app/assets/logos/bf-since1975-bar-white.png" alt="Billiard Factory, since 1975" width="240" height="40" />
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STAT STRIP ========================= -->
+<div class="stats on-dark" role="group" aria-label="Billiard Factory at a glance">
+  <div class="wrap grid">
+    <div class="cell" data-rv style="--rv-d:.0s"><p class="num">1975</p><p class="lbl">Founded in Houston</p></div>
+    <div class="cell" data-rv style="--rv-d:.07s"><p class="num">13</p><p class="lbl">Company showrooms</p></div>
+    <div class="cell" data-rv style="--rv-d:.14s"><p class="num">5</p><p class="lbl">Owned brands</p></div>
+    <div class="cell" data-rv style="--rv-d:.21s"><p class="num">0</p><p class="lbl">Middlemen</p></div>
+    <div class="cell" data-rv style="--rv-d:.28s"><p class="num">90</p><p class="lbl">Showrooms in the five-year plan</p></div>
+  </div>
+</div>
+
+<!-- ======================== QUALIFY AT A GLANCE ==================== -->
+<div id="qualify">
+  <div class="wrap q-row">
+    <p class="q-item"><strong>$500,000</strong> minimum liquid capital</p>
+    <p class="q-item"><strong>$485K–$785K</strong> estimated initial investment</p>
+    <p class="q-item"><strong>7,000–8,000 sq ft</strong> showroom</p>
+    <a href="#economics" class="q-link">See the full numbers ↓</a>
+    <a href="#convert" class="q-link" style="margin-left:0;">Already run a store? The conversion path ↓</a>
+  </div>
+</div>
+
+<!-- ============================== WHY ============================== -->
+<section id="why" class="section-pad">
+  <div class="wrap">
+    <h2 class="headline" data-rv style="max-width:16em;">Four reasons this is not an ordinary retail franchise.</h2>
+    <p class="lede body-copy" data-rv style="color:var(--ink-72); margin-top:24px;">
+      Most franchises sell you a playbook. This one hands you a fifty-year brand, its factory,
+      and its demand engine, then protects the ground you build on.
+    </p>
+    <div class="ledger">
+      <div class="row" data-rv>
+        <p class="key">The head start</p>
+        <div>
+          <h3>Fifty years of brand equity</h3>
+          <p>Larry Stick opened the first store on Telephone Road in Houston in 1975. Half a century later, Billiard Factory is one of the nation's largest billiard and game-room furniture retailers, and the story still belongs to one family. You open with a reputation most retailers spend decades earning.</p>
+        </div>
+      </div>
+      <div class="row" data-rv>
+        <p class="key">The moat</p>
+        <div>
+          <h3>Factory-direct margins</h3>
+          <p>Most retailers only sell. We manufacture, distribute, and retail, so there is no distributor markup between the workshop and your showroom floor. We own the house. You inherit the margin.</p>
+        </div>
+      </div>
+      <div class="row" data-rv>
+        <p class="key">The territory</p>
+        <div>
+          <h3>Protected, and yours alone</h3>
+          <p>Every franchise is awarded with a contractually protected, radius-based territory. No overlapping stores, and a shared-revenue model for billiardfactory.com orders inside your radius, so the national site works for you, not against you. Final radius and revenue-share terms publish with the FDD. <span class="tbd">Est · terms pending FDD</span></p>
+        </div>
+      </div>
+      <div class="row" data-rv>
+        <p class="key">The engine</p>
+        <div>
+          <h3>Demand, handled nationally</h3>
+          <p>The parent brand runs national campaigns, PR, and content. You deploy pre-built, pre-approved local creative from a dashboard, and qualified leads arrive with source attribution. You spend your time closing, not making ads.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THE HOUSE ========================== -->
+<section id="house">
+  <div class="wrap section-pad">
+    <h2 class="headline" data-rv style="max-width:15em;">We make it. We curate it. We sell it.</h2>
+    <p class="lede body-copy" data-rv style="color:var(--ink-72); margin-top:24px;">
+      Billiard Factory is a vertically integrated house of game-room brands. Five owned brands
+      protect the margin; the best partner manufacturers in the category fill the showroom. As
+      a franchise partner, you sell all of it under one roof and one standard.
+    </p>
+
+    <div class="layers">
+      <div class="layer" data-rv style="--rv-d:.0s"><p class="lab">We Make</p><p>Owned brands engineered and finished in-house: protected margins, tournament tolerances, and a standard no reseller can match.</p></div>
+      <div class="layer" data-rv style="--rv-d:.08s"><p class="lab">We Curate</p><p>Brunswick, Olhausen, and California House anchor the category, and fifty years of buying relationships put them on your floor at terms a first-year independent could not get.</p></div>
+      <div class="layer" data-rv style="--rv-d:.16s"><p class="lab">We Sell</p><p>Thirteen showrooms and a national e-commerce store. We own the relationship from the factory floor to the family room.</p></div>
+    </div>
+
+    <p class="roster-label" data-rv>The owned brands, the manufacturing moat</p>
+    <div class="owned" id="owned-grid"><!-- rendered from SSOT --></div>
+
+    <p class="roster-label" data-rv>The carried brands, the distribution power</p>
+
+    <!-- "Shop by Brand" rolling logo strip - self-contained, no dependencies. -->
+    <section class="bf-brand-strip" aria-label="Shop by Brand" style="margin-top:18px;">
+      <style>
+        .bf-brand-strip {
+          /* ---- Tunable knobs ---------------------------------------------- */
+          --bf-duration: 45s;      /* lower = faster scroll */
+          --bf-logo-height: 90px;  /* every logo locked to this exact height = consistent size */
+          --bf-logo-boost: 1.3;    /* size multiplier for logos with extra built-in padding */
+          --bf-logo-shrink: 0.78;  /* size multiplier for full-bleed logos that read too large */
+          --bf-gap: 72px;          /* space between logos */
+          /* Hover slow-down amount lives in the <script> at the bottom (HOVER_SPEED). */
+          /* ----------------------------------------------------------------- */
+          background: transparent;
+          padding: 14px 0;
+          overflow: hidden;
+          width: 100%;
+        }
+        .bf-brand-strip__viewport {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          /* Reserve the tallest logo's height so the page doesn't jump while images load */
+          min-height: calc(var(--bf-logo-height) * var(--bf-logo-boost));
+          -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+                  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+        }
+        .bf-brand-strip__track {
+          display: flex;
+          align-items: center;
+          gap: var(--bf-gap);
+          width: max-content;
+          padding-left: var(--bf-gap);
+          animation: bf-brand-scroll var(--bf-duration) linear infinite;
+        }
+        /* Hover slow-down is handled glitch-free by the script (playbackRate). */
+        .bf-brand-strip__item {
+          display: inline-flex;
+          align-items: center;
+          flex: 0 0 auto;
+        }
+        /* !important + scoping so the site theme's global "img { }" rules can't override the logo size */
+        .bf-brand-strip .bf-brand-strip__logo {
+          height: var(--bf-logo-height) !important; /* fixed height for ALL logos */
+          width: auto !important;                   /* width flows from each logo's shape */
+          max-width: none !important;
+          max-height: none !important;
+          min-height: 0 !important;
+          display: block;
+          object-fit: contain;
+        }
+        /* Bump for logos that have extra transparent padding baked into the file */
+        .bf-brand-strip .bf-brand-strip__logo--boost {
+          height: calc(var(--bf-logo-height) * var(--bf-logo-boost)) !important;
+        }
+        /* Shrink for full-bleed logos that read too large at the base height */
+        .bf-brand-strip .bf-brand-strip__logo--sm {
+          height: calc(var(--bf-logo-height) * var(--bf-logo-shrink)) !important;
+        }
+        @keyframes bf-brand-scroll {
+          from { transform: translateX(0); }
+          to   { transform: translateX(-50%); }
+        }
+        @media (max-width: 640px) {
+          .bf-brand-strip {
+            --bf-logo-height: 56px;
+            --bf-gap: 40px;
+            padding: 16px 0;
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .bf-brand-strip__track { animation: none; }
+          .bf-brand-strip__viewport {
+            overflow-x: auto;
+            -webkit-mask-image: none;
+                    mask-image: none;
+          }
+        }
+      </style>
+      <div class="bf-brand-strip__viewport">
+        <div class="bf-brand-strip__track">
+          <!--
+            To turn a "coming soon" brand into a link later, replace its
+            <span class="bf-brand-strip__item"> ... </span>
+            with
+            <a class="bf-brand-strip__item" href="YOUR_URL"> ... </a>
+            in BOTH the original set and the duplicate set below.
+          -->
+          <!-- ===================== ORIGINAL SET ===================== -->
+          <a class="bf-brand-strip__item" href="https://billiardfactory.com/billiard-factory-cues" aria-label="Billiard Factory Cues">
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--boost" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/bfcues_ypn5-ejV5.png?tr=h-360" alt="Billiard Factory Cues logo" />
+          </a>
+          <a class="bf-brand-strip__item" href="https://billiardfactory.com/cl-bailey-pool-tables" aria-label="C.L. Bailey">
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--sm" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/CLB-Vector-Tomball-texas_6FT7nW_vW.png?tr=h-360" alt="C.L. Bailey logo" />
+          </a>
+          <span class="bf-brand-strip__item"><!-- Level Best - link coming soon -->
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--boost" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/levelbestlogo_kjqhHrdKl.png?tr=h-360" alt="Level Best logo" />
+          </span>
+          <span class="bf-brand-strip__item"><!-- Velocity - link coming soon -->
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--boost" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/velocitylogosite_NAtKDe9Ub.png?tr=h-360" alt="Velocity logo" />
+          </span>
+          <span class="bf-brand-strip__item"><!-- Mali - link coming soon -->
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--boost" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/malilogo_05Q2o0XiUl.png?tr=h-360" alt="Mali logo" />
+          </span>
+          <a class="bf-brand-strip__item" href="https://billiardfactory.com/brunswick-pool-tables" aria-label="Brunswick">
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--sm" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/BrunswickBilliards-PMS8005_0UgfgfgyJ.png?tr=h-360" alt="Brunswick logo" />
+          </a>
+          <a class="bf-brand-strip__item" href="https://billiardfactory.com/california-house-pool-tables" aria-label="California House">
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--sm" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/CH_logo_2019_header_oQ-WyIc5J.png?tr=h-360" alt="California House logo" />
+          </a>
+          <a class="bf-brand-strip__item" href="https://billiardfactory.com/olhausen" aria-label="Olhausen">
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--sm" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/olhaousenlogo_vIfDnjgbD.png?tr=h-360" alt="Olhausen logo" />
+          </a>
+          <!-- ===== DUPLICATE SET (aria-hidden - makes the loop smooth) ===== -->
+          <a class="bf-brand-strip__item" href="https://billiardfactory.com/billiard-factory-cues" aria-hidden="true" tabindex="-1">
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--boost" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/bfcues_ypn5-ejV5.png?tr=h-360" alt="" />
+          </a>
+          <a class="bf-brand-strip__item" href="https://billiardfactory.com/cl-bailey-pool-tables" aria-hidden="true" tabindex="-1">
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--sm" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/CLB-Vector-Tomball-texas_6FT7nW_vW.png?tr=h-360" alt="" />
+          </a>
+          <span class="bf-brand-strip__item" aria-hidden="true"><!-- Level Best - link coming soon -->
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--boost" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/levelbestlogo_kjqhHrdKl.png?tr=h-360" alt="" />
+          </span>
+          <span class="bf-brand-strip__item" aria-hidden="true"><!-- Velocity - link coming soon -->
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--boost" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/velocitylogosite_NAtKDe9Ub.png?tr=h-360" alt="" />
+          </span>
+          <span class="bf-brand-strip__item" aria-hidden="true"><!-- Mali - link coming soon -->
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--boost" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/malilogo_05Q2o0XiUl.png?tr=h-360" alt="" />
+          </span>
+          <a class="bf-brand-strip__item" href="https://billiardfactory.com/brunswick-pool-tables" aria-hidden="true" tabindex="-1">
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--sm" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/BrunswickBilliards-PMS8005_0UgfgfgyJ.png?tr=h-360" alt="" />
+          </a>
+          <a class="bf-brand-strip__item" href="https://billiardfactory.com/california-house-pool-tables" aria-hidden="true" tabindex="-1">
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--sm" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/CH_logo_2019_header_oQ-WyIc5J.png?tr=h-360" alt="" />
+          </a>
+          <a class="bf-brand-strip__item" href="https://billiardfactory.com/olhausen" aria-hidden="true" tabindex="-1">
+            <img class="bf-brand-strip__logo bf-brand-strip__logo--sm" src="https://ik.imagekit.io/billiardfactory/estoris/images/home_page_logo/olhaousenlogo_vIfDnjgbD.png?tr=h-360" alt="" />
+          </a>
+        </div>
+      </div>
+      <script>
+        /* Glitch-free hover slow-down: changes the animation's playbackRate
+           (velocity) instead of its duration, so the strip never jumps position. */
+        (function () {
+          var script = document.currentScript;
+          var strip = script && script.closest('.bf-brand-strip');
+          if (!strip) return;
+          var viewport = strip.querySelector('.bf-brand-strip__viewport');
+          var track = strip.querySelector('.bf-brand-strip__track');
+          if (!viewport || !track || !track.getAnimations) return;
+          var NORMAL_SPEED = 1;
+          var HOVER_SPEED = 0.25;  /* lower = slower on hover (0 would be a full stop) */
+          var TWEEN_MS = 450;      /* how long the speed change eases over */
+          var raf;
+          function tweenTo(target) {
+            var anims = track.getAnimations();
+            if (!anims.length) return; /* e.g. prefers-reduced-motion */
+            cancelAnimationFrame(raf);
+            var from = anims[0].playbackRate;
+            var start;
+            function step(now) {
+              if (start === undefined) start = now;
+              var t = Math.min(1, (now - start) / TWEEN_MS);
+              var ease = t * (2 - t); /* easeOutQuad */
+              var rate = from + (target - from) * ease;
+              for (var i = 0; i < anims.length; i++) anims[i].playbackRate = rate;
+              if (t < 1) raf = requestAnimationFrame(step);
+            }
+            raf = requestAnimationFrame(step);
+          }
+          viewport.addEventListener('mouseenter', function () { tweenTo(HOVER_SPEED); });
+          viewport.addEventListener('mouseleave', function () { tweenTo(NORMAL_SPEED); });
+        })();
+      </script>
+    </section>
+  </div>
+</section>
+
+<!-- ========================= THE SHOWROOM ========================== -->
+<section id="showroom" class="section-pad" style="padding-bottom:0;">
+  <div class="wrap">
+    <h2 class="headline" data-rv style="max-width:15em;">Nine categories. Everything the room needs.</h2>
+    <p class="lede body-copy" data-rv style="color:var(--ink-72); margin-top:24px;">
+      From tournament-grade tables to the furniture that frames the room, a Billiard Factory
+      showroom sells the whole space a family gathers in, not a single product line. Deep
+      assortment means multiple tickets per household and reasons to come back.
+    </p>
+  </div>
+  <div id="design-band" class="bleed on-dark" aria-label="The design center">
+    <div class="art" aria-hidden="true">
+      <img src="assets/design-center.jpg" alt="" loading="lazy" width="1600" height="1073" />
+    </div>
+    <div class="wrap inner">
+      <p class="cap" data-rv>The design center, where a room is specified, not just sold.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding-bottom:clamp(88px,10vw,136px);">
+    <div class="cats" id="cat-grid"><!-- rendered from SSOT --></div>
+  </div>
+</section>
+
+<!-- ========================= REVENUE LANES ========================= -->
+<section id="lanes" class="section-pad">
+  <div class="wrap">
+    <h2 class="headline" data-rv style="max-width:15em;">One showroom. Six ways it earns.</h2>
+    <p class="lede body-copy" data-rv style="color:var(--ink-72); margin-top:24px;">
+      Three demand pools feed the same four walls: families furnishing the rooms they gather in,
+      designers and builders specifying for clients, and commercial buyers furnishing whole spaces
+      at once. Each one opens a different lane of revenue.
+    </p>
+    <div class="lanes">
+      <div class="lane" data-rv style="--rv-d:.0s">
+        <p class="tag">The anchor</p>
+        <h3>Big-ticket retail</h3>
+        <p>Pool tables, shuffleboards, and the furniture that frames the room. The considered purchase that starts every relationship.</p>
+      </div>
+      <div class="lane" data-rv style="--rv-d:.06s">
+        <p class="tag">Attached</p>
+        <h3>Delivery &amp; installation</h3>
+        <p>White-glove delivery and certified installation ride on every anchor sale, revenue the big-box channel gives away.</p>
+      </div>
+      <div class="lane" data-rv style="--rv-d:.12s">
+        <p class="tag">Recurring</p>
+        <h3>Service &amp; re-felting</h3>
+        <p>Re-felts, re-levels, moves, and restorations. The products last decades, and the service on them brings customers back for decades.</p>
+      </div>
+      <div class="lane" data-rv style="--rv-d:.0s">
+        <p class="tag">Attach rate</p>
+        <h3>Accessories &amp; upgrades</h3>
+        <p>Cues, lighting, seating, and the wall of gear that finishes every room sold, higher-margin add-ons on every ticket.</p>
+      </div>
+      <div class="lane" data-rv style="--rv-d:.06s">
+        <p class="tag">Pipeline</p>
+        <h3>Designer &amp; trade</h3>
+        <p>Trade pricing, spec support, and install standards for the designers and builders who bring the next project with them.</p>
+      </div>
+      <div class="lane" data-rv style="--rv-d:.12s">
+        <p class="tag">Projects</p>
+        <h3>Commercial &amp; hospitality</h3>
+        <p>Clubhouses, hotel groups, and builders furnish whole game rooms in a single order, and those calls route to the territory they land in: yours.</p>
+      </div>
+    </div>
+    <p data-rv style="margin-top:34px; font-size:.9rem; color:var(--ink-65); max-width:46em;">
+      Delivery, installation, and re-felting run through pre-approved third-party installers
+      certified to the house standard, so you earn the lane without building the crew.
+      Full lane economics publish with the FDD.
+    </p>
+  </div>
+</section>
+
+<!-- ========================== ECONOMICS ============================ -->
+<section id="economics">
+  <div class="wrap section-pad">
+    <h2 class="headline" data-rv style="max-width:15em;">The numbers, stated plainly.</h2>
+
+    <div class="note-box" data-rv>
+      <strong style="letter-spacing:.1em; text-transform:uppercase; font-size:.72rem;">Draft note</strong><br />
+      Every figure below is a directional estimate from ownership. Final numbers, including any
+      financial performance representation, publish in the Franchise Disclosure Document (Item 19)
+      and govern over anything on this page. Nothing here is an offer or an earnings claim.
+    </div>
+
+    <table class="econ" data-rv>
+      <thead><tr><th scope="col">Item</th><th scope="col">Estimate</th><th scope="col">Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Total initial investment</td><td class="v">$485,000 to $785,000</td><td class="n">Build-out, opening inventory, and franchise fee. Working capital additional.</td></tr>
+        <tr><td>Showroom build-out</td><td class="v">$200,000 to $400,000</td><td class="n">Construction, fixtures, and signage to the brand standard.</td></tr>
+        <tr><td>Opening inventory</td><td class="v">$250,000 to $350,000</td><td class="n">Roughly $250,000 of it on the showroom floor at opening.</td></tr>
+        <tr><td>Initial franchise fee</td><td class="v">$35,000</td><td class="n">One-time fee per territory.</td></tr>
+        <tr><td>Ongoing royalty</td><td class="v">2% of gross sales</td><td class="n">Among the lowest in specialty retail franchising.</td></tr>
+        <tr><td>Brand &amp; marketing fund</td><td class="v">2% of gross sales</td><td class="n">Funds the national demand engine that feeds your territory.</td></tr>
+        <tr><td>Minimum liquid capital</td><td class="v">$500,000</td><td class="n">Qualification threshold, verified during candidacy.</td></tr>
+        <tr><td>Revenue potential</td><td class="v">$2,000,000 <span class="tbd">Est · Item 19 pending</span></td><td class="n">Ownership's target annual revenue estimate per showroom. Governed by FDD Item 19 when published.</td></tr>
+        <tr><td>Showroom footprint</td><td class="v">7,000 to 8,000 sq ft</td><td class="n">Modeled on the current 13-showroom fleet.</td></tr>
+      </tbody>
+    </table>
+
+    <p data-rv style="margin-top:34px; font-size:.95rem; color:var(--ink-72); max-width:46em;">
+      Why the economics work: owned manufacturing removes the distributor layer most furniture
+      retailers pay, a 4% combined royalty and marketing load leaves margin in the store, and
+      made-to-order categories carry deposits that help cash flow. The full model, with the
+      receipts, arrives with your FDD package.
+    </p>
+  </div>
+</section>
+
+<!-- =========================== PROCESS ============================= -->
+<section id="process" class="section-pad">
+  <div class="wrap">
+    <h2 class="headline" data-rv style="max-width:15em;">From first call to grand opening.</h2>
+    <div class="steps">
+      <div class="st" data-rv style="--rv-d:.0s"><p class="n">1</p><h3>Introduce yourself</h3><p>Submit the qualification form below. Your request goes straight to Ryan Stick, the owner, who responds within two business days.</p></div>
+      <div class="st" data-rv style="--rv-d:.06s"><p class="n">2</p><h3>Qualify the territory</h3><p>We review your market, your capital position, and your operating background, and confirm territory availability.</p></div>
+      <div class="st" data-rv style="--rv-d:.12s"><p class="n">3</p><h3>Review the FDD</h3><p>You receive the Franchise Disclosure Document and the confidential economics model, with time to review alongside your advisors.</p></div>
+      <div class="st" data-rv style="--rv-d:.0s"><p class="n">4</p><h3>Meet the family</h3><p>A discovery day in Houston: the factory, a flagship showroom, and the leadership team that has run this house for fifty years.</p></div>
+      <div class="st" data-rv style="--rv-d:.06s"><p class="n">5</p><h3>Sign, site, and build</h3><p>Territory agreement, site selection with our real-estate criteria, and a showroom build-out to the brand standard.</p></div>
+      <div class="st" data-rv style="--rv-d:.12s"><p class="n">6</p><h3>Train and open</h3><p>Full operations and sales training for you and your team, opening inventory staged from our distribution centers, grand-opening campaign deployed.</p></div>
+    </div>
+    <p data-rv style="margin-top:30px; font-size:.9rem; color:var(--ink-65);">
+      Stage-by-stage timing is being finalized with the development team and publishes with the FDD. <span class="tbd">Est · timing pending FDD</span>
+    </p>
+  </div>
+</section>
+
+<!-- ========================= CONVERSION BAND ======================= -->
+<section id="convert">
+  <div class="wrap inner">
+    <div data-rv>
+      <h2>Already run a billiards or game-room store?</h2>
+      <p>
+        We have brought independent stores into the house before. <span class="proof">Seven Billiards
+        &amp; Barstools locations became Billiard Factory stores in 2007</span>, and that move carried
+        the brand into Dallas–Fort Worth. If you own a game-room, billiards, or specialty furniture
+        business, a conversion may be the fastest path into the franchise, and ownership considers
+        independent operators among the best first partners: your local reputation, our brand,
+        factory, and demand engine. Conversion terms publish with the FDD.
+      </p>
+    </div>
+    <div data-rv style="justify-self:start;">
+      <a href="#apply" class="btn btn-primary">Ask about conversions <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== DAY ONE ============================== -->
+<section id="dayone" class="bleed on-dark" aria-label="Day one as a franchise owner">
+  <div class="art" aria-hidden="true">
+    <img src="assets/dayone-wide.jpg" alt="" loading="lazy" width="1800" height="1208" />
+  </div>
+  <div class="wrap inner">
+    <h2 data-rv>Day one looks like this.</h2>
+    <p class="cap" data-rv>The keys, the sign, and fifty years of the house behind you.</p>
+  </div>
+</section>
+
+<!-- ====================== PROFILE + SUPPORT ======================== -->
+<section id="partner" class="section-pad">
+  <div class="wrap">
+    <div class="split" style="margin-top:0;">
+      <div>
+        <h2 class="headline" data-rv>Who we award territories to.</h2>
+        <p data-rv style="margin-top:20px; color:var(--ink-72);">
+          We are selective on purpose. Fifty years of reputation ride on every door we open.
+        </p>
+        <ul class="check-list">
+          <li data-rv><span class="dot" aria-hidden="true"></span><span><strong>Multi-unit operators</strong> with proven retail or showroom leadership and the team to execute at a high standard.</span></li>
+          <li data-rv><span class="dot" aria-hidden="true"></span><span><strong>Premium landlords and developers</strong> who control destination retail space and want a category-anchor tenant they own.</span></li>
+          <li data-rv><span class="dot" aria-hidden="true"></span><span><strong>Owner-operators</strong> who will be in the building, know their community, and sell the way a family business sells.</span></li>
+          <li data-rv><span class="dot" aria-hidden="true"></span><span><strong>Capital to build it right:</strong> $500,000 minimum liquid capital, verified during qualification.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="headline" data-rv style="font-size:clamp(1.5rem,2.6vw,2.1rem);">What stands behind you.</h2>
+        <div class="support">
+          <div class="it" data-rv><h3><span class="sig">Training.</span></h3><p>Initial operations, product, and sales training in Houston, plus ongoing coaching from operators who have run these showrooms for decades.</p></div>
+          <div class="it" data-rv><h3><span class="sig">Store design.</span></h3><p>Thirteen showrooms taught us where families stop, what they touch first, and what closes the sale. Your floor plan arrives with those decades already in it.</p></div>
+          <div class="it" data-rv><h3><span class="sig">Distribution.</span></h3><p>Opening inventory and replenishment staged from our own distribution centers, with the buying power of the whole house behind your orders.</p></div>
+          <div class="it" data-rv><h3><span class="sig">Marketing engine.</span></h3><p>National campaigns overhead, pre-built local creative on demand, and attributed leads routed straight into your CRM.</p></div>
+          <div class="it" data-rv><h3><span class="sig">Technology.</span></h3><p>One system runs the store. When a lead books online at 9 p.m., it is in your CRM with a name, a territory, and a source before you open the next morning.</p></div>
+          <div class="it" data-rv><h3><span class="sig">Installation &amp; service.</span></h3><p>A pre-approved network of third-party installers certified to the house standard, so delivery, installation, and re-felting earn revenue without you building a crew.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STORY ============================== -->
+<section id="story" class="section-pad">
+  <div class="wrap">
+    <h2 class="headline" data-rv style="max-width:15em;">Fifty years in the making.</h2>
+    <p class="lede body-copy" data-rv style="color:var(--ink-72); margin-top:24px;">
+      Until the first franchise stores open and their owners tell this story better than we can,
+      the proof is the half-century behind the brand.
+    </p>
+    <div class="timeline">
+      <div class="t" data-rv style="--rv-d:.0s"><p class="yr">1975</p><h3>One store, four people</h3><p>Larry Stick opens the first Billiard Factory on Telephone Road in Houston, a single showroom built on the belief that a game room is where a family gathers.</p></div>
+      <div class="t" data-rv style="--rv-d:.06s"><p class="yr">1980s</p><h3>Out of Houston</h3><p>The playbook leaves Houston and holds: new stores across the suburbs, then Scottsdale, Arizona, and San Antonio prove the concept travels to markets that had never heard the name.</p></div>
+      <div class="t" data-rv style="--rv-d:.12s"><p class="yr">2007</p><h3>Into Dallas–Fort Worth</h3><p>The acquisition of seven Billiards &amp; Barstools stores carries the brand into the DFW metroplex, growth through both building and buying.</p></div>
+      <div class="t" data-rv style="--rv-d:.0s"><p class="yr">2010s</p><h3>The second generation</h3><p>Stewardship passes to the Stick family's second generation, committed to one of the widest, deepest product lines in the industry.</p></div>
+      <div class="t" data-rv style="--rv-d:.06s"><p class="yr">2020s</p><h3>One owner, one vision</h3><p>Ryan Stick assumes full ownership and integrates manufacturing, distribution, and retail into a single vertically integrated house.</p></div>
+      <div class="t" data-rv style="--rv-d:.12s"><p class="yr">2025</p><h3>Fifty years</h3><p>A half-century in, Billiard Factory turns from the family game room toward the curated social home, and opens the house to franchise partners.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ QUOTE ============================== -->
+<section id="quote">
+  <div class="wrap section-pad">
+    <blockquote data-rv>
+      <p class="q">
+        &ldquo;Since 1975, our mission has been simple: enable families and friends to share
+        priceless time together, one game room at a time. We aren't in the furniture business.
+        We're in the business of the time that turns out to be priceless.&rdquo;
+      </p>
+      <footer class="attr">Ryan Stick · Owner, Billiard Factory &nbsp; <span class="tbd">Draft quote · pending Ryan's approval</span></footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============================= FAQ =============================== -->
+<section id="faq" class="section-pad">
+  <div class="wrap">
+    <h2 class="headline" data-rv>What candidates ask first.</h2>
+    <div class="faq">
+      <details data-rv>
+        <summary>What does it cost to open a Billiard Factory showroom?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">Ownership's current estimate is $485,000 to $785,000 all-in: $200,000 to $400,000 for the showroom build-out, $250,000 to $350,000 in opening inventory, and a $35,000 franchise fee. Ongoing, plan on 2% royalty and 2% marketing fund. Candidates should show $500,000 in liquid capital. Final figures publish in the FDD.</div>
+      </details>
+      <details data-rv>
+        <summary>Why is a game-room showroom a good retail business?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">Big-ticket, considered purchases with delivery and installation attached resist e-commerce commoditization: families want to see the table, feel the slate, and talk to someone who knows the category. Nine categories under one roof mean multiple tickets per household, and the products themselves last decades, which builds service and referral business.</div>
+      </details>
+      <details data-rv>
+        <summary>What makes Billiard Factory different from other furniture franchises?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">Vertical integration. We own manufacturing, distribution, and retail, so franchise partners buy owned-brand product factory-direct with no distributor markup, and carry partner brands through our distribution power. Very few retail franchises own their supply chain end to end.</div>
+      </details>
+      <details data-rv>
+        <summary>Do I get a protected territory?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">Yes. Every agreement includes a contractually protected, radius-based territory. Orders placed on billiardfactory.com from inside your radius are planned as shared revenue between you and the house, final terms in the FDD.</div>
+      </details>
+      <details data-rv>
+        <summary>How long does it take to open?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">The path runs from qualification through FDD review, discovery day in Houston, site selection, build-out, and training. Target timelines for each stage are being finalized with the development team. <span class="tbd">TBD · timeline</span></div>
+      </details>
+      <details data-rv>
+        <summary>What experience do I need?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">Retail, showroom, or multi-location operating experience matters more than billiards knowledge. We can teach the category; we cannot teach the discipline of running a great store. Owner-operators and experienced multi-unit groups are both considered.</div>
+      </details>
+      <details data-rv>
+        <summary>What support do I get after opening?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">Ongoing field coaching, the national marketing engine with pre-built local campaigns, central merchandising and buying, distribution-center replenishment, and the shared technology stack. When the brand evolves, your local assets update centrally, so you never carry creative overhead.</div>
+      </details>
+      <details data-rv>
+        <summary>How large is a showroom?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">Target footprint is 7,000 to 8,000 square feet, modeled on the current 13-showroom fleet, with roughly $250,000 of floor stock on display at opening. Site criteria publish with the FDD.</div>
+      </details>
+      <details data-rv>
+        <summary>Can I own more than one territory?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">Yes. Multi-unit operators are a core candidate profile, and development agreements for multiple territories are part of the model under review. Multi-unit incentives, if offered, publish with the FDD. <span class="tbd">TBD · incentives</span></div>
+      </details>
+      <details data-rv>
+        <summary>Do franchisees get the designer and trade program?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">The trade program (trade pricing, spec support, white-glove delivery and installation standards) is part of the concept, and designer relationships in your market are yours to build with the house behind you. Lead routing by territory is part of the demand engine.</div>
+      </details>
+      <details data-rv>
+        <summary>I already own a billiards or game-room store. Is there a path for me?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">Yes, and it may be the fastest one. The brand entered Dallas–Fort Worth by converting seven independent stores in 2007, and ownership considers existing operators among the best candidates for the first territories. Tell us about your business in the form below.</div>
+      </details>
+      <details data-rv>
+        <summary>Which markets are available?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">The first territories under review are Salt Lake City, El Paso, Greenville, NC, Knoxville, and Nashville, with a target of 90 franchised showrooms over the next five years. If your metro is not on that list, tell us anyway; the map is being drawn now, and early candidates help draw it.</div>
+      </details>
+      <details data-rv>
+        <summary>Is this page an offer to sell me a franchise?<span class="ind" aria-hidden="true">+</span></summary>
+        <div class="ans">No. This page is informational. A franchise is offered only through a Franchise Disclosure Document delivered in compliance with the FTC Franchise Rule and applicable state law.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= APPLY ============================= -->
+<section id="apply">
+  <div class="wrap section-pad">
+    <div class="split" style="margin-top:0;">
+      <div>
+        <h2 class="headline" data-rv>Request the Franchise Disclosure Document.</h2>
+        <p data-rv style="margin-top:22px; color:var(--ink-72); max-width:34em;">
+          We are building toward 90 franchised showrooms over the next five years, awarded
+          market by market. Tell us who you are and where you want to build; your request goes
+          straight to Ryan Stick, the owner, who responds within two business days.
+        </p>
+        <p class="serif-label" data-rv style="color:var(--walnut); margin-top:30px;">First territories under review</p>
+        <p data-rv style="margin-top:8px; color:var(--ink-72); font-size:.95rem;">
+          Salt Lake City · El Paso · Greenville, NC · Knoxville · Nashville
+        </p>
+        <ul class="check-list" style="margin-top:28px;">
+          <li data-rv><span class="dot" aria-hidden="true"></span><span>The FDD and confidential economics model, when published.</span></li>
+          <li data-rv><span class="dot" aria-hidden="true"></span><span>A territory map and availability check for your market.</span></li>
+          <li data-rv><span class="dot" aria-hidden="true"></span><span>A direct line to the owner of the house, family-run since 1975.</span></li>
+        </ul>
+      </div>
+      <div>
+        <form id="fdd-form" class="form-card" name="fdd-request" method="POST" action="" data-netlify="true" netlify-honeypot="bot-field" novalidate data-rv>
+          <input type="hidden" name="form-name" value="fdd-request" />
+          <p style="display:none;"><label>Leave this field empty: <input name="bot-field" /></label></p>
+          <input type="hidden" name="utm_source" /><input type="hidden" name="utm_medium" /><input type="hidden" name="utm_campaign" /><input type="hidden" name="utm_term" /><input type="hidden" name="utm_content" /><input type="hidden" name="referrer" /><input type="hidden" name="landing_page" />
+          <div class="form-body">
+            <p class="serif-label" style="color:var(--walnut); margin-bottom:6px;">Confidential</p>
+            <h3 class="subhead" style="margin-bottom:30px;">Your FDD request</h3>
+            <div class="form-grid">
+              <label><span>First name <span class="req" aria-hidden="true">*</span></span><input required name="first" type="text" autocomplete="given-name" placeholder="Jane" /><span class="msg">Please add your first name.</span></label>
+              <label><span>Last name <span class="req" aria-hidden="true">*</span></span><input required name="last" type="text" autocomplete="family-name" placeholder="Calloway" /><span class="msg">Please add your last name.</span></label>
+              <label><span>Work email <span class="req" aria-hidden="true">*</span></span><input required name="email" type="email" autocomplete="email" placeholder="jane@operatorgroup.com" /><span class="msg">A valid email lets us send the FDD package.</span></label>
+              <label><span>Phone</span><input name="phone" type="tel" autocomplete="tel" placeholder="(555) 010-0199" /></label>
+              <label class="full"><span>Target metro / territory <span class="req" aria-hidden="true">*</span></span><input required name="territory" type="text" placeholder="e.g. Scottsdale, AZ" /><span class="msg">Tell us the market you want to build in.</span></label>
+              <label><span>Operator profile</span>
+                <select name="profile">
+                  <option>Multi-unit operator</option>
+                  <option>Premium landlord / developer</option>
+                  <option>Owner-operator</option>
+                  <option>Existing game-room / specialty retailer</option>
+                  <option>Family office / investor</option>
+                </select>
+              </label>
+              <label><span>Liquid capital</span>
+                <select name="capital">
+                  <option value="">Select a range</option>
+                  <option>Under $500k</option>
+                  <option>$500k to $1M</option>
+                  <option>$1M to $2M</option>
+                  <option>$2M+</option>
+                </select>
+              </label>
+              <label class="full"><span>Timeline to invest</span>
+                <select name="timeline">
+                  <option>Exploring, no set timeline</option>
+                  <option>Within 6 months</option>
+                  <option>6 to 12 months</option>
+                  <option>12+ months</option>
+                </select>
+              </label>
+            </div>
+            <label class="consent">
+              <input required type="checkbox" name="consent" />
+              <span>I understand this is a request for information, not an offer to buy or sell a franchise, and I authorize Billiard Factory to contact me about territory availability.</span>
+            </label>
+            <button type="submit" class="submit">Request the FDD</button>
+            <p class="form-error" role="alert" style="display:none; margin-top:16px; font-size:.9rem; color:var(--walnut);">
+              The request could not be sent. Please check your connection and try again; nothing you typed was lost.
+            </p>
+          </div>
+          <div class="form-success" role="status">
+            <p class="mark" aria-hidden="true">✓</p>
+            <h3>Received. Territory check underway.</h3>
+            <p>Your request went straight to the owner's desk. Ryan Stick will confirm availability in your market within two business days, and the FDD package follows the moment it publishes.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <figure class="territory-fig territory-wide" data-rv>
+      <div class="frame"><img src="assets/territory-aerial.jpg" alt="Aerial view of a Billiard Factory showroom anchoring a retail development, the surrounding market stretching to the horizon" loading="lazy" width="1600" height="900" /></div>
+      <figcaption>A protected radius, drawn around your door.</figcaption>
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================= -->
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <img src="https://billiard-factory-brand-hub.netlify.app/assets/logos/bf-logo-full-black.png" alt="Billiard Factory" width="170" height="34" />
+        <p>A family-owned, vertically integrated house of game-room brands. Building the room where families gather since 1975.</p>
+      </div>
+      <div>
+        <p class="ttl">Living ecosystem</p>
+        <p>Brand tokens and data served by the <a href="https://billiard-factory-brand-hub.netlify.app">Creative &amp; Brand Hub</a>. This page re-skins automatically when the hub updates. <span id="sync-badge">· syncing</span></p>
+      </div>
+      <div>
+        <p class="ttl">Legal</p>
+        <p>This website and the information it contains do not constitute the offer or sale of a franchise. A franchise is offered only through a Franchise Disclosure Document in compliance with the FTC Franchise Rule and applicable state franchise laws. Certain states require registration before offer or sale.</p>
+      </div>
+    </div>
+    <div class="legal">
+      © <span id="yr">2026</span> Billiard Factory · America's game room since 1975 · billiardfactory.com
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   THE LIVE LINK · pull the SSOT from the Creative Hub when reachable;
+   otherwise render from the inline fallback data below.
+   ===================================================================== */
+const SSOT_URL = 'https://billiard-factory-brand-hub.netlify.app/shared/brand-data.json';
+
+/* Inline fallback: a trimmed copy of the SSOT keys this page renders. */
+const FALLBACK = {
+  meta:{ version:'4.0.0 (inline)' },
+  ownedBrands:[
+    { id:'billiard-factory', name:'Billiard Factory', tier:'Hero Parent Brand', tagline:"America's game room since 1975.", swatch:'forest',
+      image:'https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-billiard-factory.jpg',
+      copy:["The parent brand and the house line, Challenger shuffleboards, air hockey, foosball, and multi-game tables built to Billiard Factory's own spec."] },
+    { id:'cl-bailey', name:'C.L. Bailey', tier:'Owned · Heritage Furniture', tagline:'Built for homes that endure.', swatch:'walnut',
+      image:'https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-cl-bailey.jpg',
+      copy:['Solid-hardwood game-room furniture on one-inch diamond-honed slate, finished by hand and engineered to be re-leveled, restored, and inherited.'] },
+    { id:'level-best', name:'Level Best', tier:'Owned · Accessories & Tournament Goods', tagline:'Tournament-grade, tailored to the room.', swatch:'green',
+      image:'https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-level-best.jpg',
+      copy:['The performance line, tournament-grade cues balanced to competition tolerances and custom-fit covers cut to each table’s exact silhouette.'] },
+    { id:'velocity', name:'Velocity', tier:'Owned · Contemporary Tables', tagline:'Architecture you can play on.', swatch:'charcoal',
+      image:'https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-velocity.jpg',
+      copy:['The contemporary line, sleek, low, and engineered for modern, minimalist interiors where the table reads as built-in cabinetry, not recreation.'] },
+    { id:'golden-west', name:'Golden West', tier:'Owned · Custom Artisanal Wood', tagline:'Commissioned, not configured.', swatch:'walnutLight',
+      image:'https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-golden-west.jpg',
+      copy:['The atelier at the top of the house, high-end custom artisanal wood, hand-selected hardwoods and bespoke inlay drawn to a single residence.'] }
+  ],
+  productRange:{ categories:[
+    { name:'Pool Tables', blurb:'Masterpiece, dining, tournament, modern, rustic, plus nine signature collections.', image:'https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/1_9M3q8uGCda.png?tr=f-auto,q-80,w-700' },
+    { name:'Shuffleboard', blurb:'Solid-hardwood playfields from 9 to 22 feet, indoor and outdoor.', image:'https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/2_s9pq4YqKhe.png?tr=f-auto,q-80,w-700' },
+    { name:'Game Tables', blurb:'Multi-game sets and convertible dining tops that work for game night and dinner.', image:'https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/3_JaTcIuTt7.png?tr=f-auto,q-80,w-700' },
+    { name:'Cues & Cases', blurb:'McDermott, Lucasi, Players and more, plus cases, chalk, and storage.', image:'https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/4_koQQFEuZN.png?tr=f-auto,q-80,w-700' },
+    { name:'Air Hockey', blurb:'Commercial-grade rails and blowers for true competitive play.', image:'https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/5_y7EeqLQhyh.png?tr=f-auto,q-80,w-700' },
+    { name:'Foosball', blurb:'From the Tornado tournament standard to family-room favorites.', image:'https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/6__2F6aT7UGG.png?tr=f-auto,q-80,w-700' },
+    { name:'Ping Pong', blurb:'Indoor and outdoor table tennis, tournament to backyard.', image:'https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/8_z0dGqjtu2a.png?tr=f-auto,q-80,w-700' },
+    { name:'Arcade & Pinball', blurb:'Pinball machines, arcade cabinets, and golf, the full game room.', image:'https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/11_xFq-qXqZlO.png?tr=f-auto,q-80,w-700' },
+    { name:'Furniture', blurb:'Bar stools, pub tables, theater seating, and the Himalayan Collection.', image:'https://ik.imagekit.io/billiardfactory/estoris/images/home/2026_Spring_Home_Page_Tiles/10_jVpXzyhPGm.png?tr=f-auto,q-80,w-700' }
+  ]}
+};
+
+(async function(){
+  let DATA = FALLBACK, live = false;
+  try{
+    const res = await fetch(SSOT_URL, { cache:'no-store' });
+    if(res.ok){ DATA = await res.json(); live = true; }
+  }catch(e){ /* CORS or offline: inline fallback carries the page */ }
+
+  /* re-skin from live tokens when present */
+  if(live && DATA.tokens && DATA.tokens.color){
+    const map = { forest:'--forest', forestDeep:'--pine', green:'--field', sage:'--sage',
+      mint:'--mist', cream:'--cream', orange:'--orange', walnut:'--walnut', charcoal:'--ink' };
+    Object.entries(map).forEach(([k,v])=>{
+      const t = DATA.tokens.color[k];
+      if(t && t.value) document.documentElement.style.setProperty(v, t.value);
+    });
+  }
+  const badge = document.getElementById('sync-badge');
+  if(badge) badge.textContent = live
+    ? ('· live · v' + ((DATA.meta && DATA.meta.version) || '?'))
+    : '· inline data (hub unreachable)';
+
+  const swatchHex = id => {
+    const local = { forest:'#185F43', walnut:'#6E5039', green:'#218C62', charcoal:'#1F2421', walnutLight:'#8C6B4F' };
+    if(live && DATA.tokens && DATA.tokens.color && DATA.tokens.color[id]) return DATA.tokens.color[id].value;
+    return local[id] || '#185F43';
+  };
+
+  /* owned brands */
+  const owned = document.getElementById('owned-grid');
+  if(owned && DATA.ownedBrands){
+    owned.innerHTML = DATA.ownedBrands.map((b,i)=>{
+      const blurb = (b.copy && b.copy[0]) || '';
+      const ph = b.image
+        ? `<img src="${b.image}" alt="${b.name}: ${b.tagline}" loading="lazy" />`
+        : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:${swatchHex(b.swatch)};">
+             <span style="font-family:var(--serif);font-style:italic;font-size:1.3rem;color:rgba(250,248,243,.9);">${b.name}</span>
+           </div>`;
+      return `<article class="brand" data-rv style="--rv-d:${(i%3)*0.07}s">
+        <div class="ph">${ph}</div>
+        <div class="bd">
+          <p class="tier">${b.tier}</p>
+          <h3>${b.name}</h3>
+          <p class="tag">${b.tagline}</p>
+          <p class="blurb">${blurb}</p>
+        </div>
+      </article>`;
+    }).join('');
+  }
+
+  /* categories */
+  const cats = document.getElementById('cat-grid');
+  if(cats && DATA.productRange && DATA.productRange.categories){
+    cats.innerHTML = DATA.productRange.categories.map((c,i)=>`
+      <div class="cat" data-rv style="--rv-d:${(i%3)*0.07}s">
+        <div class="ph"><img src="${c.image}" alt="${c.name}: ${c.blurb}" loading="lazy" /></div>
+        <div class="bd"><h3>${c.name}</h3><p>${c.blurb}</p></div>
+      </div>
+    `).join('');
+  }
+
+  observeReveals();
+})();
+
+/* scroll reveals: IntersectionObserver adds .in; content never hidden without JS */
+function observeReveals(){
+  const els = document.querySelectorAll('[data-rv]');
+  if(!('IntersectionObserver' in window)){ els.forEach(el=>el.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin:'0px 0px -8% 0px', threshold:.08 });
+  els.forEach(el=>io.observe(el));
+  /* safety: nothing stays offset forever */
+  setTimeout(()=>els.forEach(el=>el.classList.add('in')), 4000);
+}
+observeReveals();
+
+/* mobile menu */
+(function(){
+  const btn = document.querySelector('.menu-btn'), menu = document.getElementById('mobileMenu');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', ()=>{
+    const open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+    menu.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+  }));
+})();
+
+/* lead source: capture UTM parameters + referrer into hidden fields so
+   every submission arrives with attribution attached */
+(function(){
+  const form = document.getElementById('fdd-form');
+  const params = new URLSearchParams(window.location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{
+    const f = form.querySelector('input[name="'+k+'"]');
+    if(f && params.get(k)) f.value = params.get(k);
+  });
+  const ref = form.querySelector('input[name=referrer]');
+  if(ref) ref.value = document.referrer || 'direct';
+  const lp = form.querySelector('input[name=landing_page]');
+  if(lp) lp.value = window.location.href.split('#')[0];
+})();
+
+/* form: inline validation + Netlify Forms submission + conversion event */
+const form = document.getElementById('fdd-form');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  let firstBad = null;
+  form.querySelectorAll('.form-grid label').forEach(l=>{
+    const inp = l.querySelector('input[required], select[required]');
+    if(!inp) return;
+    const bad = !inp.checkValidity();
+    l.classList.toggle('err', bad);
+    if(bad && !firstBad) firstBad = inp;
+  });
+  const consent = form.querySelector('input[name=consent]');
+  if(!consent.checked){ consent.focus(); if(!firstBad) firstBad = consent; }
+  if(firstBad){ firstBad.focus(); return; }
+
+  const btn = form.querySelector('button.submit');
+  const errBox = form.querySelector('.form-error');
+  errBox.style.display = 'none';
+  btn.disabled = true; btn.textContent = 'Sending…';
+
+  const body = new URLSearchParams(new FormData(form)).toString();
+  fetch(window.location.pathname, {
+    method:'POST',
+    headers:{ 'Content-Type':'application/x-www-form-urlencoded' },
+    body
+  }).then(res=>{
+    if(!res.ok) throw new Error('submit failed: ' + res.status);
+    form.classList.add('done');
+    form.querySelector('.form-success').scrollIntoView({ behavior:'smooth', block:'center' });
+    /* GA4 conversion: fires only when GA4_ID is set */
+    track('event','generate_lead',{
+      form_name:'fdd-request',
+      territory: form.querySelector('input[name=territory]').value,
+      operator_profile: form.querySelector('select[name=profile]').value,
+      liquid_capital: form.querySelector('select[name=capital]').value,
+      invest_timeline: form.querySelector('select[name=timeline]').value
+    });
+  }).catch(()=>{
+    btn.disabled = false; btn.textContent = 'Request the FDD';
+    errBox.style.display = 'block';
+  });
+});
+form.querySelectorAll('input[required]').forEach(inp=>{
+  inp.addEventListener('blur', ()=>{ inp.closest('label').classList.toggle('err', !inp.checkValidity() && inp.value !== ''); });
+});
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
