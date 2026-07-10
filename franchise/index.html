@@ -256,7 +256,7 @@ nav.top .links a.cta:hover{ background:var(--pine); transform:translateY(-2px); 
   background:linear-gradient(97deg, rgba(18,62,45,.92) 16%, rgba(18,62,45,.55) 52%, rgba(18,62,45,.08) 84%),
              linear-gradient(to top, rgba(18,62,45,.55) 0%, rgba(18,62,45,.15) 34%, transparent 55%);
 }
-#hero .inner{ position:relative; z-index:2; padding:clamp(240px,24vw,340px) 0 clamp(70px,8vw,96px); }
+#hero .inner{ position:relative; z-index:2; padding-top:clamp(240px,24vw,340px); padding-bottom:clamp(70px,8vw,96px); }
 @media(max-width:700px){
   #hero .art img{ object-position:center 30%; }
   #hero .art::after{
@@ -393,7 +393,7 @@ table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
 
 /* conversion band · cream so it reads as its own beat between the mist numbers and the award band */
 #convert{ background:var(--cream); }
-#convert .inner{ display:grid; gap:36px; padding:clamp(64px,7vw,88px) 0; }
+#convert .inner{ display:grid; gap:36px; padding-block:clamp(64px,7vw,88px); }
 @media(min-width:1000px){ #convert .inner{ grid-template-columns:7fr 5fr; align-items:center; gap:80px; } }
 #convert h2{ font-family:var(--serif); font-weight:600; font-size:clamp(1.6rem,3vw,2.3rem); line-height:1.3; }
 #convert p{ color:var(--ink-72); margin-top:16px; line-height:1.7; max-width:38em; }
@@ -418,17 +418,23 @@ table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
 .bleed .cap{ font-family:var(--serif); font-style:italic; color:var(--cream-80); font-size:1.15rem; max-width:32em; }
 
 /* statement bands: headline + copy carried on the image */
-#award .art img{ object-position:center 8%; }
-#award .inner{ padding:clamp(340px,38vw,500px) 0 clamp(52px,6vw,80px); }
 #award h2, #design-band h2{ font-family:var(--sans); font-weight:700; letter-spacing:-.022em; font-size:clamp(2rem,4.2vw,3.2rem); line-height:1.06; }
 #award .cap, #design-band .cap{ margin-top:16px; }
+
+/* who-we-award: the band takes the photo's own 3:2 frame on desktop, so the shot is never cropped */
+#award{ display:flex; align-items:flex-end; }
+#award .art img{ object-position:center top; }
+#award .inner{ width:100%; padding-top:0; padding-bottom:clamp(40px,4.5vw,64px); }
+@media(min-width:701px){
+  #award{ aspect-ratio:1800/1208; min-height:520px; }
+}
 @media(max-width:700px){
   #award .inner{ padding-top:340px; }
 }
 
 /* design center */
 #design-band .art img{ object-position:center 68%; }
-#design-band .inner{ padding:clamp(280px,32vw,420px) 0 clamp(52px,6vw,80px); }
+#design-band .inner{ padding-top:clamp(280px,32vw,420px); padding-bottom:clamp(52px,6vw,80px); }
 #design-band .art::after{
   background:linear-gradient(to top, rgba(18,62,45,.94) 0%, rgba(18,62,45,.55) 40%, transparent 72%);
 }
