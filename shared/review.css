@@ -1,0 +1,124 @@
+/* =============================================================
+ *  BILLIARD FACTORY · SITE REVIEW OVERLAY
+ *  Loaded by shared/review.js (one-tag embed). Self-contained:
+ *  every rule is namespaced bfr- and carries its own tokens, so
+ *  it can ride on ANY draft site without inheriting its CSS.
+ *  Palette: warm paper / heritage felt / engine-room gold.
+ * ============================================================= */
+.bfr-root{
+  --bfr-gold:#C8A24B; --bfr-gold-deep:#A98430;
+  --bfr-felt:#185F43; --bfr-pine:#123E2D;
+  --bfr-paper:#FFFEFB; --bfr-cream:#FAF8F3;
+  --bfr-ink:#1F2421; --bfr-muted:#6E685E;
+  --bfr-line:rgba(31,36,33,.16);
+  --bfr-serif:'Vollkorn',Georgia,serif;
+  --bfr-sans:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  --bfr-shadow:0 10px 24px -10px rgba(18,62,45,.35), 0 30px 60px -28px rgba(31,36,33,.30);
+  font-family:var(--bfr-sans);
+  line-height:1.5;
+}
+.bfr-root, .bfr-root *{ box-sizing:border-box; }
+
+/* ---- the tab ------------------------------------------------ */
+.bfr-tab{
+  position:fixed; right:18px; bottom:18px; z-index:2147483000;
+  display:inline-flex; align-items:center; gap:.55rem;
+  background:var(--bfr-gold); color:var(--bfr-pine);
+  border:1px solid var(--bfr-gold-deep); border-radius:999px;
+  padding:.7rem 1.15rem; cursor:pointer;
+  font-family:var(--bfr-sans); font-size:.78rem; font-weight:700;
+  text-transform:uppercase; letter-spacing:.09em;
+  box-shadow:var(--bfr-shadow);
+  transition:transform .18s ease, background .18s ease;
+}
+.bfr-tab:hover{ transform:translateY(-2px); }
+.bfr-tab .bfr-count[hidden]{ display:none; }
+.bfr-tab .bfr-count{
+  background:var(--bfr-pine); color:var(--bfr-cream);
+  border-radius:999px; min-width:1.35rem; height:1.35rem;
+  display:inline-flex; align-items:center; justify-content:center;
+  font-size:.68rem; padding:0 .3rem; font-variant-numeric:tabular-nums;
+}
+.bfr-tab.bfr-armed{ background:var(--bfr-pine); color:var(--bfr-cream); border-color:var(--bfr-pine); }
+
+/* ---- pick mode ---------------------------------------------- */
+.bfr-picking, .bfr-picking *{ cursor:crosshair !important; }
+.bfr-hover-ring{
+  position:absolute; z-index:2147482996; pointer-events:none;
+  border:2px dashed var(--bfr-gold); border-radius:4px;
+  box-shadow:0 0 0 4px rgba(200,162,75,.18);
+}
+.bfr-hint{
+  position:fixed; left:50%; bottom:18px; transform:translateX(-50%);
+  z-index:2147483000; background:var(--bfr-pine); color:var(--bfr-cream);
+  border-radius:6px; padding:.55rem 1rem; font-size:.78rem; letter-spacing:.03em;
+  box-shadow:var(--bfr-shadow);
+}
+.bfr-hint b{ color:var(--bfr-gold); font-weight:700; }
+
+/* ---- pins ---------------------------------------------------- */
+.bfr-pin-layer{ position:absolute; top:0; left:0; width:100%; height:0; z-index:2147482997; }
+.bfr-pin{
+  position:absolute; width:26px; height:26px; border-radius:50% 50% 50% 4px;
+  background:var(--bfr-gold); color:var(--bfr-pine);
+  border:2px solid var(--bfr-paper); outline:1px solid var(--bfr-gold-deep);
+  display:flex; align-items:center; justify-content:center;
+  font-size:.72rem; font-weight:700; font-variant-numeric:tabular-nums;
+  cursor:pointer; box-shadow:0 4px 10px -3px rgba(18,62,45,.45);
+  transform:rotate(-45deg);
+  transition:transform .15s ease;
+}
+.bfr-pin > span{ transform:rotate(45deg); }
+.bfr-pin:hover{ transform:rotate(-45deg) scale(1.15); }
+
+/* ---- the card ------------------------------------------------ */
+.bfr-card{
+  position:absolute; z-index:2147483001; width:min(320px, calc(100vw - 32px));
+  background:var(--bfr-paper); color:var(--bfr-ink);
+  border:1px solid var(--bfr-line); border-top:3px solid var(--bfr-gold);
+  border-radius:10px; padding:16px; box-shadow:var(--bfr-shadow);
+}
+.bfr-card h4{
+  margin:0 0 2px; font-family:var(--bfr-serif); font-weight:600;
+  font-size:1.05rem; color:var(--bfr-pine); letter-spacing:-.01em;
+}
+.bfr-card .bfr-where{
+  margin:0 0 10px; font-size:.68rem; color:var(--bfr-muted);
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.bfr-card textarea, .bfr-card input{
+  width:100%; background:var(--bfr-cream); color:var(--bfr-ink);
+  border:1px solid var(--bfr-line); border-radius:6px;
+  font-family:var(--bfr-sans); font-size:.85rem; padding:.55rem .65rem;
+}
+.bfr-card textarea{ min-height:84px; resize:vertical; }
+.bfr-card textarea:focus, .bfr-card input:focus{
+  outline:2px solid var(--bfr-gold); outline-offset:0; border-color:var(--bfr-gold-deep);
+}
+.bfr-card label{
+  display:block; margin:10px 0 4px; font-size:.66rem; font-weight:700;
+  text-transform:uppercase; letter-spacing:.1em; color:var(--bfr-muted);
+}
+.bfr-actions{ display:flex; gap:8px; margin-top:12px; align-items:center; }
+.bfr-btn{
+  border-radius:5px; padding:.55rem 1rem; cursor:pointer;
+  font-family:var(--bfr-sans); font-size:.72rem; font-weight:700;
+  text-transform:uppercase; letter-spacing:.08em;
+  border:1px solid transparent; transition:background .15s ease;
+}
+.bfr-btn-go{ background:var(--bfr-felt); color:var(--bfr-cream); }
+.bfr-btn-go:hover{ background:var(--bfr-pine); }
+.bfr-btn-go[disabled]{ opacity:.55; cursor:default; }
+.bfr-btn-quiet{ background:none; color:var(--bfr-muted); border-color:var(--bfr-line); }
+.bfr-error{ margin:8px 0 0; font-size:.74rem; color:#8F4D50; }
+.bfr-ok{ margin:0; font-size:.85rem; color:var(--bfr-felt); font-family:var(--bfr-serif); }
+
+/* read-only pin view */
+.bfr-note{ margin:0; font-size:.88rem; white-space:pre-wrap; }
+.bfr-meta{ margin:10px 0 0; font-size:.68rem; color:var(--bfr-muted); }
+.bfr-meta b{ color:var(--bfr-felt); }
+
+@media (max-width:480px){
+  .bfr-tab{ right:12px; bottom:12px; padding:.6rem .9rem; }
+}
+@media print{ .bfr-root{ display:none !important; } }
