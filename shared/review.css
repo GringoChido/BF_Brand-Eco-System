@@ -99,6 +99,25 @@
   display:block; margin:10px 0 4px; font-size:.66rem; font-weight:700;
   text-transform:uppercase; letter-spacing:.1em; color:var(--bfr-muted);
 }
+/* feedback v2: type chips + For dropdown */
+.bfr-chips{ display:flex; gap:6px; flex-wrap:wrap; }
+.bfr-chip{
+  border:1px solid var(--bfr-line); border-radius:999px; background:var(--bfr-cream);
+  color:var(--bfr-ink); padding:.35rem .8rem; cursor:pointer;
+  font-family:var(--bfr-sans); font-size:.72rem; font-weight:700;
+  letter-spacing:.05em; transition:background .12s ease, border-color .12s ease;
+}
+.bfr-chip:hover{ border-color:var(--bfr-gold-deep); }
+.bfr-chip-on{ background:var(--bfr-gold); border-color:var(--bfr-gold-deep); color:var(--bfr-pine); }
+.bfr-label-miss{ color:#8F4D50 !important; }
+.bfr-select{
+  width:100%; background:var(--bfr-cream); color:var(--bfr-ink);
+  border:1px solid var(--bfr-line); border-radius:6px;
+  font-family:var(--bfr-sans); font-size:.85rem; padding:.5rem .55rem;
+}
+.bfr-select:focus{ outline:2px solid var(--bfr-gold); outline-offset:0; }
+.bfr-helper{ margin:10px 0 0; font-size:.68rem; color:var(--bfr-muted); font-style:italic; }
+
 .bfr-actions{ display:flex; gap:8px; margin-top:12px; align-items:center; }
 .bfr-btn{
   border-radius:5px; padding:.55rem 1rem; cursor:pointer;

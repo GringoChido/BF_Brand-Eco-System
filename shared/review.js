@@ -84,11 +84,21 @@
   root.appendChild(pinLayer);
   root.appendChild(tab);
 
-  var pins = [];        // {id, selector, note, reviewer, viewport, createdAt}
+  var pins = [];        // {id, selector, note, reviewer, viewport, type, createdAt}
   var picking = false;
   var card = null;
   var hoverRing = null;
   var hint = null;
+
+  /* Feedback v2: type chips + a "For" tag. People are display names fetched
+   * from the intake (?people=1) — emails never reach this file. */
+  var TYPES = [["bug", "Bug"], ["copy", "Copy"], ["design", "Design"], ["idea", "Idea"]];
+  var TYPE_LABEL = { bug: "Bug", copy: "Copy", design: "Design", idea: "Idea" };
+  var people = [];
+  fetch(ENDPOINT + "?people=1", { headers: headers(false) })
+    .then(function (res) { return res.ok ? res.json() : { people: [] }; })
+    .then(function (data) { people = data.people || []; })
+    .catch(function () { /* dropdown just stays "Anyone" */ });
 
   function setCount() {
     tabCount.textContent = String(pins.length);
@@ -170,6 +180,21 @@
     where.title = selector;
     card.appendChild(where);
 
+    var typeLabel = h("label", null, "What kind of note?");
+    var chipRow = h("div", "bfr-chips");
+    var chosenType = null;
+    TYPES.forEach(function (t) {
+      var chip = h("button", "bfr-chip", t[1]);
+      chip.type = "button";
+      chip.dataset.type = t[0];
+      chip.addEventListener("click", function () {
+        chosenType = t[0];
+        [...chipRow.children].forEach(function (c) { c.classList.toggle("bfr-chip-on", c === chip); });
+        typeLabel.classList.remove("bfr-label-miss");
+      });
+      chipRow.appendChild(chip);
+    });
+
     var noteLabel = h("label", null, "What should change?");
     var note = h("textarea");
     note.placeholder = "Say what you see and what you'd rather see…";
@@ -177,6 +202,17 @@
     var name = h("input");
     name.value = localStorage.getItem(NAME_KEY) || "";
     name.placeholder = "So we know who to ask";
+
+    var forLabel = h("label", null, "For");
+    var forSel = h("select", "bfr-select");
+    var anyOpt = h("option", null, "Anyone — Josh routes it");
+    anyOpt.value = "";
+    forSel.appendChild(anyOpt);
+    people.forEach(function (p) {
+      var o = h("option", null, p);
+      o.value = p;
+      forSel.appendChild(o);
+    });
 
     var actions = h("div", "bfr-actions");
     var send = h("button", "bfr-btn bfr-btn-go", "Pin it");
@@ -187,15 +223,19 @@
     actions.appendChild(send);
     actions.appendChild(cancel);
 
+    card.appendChild(typeLabel); card.appendChild(chipRow);
     card.appendChild(noteLabel); card.appendChild(note);
     card.appendChild(nameLabel); card.appendChild(name);
+    card.appendChild(forLabel); card.appendChild(forSel);
     card.appendChild(actions);
+    card.appendChild(h("p", "bfr-helper", "This becomes a task on the BF roadmap."));
     placeCard(card, x, y);
     note.focus();
 
     send.addEventListener("click", function () {
       var noteVal = note.value.trim();
       if (!noteVal) { note.focus(); return; }
+      if (!chosenType) { typeLabel.classList.add("bfr-label-miss"); chipRow.scrollIntoView({ block: "nearest" }); return; }
       send.disabled = true;
       send.textContent = "Pinning…";
       var reviewer = name.value.trim();
@@ -210,12 +250,18 @@
           note: noteVal,
           reviewer: reviewer || null,
           viewport: innerWidth + "x" + innerHeight,
+          type: chosenType,
+          taggedFor: forSel.value || null,
         }),
       }).then(function (res) {
-        if (!res.ok) throw new Error("HTTP " + res.status);
+        if (!res.ok) {
+          return res.json().then(function (err) {
+            throw new Error(err.message || ("HTTP " + res.status));
+          }, function () { throw new Error("HTTP " + res.status); });
+        }
         return res.json();
       }).then(function (data) {
-        pins.push({ id: data.id, selector: selector, note: noteVal,
+        pins.push({ id: data.id, selector: selector, note: noteVal, type: chosenType,
           reviewer: reviewer || null, createdAt: new Date().toISOString() });
         renderPins();
         card.textContent = "";
@@ -225,7 +271,7 @@
         send.disabled = false;
         send.textContent = "Pin it";
         var msg = card.querySelector(".bfr-error") || card.appendChild(h("p", "bfr-error"));
-        msg.textContent = "Couldn't save the pin (" + err.message + "). Try again?";
+        msg.textContent = err.message || "Couldn't save the pin. Try again?";
       });
     });
   }
@@ -233,7 +279,7 @@
   function openViewCard(pin, x, y) {
     closeCard();
     card = h("div", "bfr-card");
-    card.appendChild(h("h4", null, "Reviewer note"));
+    card.appendChild(h("h4", null, (TYPE_LABEL[pin.type] || "Reviewer") + " note"));
     card.appendChild(h("p", "bfr-note", pin.note));
     var meta = h("p", "bfr-meta");
     var who = h("b", null, pin.reviewer || "Unsigned");
