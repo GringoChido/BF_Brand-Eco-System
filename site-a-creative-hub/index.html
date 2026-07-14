@@ -668,7 +668,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
   txt('logo-clearspace', L.clearSpace||'');
   set('logo-wall', (L.variations||[]).map(v=>`
     <div class="logo-card">
-      <div class="stage ${v.bg==='dark'?'dark':''}"><img src="${esc(v.file)}" alt="${esc(v.name)}" loading="lazy" onerror="this.parentNode.innerHTML='<span class=&quot;eyebrow&quot; style=&quot;color:${v.bg==='dark'?'var(--cream)':'var(--ink)'}&quot;>${esc(v.name)}</span>'"/></div>
+      <div class="stage ${v.bg==='dark'?'dark':''}"${v.stage?` style="background:${esc(v.stage)}"`:''}><img src="${esc(v.file)}" alt="${esc(v.name)}" loading="lazy" onerror="this.parentNode.innerHTML='<span class=&quot;eyebrow&quot; style=&quot;color:${v.bg==='dark'?'var(--cream)':'var(--ink)'}&quot;>${esc(v.name)}</span>'"/></div>
       <div class="meta"><div><div class="nm">${esc(v.name)}</div><div class="us">${esc(v.use)}</div></div><a class="dl" href="${esc(v.file)}" download="${esc(v.id)}.png" aria-label="Download ${esc(v.name)} PNG">↓ PNG</a></div>
     </div>`).join(''));
   set('logo-misuse', (L.misuse||[]).map((m,i)=>`
