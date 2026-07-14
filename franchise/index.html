@@ -412,6 +412,9 @@ table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
 .timeline .yr{ font-family:var(--serif); font-style:italic; font-size:1.7rem; color:var(--walnut); line-height:1; }
 .timeline h3{ font-size:1.05rem; font-weight:700; letter-spacing:-.01em; margin:12px 0 6px; }
 .timeline p{ font-size:.9rem; color:var(--ink-72); }
+.timeline .t-photo{ margin:0 0 18px; }
+.timeline .t-photo img{ width:100%; height:170px; object-fit:cover; border-radius:3px; box-shadow:var(--sh-sm); }
+.timeline .t-photo figcaption{ margin-top:8px; font-size:.78rem; color:var(--ink-65); font-style:italic; }
 
 /* full-bleed image bands · cropped and text-aligned to match the hero */
 .bleed{ position:relative; overflow:hidden; border-top:none; background:var(--pine); color:var(--cream); }
@@ -478,6 +481,10 @@ table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
 #quote{ background:var(--mist); }
 #quote .q{ font-family:var(--serif); font-size:clamp(1.5rem,3vw,2.2rem); line-height:1.55; max-width:26em; }
 #quote .attr{ margin-top:30px; color:var(--ink-65); font-size:.95rem; }
+#quote .q-split{ display:grid; grid-template-columns:minmax(200px,260px) 1fr; gap:clamp(28px,5vw,64px); align-items:center; }
+#quote .q-portrait{ margin:0; aspect-ratio:4/5; border-radius:3px; overflow:hidden; box-shadow:var(--sh-sm); background:var(--forest); display:flex; align-items:center; justify-content:center; }
+#quote .q-portrait img{ width:52%; height:auto; opacity:.92; }
+@media(max-width:760px){ #quote .q-split{ grid-template-columns:1fr; } #quote .q-portrait{ max-width:240px; } }
 
 /* faq */
 .faq{ margin-top:56px; border-top:1px solid var(--hairline); }
@@ -690,12 +697,12 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
       the proof is the half-century behind the brand.
     </p>
     <div class="timeline">
-      <div class="t" data-rv style="--rv-d:.0s"><p class="yr">1975</p><h3>One store, four people</h3><p>Larry Stick opens the first Billiard Factory on Telephone Road in Houston, a single showroom built on the belief that a game room is where a family gathers.</p></div>
-      <div class="t" data-rv style="--rv-d:.06s"><p class="yr">1980s</p><h3>Out of Houston</h3><p>The playbook leaves Houston and holds: new stores across the suburbs, then Scottsdale, Arizona, and San Antonio prove the concept travels to markets that had never heard the name.</p></div>
+      <div class="t" data-rv style="--rv-d:.0s"><figure class="t-photo"><img src="https://ik.imagekit.io/billiardfactory/estoris/images/about-us/about-70_s.jpg?tr=w-800,q-80,f-auto" alt="Black-and-white photographs from the first Billiard Factory years: the family on the showroom floor and an exhibition night around a table" /><figcaption>From the family album: the first years on Telephone Road.</figcaption></figure><p class="yr">1975</p><h3>One store, four people</h3><p>Larry Stick opens the first Billiard Factory on Telephone Road in Houston, a single showroom built on the belief that a game room is where a family gathers.</p></div>
+      <div class="t" data-rv style="--rv-d:.06s"><figure class="t-photo"><img src="https://ik.imagekit.io/billiardfactory/estoris/images/about-us/about-80_s.jpg?tr=w-800,q-80,f-auto" alt="The brick Billiard Factory storefront in the growing years, and family snapshots from the same era" /><figcaption>The playbook leaves Houston: the storefront and the family behind it.</figcaption></figure><p class="yr">1980s</p><h3>Out of Houston</h3><p>The playbook leaves Houston and holds: new stores across the suburbs, then Scottsdale, Arizona, and San Antonio prove the concept travels to markets that had never heard the name.</p></div>
       <div class="t" data-rv style="--rv-d:.12s"><p class="yr">2007</p><h3>Into Dallas–Fort Worth</h3><p>The acquisition of seven Billiards &amp; Barstools stores carries the brand into the DFW metroplex, growth through both building and buying.</p></div>
-      <div class="t" data-rv style="--rv-d:.0s"><p class="yr">2010s</p><h3>The second generation</h3><p>Stewardship passes to the Stick family's second generation, committed to one of the widest, deepest product lines in the industry.</p></div>
+      <div class="t" data-rv style="--rv-d:.0s"><figure class="t-photo"><img src="https://ik.imagekit.io/billiardfactory/estoris/images/about-us/2010.jpg?tr=w-800,q-80,f-auto" alt="Four members of the family and leadership under the green Billiard Factory sign in a modern showroom" /><figcaption>Two generations under the same green sign.</figcaption></figure><p class="yr">2010s</p><h3>The second generation</h3><p>Stewardship passes to the Stick family's second generation, committed to one of the widest, deepest product lines in the industry.</p></div>
       <div class="t" data-rv style="--rv-d:.06s"><p class="yr">2020s</p><h3>One owner, one vision</h3><p>Ryan Stick assumes full ownership and unites the owned brands, distribution, and retail into a single house.</p></div>
-      <div class="t" data-rv style="--rv-d:.12s"><p class="yr">2025</p><h3>Fifty years</h3><p>A half-century in, Billiard Factory turns from the family game room toward the curated social home, and opens the house to franchise partners.</p></div>
+      <div class="t" data-rv style="--rv-d:.12s"><figure class="t-photo"><img src="https://ik.imagekit.io/billiardfactory/estoris/images/about-us/florida_3-20150202_171627.jpg?tr=w-800,q-80,f-auto" alt="The classic Billiard Factory sign over a showroom entrance" /><figcaption>The sign that has meant something since 1975.</figcaption></figure><p class="yr">2025</p><h3>Fifty years</h3><p>A half-century in, Billiard Factory turns from the family game room toward the curated social home, and opens the house to franchise partners.</p></div>
     </div>
   </div>
 </section>
@@ -1062,6 +1069,12 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
 <!-- ============================ QUOTE ============================== -->
 <section id="quote">
   <div class="wrap section-pad">
+    <div class="q-split">
+      <!-- PLACEHOLDER: swap the stamp for Ryan Stick's portrait when shot.
+           Keep aspect-ratio 4/5; alt "Ryan Stick, owner of Billiard Factory". -->
+      <figure class="q-portrait" data-rv aria-hidden="true">
+        <img src="https://billiard-factory-brand-hub.netlify.app/assets/logos/bf-since1975-stories-white.png" alt="" />
+      </figure>
     <blockquote data-rv>
       <p class="q">
         &ldquo;Since 1975, our mission has been simple: enable families and friends to share
@@ -1069,6 +1082,7 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
       </p>
       <footer class="attr">Ryan Stick · Owner, Billiard Factory &nbsp; <span class="tbd">Draft quote · pending Ryan's approval</span></footer>
     </blockquote>
+    </div>
   </div>
 </section>
 
