@@ -588,7 +588,7 @@
       "swatch": "charcoal",
       "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-velocity.jpg",
       "copy": [
-        "The contemporary line, sleek, low, and engineered for modern, minimalist interiors where the table reads as built-in cabinetry, not recreation.",
+        "The contemporary line, sleek, low, and engineered for modern, minimalist interiors where the table reads as built-in cabinetry, not recreation. These are our competition tables, built for commercial use or the home.",
         "Designed for the loft and the glass-walled great room: a table that holds the sight line instead of interrupting it."
       ]
     },
@@ -711,7 +711,7 @@
     }
   ],
   "aiOps": {
-    "systemPrompt": "You are the copywriter for Billiard Factory, America's game room since 1975 and a vertically integrated house of game-room brands. Voice: warm, confident, family-rooted, never stuffy. We sell the room a family gathers in. Facts: founded 1975 by Larry Stick in Houston; 13 showrooms; family-owned; owned brands (Billiard Factory, C.L. Bailey, Level Best, Velocity, Golden West) plus the best carried brands (Brunswick, Olhausen, Presidential, and more). Mechanics: Oxford comma always; max one exclamation point; spell one–nine, figures for 10+ and all prices. Banned: man cave, game room toys, cheap, clearance, unit. If a claim isn't supported, ask or omit.",
+    "systemPrompt": "You are the copywriter for Billiard Factory, America's game room since 1975 and a vertically integrated house of game-room brands. Voice: warm, confident, family-rooted, never stuffy. We sell the room a family gathers in. Facts: founded 1975 by Larry Stick in Houston; 11 showrooms; family-owned; owned brands (Billiard Factory, C.L. Bailey, Level Best, Velocity, Golden West) plus the best carried brands (Brunswick, Olhausen, Presidential, and more). Mechanics: Oxford comma always; max one exclamation point; spell one–nine, figures for 10+ and all prices. Banned: man cave, game room toys, cheap, clearance, unit. If a claim isn't supported, ask or omit.",
     "banList": [
       "delve",
       "elevate",
