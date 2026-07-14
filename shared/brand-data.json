@@ -10,7 +10,7 @@
     ],
     "tagline": "America's game room since 1975.",
     "pivotLine": "From the family game room to the curated social home.",
-    "positioning": "Billiard Factory has spent fifty years as one of the nation's largest billiard and game-room furniture retailers. We own manufacturing, we carry the best brands in the category, and we sell through our own showrooms: a vertically integrated house now curating the modern social home."
+    "positioning": "Billiard Factory has spent fifty years as one of the nation's largest billiard and game-room furniture retailers. Our owned brands are engineered, designed, and finished by our factories, we carry the best brands in the category, and we sell through our own showrooms: a family-owned house now curating the modern social home."
   },
   "brandFoundations": {
     "purpose": "Enabling families and friends to share priceless time together, one game room at a time.",
@@ -388,7 +388,7 @@
       },
       {
         "name": "Confident, never boastful",
-        "body": "Fifty years and owned manufacturing let us state facts plainly. Show the proof, skip the hype."
+        "body": "Fifty years and our own brands let us state facts plainly. Show the proof, skip the hype."
       },
       {
         "name": "Concrete over clever",
@@ -461,7 +461,7 @@
     "founded": "1975",
     "founder": "Larry Stick",
     "origin": "A single store on Telephone Road in Houston, Texas, four employees and a workshop.",
-    "today": "One of the nation's largest billiard and game-room furniture retailers: 13 showrooms, multiple distribution centers, still family-owned.",
+    "today": "One of the nation's largest billiard and game-room furniture retailers: 11 showrooms, multiple distribution centers, still family-owned.",
     "anniversary": "2025 marked 50 years.",
     "timeline": [
       {
@@ -487,7 +487,7 @@
       {
         "year": "2020s",
         "title": "One owner, one vision",
-        "body": "Ryan Stick assumes full ownership and begins integrating manufacturing, distribution, and retail into a single vertically integrated house."
+        "body": "Ryan Stick assumes full ownership and begins uniting the owned brands, distribution, and retail into a single house."
       },
       {
         "year": "2025",
@@ -547,11 +547,11 @@
     ]
   },
   "verticalIntegration": {
-    "thesis": "Most retailers only sell. Billiard Factory manufactures, distributes, and retails, so there is no middleman between the workshop and your room.",
+    "thesis": "Most retailers only sell. Billiard Factory owns its brands and our factories build them, so there is no middleman between the workshop and your room.",
     "layers": [
       {
         "label": "We Make",
-        "body": "Owned brands engineered and finished in-house, protected margins, tournament tolerances, and a standard no reseller can match."
+        "body": "Owned and family brands engineered, designed, and finished by our factories, protected margins, tournament tolerances, and a standard no reseller can match."
       },
       {
         "label": "We Curate",
@@ -559,7 +559,7 @@
       },
       {
         "label": "We Sell",
-        "body": "Thirteen showrooms and a national e-commerce store, and we own the relationship from the factory floor to the family room."
+        "body": "Eleven showrooms and a national e-commerce store, and we own the relationship from the factory floor to the family room."
       }
     ]
   },
@@ -697,14 +697,14 @@
       "label": "Fifty years of game-room expertise, a brand story that sells itself."
     },
     {
-      "stat": "13",
+      "stat": "11",
       "unit": "showrooms",
       "label": "A real retail footprint plus national e-commerce and distribution centers."
     },
     {
       "stat": "0",
       "unit": "middlemen",
-      "label": "Owned manufacturing, factory-direct from the bench to the room."
+      "label": "Owned brands built by our factories, factory-direct from the bench to the room."
     },
     {
       "stat": "100%",
@@ -735,7 +735,7 @@
     }
   ],
   "aiOps": {
-    "systemPrompt": "You are the copywriter for Billiard Factory, America's game room since 1975 and a vertically integrated house of game-room brands. Voice: warm, confident, family-rooted, never stuffy. We sell the room a family gathers in. Facts: founded 1975 by Larry Stick in Houston; 11 showrooms; family-owned; owned brands (Billiard Factory, C.L. Bailey, Level Best, Velocity, Golden West) plus the best carried brands (Brunswick, Olhausen, Presidential, and more). Mechanics: Oxford comma always; max one exclamation point; spell one–nine, figures for 10+ and all prices. Banned: man cave, game room toys, cheap, clearance, unit. If a claim isn't supported, ask or omit.",
+    "systemPrompt": "You are the copywriter for Billiard Factory, America's game room since 1975 and a family-owned house of game-room brands. Voice: warm, confident, family-rooted, never stuffy. We sell the room a family gathers in. Facts: founded 1975 by Larry Stick in Houston; 11 showrooms; family-owned; owned brands (Billiard Factory, C.L. Bailey, Level Best, Velocity, Golden West) plus the best carried brands (Brunswick, Olhausen, Presidential, and more). Mechanics: Oxford comma always; max one exclamation point; spell one–nine, figures for 10+ and all prices. Banned: man cave, game room toys, cheap, clearance, unit. If a claim isn't supported, ask or omit.",
     "banList": [
       "delve",
       "elevate",
