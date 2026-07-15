@@ -444,8 +444,8 @@ table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
 .bleed .cap{ font-family:var(--serif); font-style:italic; color:var(--cream-80); font-size:1.15rem; max-width:32em; }
 
 /* statement bands: headline + copy carried on the image */
-#award h2, #design-band h2{ font-family:var(--sans); font-weight:700; letter-spacing:-.022em; font-size:clamp(2rem,4.2vw,3.2rem); line-height:1.06; }
-#award .cap, #design-band .cap{ margin-top:16px; }
+#award h2{ font-family:var(--sans); font-weight:700; letter-spacing:-.022em; font-size:clamp(2rem,4.2vw,3.2rem); line-height:1.06; }
+#award .cap{ margin-top:16px; }
 
 /* who-we-award: the band takes the photo's own 3:2 frame on desktop, so the shot is never cropped */
 #award{ display:flex; align-items:flex-end; }
@@ -459,13 +459,7 @@ table.econ td.n{ color:var(--ink-65); font-size:.88rem; }
 }
 
 /* design center */
-#design-band .art img{ object-position:center 68%; }
-#design-band .inner{ padding-top:clamp(280px,32vw,420px); padding-bottom:clamp(52px,6vw,80px); }
-#design-band .art::after{
-  background:linear-gradient(to top, rgba(18,62,45,.94) 0%, rgba(18,62,45,.55) 40%, transparent 72%);
-}
 @media(max-width:700px){
-  #design-band .inner{ padding-top:300px; }
   .bleed .art::after{
     background:linear-gradient(to bottom, rgba(18,62,45,.25) 0%, rgba(18,62,45,.62) 45%, rgba(18,62,45,.94) 100%);
   }
