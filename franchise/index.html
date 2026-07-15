@@ -347,6 +347,20 @@ nav.top .links a.cta:hover{ background:var(--pine); transform:translateY(-2px); 
 
 /* showroom categories */
 .cats{ display:grid; gap:22px; margin-top:56px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+@media(min-width:1080px){
+  .cats{ grid-template-columns:repeat(4,1fr); }
+  .cats .cat--anchor{ grid-column:span 2; grid-row:span 2; }
+  .cats .cat--anchor .ph{ aspect-ratio:auto; flex:1; min-height:0; }
+  .cats .cat--anchor{ display:flex; flex-direction:column; }
+  .cats .cat--anchor .bd{ padding:26px 28px 30px; }
+  .cats .cat--anchor h3{ font-size:1.5rem; letter-spacing:-.02em; }
+  .cats .cat--anchor p{ font-size:.95rem; max-width:42em; }
+}
+@media(min-width:640px) and (max-width:1079.98px){
+  .cats .cat--anchor{ grid-column:1 / -1; }
+  .cats .cat--anchor .ph{ aspect-ratio:16/8; }
+  .cats .cat--anchor h3{ font-size:1.3rem; }
+}
 .cats .cat{ border-radius:4px; overflow:hidden; background:var(--mist); box-shadow:var(--sh-sm);
   transition:transform .25s var(--ease-out), box-shadow .25s var(--ease-out); }
 .cats .cat:hover{ transform:translateY(-3px); box-shadow:var(--sh-md); }
@@ -359,6 +373,7 @@ nav.top .links a.cta:hover{ background:var(--pine); transform:translateY(-2px); 
 /* phones: 2-up compact tiles so nine categories scan in five rows, not nine screens */
 @media(max-width:640px){
   .cats{ grid-template-columns:repeat(2,1fr); gap:14px; }
+  .cats .cat--anchor{ grid-column:1 / -1; }
   .cats .cat .bd{ padding:13px 14px 16px; }
   .cats .cat h3{ font-size:.92rem; }
   .cats .cat p{ display:none; }
@@ -888,23 +903,16 @@ body > footer .legal{ border-top:1px solid var(--hairline); padding:26px 0; font
 </section>
 
 <!-- ========================= THE SHOWROOM ========================== -->
-<section id="showroom" style="border-top:none;">
-  <div id="design-band" class="bleed on-dark" aria-label="Nine categories, everything the room needs">
-    <div class="art" aria-hidden="true">
-      <img src="assets/design-center.jpg" alt="" loading="lazy" width="1600" height="1073" />
-    </div>
-    <div class="wrap inner">
-      <h2 data-rv>Nine categories.<br />Everything the room needs.</h2>
-      <p class="cap" data-rv>
-        From tournament-grade tables to the furniture that frames the room, a Billiard Factory
-        showroom sells the whole space a family gathers in, not a single product line. Deep
-        assortment means multiple tickets per household and reasons to come back.
-      </p>
-      <p class="cap" data-rv style="font-size:.95rem; margin-top:12px;">In the design center, a room is specified, not just sold.</p>
-    </div>
-  </div>
-  <div class="wrap" style="padding-top:clamp(56px,7vw,88px); padding-bottom:clamp(88px,10vw,136px);">
-    <div class="cats" id="cat-grid" style="margin-top:0;"><!-- rendered from SSOT --></div>
+<section id="showroom">
+  <div class="wrap section-pad">
+    <h2 class="headline" data-rv style="max-width:15em;">Nine categories. Everything the room needs.</h2>
+    <p class="lede body-copy" data-rv style="color:var(--ink-72); margin-top:24px;">
+      From tournament-grade tables to the furniture that frames the room, a Billiard Factory
+      showroom sells the whole space a family gathers in, not a single product line. Deep
+      assortment means multiple tickets per household, and in the design center a room is
+      specified, not just sold.
+    </p>
+    <div class="cats" id="cat-grid"><!-- rendered from SSOT --></div>
   </div>
 </section>
 
@@ -1363,7 +1371,7 @@ const FALLBACK = {
   const cats = document.getElementById('cat-grid');
   if(cats && DATA.productRange && DATA.productRange.categories){
     cats.innerHTML = DATA.productRange.categories.map((c,i)=>`
-      <div class="cat" data-rv style="--rv-d:${(i%3)*0.07}s">
+      <div class="cat${i===0?' cat--anchor':''}" data-rv style="--rv-d:${Math.min(i*0.05,0.4)}s">
         <div class="ph"><img src="${c.image}" alt="${c.name}: ${c.blurb}" loading="lazy" /></div>
         <div class="bd"><h3>${c.name}</h3><p>${c.blurb}</p></div>
       </div>
