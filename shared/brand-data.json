@@ -368,6 +368,14 @@
         "file": "../assets/logos/bf-logo-simple-white.png",
         "bg": "dark",
         "stage": "#185F43"
+      },
+      {
+        "id": "bf-mark-on-orange",
+        "name": "Simple mark · on Signal Orange",
+        "use": "Plain mark reversed on the accent: promo tags, event pieces.",
+        "file": "../assets/logos/bf-logo-simple-white.png",
+        "bg": "dark",
+        "stage": "#F0560C"
       }
     ],
     "misuse": [

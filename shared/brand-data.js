@@ -345,6 +345,38 @@ window.BF_DATA = {
         "use": "Storytelling seals, on dark.",
         "file": "../assets/logos/bf-since1975-stories-white.png",
         "bg": "dark"
+      },
+      {
+        "id": "bf-mark-on-white",
+        "name": "Simple mark · on white",
+        "use": "Plain mark on pure white: packaging, documents, co-branding.",
+        "file": "../assets/logos/bf-logo-simple-black.png",
+        "bg": "light",
+        "stage": "#FFFFFF"
+      },
+      {
+        "id": "bf-mark-on-black",
+        "name": "Simple mark · on black",
+        "use": "Plain mark reversed on black: apparel, dark packaging.",
+        "file": "../assets/logos/bf-logo-simple-white.png",
+        "bg": "dark",
+        "stage": "#122019"
+      },
+      {
+        "id": "bf-mark-on-green",
+        "name": "Simple mark · on Heritage Green",
+        "use": "Plain mark on the brand green: signage, vehicle, felt.",
+        "file": "../assets/logos/bf-logo-simple-white.png",
+        "bg": "dark",
+        "stage": "#185F43"
+      },
+      {
+        "id": "bf-mark-on-orange",
+        "name": "Simple mark · on Signal Orange",
+        "use": "Plain mark reversed on the accent: promo tags, event pieces.",
+        "file": "../assets/logos/bf-logo-simple-white.png",
+        "bg": "dark",
+        "stage": "#F0560C"
       }
     ],
     "misuse": [
