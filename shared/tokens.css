@@ -63,4 +63,11 @@
   --bf-radius-pill:999px;
   --bf-rule-hairline:1px;
   --bf-rule-heavy:2px;
+
+  /* ---- motion ---- */
+  --bf-dur-quick:200ms;
+  --bf-dur-standard:400ms;
+  --bf-dur-reveal:700ms;
+  --bf-ease-out:cubic-bezier(.2,.7,.2,1);
+  --bf-ease-inout:cubic-bezier(.4,0,.2,1);
 }

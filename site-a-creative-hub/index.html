@@ -336,6 +336,34 @@ section{ position:relative; }
 .dv-ramp{ display:flex; height:2.6rem; border-radius:4px; overflow:hidden; margin-top:1rem; border:1px solid var(--line); }
 .dv-ramp span{ flex:1; }
 
+/* ---------- motion (v5) ---------- */
+.mo{ display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+@media(max-width:880px){ .mo{ grid-template-columns:1fr; } }
+.mo .g-card p{ margin-top:.8rem; }
+.mo-demo{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; width:100%; margin-top:1rem; background:var(--forest); border:none; border-radius:8px; padding:2.2rem 1rem 1.4rem; cursor:pointer; position:relative; }
+.mo-ring{ width:5.4rem; height:5.4rem; display:block; }
+.mo-word{ font-family:var(--sans); font-weight:700; letter-spacing:.14em; color:var(--cream); font-size:1rem; }
+.mo-hint{ font-family:var(--mono); font-size:.6rem; color:rgba(250,248,243,.55); }
+.mo-demo.play .mo-i{ animation:moInlay 200ms cubic-bezier(.2,.7,.2,1) both; }
+.mo-demo.play .mo-r{ stroke-dasharray:222; stroke-dashoffset:222; animation:moRing 400ms cubic-bezier(.2,.7,.2,1) 200ms both; }
+.mo-demo.play .mo-word{ animation:moWord 700ms cubic-bezier(.2,.7,.2,1) 450ms both; }
+@keyframes moInlay{ from{ opacity:0; transform:scale(.92); transform-origin:center; } to{ opacity:1; transform:none; } }
+@keyframes moRing{ to{ stroke-dashoffset:0; } }
+@keyframes moWord{ from{ opacity:0; transform:translateY(20px); } to{ opacity:1; transform:none; } }
+.mo-tok{ display:grid; gap:.4rem; margin-top:1rem; font-family:var(--mono); font-size:.76rem; color:rgba(31,36,33,.8); }
+.mo-tok .t{ display:flex; justify-content:space-between; gap:1rem; border-bottom:1px solid var(--line); padding:.45rem 0; }
+.mo-end{ margin-top:1rem; aspect-ratio:16/9; background:var(--forest); border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.8rem; position:relative; }
+.mo-end img{ width:40%; }
+.mo-end span{ position:absolute; bottom:.7rem; font-family:var(--mono); font-size:.6rem; color:var(--cream); letter-spacing:.06em; }
+.mo-lt{ margin-top:1rem; background:var(--forest); border-radius:6px; padding:2.2rem 1rem .9rem; position:relative; overflow:hidden; }
+.mo-lt .bar{ position:absolute; left:.9rem; bottom:.9rem; top:auto; width:2px; height:2.2rem; background:var(--orange); }
+.mo-lt .nm{ display:block; margin-left:1.6rem; font-weight:700; color:var(--cream); font-size:.95rem; background:none; }
+.mo-lt .ti{ display:block; margin-left:1.6rem; font-family:var(--mono); font-size:.6rem; color:rgba(250,248,243,.7); letter-spacing:.08em; }
+.mo-safe{ margin-top:1rem; aspect-ratio:9/13; max-width:9rem; background:var(--mint); border:1px solid var(--line-2); border-radius:6px; position:relative; display:flex; align-items:center; justify-content:center; }
+.mo-safe .z{ position:absolute; left:0; right:0; background:rgba(240,86,12,.14); font-family:var(--mono); font-size:.5rem; color:#8A3406; display:flex; align-items:center; justify-content:center; text-align:center; }
+.mo-safe .z.t{ top:0; height:14%; border-radius:6px 6px 0 0; } .mo-safe .z.b{ bottom:0; height:17%; border-radius:0 0 6px 6px; }
+.mo-safe .c{ font-family:var(--mono); font-size:.54rem; color:rgba(31,36,33,.6); }
+
 /* ---------- type licensing (v5) ---------- */
 .lic{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
 @media(max-width:1000px){ .lic{ grid-template-columns:1fr; } }
@@ -684,6 +712,43 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
       <div class="g-card"><span class="eyebrow" style="color:var(--green)">Sequential ramp</span>
         <div class="dv-ramp" id="dv-ramp"></div><p id="dv-ramp-note"></p></div>
       <div class="g-card"><span class="eyebrow" style="color:var(--green)">Chart typography</span><p id="dv-type"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MOTION (v5) ===== -->
+<section id="motion" class="is-mint pad">
+  <div class="wrap">
+    <div class="sec-mark reveal"><span class="no" data-secno>06</span><span class="ln"></span></div>
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker eyebrow"><span class="bar"></span> Motion</span>
+        <h2 class="sec-title">Decisive arrivals, soft landings.</h2>
+      </div>
+      <p class="measure muted" id="motion-intro"></p>
+    </div>
+    <div class="mo reveal">
+      <div class="g-card mo-demo-card">
+        <span class="eyebrow" style="color:var(--green)">Logo reveal</span>
+        <button class="mo-demo" id="mo-demo" type="button" aria-label="Replay the logo reveal">
+          <span class="mo-ring"><svg viewBox="0 0 96 96" fill="none" aria-hidden="true">
+            <path class="mo-r" d="M48 9 L87 48 L48 87 L9 48 Z" stroke="#FAF8F3" stroke-width="6.5"/>
+            <path class="mo-i" d="M48 35 L61 48 L48 61 L35 48 Z" fill="#FAF8F3"/>
+          </svg></span>
+          <span class="mo-word">BILLIARD FACTORY</span>
+          <span class="mo-hint">Click to replay</span>
+        </button>
+        <p id="mo-reveal"></p>
+      </div>
+      <div class="g-card"><span class="eyebrow" style="color:var(--green)">Durations &amp; easing</span>
+        <div class="mo-tok" id="mo-tok"></div><p id="mo-toknote"></p></div>
+      <div class="g-card"><span class="eyebrow" style="color:var(--green)">Video end card</span>
+        <div class="mo-end" aria-hidden="true"><img src="../assets/logos/bf-registration-white.png" alt=""/><span>billiardfactory.com</span></div>
+        <p id="mo-end-note"></p></div>
+      <div class="g-card"><span class="eyebrow" style="color:var(--green)">Lower third · story safe zones</span>
+        <div class="mo-lt" aria-hidden="true"><span class="bar"></span><span class="nm">Ryan Stick</span><span class="ti">BILLIARD FACTORY · OWNER</span></div>
+        <div class="mo-safe" aria-hidden="true"><span class="z t">220px · platform UI</span><span class="z b">280px · platform UI</span><span class="c">1080 × 1420 safe</span></div>
+        <p id="mo-lt-note"></p><p id="mo-safe-note"></p></div>
     </div>
   </div>
 </section>
@@ -1050,6 +1115,23 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
       `<span class="bar" style="background:${sw(k)};height:${heights[i%4]}%"><i>${esc(C[k].name.split(' ')[0])}</i></span>`).join('')+
       `<span class="bar" style="background:${sw('orange')};height:100%"><i>Highlight</i></span>`);
     set('dv-ramp', (DV.ramp||[]).map(h=>`<span style="background:${esc(h)}"></span>`).join(''));
+  }
+
+  // ---- MOTION (v5) ----
+  const MO=D.motion;
+  if(MO){
+    txt('motion-intro', MO.intro||'');
+    txt('mo-reveal', MO.logoReveal||''); txt('mo-toknote', MO.tokensNote||'');
+    txt('mo-end-note', MO.endCard||''); txt('mo-lt-note', MO.lowerThird||''); txt('mo-safe-note', MO.storySafe||'');
+    const mt=D.tokens.motion||{};
+    set('mo-tok', Object.entries(mt.durations||{}).map(([k,v])=>`<span class="t"><span>--bf-dur-${esc(k)}</span><b>${esc(v)}</b></span>`).join('')+
+                  Object.entries(mt.easings||{}).map(([k,v])=>`<span class="t"><span>--bf-ease-${esc(k)}</span><b>${esc(v)}</b></span>`).join(''));
+    const demo=document.getElementById('mo-demo');
+    if(demo){
+      const play=()=>{ demo.classList.remove('play'); void demo.offsetWidth; demo.classList.add('play'); };
+      demo.addEventListener('click',play);
+      new IntersectionObserver((es,o)=>{ if(es[0].isIntersecting){ play(); o.disconnect(); } },{threshold:.5}).observe(demo);
+    }
   }
 
   // ---- 05 · VOICE ----

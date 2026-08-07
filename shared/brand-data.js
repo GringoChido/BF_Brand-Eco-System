@@ -436,6 +436,17 @@ window.BF_DATA = {
         "heavy": "2px"
       },
       "radiusNote": "Buttons and chips 4px · tiles 6px · cards and stages 8px · modals 12px · pills 999px. Rules are 1px hairlines at 12–20% Ink; the 2px weight is reserved for the kicker bar and chart axes."
+    },
+    "motion": {
+      "durations": {
+        "quick": "200ms",
+        "standard": "400ms",
+        "reveal": "700ms"
+      },
+      "easings": {
+        "out": "cubic-bezier(.2,.7,.2,1)",
+        "inout": "cubic-bezier(.4,0,.2,1)"
+      }
     }
   },
   "logo": {
@@ -1109,5 +1120,13 @@ window.BF_DATA = {
     ],
     "rampNote": "Sequential data runs the green ramp, dark equals more. Never rainbow scales, never red-to-green.",
     "typeNote": "Axes, tick labels, and data callouts set in Fragment Mono at the Spec step. Chart titles are Helvetica Neue Headline; nothing in a chart is italic. Gridlines are 1px hairlines at 12% Ink; axes take the 2px rule weight."
+  },
+  "motion": {
+    "intro": "Motion is restraint at 24 frames a second: three durations, one easing family, and nothing that bounces, spins, or sparkles. If an animation would embarrass a fifty-year-old furniture maker, it's off-brand.",
+    "tokensNote": "Quick (200ms) for hovers and fades · Standard (400ms) for panels and slides · Reveal (700ms) for entrances. Everything runs the ease-out family — objects arrive decisively and settle softly. Durations over 700ms are reserved for the logo reveal alone.",
+    "logoReveal": "The inlay lands first: a 200ms fade with a settle from 92% scale. The sight ring follows over 400ms. The wordmark fades up last across 700ms, rising 20px. Under 1.2 seconds end to end, then everything holds still.",
+    "endCard": "The last 2.5 seconds of every video: Heritage Green field, the registration lockup centered at 40% of frame width, arriving on the standard 400ms fade. The URL sits 90px from the bottom in Fragment Mono, Cream. No sting, no confetti, no QR code unless the media is print-adjacent (a screen in a showroom).",
+    "lowerThird": "Name in Helvetica Neue 700, role in Fragment Mono, on a Cream panel carrying the 2px Signal Orange kicker bar. Lower-left, inside safe margins; enters with a 400ms slide from the left, exits on a 200ms fade. Never animated per word.",
+    "storySafe": "Reels and Stories (1080 × 1920): keep type and logos inside the centre 1080 × 1420 zone — the top 220px and bottom 280px belong to platform UI. 60px side margins. The Since-1975 stamp anchors story templates top-centre, inside the zone."
   }
 };
