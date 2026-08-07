@@ -1,0 +1,43 @@
+/* Billiard Factory design tokens · v4.2.0 · generated from brand-data.json — do not edit by hand. */
+:root{
+  /* ---- colour (9 values · 60/30/7/3 law: Cream+Mist 60 · Heritage+photo 30 · Walnut 7 · Orange 3) ---- */
+  --bf-heritage-green:#185F43;  /* Heritage Green · PMS 554 C */
+  --bf-pine:#123E2D;  /* Pine · PMS 3435 C */
+  --bf-field-green:#218C62;  /* Field Green · PMS 341 C */
+  --bf-sage:#91AEA3;  /* Sage · PMS 5575 C */
+  --bf-walnut:#6E5039;  /* Walnut · PMS 7532 C */
+  --bf-signal-orange:#F0560C;  /* Signal Orange · PMS 166 C */
+  --bf-mist:#EAEEEC;  /* Mist · PMS 9080 C */
+  --bf-cream:#FAF8F3;  /* Cream · PMS 9080 C */
+  --bf-ink:#1F2421;  /* Ink · PMS Black 3 C */
+
+  /* ---- type families ---- */
+  --bf-font-sans:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --bf-font-serif:'Vollkorn', Georgia, serif;
+  --bf-font-mono:'Fragment Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  /* ---- type scale ---- */
+  --bf-type-display-size:clamp(2.75rem, 6vw, 5rem);
+  --bf-type-display-weight:700;
+  --bf-type-display-tracking:-0.03em;
+  --bf-type-headline-size:clamp(1.9rem, 4vw, 3rem);
+  --bf-type-headline-weight:700;
+  --bf-type-headline-tracking:-0.022em;
+  --bf-type-subhead-size:1.35rem;
+  --bf-type-subhead-weight:500;
+  --bf-type-subhead-tracking:-0.01em;
+  --bf-type-editorial-size:1.5rem;
+  --bf-type-editorial-weight:500;
+  --bf-type-editorial-tracking:0;
+  --bf-type-body-size:1rem;
+  --bf-type-body-weight:400;
+  --bf-type-body-tracking:0;
+  --bf-type-eyebrow-size:0.72rem;
+  --bf-type-eyebrow-weight:700;
+  --bf-type-eyebrow-tracking:0.18em;
+  --bf-type-spec-size:0.85rem;
+  --bf-type-spec-weight:400;
+  --bf-type-spec-tracking:0.01em;
+
+  /* ---- spacing (4/8px base) · radius · rules ---- */
+}

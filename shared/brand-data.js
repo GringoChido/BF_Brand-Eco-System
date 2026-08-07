@@ -54,7 +54,8 @@ window.BF_DATA = {
         "role": "Primary brand colour, since 1975",
         "onLight": false,
         "rgb": "24, 95, 67",
-        "cmyk": "75, 0, 29, 63"
+        "cmyk": "75, 0, 29, 63",
+        "pms": "554 C"
       },
       "forestDeep": {
         "value": "#123E2D",
@@ -62,7 +63,8 @@ window.BF_DATA = {
         "role": "Deep surfaces, footers",
         "onLight": false,
         "rgb": "18, 62, 45",
-        "cmyk": "71, 0, 28, 76"
+        "cmyk": "71, 0, 28, 76",
+        "pms": "3435 C"
       },
       "green": {
         "value": "#218C62",
@@ -70,7 +72,8 @@ window.BF_DATA = {
         "role": "Secondary green, prices on photo",
         "onLight": false,
         "rgb": "33, 140, 98",
-        "cmyk": "77, 0, 30, 45"
+        "cmyk": "77, 0, 30, 45",
+        "pms": "341 C"
       },
       "sage": {
         "value": "#91AEA3",
@@ -78,7 +81,8 @@ window.BF_DATA = {
         "role": "Muted green, supporting text",
         "onLight": false,
         "rgb": "145, 174, 163",
-        "cmyk": "17, 0, 6, 32"
+        "cmyk": "17, 0, 6, 32",
+        "pms": "5575 C"
       },
       "mint": {
         "value": "#EAEEEC",
@@ -86,7 +90,9 @@ window.BF_DATA = {
         "role": "Pale background tint",
         "onLight": true,
         "rgb": "234, 238, 236",
-        "cmyk": "2, 0, 1, 7"
+        "cmyk": "2, 0, 1, 7",
+        "pms": "9080 C",
+        "pmsNote": "Mist and Cream both proof nearest 9080 C; in spot work, run Cream as the paper and print Mist as 9080 C."
       },
       "cream": {
         "value": "#FAF8F3",
@@ -94,7 +100,9 @@ window.BF_DATA = {
         "role": "Warm paper surface",
         "onLight": true,
         "rgb": "250, 248, 243",
-        "cmyk": "0, 1, 3, 2"
+        "cmyk": "0, 1, 3, 2",
+        "pms": "9080 C",
+        "pmsNote": "Usually the paper itself — prefer an unprinted warm stock over ink."
       },
       "orange": {
         "value": "#F0560C",
@@ -102,7 +110,8 @@ window.BF_DATA = {
         "role": "Accent, calls to action",
         "onLight": false,
         "rgb": "240, 86, 12",
-        "cmyk": "0, 64, 95, 6"
+        "cmyk": "0, 64, 95, 6",
+        "pms": "166 C"
       },
       "walnut": {
         "value": "#6E5039",
@@ -110,7 +119,9 @@ window.BF_DATA = {
         "role": "Wood warmth from photography",
         "onLight": false,
         "rgb": "110, 80, 57",
-        "cmyk": "0, 27, 48, 57"
+        "cmyk": "0, 27, 48, 57",
+        "pms": "7532 C",
+        "pmsNote": "Coin-flip with 4705 C — decide on press."
       },
       "charcoal": {
         "value": "#1F2421",
@@ -118,7 +129,8 @@ window.BF_DATA = {
         "role": "Body text, dark surfaces",
         "onLight": false,
         "rgb": "31, 36, 33",
-        "cmyk": "13, 0, 9, 86"
+        "cmyk": "13, 0, 9, 86",
+        "pms": "Black 3 C"
       },
       "charcoalDeep": {
         "value": "#122019",
@@ -283,7 +295,89 @@ window.BF_DATA = {
         "weight": 400,
         "tracking": "0.01em"
       }
-    ]
+    ],
+    "pmsNeedsJoshua": "Confirm PMS proofs with the print vendor — matches are ΔE-computed against digital proofs, not physical drawdowns. Walnut is a coin-flip between 7532 C and 4705 C.",
+    "materials": {
+      "intro": "An 11-showroom retailer's colours live on signs, cloth, wood, and vans — not screens. Physical-world references for each brand surface.",
+      "items": [
+        {
+          "surface": "Playing cloth",
+          "spec": "Heritage Green felt — worsted tournament cloth dyed to Heritage Green. House reference: the Mali cloth range already on our tables.",
+          "needsJoshua": "Supplier codes — Mali dye lot / cloth colour name for Heritage Green."
+        },
+        {
+          "surface": "Wood stain",
+          "spec": "Walnut #6E5039 maps to a medium walnut stain on oak and maple. House references: C.L. Bailey Warm Chestnut and Traditional Mahogany finishes.",
+          "needsJoshua": "Supplier codes — stain names and sheen per factory."
+        },
+        {
+          "surface": "Powder-coat",
+          "spec": "Fixture and hardware green — nearest standard: RAL 6005 Moss Green, satin. Ink hardware: RAL 9005 Jet Black, matte.",
+          "needsJoshua": "Confirm powder vendor, gloss level, and a sprayed sample against PMS 554 C."
+        },
+        {
+          "surface": "Vinyl wrap",
+          "spec": "Vehicle green — match to PMS 554 C in cast vinyl (3M 2080 or Avery SW900 range). Cream lettering, not white.",
+          "needsJoshua": "Supplier codes — wrap film SKUs from the fleet vendor."
+        },
+        {
+          "surface": "Embroidery thread",
+          "spec": "Uniform thread matched to Heritage Green (Madeira or Isacord book), Cream on green garments.",
+          "needsJoshua": "Supplier codes — thread numbers from the uniform vendor."
+        }
+      ]
+    },
+    "contrast": {
+      "note": "Computed WCAG 2.1 ratios, calculated live from the token values on this page — never eyeballed. AA = 4.5:1 body text; AA-large = 3:1 for 24px+ (or 19px bold) display only.",
+      "text": [
+        "charcoal",
+        "forest",
+        "forestDeep",
+        "walnut",
+        "green",
+        "orange",
+        "sage",
+        "cream"
+      ],
+      "bg": [
+        [
+          "cream",
+          "Cream"
+        ],
+        [
+          "mint",
+          "Mist"
+        ],
+        [
+          "white",
+          "White"
+        ],
+        [
+          "forest",
+          "Heritage"
+        ],
+        [
+          "forestDeep",
+          "Pine"
+        ],
+        [
+          "charcoal",
+          "Ink"
+        ],
+        [
+          "walnut",
+          "Walnut"
+        ]
+      ],
+      "rules": [
+        "Signal Orange is never body text on light backgrounds — it fails AA on Cream, Mist, and white. Use it for display type 24px and up, or on Pine and Ink where it passes large.",
+        "Sage on Cream or Mist is decorative or large-display only — it fails AA as body text. Sage carries supporting text on Heritage Green, Pine, and Ink, where it passes."
+      ]
+    },
+    "downloads": {
+      "css": "../shared/tokens.css",
+      "json": "../shared/tokens.json"
+    }
   },
   "logo": {
     "primary": "bf-logo-full-black",
