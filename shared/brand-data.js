@@ -1198,5 +1198,54 @@ window.BF_DATA = {
         "Reference implementation: the Sitewide Savings Ticket Ladder system (Aug 2026) — cream paper grain, layered ticket stack, orange spent only on the savings figure."
       ]
     }
+  },
+  "subBrandSystem": {
+    "intro": "Four owned brands, four typographic voices, one endorsement. Each wordmark is a treatment of the house type system — no new fonts enter the building — and each carries the same line underneath: BY BILLIARD FACTORY.",
+    "endorsement": {
+      "rule": "The endorsement line reads BY BILLIARD FACTORY in Helvetica Neue 700, all caps, 0.18em tracking, set at 22% of the sub-brand wordmark's cap height and one inlay-height below it. Required on packaging, hang tags, catalogs, and any surface outside a Billiard Factory showroom or channel; optional inside BF-owned spaces, where the house brand is already on the door.",
+      "minimum": "If the endorsement would set below 5pt print or 10px screen, the whole lockup is too small — scale the lockup up rather than dropping the line.",
+      "clear": "The endorsement never locks up with partner or carried brands — it marks ownership, not distribution."
+    },
+    "treatments": [
+      {
+        "id": "cl-bailey",
+        "name": "C.L. BAILEY",
+        "character": "Heritage furniture — set like a cabinetmaker's stamp.",
+        "css": "font-family:var(--serif);font-weight:600;letter-spacing:.14em;",
+        "note": "Vollkorn 600, all caps, wide-tracked. Walnut or Ink, never orange."
+      },
+      {
+        "id": "level-best",
+        "name": "LEVEL BEST",
+        "character": "Tournament goods — set like a spec sheet.",
+        "css": "font-family:var(--sans);font-weight:700;letter-spacing:.02em;",
+        "note": "Helvetica Neue 700, all caps, tight. Heritage Green or Ink; Fragment Mono for model numbers beside it."
+      },
+      {
+        "id": "velocity",
+        "name": "VELOCITY",
+        "character": "Contemporary tables — set like architecture.",
+        "css": "font-family:var(--sans);font-weight:300;letter-spacing:.34em;",
+        "note": "Helvetica Neue Light, all caps, extended tracking. Ink on light, Cream on dark; never bolded."
+      },
+      {
+        "id": "golden-west",
+        "name": "Golden West",
+        "character": "The atelier — set like a signature.",
+        "css": "font-family:var(--serif);font-weight:500;font-style:italic;letter-spacing:.01em;",
+        "note": "Vollkorn 500 italic, title case. Walnut or Ink; the only title-case wordmark in the house."
+      }
+    ],
+    "needsJoshua": "Ratify the four typographic treatments as interim wordmarks — they hold the system together until each sub-brand gets drawn artwork."
+  },
+  "carriedRules": {
+    "intro": "Carried brands fill the showroom; the grid below is how they appear without diluting the house.",
+    "rules": [
+      "Partner logos render monochrome — Ink on light, Cream on dark — never in their own colours on BF surfaces.",
+      "Equal-weight grid: every carried logo sits in the same cell size, optically balanced; no brand gets a bigger box.",
+      "Carried logos never lock up with the BF mark, the endorsement line, or an owned-brand wordmark.",
+      "On any BF-owned surface, no carried logo sets larger than the house brand on that surface."
+    ],
+    "needsJoshua": "Confirm the carried-brands list — McDermott, Lucasi, Players, Tornado, Brunswick, Olhausen, Plank & Hide, Presidential, American Heritage, True Billiards — and which appear on the public wall."
   }
 };

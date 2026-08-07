@@ -336,6 +336,15 @@ section{ position:relative; }
 .dv-ramp{ display:flex; height:2.6rem; border-radius:4px; overflow:hidden; margin-top:1rem; border:1px solid var(--line); }
 .dv-ramp span{ flex:1; }
 
+/* ---------- sub-brand system (v5) ---------- */
+.sbs{ display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+@media(max-width:880px){ .sbs{ grid-template-columns:1fr; } }
+.sbs .sb{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.8rem 1.6rem 1.4rem; box-shadow:var(--sh-sm); }
+.sbs .sb .wm{ font-size:clamp(1.5rem,3vw,2.1rem); color:var(--ink); line-height:1.1; }
+.sbs .sb .by{ font-family:var(--sans); font-weight:700; letter-spacing:.18em; font-size:.6rem; color:var(--forest); margin-top:.55rem; }
+.sbs .sb .ch{ font-family:var(--serif); font-style:italic; font-size:.92rem; color:var(--walnut); margin-top:.9rem; }
+.sbs .sb .nt{ font-size:.8rem; color:rgba(31,36,33,.62); margin-top:.35rem; }
+
 /* ---------- applications (v5) ---------- */
 .apps-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
 .apps-grid .g-card .nm{ font-weight:700; font-size:.95rem; margin-bottom:.5rem; }
@@ -866,8 +875,16 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
     <div class="reveal" style="margin-bottom:.4rem"><span class="eyebrow" style="color:var(--green)">Owned Brands · the manufacturing moat</span></div>
     <div id="owned" class="reveal"></div>
 
-    <div class="reveal" style="margin:3.5rem 0 1.4rem"><span class="eyebrow" style="color:var(--green)">Distribution Power · the brands we carry</span></div>
+    <!-- Sub-brand wordmark system (v5) -->
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--green)">Sub-brand wordmarks · one endorsement</span>
+      <p class="measure muted" id="sbs-intro" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <div class="sbs reveal" id="sbs"></div>
+    <div class="g-card reveal" id="sbs-endorse" style="margin-top:1rem"></div>
+
+    <div class="reveal" style="margin:3.5rem 0 1.4rem"><span class="eyebrow" style="color:var(--green)">Distribution Power · the brands we carry</span>
+      <p class="measure muted" id="carried-intro" style="margin-top:.6rem;font-size:.92rem"></p></div>
     <div class="wall reveal" id="carried"></div>
+    <div class="reveal" id="carried-rules" style="margin-top:1.4rem;display:grid;gap:.7rem"></div>
   </div>
 </section>
 
@@ -1222,6 +1239,25 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
     </article>`).join(''));
   set('carried', (D.carriedBrands||[]).map(b=>`
     <div class="b ph" data-label="${esc(b.name)}">${b.image?`<img src="${esc(b.image)}" alt="${esc(b.name)}" loading="lazy" onerror="this.style.display='none'"/>`:''}</div>`).join(''));
+  // sub-brand wordmark system + carried rules (v5)
+  const SB=D.subBrandSystem;
+  if(SB){
+    txt('sbs-intro', SB.intro||'');
+    set('sbs', (SB.treatments||[]).map(t=>`
+      <div class="sb"><div class="wm" style="${esc(t.css)}">${esc(t.name)}</div>
+        <div class="by">BY BILLIARD FACTORY</div>
+        <div class="ch">${esc(t.character)}</div><div class="nt">${esc(t.note)}</div></div>`).join(''));
+    const E=SB.endorsement||{};
+    set('sbs-endorse', `<span class="eyebrow" style="color:var(--green)">The endorsement rule</span>
+      <p style="margin-top:.7rem">${esc(E.rule||'')}</p><p>${esc(E.minimum||'')}</p><p>${esc(E.clear||'')}</p>
+      ${SB.needsJoshua?`<div class="needs">NEEDS JOSHUA: ${esc(SB.needsJoshua)}</div>`:''}`);
+  }
+  const CR=D.carriedRules;
+  if(CR){
+    txt('carried-intro', CR.intro||'');
+    set('carried-rules', (CR.rules||[]).map((r,i)=>`<div class="cmx-rule"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(r)}</span></div>`).join('')+
+      (CR.needsJoshua?`<div class="needs">NEEDS JOSHUA: ${esc(CR.needsJoshua)}</div>`:''));
+  }
 
   // ---- 08 · RANGE ----
   set('range-grid', (D.productRange.categories||[]).map(c=>`
