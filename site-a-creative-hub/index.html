@@ -336,6 +336,23 @@ section{ position:relative; }
 .dv-ramp{ display:flex; height:2.6rem; border-radius:4px; overflow:hidden; margin-top:1rem; border:1px solid var(--line); }
 .dv-ramp span{ flex:1; }
 
+/* ---------- legal & governance (v5) ---------- */
+.lg{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+@media(max-width:880px){ .lg{ grid-template-columns:1fr; } }
+.lg-list{ margin:.9rem 0 0; padding:0; list-style:none; display:grid; gap:.6rem; }
+.lg-list li{ font-size:.88rem; color:rgba(31,36,33,.78); padding-left:1.2rem; position:relative; }
+.lg-list li::before{ content:"◆"; position:absolute; left:0; top:.28em; color:var(--forest); font-size:.5rem; }
+.gov-steps{ margin:.9rem 0 0; padding:0; list-style:none; display:grid; gap:.6rem; counter-reset:gs; }
+.gov-steps li{ font-size:.88rem; color:rgba(31,36,33,.78); padding-left:2rem; position:relative; counter-increment:gs; }
+.gov-steps li::before{ content:counter(gs,decimal-leading-zero); position:absolute; left:0; top:.05em; font-family:var(--mono); font-size:.7rem; color:var(--green); }
+.chlog{ border-top:1px solid var(--line); }
+.chlog .c{ display:grid; grid-template-columns:9.5rem 1fr; gap:1.5rem; padding:1.3rem 0; border-bottom:1px solid var(--line); }
+@media(max-width:680px){ .chlog .c{ grid-template-columns:1fr; gap:.4rem; } }
+.chlog .v{ font-family:var(--mono); font-size:.85rem; color:var(--forest); font-weight:700; }
+.chlog .dt{ font-family:var(--mono); font-size:.68rem; color:rgba(31,36,33,.5); }
+.chlog .nt{ font-size:.9rem; color:rgba(31,36,33,.75); }
+.njlist{ display:grid; gap:.7rem; }
+
 /* ---------- sub-brand system (v5) ---------- */
 .sbs{ display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
 @media(max-width:880px){ .sbs{ grid-template-columns:1fr; } }
@@ -920,6 +937,56 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
   </div>
 </section>
 
+<!-- ===== LEGAL & GOVERNANCE (v5) ===== -->
+<section id="legal" class="pad">
+  <div class="wrap">
+    <div class="sec-mark reveal"><span class="no" data-secno>12</span><span class="ln"></span></div>
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker eyebrow"><span class="bar"></span> Legal &amp; Governance</span>
+        <h2 class="sec-title">Ownable, and owned.</h2>
+      </div>
+      <p class="measure muted" id="legal-intro"></p>
+    </div>
+
+    <div class="lg reveal">
+      <div class="g-card">
+        <span class="eyebrow" style="color:var(--green)">The marks</span>
+        <ul class="lg-list" id="tm-marks"></ul>
+        <p id="tm-legalname" style="margin-top:.9rem"></p>
+        <p id="tm-daterule"></p>
+        <div class="needs" id="tm-needs"></div>
+      </div>
+      <div class="g-card">
+        <span class="eyebrow" style="color:var(--green)">Who may use what</span>
+        <ul class="lg-list" id="tm-users"></ul>
+        <div style="margin-top:1.1rem;background:var(--mint);border:1px solid var(--line);border-radius:6px;padding:1rem;display:flex;align-items:center;gap:1rem">
+          <img src="../assets/logos/bf-registration-black.png" alt="Registration lockup" style="width:9rem"/>
+          <p id="tm-lockuprule" style="font-size:.8rem;color:rgba(31,36,33,.7)"></p>
+        </div>
+      </div>
+      <div class="g-card">
+        <span class="eyebrow" style="color:var(--green)">AI imagery policy</span>
+        <ul class="lg-list" id="ai-rules"></ul>
+      </div>
+      <div class="g-card">
+        <span class="eyebrow" style="color:var(--green)">Governance</span>
+        <p id="gov-steward" style="margin-top:.7rem"></p>
+        <div class="needs" id="gov-needs"></div>
+        <p id="gov-repo"></p>
+        <ol class="gov-steps" id="gov-workflow"></ol>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin:3rem 0 1rem"><span class="eyebrow" style="color:var(--green)">Changelog</span></div>
+    <div class="chlog reveal" id="chlog"></div>
+
+    <div class="reveal" style="margin:3rem 0 1rem"><span class="eyebrow" style="color:var(--orange)">Open items · needs Joshua</span>
+      <p class="measure muted" style="margin-top:.6rem;font-size:.9rem">Collected automatically from every flag in this system — when these are answered, the kit is closed.</p></div>
+    <div class="njlist reveal" id="njlist"></div>
+  </div>
+</section>
+
 <!-- ===== FOOTER ===== -->
 <footer class="is-forest felt" style="padding:clamp(3rem,6vw,4.5rem) 0">
   <div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.4rem">
@@ -1290,6 +1357,36 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
       <div class="img ph" data-label="${esc(c.name)}">${c.image?`<img src="${esc(c.image)}" alt="${esc(c.name)}" loading="lazy" onerror="this.style.display='none'"/>`:''}</div>
       <div class="body"><h3>${esc(c.name)}</h3><p>${esc(c.blurb)}</p><div class="more">Shop ${esc(c.name)} →</div></div>
     </a>`).join(''));
+
+  // ---- LEGAL & GOVERNANCE (v5) ----
+  const LG=D.legal;
+  if(LG){
+    txt('legal-intro', LG.intro||'');
+    const TM=LG.trademark||{};
+    set('tm-marks', (TM.marks||[]).map(m=>`<li>${esc(m)}</li>`).join(''));
+    txt('tm-legalname', TM.legalName||''); txt('tm-daterule', TM.dateRule||''); txt('tm-lockuprule', TM.lockupRule||'');
+    txt('tm-needs', 'NEEDS JOSHUA: '+(TM.needsJoshua||''));
+    set('tm-users', (TM.users||[]).map(m=>`<li>${esc(m)}</li>`).join(''));
+    set('ai-rules', ((LG.aiPolicy&&LG.aiPolicy.rules)||[]).map(m=>`<li>${esc(m)}</li>`).join(''));
+    const GV=LG.governance||{};
+    txt('gov-steward', GV.steward||''); txt('gov-repo', GV.repo||'');
+    txt('gov-needs', 'NEEDS JOSHUA: '+(GV.stewardNeedsJoshua||''));
+    set('gov-workflow', (GV.workflow||[]).map(w=>`<li>${esc(w)}</li>`).join(''));
+    set('chlog', (LG.changelog||[]).map(c=>`
+      <div class="c"><div><div class="v">v${esc(c.version)}</div><div class="dt">${esc(c.date)}</div></div><div class="nt">${esc(c.notes)}</div></div>`).join(''));
+  }
+  // auto-collected NEEDS JOSHUA checklist — walks the whole data tree
+  (function(){
+    const found=[];
+    (function walk(o,path){
+      if(!o||typeof o!=='object') return;
+      Object.entries(o).forEach(([k,v])=>{
+        if(/needsjoshua/i.test(k)&&typeof v==='string') found.push({where:path,what:v});
+        else walk(v, Array.isArray(o)?path:(path?path+' · ':'')+(Array.isArray(v)?k:k));
+      });
+    })(D,'');
+    set('njlist', found.map((f,i)=>`<div class="cmx-rule"><span class="no" style="background:var(--orange)">${String(i+1).padStart(2,'0')}</span><span><b style="text-transform:capitalize">${esc(f.where.split(' · ')[0]||'general')}</b> — ${esc(f.what)}</span></div>`).join(''));
+  })();
 
   // ---- colophon ----
   const v='v'+((D.meta&&D.meta.version)||'?');

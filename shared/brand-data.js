@@ -1285,5 +1285,56 @@ window.BF_DATA = {
       "On any BF-owned surface, no carried logo sets larger than the house brand on that surface."
     ],
     "needsJoshua": "Confirm the carried-brands list — McDermott, Lucasi, Players, Tornado, Brunswick, Olhausen, Plank & Hide, Presidential, American Heritage, True Billiards — and which appear on the public wall."
+  },
+  "legal": {
+    "intro": "The rules that keep the brand ownable: what we file, who may use what, and how a change to this system actually happens.",
+    "trademark": {
+      "marks": [
+        "BILLIARD FACTORY™ — the wordmark carries ™ today and switches to ® the day registration issues.",
+        "America's game room™ — the tagline carries ™ in national creative.",
+        "The rail-diamond mark files as part of the registration lockup — the symbol is what makes the filing distinctive."
+      ],
+      "legalName": "The company's legal name is The Billiard Factory, Ltd. It appears on contracts, invoices, and legal notices; everywhere else the brand is simply Billiard Factory.",
+      "users": [
+        "Franchisees: the marks are licensed, not owned — used per the franchise agreement, never modified, never combined with local sub-marks or slogans.",
+        "Partners and vendors: may name Billiard Factory in plain text; any logo use requires written approval from the brand steward and follows the partner-logo rules in House of Brands.",
+        "Press: use the provided press-kit assets unmodified — never recreate, retype, or recolour a mark."
+      ],
+      "lockupRule": "In legal and registered contexts, the registration lockup is the only form used — symbol and wordmark, no founding date.",
+      "dateRule": "The founding date reads “Est. 1975” in brand storytelling. Never present dates as legal first-use claims — marketing provenance and trademark first use are different instruments.",
+      "needsJoshua": "Align the 1975 vs. 1977 first-use dates with the trademark attorney before any filing cites a date."
+    },
+    "aiPolicy": {
+      "name": "AI imagery policy",
+      "rules": [
+        "Permitted for concepting, mockups, and campaign backgrounds — always corrected to the palette and the “real rooms, real light” standard before publication.",
+        "The negative prompt in Imagery is the floor, not the ceiling: no cold strobe, no CGI sheen, no man-cave neon survives review.",
+        "No real-person likenesses, ever — hands and rooms, not faces, unless the person signed a release and the photo is real.",
+        "AI imagery never depicts a specific SKU a customer can order unless it is retouched to match the actual product.",
+        "Disclose AI-generated imagery where a platform requires it; when in doubt, disclose."
+      ]
+    },
+    "governance": {
+      "steward": "The brand steward approves every new use of the marks and every change to this system.",
+      "stewardNeedsJoshua": "Name the brand steward + contact (role currently sits with the creative-direction engagement).",
+      "repo": "Canonical assets and this hub live in one place: the BF_Brand-Eco-System repository → billiard-factory-brand-hub.netlify.app. If an asset isn't downloadable from the hub, it isn't canonical.",
+      "workflow": [
+        "Request — flag the need via the hub's feedback overlay or the Engine Room board, with where it will run.",
+        "Review — the steward checks it against this system and answers within two business days.",
+        "Ship — approved changes land in the hub's data file and deploy; the hub itself is the approval record."
+      ]
+    },
+    "changelog": [
+      {
+        "version": "5.0.0",
+        "date": "2026-08-06",
+        "notes": "The Perfect Kit: canonical rail-diamond mark + registration lockup, vector masters (SVG/EPS) for every lockup, PMS + materials + contrast matrix, design tokens, Grid/Icons/Data, Motion, Applications, sub-brand wordmark system, messaging matrix, Legal & Governance."
+      },
+      {
+        "version": "4.2.0",
+        "date": "2026-07-09",
+        "notes": "Baseline style guide: brand foundations, 12 PNG lockups, palette with proportion law, type system, voice, imagery, house of brands, range."
+      }
+    ]
   }
 };
