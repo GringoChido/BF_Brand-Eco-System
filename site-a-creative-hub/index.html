@@ -310,6 +310,32 @@ section{ position:relative; }
 .scale .row .key .us{ font-size:.74rem; color:rgba(31,36,33,.55); }
 .scale .row .spec{ color:var(--ink); overflow-wrap:anywhere; }
 
+/* ---------- grid, icons & data (v5) ---------- */
+.gid{ display:grid; grid-template-columns:1.25fr 1fr; gap:1rem; }
+.gid2{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+@media(max-width:880px){ .gid,.gid2{ grid-template-columns:1fr; } }
+.g-card{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.5rem 1.6rem; box-shadow:var(--sh-sm); }
+.g-card p{ font-size:.86rem; color:rgba(31,36,33,.72); margin-top:.7rem; }
+.grid-demo{ display:grid; grid-template-columns:repeat(12,1fr); gap:6px; height:3.2rem; margin-top:1rem; }
+.grid-demo span{ background:rgba(24,95,67,.12); border:1px solid rgba(24,95,67,.25); border-radius:2px; }
+.space-demo{ display:flex; align-items:flex-end; gap:.6rem; margin-top:1rem; height:3.4rem; }
+.space-demo .s{ background:var(--forest); width:1.1rem; border-radius:2px 2px 0 0; position:relative; }
+.space-demo .s i{ position:absolute; top:-1.15rem; left:50%; transform:translateX(-50%); font-style:normal; font-family:var(--mono); font-size:.56rem; color:rgba(31,36,33,.55); }
+.rad-demo{ display:flex; gap:.8rem; margin-top:1rem; align-items:center; flex-wrap:wrap; }
+.rad-demo .r{ width:3rem; height:3rem; background:var(--mint); border:1px solid var(--line-2); display:flex; align-items:flex-end; justify-content:center; font-family:var(--mono); font-size:.56rem; color:rgba(31,36,33,.6); padding-bottom:.25rem; }
+.icons{ display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:1rem; }
+.icons .ic{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.2rem .8rem 1rem; box-shadow:var(--sh-sm); display:flex; flex-direction:column; align-items:center; gap:.7rem; transition:transform .22s, box-shadow .22s; }
+.icons .ic:hover{ transform:translateY(-3px); box-shadow:var(--sh-md); }
+.icons .ic svg{ width:2.6rem; height:2.6rem; color:var(--forest); }
+.icons .ic .nm{ font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:rgba(31,36,33,.65); text-align:center; }
+.dv{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:1rem; }
+@media(max-width:1000px){ .dv{ grid-template-columns:1fr; } }
+.dv-demo{ display:flex; align-items:flex-end; gap:.7rem; height:6.4rem; margin-top:1rem; border-bottom:2px solid var(--ink); padding:0 .4rem; }
+.dv-demo .bar{ flex:1; border-radius:2px 2px 0 0; position:relative; }
+.dv-demo .bar i{ position:absolute; top:-1.2rem; left:50%; transform:translateX(-50%); font-style:normal; font-family:var(--mono); font-size:.58rem; color:rgba(31,36,33,.6); white-space:nowrap; }
+.dv-ramp{ display:flex; height:2.6rem; border-radius:4px; overflow:hidden; margin-top:1rem; border:1px solid var(--line); }
+.dv-ramp span{ flex:1; }
+
 /* ---------- type licensing (v5) ---------- */
 .lic{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
 @media(max-width:1000px){ .lic{ grid-template-columns:1fr; } }
@@ -618,6 +644,47 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
     <!-- Licensing & fallbacks (v5) -->
     <div class="reveal" style="margin:3rem 0 1rem"><span class="eyebrow" style="color:var(--green)">Licensing & fallbacks · so decks stop freelancing</span></div>
     <div class="lic reveal" id="lic"></div>
+  </div>
+</section>
+
+<!-- ===== GRID, ICONS & DATA (v5) ===== -->
+<section id="grid" class="pad">
+  <div class="wrap">
+    <div class="sec-mark reveal"><span class="no" data-secno>05</span><span class="ln"></span></div>
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker eyebrow"><span class="bar"></span> Grid, Icons &amp; Data</span>
+        <h2 class="sec-title">The invisible architecture.</h2>
+      </div>
+      <p class="measure muted">The rules under the rules: how pages align, how icons are drawn, and how a Billiard Factory chart looks before a single number goes in.</p>
+    </div>
+
+    <div class="gid reveal">
+      <div class="g-card"><span class="eyebrow" style="color:var(--green)">Web grid</span><p id="grid-web"></p>
+        <div class="grid-demo" aria-hidden="true"></div></div>
+      <div class="g-card"><span class="eyebrow" style="color:var(--green)">Print grid</span><p id="grid-print"></p></div>
+    </div>
+
+    <div class="gid2 reveal" style="margin-top:1rem">
+      <div class="g-card"><span class="eyebrow" style="color:var(--green)">Spacing · the 4/8 ladder</span>
+        <div class="space-demo" id="space-demo"></div><p id="grid-space-note"></p></div>
+      <div class="g-card"><span class="eyebrow" style="color:var(--green)">Radius &amp; rules</span>
+        <div class="rad-demo" id="rad-demo"></div><p id="grid-radius-note"></p></div>
+    </div>
+
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--green)">Iconography · drawn from the mark</span>
+      <p class="measure muted" id="icon-rules" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <div class="icons reveal" id="icons"></div>
+
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--green)">Data visualization · the house chart</span>
+      <p class="measure muted" id="dv-intro" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <div class="dv reveal">
+      <div class="g-card"><span class="eyebrow" style="color:var(--green)">Categorical order</span>
+        <div class="dv-demo" id="dv-cat"></div><p id="dv-cat-note"></p></div>
+      <div class="g-card"><span class="eyebrow" style="color:var(--green)">Sequential ramp</span>
+        <div class="dv-ramp" id="dv-ramp"></div><p id="dv-ramp-note"></p></div>
+      <div class="g-card"><span class="eyebrow" style="color:var(--green)">Chart typography</span><p id="dv-type"></p></div>
+    </div>
   </div>
 </section>
 
@@ -953,6 +1020,36 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
           <dt>Office apps</dt><dd>${esc(l.office)}</dd>
         </dl>
         ${l.needsJoshua?`<div class="needs">NEEDS JOSHUA: ${esc(l.needsJoshua)}</div>`:''}</div>`).join(''));
+  }
+
+  // ---- GRID, ICONS & DATA (v5) ----
+  const G=D.tokens.grid;
+  if(G){
+    txt('grid-web', G.web||''); txt('grid-print', G.print||'');
+    txt('grid-space-note', G.spaceNote||''); txt('grid-radius-note', G.radiusNote||'');
+    set('space-demo', Object.entries(G.space||{}).map(([k,v])=>
+      `<span class="s" style="height:${Math.min(parseInt(v),52)}px"><i>${esc(v)}</i></span>`).join(''));
+    set('rad-demo', Object.entries(G.radius||{}).filter(([k])=>k!=='pill').map(([k,v])=>
+      `<span class="r" style="border-radius:${esc(v)}">${esc(v)}</span>`).join('')+`<span class="r" style="border-radius:999px;width:4.4rem">pill</span>`);
+    const gd=document.querySelector('.grid-demo'); if(gd) gd.innerHTML='<span></span>'.repeat(12);
+  }
+  const IC=D.icons;
+  if(IC){
+    txt('icon-rules', IC.rules||'');
+    set('icons', (IC.set||[]).map(i=>`
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="${esc(i.d)}"/>${i.extra?`<path d="${esc(i.extra)}"${i.fillExtra?' fill="currentColor" stroke="none"':''}/>`:''}
+      </svg><span class="nm">${esc(i.name)}</span></div>`).join(''));
+  }
+  const DV=D.dataviz;
+  if(DV){
+    txt('dv-intro', DV.intro||''); txt('dv-cat-note', DV.categoricalNote||'');
+    txt('dv-ramp-note', DV.rampNote||''); txt('dv-type', DV.typeNote||'');
+    const heights=[92,64,76,48];
+    set('dv-cat', (DV.categorical||[]).map((k,i)=>
+      `<span class="bar" style="background:${sw(k)};height:${heights[i%4]}%"><i>${esc(C[k].name.split(' ')[0])}</i></span>`).join('')+
+      `<span class="bar" style="background:${sw('orange')};height:100%"><i>Highlight</i></span>`);
+    set('dv-ramp', (DV.ramp||[]).map(h=>`<span style="background:${esc(h)}"></span>`).join(''));
   }
 
   // ---- 05 · VOICE ----

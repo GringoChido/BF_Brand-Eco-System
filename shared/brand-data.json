@@ -408,6 +408,33 @@
           "office": "Install from Google Fonts; Consolas or Menlo substitute in office apps."
         }
       ]
+    },
+    "grid": {
+      "web": "12 columns · max width 86rem (1376px) · outer margin clamp(1.25rem, 4vw, 4.5rem) · gutter 1.5rem. Cards and panels snap to column edges; nothing floats between columns.",
+      "print": "6 columns on US Letter and A4 · 0.5in outer margins · 0.1875in gutters. Large-format signage lays out on the mark's own 96-unit grid — one module u equals sign height ÷ 16.",
+      "space": {
+        "1": "4px",
+        "2": "8px",
+        "3": "16px",
+        "4": "24px",
+        "5": "32px",
+        "6": "48px",
+        "7": "64px",
+        "8": "96px"
+      },
+      "spaceNote": "Every margin, padding, and gap is a step on the 4/8px ladder. If a layout needs 20px, it actually needs 16 or 24.",
+      "radius": {
+        "sm": "4px",
+        "md": "6px",
+        "lg": "8px",
+        "xl": "12px",
+        "pill": "999px"
+      },
+      "rule": {
+        "hairline": "1px",
+        "heavy": "2px"
+      },
+      "radiusNote": "Buttons and chips 4px · tiles 6px · cards and stages 8px · modals 12px · pills 999px. Rules are 1px hairlines at 12–20% Ink; the 2px weight is reserved for the kicker bar and chart axes."
     }
   },
   "logo": {
@@ -983,5 +1010,103 @@
       "synergy"
     ],
     "negativePrompt": "--no cold studio strobe, white seamless background, clinical catalog cutout, oversaturated showroom lighting, man-cave neon, plastic finish, warped perspective, cartoon, CGI sheen"
+  },
+  "icons": {
+    "rules": "Drawn on a 24px grid with a 2px stroke, squared caps, and open joins. Corners facet at 45° where they can — the rail diamond's angle. One colour per icon: Ink on light, Cream on dark, Heritage Green when the icon is the accent. Never two-tone, never filled except the diamond motif.",
+    "set": [
+      {
+        "name": "Pool table",
+        "d": "M3 7 H21 V17 H3 Z",
+        "extra": "M12 10.2 L13.8 12 L12 13.8 L10.2 12 Z",
+        "fillExtra": true
+      },
+      {
+        "name": "Shuffleboard",
+        "d": "M2 9.5 H22 V13.5 H2 Z M4.5 13.5 V18.5 M19.5 13.5 V18.5",
+        "extra": "M7 11.5 a1.4 1.4 0 1 0 0.01 0",
+        "fillExtra": false
+      },
+      {
+        "name": "Cues",
+        "d": "M7 17 L21.5 2.5",
+        "extra": "M4.6 19.4 a2.4 2.4 0 1 0 0.01 0",
+        "fillExtra": false
+      },
+      {
+        "name": "Game table",
+        "d": "M4 8 H20 V16 H4 Z M2 10 V14 M22 10 V14",
+        "extra": "M12 8 V16",
+        "fillExtra": false
+      },
+      {
+        "name": "Air hockey",
+        "d": "M3 7 H21 V17 H3 Z M12 7 V17",
+        "extra": "M16.5 12 a1.2 1.2 0 1 0 0.01 0",
+        "fillExtra": true
+      },
+      {
+        "name": "Foosball",
+        "d": "M3 8 H21 V16 H3 Z M3 10.7 H21 M3 13.3 H21",
+        "extra": "M8 9.4 V12 M16 12 V14.6",
+        "fillExtra": false
+      },
+      {
+        "name": "Ping pong",
+        "d": "M3 10 H21 V15.5 H3 Z M12 7.5 V18",
+        "extra": "M16.8 4.6 a1.5 1.5 0 1 0 0.01 0",
+        "fillExtra": true
+      },
+      {
+        "name": "Arcade",
+        "d": "M6 3 H18 V21 H6 Z M9 6 H15 V10 H9 Z",
+        "extra": "M10 14.5 a0.9 0.9 0 1 0 0.01 0 M14 14.5 a0.9 0.9 0 1 0 0.01 0",
+        "fillExtra": true
+      },
+      {
+        "name": "Furniture",
+        "d": "M6 6 H18 M8.2 6 L6 20.5 M15.8 6 L18 20.5 M8.6 14 H15.4",
+        "extra": "",
+        "fillExtra": false
+      },
+      {
+        "name": "Delivery",
+        "d": "M2 7 H14 V16 H2 Z M14 10 H18.6 L21.5 13.2 V16 H14",
+        "extra": "M6 17.8 a1.8 1.8 0 1 0 0.01 0 M17.5 17.8 a1.8 1.8 0 1 0 0.01 0",
+        "fillExtra": false
+      },
+      {
+        "name": "Showroom",
+        "d": "M3 9 L4.5 4.5 H19.5 L21 9 M3 9 H21 M4.5 9 V20.5 M19.5 9 V20.5 M2 20.5 H22",
+        "extra": "M10 20.5 V13.5 H14 V20.5",
+        "fillExtra": false
+      },
+      {
+        "name": "Warranty",
+        "d": "M12 3 L20 6 V12 C20 16.8 16.6 19.9 12 21.4 C7.4 19.9 4 16.8 4 12 V6 Z",
+        "extra": "M12 9 L15 12 L12 15 L9 12 Z",
+        "fillExtra": true
+      }
+    ]
+  },
+  "dataviz": {
+    "intro": "The company runs on dashboards; the brand governs them too. One categorical order, one green ramp, one highlight — every chart in the house reads as the same hand.",
+    "categorical": [
+      "forest",
+      "walnut",
+      "green",
+      "sage"
+    ],
+    "categoricalNote": "Series take colours in this order: Heritage Green → Walnut → Field Green → Sage. Signal Orange is reserved for the single highlight series — the number the chart exists to show — and appears once per chart at most.",
+    "ramp": [
+      "#123E2D",
+      "#185F43",
+      "#218C62",
+      "#57A283",
+      "#91AEA3",
+      "#C8D6D0",
+      "#EAEEEC"
+    ],
+    "rampNote": "Sequential data runs the green ramp, dark equals more. Never rainbow scales, never red-to-green.",
+    "typeNote": "Axes, tick labels, and data callouts set in Fragment Mono at the Spec step. Chart titles are Helvetica Neue Headline; nothing in a chart is italic. Gridlines are 1px hairlines at 12% Ink; axes take the 2px rule weight."
   }
 }

@@ -48,4 +48,19 @@
 
   --bf-paragraph-space:0.7em;
   /* ---- spacing (4/8px base) · radius · rules ---- */
+  --bf-space-1:4px;
+  --bf-space-2:8px;
+  --bf-space-3:16px;
+  --bf-space-4:24px;
+  --bf-space-5:32px;
+  --bf-space-6:48px;
+  --bf-space-7:64px;
+  --bf-space-8:96px;
+  --bf-radius-sm:4px;
+  --bf-radius-md:6px;
+  --bf-radius-lg:8px;
+  --bf-radius-xl:12px;
+  --bf-radius-pill:999px;
+  --bf-rule-hairline:1px;
+  --bf-rule-heavy:2px;
 }
