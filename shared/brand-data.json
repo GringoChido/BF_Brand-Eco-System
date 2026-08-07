@@ -1,7 +1,7 @@
 {
   "meta": {
     "ecosystem": "Billiard Factory · Living HTML Ecosystem",
-    "version": "5.2.0",
+    "version": "5.2.1",
     "lastUpdated": "2026-08-06",
     "sourceOfTruth": "Site A · Creative & Brand Hub",
     "consumedBy": [
@@ -1325,6 +1325,11 @@
     },
     "changelog": [
       {
+        "version": "5.2.1",
+        "date": "2026-08-06",
+        "notes": "Campaigns gains “How a piece gets made” — the five-step production loop: brief → pack → system-block-first generation → digit check + rescue/REV → ship on the record."
+      },
+      {
         "version": "5.2.0",
         "date": "2026-08-06",
         "notes": "New section 11 · The Designer Program: the trade pitch codified support-first, the four partner tiers as ratified offer facts, trade vocabulary, the TO THE TRADE visual treatment with reference plate, touchpoints, and three alignment flags (canonical name, showroom count, stat citations)."
@@ -1458,6 +1463,17 @@
         "No date on evergreen offers; campaign dates match the brief.",
         "Story safe band and web exact-pixel exports verified.",
         "Uploaded to the campaign's ImageKit folder and attached to its dated row."
+      ]
+    },
+    "workflow": {
+      "title": "How a piece gets made",
+      "intro": "The production loop behind every post, story, and banner — the part that makes the system repeatable by someone who isn't its author.",
+      "steps": [
+        "Start from the brief. The lane's ratified offer facts are the input — if the brief doesn't carry a number, a date, or a claim, the piece doesn't say it.",
+        "Write the pack. Every flight gets a dated pack document: the system block, per-piece prompts with run dates, copy variants, the hard checks, and the open blockers. The pack is the flight's recipe — anyone on the team can generate from it.",
+        "Generate system-block-first. The approved system block pastes at the top of every piece prompt, so each generation inherits the style instead of reinventing it. Photo pieces reserve their overlay zone as clean negative space; the headline is composed in post — the model never renders the money.",
+        "Check, then rescue. After every render, the money copy is verified digit by digit against the brief. A miss gets one of the pack's rescue levers; a failed layout becomes a written REV with the fix stated — the two-zone law itself was born as a REV.",
+        "Ship on the record. Export to the format grid's exact sizes, file to the campaign's ImageKit folder, and attach the art to its dated row — the checklist below closes every piece."
       ]
     }
   },

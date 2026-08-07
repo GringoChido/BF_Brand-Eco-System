@@ -979,6 +979,10 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The ten promo laws</span></div>
     <div class="reveal" id="cpn-laws" style="display:grid;gap:.7rem"></div>
 
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">How a piece gets made</span>
+      <p class="measure muted" id="cpn-wf-intro" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <ol class="gov-steps reveal" id="cpn-wf" style="max-width:52em"></ol>
+
     <div class="cpn-ship reveal" id="cpn-ship"></div>
   </div>
 </section>
@@ -1524,6 +1528,10 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
         <div class="bd"><div class="nm">${esc(y.name)}</div><div class="us">${esc(y.use)}</div><p>${esc(y.spec)}</p>
         ${y.footer?`<div class="ft">${esc(y.footer)}</div>`:''}</div></div>`).join(''));
     set('cpn-laws', (CP.laws||[]).map((r,i)=>`<div class="cmx-rule"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(r)}</span></div>`).join(''));
+    if(CP.workflow){
+      txt('cpn-wf-intro', CP.workflow.intro||'');
+      set('cpn-wf', (CP.workflow.steps||[]).map(w=>`<li>${esc(w)}</li>`).join(''));
+    }
     const SH=CP.shipping;
     if(SH) set('cpn-ship', `<div class="h">Filing &amp; shipping</div><p>${esc(SH.path||'')}</p><p>${esc(SH.record||'')}</p><ol>${(SH.checklist||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ol>`);
   }
