@@ -401,6 +401,18 @@ section{ position:relative; }
 .principle{ border:1px solid var(--line-d); border-radius:8px; padding:1.5rem; background:rgba(255,255,255,.03); }
 .principle .pn{ font-size:1.15rem; font-weight:700; margin-bottom:.5rem; }
 .principle p{ color:rgba(250,248,243,.74); font-size:.92rem; }
+.mmx{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+@media(max-width:980px){ .mmx{ grid-template-columns:1fr; } }
+.mmx .a{ border:1px solid var(--line-d); border-radius:8px; padding:1.5rem; background:rgba(255,255,255,.03); display:flex; flex-direction:column; gap:.75rem; }
+.mmx .a .aud{ font-size:1.1rem; font-weight:700; color:var(--cream); }
+.mmx .a .who{ font-size:.8rem; color:rgba(250,248,243,.6); margin-top:-.4rem; }
+.mmx .a .k{ font-size:.6rem; font-weight:700; text-transform:uppercase; letter-spacing:.14em; color:var(--sage-2); }
+.mmx .a .lead{ font-family:var(--serif); font-size:.98rem; color:var(--cream); }
+.mmx .a ul{ margin:0; padding:0; list-style:none; display:grid; gap:.45rem; }
+.mmx .a li{ font-size:.82rem; color:rgba(250,248,243,.78); padding-left:1.1rem; position:relative; }
+.mmx .a li::before{ content:"·"; position:absolute; left:.2rem; color:var(--sage); font-size:1.2rem; line-height:1; top:-.12rem; }
+.mmx .a .tone{ font-size:.8rem; color:rgba(250,248,243,.66); }
+.mmx .a .ex{ font-family:var(--serif); font-style:italic; font-size:.92rem; color:var(--cream); border-left:2px solid var(--orange); padding-left:.8rem; }
 .ba{ display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line-d); border-radius:8px; overflow:hidden; margin-top:1rem; }
 @media(max-width:640px){ .ba{ grid-template-columns:1fr; } }
 .ba .cell{ padding:1.3rem 1.4rem; }
@@ -791,6 +803,11 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
     <div class="reveal" style="margin-top:3rem">
       <span class="eyebrow" style="color:var(--sage-2)">Rewrite the room · before / after</span>
       <div id="beforeafter" style="margin-top:1rem;display:grid;gap:1rem"></div>
+    </div>
+
+    <div class="reveal" style="margin-top:3rem">
+      <span class="eyebrow" style="color:var(--sage-2)">The messaging matrix · one voice, three rooms</span>
+      <div class="mmx" id="mmx" style="margin-top:1rem"></div>
     </div>
 
     <div class="reveal" style="display:grid;grid-template-columns:1.3fr 1fr;gap:2.5rem;margin-top:3rem" id="voice-foot">
@@ -1197,6 +1214,14 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
     <div class="ba">
       <div class="cell bad"><span class="tag">✕ ${esc(b.context)} · before</span><p>“${esc(b.before)}”</p></div>
       <div class="cell good"><span class="tag">✓ ${esc(b.context)} · after</span><p>“${esc(b.after)}”</p></div>
+    </div>`).join(''));
+  set('mmx', (V.messagingMatrix||[]).map(a=>`
+    <div class="a">
+      <div><div class="aud">${esc(a.audience)}</div><div class="who">${esc(a.who)}</div></div>
+      <div><span class="k">Lead benefit</span><p class="lead">${esc(a.leadBenefit)}</p></div>
+      <div><span class="k">Proof</span><ul>${(a.proofs||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>
+      <div><span class="k">Tone shift</span><p class="tone">${esc(a.tone)}</p></div>
+      <p class="ex">“${esc(a.example)}”</p>
     </div>`).join(''));
   set('banlist', (V.banList||[]).map(w=>`<span>${esc(w)}</span>`).join(''));
   set('mechanics', (V.mechanics||[]).map(m=>`<li>${esc(m)}</li>`).join(''));

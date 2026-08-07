@@ -712,6 +712,44 @@ window.BF_DATA = {
         "before": "Don't miss our seamless clearance event on game room units!",
         "after": "Our spring great-room event is on. Factory-direct pricing on the tables that anchor the room."
       }
+    ],
+    "messagingMatrix": [
+      {
+        "audience": "The Host",
+        "who": "35–60, furnishing a home they intend to keep and fill with people.",
+        "leadBenefit": "A room the whole family is drawn to, built well enough to be inherited.",
+        "proofs": [
+          "Fifty years and two generations of family ownership — we've furnished the rooms their kids grew up in.",
+          "One-inch diamond-honed slate and solid hardwood, finished by hand.",
+          "Our own crews deliver and level the table in the room, not at the curb."
+        ],
+        "tone": "The warmest register: first-person plural, family language, no jargon, no urgency.",
+        "example": "Built to be re-leveled, restored, and handed down — the table your grandkids will argue over."
+      },
+      {
+        "audience": "The Designer / Builder",
+        "who": "Specifying game rooms for clients, on a drawing deadline.",
+        "leadBenefit": "Specification-grade detail from a single accountable source.",
+        "proofs": [
+          "Owned factories: finishes, cloth colours, and dimensions built to spec, with no reseller in between.",
+          "Nine categories under one roof — one order covers the whole room.",
+          "Velocity for the modern loft, Golden West when the commission is one of one."
+        ],
+        "tone": "Tighter and technical: figures over adjectives, specs stated plainly, still a maker's voice.",
+        "example": "One-inch slate, worsted tournament cloth, and a finish matched to your millwork — from our factory, on your schedule."
+      },
+      {
+        "audience": "The Franchise Operator",
+        "who": "Multi-unit operators and premium landlords weighing the model.",
+        "leadBenefit": "A proven house with the demand engine already running.",
+        "proofs": [
+          "Eleven showrooms and national e-commerce prove the model at retail scale.",
+          "Owned brands carry protected margin no reseller can match.",
+          "100% territory exclusivity for every qualified operator."
+        ],
+        "tone": "The most direct register: numbers lead, adjectives sit out, confidence without hype.",
+        "example": "Fifty years of brand, a protected territory, and a factory behind every SKU — you run the room, the house runs the demand."
+      }
     ]
   },
   "imagery": {
