@@ -310,6 +310,16 @@ section{ position:relative; }
 .scale .row .key .us{ font-size:.74rem; color:rgba(31,36,33,.55); }
 .scale .row .spec{ color:var(--ink); overflow-wrap:anywhere; }
 
+/* ---------- type licensing (v5) ---------- */
+.lic{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+@media(max-width:1000px){ .lic{ grid-template-columns:1fr; } }
+.lic .l{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.5rem 1.6rem; box-shadow:var(--sh-sm); }
+.lic .l .fam{ font-weight:700; font-size:1.05rem; margin-bottom:.6rem; }
+.lic .l dl{ margin:0; display:grid; gap:.55rem; }
+.lic .l dt{ font-size:.62rem; text-transform:uppercase; letter-spacing:.1em; font-weight:700; color:var(--green); }
+.lic .l dd{ margin:0; font-size:.84rem; color:rgba(31,36,33,.74); }
+.lic .l dd code{ font-family:var(--mono); font-size:.74rem; background:var(--mint); border-radius:4px; padding:.1rem .35rem; overflow-wrap:anywhere; }
+
 /* ---------- voice ---------- */
 .voice-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
 @media(max-width:760px){ .voice-grid{ grid-template-columns:1fr; } }
@@ -603,6 +613,11 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
       </div>
     </div>
     <div class="scale reveal" id="scale"></div>
+    <p class="muted reveal" id="leading-rule" style="font-size:.88rem;margin-top:1.4rem;max-width:52em"></p>
+
+    <!-- Licensing & fallbacks (v5) -->
+    <div class="reveal" style="margin:3rem 0 1rem"><span class="eyebrow" style="color:var(--green)">Licensing & fallbacks · so decks stop freelancing</span></div>
+    <div class="lic reveal" id="lic"></div>
   </div>
 </section>
 
@@ -920,12 +935,25 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
   txt('mono-note', (D.tokens.type.mono&&D.tokens.type.mono.note)||'The spec-sheet voice: hex values, measurements, figures, and flags.');
   set('scale', (D.tokens.scale||[]).map(s=>{
     const fam=s.family==='serif'?'var(--serif)':(s.family==='mono'?'var(--mono)':'var(--sans)');
-    const style=`font-family:${fam};font-size:${s.size};font-weight:${s.weight||400};letter-spacing:${s.tracking||'0'};line-height:1.1`;
+    const style=`font-family:${fam};font-size:${s.size};font-weight:${s.weight||400};letter-spacing:${s.tracking||'0'};line-height:${s.leading||'1.1'}`;
     return `<div class="row">
-      <div class="key"><div class="nm">${esc(s.name)}</div><div class="us">${esc(s.use)} · ${esc(s.size)}</div></div>
+      <div class="key"><div class="nm">${esc(s.name)}</div><div class="us">${esc(s.use)} · ${esc(s.size)}${s.leading?` · lh ${esc(s.leading)}`:''}</div></div>
       <div class="spec" style="${style}">${esc(s.specimen)}</div>
     </div>`;
   }).join(''));
+  // licensing panel (v5)
+  const TY=D.tokens.typography;
+  if(TY){
+    txt('leading-rule', TY.leadingRule||'');
+    set('lic', (TY.licensing||[]).map(l=>`
+      <div class="l"><div class="fam" style="${l.family==='Vollkorn'?'font-family:var(--serif)':(l.family==='Fragment Mono'?'font-family:var(--mono)':'')}">${esc(l.family)}</div>
+        <dl>
+          <dt>License</dt><dd>${esc(l.license)}</dd>
+          <dt>Web</dt><dd>${l.web.indexOf('fonts.googleapis')===0?`<code>${esc(l.web)}</code>`:esc(l.web)}</dd>
+          <dt>Office apps</dt><dd>${esc(l.office)}</dd>
+        </dl>
+        ${l.needsJoshua?`<div class="needs">NEEDS JOSHUA: ${esc(l.needsJoshua)}</div>`:''}</div>`).join(''));
+  }
 
   // ---- 05 · VOICE ----
   const V=D.voice||{};

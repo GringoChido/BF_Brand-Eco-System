@@ -239,7 +239,8 @@ window.BF_DATA = {
         "size": "clamp(2.75rem, 6vw, 5rem)",
         "family": "sans",
         "weight": 700,
-        "tracking": "-0.03em"
+        "tracking": "-0.03em",
+        "leading": "0.95"
       },
       {
         "name": "Headline",
@@ -248,7 +249,8 @@ window.BF_DATA = {
         "size": "clamp(1.9rem, 4vw, 3rem)",
         "family": "sans",
         "weight": 700,
-        "tracking": "-0.022em"
+        "tracking": "-0.022em",
+        "leading": "1.05"
       },
       {
         "name": "Subhead",
@@ -257,7 +259,8 @@ window.BF_DATA = {
         "size": "1.35rem",
         "family": "sans",
         "weight": 500,
-        "tracking": "-0.01em"
+        "tracking": "-0.01em",
+        "leading": "1.3"
       },
       {
         "name": "Editorial",
@@ -266,7 +269,8 @@ window.BF_DATA = {
         "size": "1.5rem",
         "family": "serif",
         "weight": 500,
-        "tracking": "0"
+        "tracking": "0",
+        "leading": "1.45"
       },
       {
         "name": "Body",
@@ -275,7 +279,8 @@ window.BF_DATA = {
         "size": "1rem",
         "family": "sans",
         "weight": 400,
-        "tracking": "0"
+        "tracking": "0",
+        "leading": "1.62"
       },
       {
         "name": "Eyebrow",
@@ -284,7 +289,8 @@ window.BF_DATA = {
         "size": "0.72rem",
         "family": "sans",
         "weight": 700,
-        "tracking": "0.18em"
+        "tracking": "0.18em",
+        "leading": "1.35"
       },
       {
         "name": "Spec",
@@ -293,7 +299,8 @@ window.BF_DATA = {
         "size": "0.85rem",
         "family": "mono",
         "weight": 400,
-        "tracking": "0.01em"
+        "tracking": "0.01em",
+        "leading": "1.5"
       }
     ],
     "pmsNeedsJoshua": "Confirm PMS proofs with the print vendor — matches are ΔE-computed against digital proofs, not physical drawdowns. Walnut is a coin-flip between 7532 C and 4705 C.",
@@ -377,6 +384,31 @@ window.BF_DATA = {
     "downloads": {
       "css": "../shared/tokens.css",
       "json": "../shared/tokens.json"
+    },
+    "typography": {
+      "paragraphSpacing": "0.7em",
+      "leadingRule": "Line-height is part of the scale, not a per-project choice: display and headline set tight (0.95–1.05), reading text at 1.62, spec text at 1.5. Paragraph spacing is 0.7em — space between paragraphs, never a full blank line, never an indent.",
+      "licensing": [
+        {
+          "family": "Helvetica Neue",
+          "license": "Commercial — a Monotype family. Desktop and print production require licensed seats through Monotype; it ships with macOS and iOS, which is what the web strategy leans on.",
+          "web": "Do not embed a webfont. Serve the system stack — 'Helvetica Neue', Helvetica, Arial, sans-serif. Apple devices render true Helvetica Neue; everything else falls back to Arial without a licensing bill or a layout shift.",
+          "office": "Arial, always. Employee decks, Word docs, and email signatures use Arial — never a downloaded lookalike.",
+          "needsJoshua": "Confirm Monotype seat coverage for the print-production designers."
+        },
+        {
+          "family": "Vollkorn",
+          "license": "Open — SIL Open Font License, served from Google Fonts. Free to embed, print, and package.",
+          "web": "fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..700;1,400..500",
+          "office": "Install the OFL files from Google Fonts; Georgia is the substitute when installation isn't possible."
+        },
+        {
+          "family": "Fragment Mono",
+          "license": "Open — SIL Open Font License, served from Google Fonts. Free to embed, print, and package.",
+          "web": "fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1",
+          "office": "Install from Google Fonts; Consolas or Menlo substitute in office apps."
+        }
+      ]
     }
   },
   "logo": {

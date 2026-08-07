@@ -20,24 +20,32 @@
   --bf-type-display-size:clamp(2.75rem, 6vw, 5rem);
   --bf-type-display-weight:700;
   --bf-type-display-tracking:-0.03em;
+  --bf-type-display-leading:0.95;
   --bf-type-headline-size:clamp(1.9rem, 4vw, 3rem);
   --bf-type-headline-weight:700;
   --bf-type-headline-tracking:-0.022em;
+  --bf-type-headline-leading:1.05;
   --bf-type-subhead-size:1.35rem;
   --bf-type-subhead-weight:500;
   --bf-type-subhead-tracking:-0.01em;
+  --bf-type-subhead-leading:1.3;
   --bf-type-editorial-size:1.5rem;
   --bf-type-editorial-weight:500;
   --bf-type-editorial-tracking:0;
+  --bf-type-editorial-leading:1.45;
   --bf-type-body-size:1rem;
   --bf-type-body-weight:400;
   --bf-type-body-tracking:0;
+  --bf-type-body-leading:1.62;
   --bf-type-eyebrow-size:0.72rem;
   --bf-type-eyebrow-weight:700;
   --bf-type-eyebrow-tracking:0.18em;
+  --bf-type-eyebrow-leading:1.35;
   --bf-type-spec-size:0.85rem;
   --bf-type-spec-weight:400;
   --bf-type-spec-tracking:0.01em;
+  --bf-type-spec-leading:1.5;
 
+  --bf-paragraph-space:0.7em;
   /* ---- spacing (4/8px base) · radius · rules ---- */
 }
