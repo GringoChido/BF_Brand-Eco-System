@@ -336,6 +336,18 @@ section{ position:relative; }
 .dv-ramp{ display:flex; height:2.6rem; border-radius:4px; overflow:hidden; margin-top:1rem; border:1px solid var(--line); }
 .dv-ramp span{ flex:1; }
 
+/* ---------- applications (v5) ---------- */
+.apps-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+.apps-grid .g-card .nm{ font-weight:700; font-size:.95rem; margin-bottom:.5rem; }
+.apps-grid .g-card img.av{ width:3.4rem; height:3.4rem; border-radius:8px; margin:.4rem 0 .2rem; }
+.camp{ margin-top:2.6rem; background:var(--forest); color:var(--cream); border-radius:8px; padding:2rem 2.2rem; box-shadow:var(--sh-md); position:relative; overflow:hidden; }
+.camp::before{ content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(120% 80% at 22% 0%, rgba(255,255,255,.06), transparent 60%); }
+.camp > *{ position:relative; }
+.camp .h{ font-weight:700; font-size:1.15rem; margin-bottom:1rem; }
+.camp ol{ margin:0; padding:0; list-style:none; display:grid; gap:.7rem; counter-reset:cr; }
+.camp li{ font-size:.92rem; color:rgba(250,248,243,.85); padding-left:2rem; position:relative; counter-increment:cr; }
+.camp li::before{ content:counter(cr,decimal-leading-zero); position:absolute; left:0; top:.05em; font-family:var(--mono); font-size:.7rem; color:var(--sage-2); }
+
 /* ---------- motion (v5) ---------- */
 .mo{ display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
 @media(max-width:880px){ .mo{ grid-template-columns:1fr; } }
@@ -810,6 +822,31 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
   </div>
 </section>
 
+<!-- ===== APPLICATIONS (v5) ===== -->
+<section id="apps" class="is-mint pad">
+  <div class="wrap">
+    <div class="sec-mark reveal"><span class="no" data-secno>09</span><span class="ln"></span></div>
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker eyebrow"><span class="bar"></span> Applications</span>
+        <h2 class="sec-title">The brand at street scale.</h2>
+      </div>
+      <p class="measure muted" id="apps-intro"></p>
+    </div>
+
+    <div class="reveal" style="margin-bottom:1rem"><span class="eyebrow" style="color:var(--green)">Retail environment</span></div>
+    <div class="apps-grid reveal" id="apps-retail"></div>
+
+    <div class="reveal" style="margin:2.6rem 0 1rem"><span class="eyebrow" style="color:var(--green)">Fleet &amp; people</span></div>
+    <div class="apps-grid reveal" id="apps-fleet"></div>
+
+    <div class="reveal" style="margin:2.6rem 0 1rem"><span class="eyebrow" style="color:var(--green)">Templates</span></div>
+    <div class="apps-grid reveal" id="apps-templates"></div>
+
+    <div class="camp reveal" id="apps-campaign"></div>
+  </div>
+</section>
+
 <!-- ===== 07 · HOUSE OF BRANDS / ARCHITECTURE ===== -->
 <section id="house" class="is-mint pad">
   <div class="wrap">
@@ -1153,6 +1190,22 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
   set('img-do', (I.do||[]).map(x=>`<li>${esc(x)}</li>`).join(''));
   set('img-dont', (I.dont||[]).map(x=>`<li>${esc(x)}</li>`).join(''));
   txt('neg-prompt', I.negativePrompt||'');
+
+  // ---- APPLICATIONS (v5) ----
+  const AP=D.applications;
+  if(AP){
+    txt('apps-intro', AP.intro||'');
+    const appCard=a=>`
+      <div class="g-card"><div class="nm">${esc(a.name)}</div>
+        ${a.file?`<img class="av" src="${esc(a.file)}" alt="${esc(a.name)}" loading="lazy"/>`:''}
+        <p style="margin-top:.2rem">${esc(a.spec)}</p>
+        ${a.needsJoshua?`<div class="needs">NEEDS JOSHUA: ${esc(a.needsJoshua)}</div>`:''}</div>`;
+    set('apps-retail', (AP.retail||[]).map(appCard).join(''));
+    set('apps-fleet', (AP.fleet||[]).map(appCard).join(''));
+    set('apps-templates', (AP.templates||[]).map(appCard).join(''));
+    if(AP.campaign) set('apps-campaign',
+      `<div class="h">${esc(AP.campaign.name)}</div><ol>${(AP.campaign.rules||[]).map(r=>`<li>${esc(r)}</li>`).join('')}</ol>`);
+  }
 
   // ---- 07 · ARCHITECTURE ----
   set('vi-layers', (D.verticalIntegration.layers||[]).map(l=>`

@@ -1128,5 +1128,75 @@ window.BF_DATA = {
     "endCard": "The last 2.5 seconds of every video: Heritage Green field, the registration lockup centered at 40% of frame width, arriving on the standard 400ms fade. The URL sits 90px from the bottom in Fragment Mono, Cream. No sting, no confetti, no QR code unless the media is print-adjacent (a screen in a showroom).",
     "lowerThird": "Name in Helvetica Neue 700, role in Fragment Mono, on a Cream panel carrying the 2px Signal Orange kicker bar. Lower-left, inside safe margins; enters with a 400ms slide from the left, exits on a 200ms fade. Never animated per word.",
     "storySafe": "Reels and Stories (1080 × 1920): keep type and logos inside the centre 1080 × 1420 zone — the top 220px and bottom 280px belong to platform UI. 60px side margins. The Since-1975 stamp anchors story templates top-centre, inside the zone."
+  },
+  "applications": {
+    "intro": "The showroom is the brand's biggest canvas, and the van is its most-seen ad. How the identity lands on architecture, fabric, and paper — specified tightly enough that a fabricator can quote from this page.",
+    "retail": [
+      {
+        "name": "Storefront sign",
+        "spec": "Channel letters set from the registration lockup — never the full stamp at building scale. Faces in PMS 554 C acrylic or painted aluminum, returns and trim caps in Ink. Halo or face-lit at 3000K maximum. The mark may stand alone as a blade sign, mounted level, never rotated.",
+        "needsJoshua": "Sign fabricator quote against this spec + landlord sign criteria per showroom."
+      },
+      {
+        "name": "Interior wayfinding",
+        "spec": "Category panels in Heritage Green with Cream type — Helvetica Neue 700, all caps, 0.08em tracking — and the category icon leading at left. Panels hang level at 96in AFF on the 4/8 spacing ladder; aisle and bay numbers in Fragment Mono."
+      },
+      {
+        "name": "Window vinyl",
+        "spec": "Cream cut vinyl only on glass, matched to the Materials wrap spec. The registration lockup or the mark alone; maximum 60% of the pane's width; hours and contact lines in Fragment Mono below, never beside."
+      },
+      {
+        "name": "Price & hang tags",
+        "spec": "Cream stock, Ink type. Product name in Helvetica Neue 700 at 12pt, spec lines in Fragment Mono at 8pt, price in Helvetica Neue 700 at 20pt. The mark sits 0.5in top-left. A sale price is the only Signal Orange on the tag — the money moment, nothing else."
+      }
+    ],
+    "fleet": [
+      {
+        "name": "Vehicle wrap",
+        "spec": "Heritage Green field in cast vinyl (see Materials), the registration lockup centered on both box sides at 60% of panel height, billiardfactory.com across the rear doors in Cream Fragment Mono. No phone numbers, no starbursts, no product collages — the van is a moving sign, not a moving flyer.",
+        "needsJoshua": "Fleet vendor + wrap film SKUs; measure the box trucks before art."
+      },
+      {
+        "name": "Uniforms & crew",
+        "spec": "Polos in Heritage Green or Ink with the mark embroidered left-chest at 2.5in wide — the minimum embroidered size — in Cream thread matched to the Materials spec. Delivery crews add the Ink work jacket with the mark across the back at 10in. Clean shoes, no competitor caps; the crew at the door is the last brand touchpoint of every sale.",
+        "needsJoshua": "Thread numbers from the uniform vendor (Madeira or Isacord book)."
+      }
+    ],
+    "templates": [
+      {
+        "name": "Email header & footer",
+        "spec": "600px template. Header: a 72px Heritage Green bar with the white simple lockup at 180px, centered. Footer: Mist panel, legal line and unsubscribe in Fragment Mono 11px, the mark at 24px. Body text Helvetica-stack 16px/1.62 on Cream."
+      },
+      {
+        "name": "Social avatar",
+        "spec": "The mark tile — Cream rail diamond on the Heritage Green square. Every platform, every sub-account; never a photo, never the full wordmark at avatar scale.",
+        "file": "../assets/favicon-512.png"
+      },
+      {
+        "name": "Story template",
+        "spec": "Since-1975 stamp top-centre inside the safe zone, content on a Cream card with 8px radius, one CTA bottom-centre. Built to the Motion section's 1080 × 1420 safe area."
+      },
+      {
+        "name": "Business card",
+        "spec": "3.5 × 2in on Cream stock. Front: name in Helvetica Neue 700 at 9pt, role in Fragment Mono at 6.5pt, contact block in Fragment Mono at 7pt, the mark at 0.4in bottom-right. Back: Heritage Green flood, Cream mark centered at 0.75in."
+      },
+      {
+        "name": "Letterhead",
+        "spec": "US Letter. The registration lockup at 2in top-left, body block starting 2in from the trim, Helvetica-stack 10.5pt/1.62, the Since-1975 bar as the footer with address and legal name in Fragment Mono 7.5pt."
+      },
+      {
+        "name": "Invoice",
+        "spec": "Letterhead base with the line-item table in Fragment Mono 9pt, hairline rules only. The totals band floods Heritage Green with Cream figures; the amount due is the document's single Signal Orange element."
+      }
+    ],
+    "campaign": {
+      "name": "Campaign & promo rules",
+      "rules": [
+        "Sale creative keeps the 60·30·7·3 law — a promotion changes the message, never the proportions. Signal Orange is spent on the money moment (the price, the tier, the date) and nowhere else.",
+        "Headlines stay in the two brand faces; no imported display fonts for holidays. Urgency comes from the offer, not from starbursts, countdown clocks, or ALL-CAPS body copy.",
+        "Offer facts come from a ratified brief — creative never states an end date, a discount, or a claim the brief doesn't carry.",
+        "Reference implementation: the Sitewide Savings Ticket Ladder system (Aug 2026) — cream paper grain, layered ticket stack, orange spent only on the savings figure."
+      ]
+    }
   }
 };
