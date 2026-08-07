@@ -339,6 +339,36 @@ section{ position:relative; }
 .dv-ramp{ display:flex; height:2.6rem; border-radius:4px; overflow:hidden; margin-top:1rem; border:1px solid var(--line); }
 .dv-ramp span{ flex:1; }
 
+/* ---------- campaigns (v5.1) ---------- */
+.cpn-lanes{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+@media(max-width:980px){ .cpn-lanes{ grid-template-columns:1fr; } }
+.cpn-lanes .ln2{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.2rem 1.3rem; box-shadow:var(--sh-sm); }
+.cpn-lanes .ln2 .nm{ font-weight:700; font-size:.9rem; }
+.cpn-lanes .ln2 .nm .st{ font-family:var(--mono); font-size:.58rem; color:var(--forest); text-transform:uppercase; letter-spacing:.08em; margin-left:.4rem; }
+.cpn-lanes .ln2 p{ font-size:.82rem; color:rgba(31,36,33,.7); margin-top:.35rem; }
+.cpn-fmt{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1rem; }
+.cpn-fmt .f{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.1rem 1.2rem; box-shadow:var(--sh-sm); }
+.cpn-fmt .f .nm{ font-weight:700; font-size:.86rem; margin-bottom:.3rem; }
+.cpn-fmt .f .sp{ font-family:var(--mono); font-size:.72rem; color:rgba(31,36,33,.72); }
+.cpn-sys{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+@media(max-width:1000px){ .cpn-sys{ grid-template-columns:1fr; } }
+.cpn-sys .sy{ background:var(--paper); border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:var(--sh-md); display:flex; flex-direction:column; }
+.cpn-sys .sy .stage{ aspect-ratio:4/5; background:var(--mint); overflow:hidden; }
+.cpn-sys .sy .stage img{ width:100%; height:100%; object-fit:cover; object-position:top; }
+.cpn-sys .sy .bd{ padding:1.3rem 1.4rem 1.5rem; }
+.cpn-sys .sy .nm{ font-weight:700; font-size:1.02rem; }
+.cpn-sys .sy .us{ font-family:var(--serif); font-style:italic; font-size:.88rem; color:var(--walnut); margin:.3rem 0 .6rem; }
+.cpn-sys .sy p{ font-size:.82rem; color:rgba(31,36,33,.72); }
+.cpn-sys .sy .ft{ font-family:var(--mono); font-size:.7rem; color:rgba(31,36,33,.72); background:var(--mint); border:1px solid var(--line); border-radius:6px; padding:.7rem .8rem; margin-top:.8rem; }
+.cpn-ship{ margin-top:3rem; background:var(--forest); color:var(--cream); border-radius:8px; padding:2rem 2.2rem; box-shadow:var(--sh-md); position:relative; overflow:hidden; }
+.cpn-ship::before{ content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(120% 80% at 22% 0%, rgba(255,255,255,.06), transparent 60%); }
+.cpn-ship > *{ position:relative; }
+.cpn-ship .h{ font-weight:700; font-size:1.15rem; margin-bottom:.9rem; }
+.cpn-ship p{ font-size:.92rem; color:rgba(250,248,243,.85); margin-bottom:.7rem; }
+.cpn-ship ol{ margin:.4rem 0 0; padding:0; list-style:none; display:grid; gap:.55rem; counter-reset:sc; }
+.cpn-ship li{ font-size:.9rem; color:rgba(250,248,243,.85); padding-left:2rem; position:relative; counter-increment:sc; }
+.cpn-ship li::before{ content:counter(sc,decimal-leading-zero); position:absolute; left:0; top:.05em; font-family:var(--mono); font-size:.7rem; color:var(--sage-2); }
+
 /* ---------- legal & governance (v5) ---------- */
 .lg{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
 @media(max-width:880px){ .lg{ grid-template-columns:1fr; } }
@@ -538,9 +568,10 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
       <a href="#voice"><span class="ix">07</span>Voice</a>
       <a href="#imagery"><span class="ix">08</span>Imagery</a>
       <a href="#apps"><span class="ix">09</span>Applications</a>
-      <a href="#house"><span class="ix">10</span>House</a>
-      <a href="#range"><span class="ix">11</span>Range</a>
-      <a href="#legal"><span class="ix">12</span>Legal</a>
+      <a href="#campaigns"><span class="ix">10</span>Campaigns</a>
+      <a href="#house"><span class="ix">11</span>House</a>
+      <a href="#range"><span class="ix">12</span>Range</a>
+      <a href="#legal"><span class="ix">13</span>Legal</a>
     </nav>
     <a class="btn btn-forest" href="#logo">Brand Kit</a>
     <button class="nav-toggle" aria-label="Open section menu" aria-controls="tocMobile" aria-expanded="false"><span class="bars"><span></span></span> Menu</button>
@@ -555,9 +586,10 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     <a href="#voice"><span class="ix">07</span>Voice</a>
     <a href="#imagery"><span class="ix">08</span>Imagery</a>
     <a href="#apps"><span class="ix">09</span>Applications</a>
-    <a href="#house"><span class="ix">10</span>House of Brands</a>
-    <a href="#range"><span class="ix">11</span>The Range</a>
-    <a href="#legal"><span class="ix">12</span>Legal &amp; Governance</a>
+    <a href="#campaigns"><span class="ix">10</span>Campaigns</a>
+    <a href="#house"><span class="ix">11</span>House of Brands</a>
+    <a href="#range"><span class="ix">12</span>The Range</a>
+    <a href="#legal"><span class="ix">13</span>Legal &amp; Governance</a>
   </nav>
 </header>
 
@@ -901,10 +933,41 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
   </div>
 </section>
 
-<!-- ===== 10 · HOUSE OF BRANDS / ARCHITECTURE ===== -->
+<!-- ===== 10 · CAMPAIGNS (v5.1) ===== -->
+<section id="campaigns" class="pad">
+  <div class="wrap">
+    <div class="sec-mark reveal"><span class="no" data-secno>10</span><span class="ln"></span></div>
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker eyebrow"><span class="bar"></span> Campaigns</span>
+        <h2 class="sec-title">The promo engine.</h2>
+      </div>
+      <p class="measure muted" id="cpn-intro"></p>
+    </div>
+
+    <div class="reveal" style="margin-bottom:1rem"><span class="eyebrow" style="color:var(--forest)">How a campaign is built</span>
+      <p class="measure muted" id="cpn-model" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <div class="cpn-lanes reveal" id="cpn-lanes"></div>
+    <p class="measure muted reveal" id="cpn-rhythm" style="font-size:.9rem;margin-top:1rem"></p>
+
+    <div class="reveal" style="margin:3rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The format grid</span></div>
+    <div class="cpn-fmt reveal" id="cpn-formats"></div>
+    <p class="measure muted reveal" id="cpn-fmt-note" style="font-size:.9rem;margin-top:1rem"></p>
+
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The three art systems</span></div>
+    <div class="cpn-sys reveal" id="cpn-systems"></div>
+
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The ten promo laws</span></div>
+    <div class="reveal" id="cpn-laws" style="display:grid;gap:.7rem"></div>
+
+    <div class="cpn-ship reveal" id="cpn-ship"></div>
+  </div>
+</section>
+
+<!-- ===== 11 · HOUSE OF BRANDS / ARCHITECTURE ===== -->
 <section id="house" class="is-mint pad">
   <div class="wrap">
-    <div class="sec-mark reveal"><span class="no">10</span><span class="ln"></span></div>
+    <div class="sec-mark reveal"><span class="no">11</span><span class="ln"></span></div>
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> Brand Architecture</span>
@@ -933,10 +996,10 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
   </div>
 </section>
 
-<!-- ===== 11 · THE RANGE ===== -->
+<!-- ===== 12 · THE RANGE ===== -->
 <section id="range" class="pad">
   <div class="wrap">
-    <div class="sec-mark reveal"><span class="no">11</span><span class="ln"></span></div>
+    <div class="sec-mark reveal"><span class="no">12</span><span class="ln"></span></div>
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> The Range</span>
@@ -951,7 +1014,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
 <!-- ===== LEGAL & GOVERNANCE (v5) ===== -->
 <section id="legal" class="pad">
   <div class="wrap">
-    <div class="sec-mark reveal"><span class="no" data-secno>12</span><span class="ln"></span></div>
+    <div class="sec-mark reveal"><span class="no" data-secno>13</span><span class="ln"></span></div>
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> Legal &amp; Governance</span>
@@ -1007,7 +1070,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     </div>
     <div class="col">
       <p class="eyebrow" style="color:var(--sage-2);margin-bottom:.8rem">Guidelines</p>
-      <p><a href="#brand">The Brand</a> · <a href="#logo">Logo</a> · <a href="#colour">Colour</a> · <a href="#type">Type</a> · <a href="#grid">Grid &amp; Data</a> · <a href="#motion">Motion</a> · <a href="#voice">Voice</a> · <a href="#imagery">Imagery</a> · <a href="#apps">Applications</a> · <a href="#house">House of Brands</a> · <a href="#range">The Range</a> · <a href="#legal">Legal</a></p>
+      <p><a href="#brand">The Brand</a> · <a href="#logo">Logo</a> · <a href="#colour">Colour</a> · <a href="#type">Type</a> · <a href="#grid">Grid &amp; Data</a> · <a href="#motion">Motion</a> · <a href="#voice">Voice</a> · <a href="#imagery">Imagery</a> · <a href="#apps">Applications</a> · <a href="#campaigns">Campaigns</a> · <a href="#house">House of Brands</a> · <a href="#range">The Range</a> · <a href="#legal">Legal</a></p>
     </div>
     <div class="col">
       <p class="eyebrow" style="color:var(--sage-2);margin-bottom:.8rem">Colophon</p>
@@ -1378,6 +1441,27 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
       <div class="body"><h3>${esc(c.name)}</h3><p>${esc(c.blurb)}</p><div class="more">Shop ${esc(c.name)} →</div></div>
     </a>`).join(''));
 
+  // ---- 10 · CAMPAIGNS (v5.1) ----
+  const CP=D.campaigns;
+  if(CP){
+    txt('cpn-intro', CP.intro||'');
+    txt('cpn-model', (CP.model&&CP.model.body)||'');
+    txt('cpn-rhythm', (CP.model&&CP.model.rhythm)||'');
+    set('cpn-lanes', ((CP.model&&CP.model.lanes)||[]).map(l=>{
+      const st=/standing/.test(l.name)?'<span class="st">standing</span>':'';
+      return `<div class="ln2"><div class="nm">${esc(l.name.replace(' · standing',''))}${st}</div><p>${esc(l.role)}</p></div>`;
+    }).join(''));
+    set('cpn-formats', (CP.formats||[]).map(f=>`<div class="f"><div class="nm">${esc(f.name)}</div><div class="sp">${esc(f.spec)}</div></div>`).join(''));
+    txt('cpn-fmt-note', CP.formatsNote||'');
+    set('cpn-systems', (CP.systems||[]).map(y=>`
+      <div class="sy"><div class="stage"><img src="${esc(y.img)}" alt="${esc(y.name)} reference piece" loading="lazy" onerror="this.parentNode.style.display='none'"/></div>
+        <div class="bd"><div class="nm">${esc(y.name)}</div><div class="us">${esc(y.use)}</div><p>${esc(y.spec)}</p>
+        ${y.footer?`<div class="ft">${esc(y.footer)}</div>`:''}</div></div>`).join(''));
+    set('cpn-laws', (CP.laws||[]).map((r,i)=>`<div class="cmx-rule"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(r)}</span></div>`).join(''));
+    const SH=CP.shipping;
+    if(SH) set('cpn-ship', `<div class="h">Filing &amp; shipping</div><p>${esc(SH.path||'')}</p><p>${esc(SH.record||'')}</p><ol>${(SH.checklist||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ol>`);
+  }
+
   // ---- LEGAL & GOVERNANCE (v5) ----
   const LG=D.legal;
   if(LG){
@@ -1425,7 +1509,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
 
   // ---- scroll-spy + back-to-top (one throttled passive listener) ----
   const links=document.querySelectorAll('.toc a, .toc-mobile a');
-  const spyIds=['brand','logo','colour','type','grid','motion','voice','imagery','apps','house','range','legal'];
+  const spyIds=['brand','logo','colour','type','grid','motion','voice','imagery','apps','campaigns','house','range','legal'];
   const top=document.getElementById('toTop');
   if(top) top.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   const spyEls=spyIds.map(id=>document.getElementById(id)).filter(Boolean);

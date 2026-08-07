@@ -2,7 +2,7 @@
 window.BF_DATA = {
   "meta": {
     "ecosystem": "Billiard Factory · Living HTML Ecosystem",
-    "version": "5.0.0",
+    "version": "5.1.0",
     "lastUpdated": "2026-08-06",
     "sourceOfTruth": "Site A · Creative & Brand Hub",
     "consumedBy": [
@@ -1326,6 +1326,11 @@ window.BF_DATA = {
     },
     "changelog": [
       {
+        "version": "5.1.0",
+        "date": "2026-08-06",
+        "notes": "New section 10 · Campaigns: the campaign creative system codified from Season Opener + Labor Day — lane model, format grid, the three art systems (Ticket Ladder, Photo Scrim, Solid Field), the ten promo laws, and the shipping record."
+      },
+      {
         "version": "5.0.0",
         "date": "2026-08-06",
         "notes": "The Perfect Kit: canonical rail-diamond mark + registration lockup, vector masters (SVG/EPS) for every lockup, PMS + materials + contrast matrix, design tokens, Grid/Icons/Data, Motion, Applications, sub-brand wordmark system, messaging matrix, Legal & Governance."
@@ -1336,5 +1341,120 @@ window.BF_DATA = {
         "notes": "Baseline style guide: brand foundations, 12 PNG lockups, palette with proportion law, type system, voice, imagery, house of brands, range."
       }
     ]
+  },
+  "campaigns": {
+    "intro": "The part of the brand that runs weekly. Every promotion is built in advance as a complete flight — social, stories, web banners, email, signage — on the Marketing Engine, and every piece obeys the same laws. This section codifies the system proven on Season Opener (Aug 2026) and Labor Day (Aug–Sep 2026).",
+    "model": {
+      "body": "A campaign is a set of lanes, each with its own brief. The brief carries the OFFER FACTS — the only numbers, dates, and claims creative may state. Facts get ratified before art gets made; if the brief doesn't carry it, the piece doesn't say it.",
+      "lanes": [
+        {
+          "name": "Main",
+          "role": "The campaign's own offer — the hero push, the lane that carries the end date."
+        },
+        {
+          "name": "Category",
+          "role": "A table for every room — one product category made covetable, one post at a time."
+        },
+        {
+          "name": "Designer / Trade",
+          "role": "The trade cut: white-glove language for designers and builders specifying for clients."
+        },
+        {
+          "name": "Event",
+          "role": "In-store moments — invitations run AHEAD of the campaign work-back, never inside it."
+        },
+        {
+          "name": "Sitewide Savings · standing",
+          "role": "The evergreen tiered offer rides every campaign automatically. Its tiers never change without an owner ruling."
+        },
+        {
+          "name": "Editorial · standing",
+          "role": "The self-running content desk — never used to fill a campaign hole."
+        }
+      ],
+      "rhythm": "The run-sheet law: one post and one story every campaign day, each slot carrying its date, copy, and finished art. Flights phase tease → launch → peak → close; email works back from the dates. The ladder card (the piece people screenshot for a spouse) runs three to four times per flight, never more."
+    },
+    "formats": [
+      {
+        "name": "Feed post",
+        "spec": "1080 × 1350 (4:5), exported @2x"
+      },
+      {
+        "name": "Story",
+        "spec": "1080 × 1920 (9:16) — all type inside the centre 1080 × 1420 band"
+      },
+      {
+        "name": "Web hero · desktop",
+        "spec": "3840 × 1400, exported exactly"
+      },
+      {
+        "name": "Web hero · mobile",
+        "spec": "1080 × 1350 — its own render, never a downscale"
+      },
+      {
+        "name": "Evergreen site banner",
+        "spec": "1920 × 700 — no dates, lives past the campaign"
+      },
+      {
+        "name": "Email",
+        "spec": "600px template — 72px Heritage Green header bar (see Applications)"
+      },
+      {
+        "name": "In-store signage",
+        "spec": "US Letter, both ways — 8.5 × 11 and 11 × 8.5"
+      },
+      {
+        "name": "Share image",
+        "spec": "1200 × 630 OG template (see Logo)"
+      }
+    ],
+    "formatsNote": "A story is a re-composition of the post, never a crop. A mobile hero is a re-set of the desktop, never a shrink. Five ascending figures don't survive 1080px wide — compress the ladder to two rungs and say “…and three tiers between.”",
+    "systems": [
+      {
+        "id": "ticket-ladder",
+        "name": "The Ticket Ladder",
+        "use": "Evergreen promo graphics — the standing Sitewide Savings lane, and any offer that outlives a season.",
+        "spec": "Warm Cream paper with subtle grain — never gray, never white. Physical print-shop objects do the talking: layered tickets, stubs, receipts, rubber stamps, scorecards, with dashed perforations, one light source, and real shadows. Helvetica Neue bold carries headlines and dollar amounts, Fragment Mono the letterspaced spec labels, Vollkorn italic the one warm charm line. Ink and Walnut type; Signal Orange spent once, on the money. Black full lockup top centre.",
+        "footer": "The standing footer, always: “No code. No hoops. Applied automatically online · honored in-store.” in Ink mono, then “America's game room since 1975.” in Vollkorn italic Walnut.",
+        "img": "../assets/campaigns/system-ticket-ladder.png"
+      },
+      {
+        "id": "photo-scrim",
+        "name": "The Photo Scrim",
+        "use": "Campaign lifestyle — the Main lane's launch and peak pieces, where the room sells the offer.",
+        "spec": "“Real rooms, real light” photography (or AI imagery cleared by the AI policy) with the lower band falling into a scrim: a letterspaced eyebrow in the campaign accent, a big display headline, then the offer plaque — a ticket-shaped FREE chip, the value line, and real cloth swatch chips when cloth is the offer. Campaign offers date on a gold ENDS bar at the foot; the photograph carries the brand's green so the type never has to.",
+        "img": "../assets/campaigns/system-photo-scrim.png"
+      },
+      {
+        "id": "solid-field",
+        "name": "The Solid Field & the Ladder Card",
+        "use": "Type-led graphic pieces — introductions before photography exists, and the tier table people screenshot.",
+        "spec": "A deep near-black field with a warm radial lift and faint grain — depth, not flatness; a flat panel reads as an ad and gets scrolled past. Cream display serif at its heaviest cut, antique-gold eyebrows and hairlines, the tier staircase making the type itself the picture. The ladder card sets all five tiers in aligned columns, top tier in orange, and runs over photography only when the image is darkened to serve the table.",
+        "img": "../assets/campaigns/system-ladder-card.png"
+      }
+    ],
+    "laws": [
+      "Offer facts are law. Creative states only what a ratified brief carries — verbatim tiers, nothing implied below the threshold, every number checked digit by digit before export. $1,000 always takes the comma.",
+      "Signal Orange appears exactly once per piece, on the money moment — the headline figure or the top tier row, never both.",
+      "Evergreen offers never carry an end date, stated or implied. Campaign offers date on the gold ENDS bar — urgency belongs to the campaign, never to the standing offer.",
+      "No green in promo graphics — standing law. Green is the product's colour, not the discount's: photography carries Heritage Green in the cloth; graphic pieces run Cream, Ink, Walnut, one orange moment, and the campaign accent.",
+      "Seasonal palettes convert, never copy. Labor Day's red became Signal Orange, its blue became near-black, antique gold did the flag work — the piece reads as the holiday and as Billiard Factory.",
+      "Two zones, zero overlaps. Type and art each own their zone; nothing touches, overlaps, or sits behind anything; three text elements maximum, wordmark and button excluded.",
+      "The wordmark rides social pieces and never web heroes — the site header already carries it.",
+      "Story type stays inside the centre 1080 × 1420 band; the top 220px and bottom 280px belong to platform UI.",
+      "AI imagery follows the AI policy: hands, never faces; overlay zones reserved as clean negative space; every headline composed in post — the model never renders the money.",
+      "Misses become revisions in writing. Every pack documents its rescue levers, and a failed render earns a REV with the fix stated — the system learns on paper, not in memory."
+    ],
+    "shipping": {
+      "path": "Finished art lives on ImageKit under estoris/Pushes/<Campaign>/<lane folder>/ — filenames carry the piece, the pixel size, @2x for social, and the run date. Working layered files go to the Google Drive working-source tier, never the repo.",
+      "record": "Every piece attaches to its dated row on the campaign page — the run sheet is the run-of-show record, and a piece without a row doesn't exist.",
+      "checklist": [
+        "Numbers digit-perfect against the brief; $1,000 with the comma.",
+        "Orange counted: exactly one moment per piece.",
+        "No date on evergreen offers; campaign dates match the brief.",
+        "Story safe band and web exact-pixel exports verified.",
+        "Uploaded to the campaign's ImageKit folder and attached to its dated row."
+      ]
+    }
   }
 };

@@ -36,3 +36,18 @@
 13. Confirm the carried-brands list (McDermott, Lucasi, Players, Tornado, …).
 14. Align 1975 vs 1977 first-use dates with the trademark attorney.
 15. Name the brand steward + contact.
+
+---
+
+# v5.1.0 addendum — Section 10 · Campaigns (2026-08-06, same day)
+
+Codified from the live Marketing Engine work (Season Opener: 71 deliverables · Labor Day: 99) and the
+nine creative packs in `bf-spring-dashboard/docs/` + the master repo's Sitewide kits:
+
+- **The lane model** — Main / Category / Designer / Event + the two standing lanes (Sitewide Savings, Editorial); offer facts ratified in briefs before creative claims them.
+- **The format grid** — post 1080×1350 @2x · story 1080×1920 (1080×1420 safe band) · web hero 3840×1400 + mobile 1080×1350 (own render) · evergreen banner 1920×700 · email 600px · signage 8.5×11 both ways · OG 1200×630.
+- **The three art systems**, each with a real shipped piece as its reference plate (mirrored to `assets/campaigns/`): the Ticket Ladder (evergreen graphics), the Photo Scrim (campaign lifestyle), the Solid Field & Ladder Card (type-led).
+- **The ten promo laws** — orange once on the money moment; $1,000 with the comma; verbatim tiers digit-checked; evergreen never dated / campaign offers on the gold ENDS bar; **no green in promo graphics (ratified as standing law — green is the product's colour, not the discount's)**; seasonal palettes convert never copy; two zones zero overlaps ≤3 text elements; wordmark on social never web heroes; story safe band; AI imagery per policy; misses become written REVs.
+- **Filing & shipping** — ImageKit path + naming convention, the dated-row record rule, the 5-point ship checklist.
+
+Nav is now 13 sections (Campaigns = 10; House/Range/Legal shift to 11/12/13). Colophon v5.1.0.
