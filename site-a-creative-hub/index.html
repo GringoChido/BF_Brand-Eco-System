@@ -6,9 +6,20 @@
 <title>Billiard Factory · Brand Guidelines · America's Game Room Since 1975</title>
 <meta name="description" content="The Billiard Factory brand guidelines and creative hub: foundations, logo, colour, typography, voice, art direction, and the house of brands: one living source of truth." />
 
+<link rel="icon" href="../assets/favicon.ico" sizes="16x16 32x32 48x48" />
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon-512.png" />
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Billiard Factory · Brand Guidelines" />
+<meta property="og:description" content="America's game room. The living brand operating system: mark, colour, type, voice, applications, and governance." />
+<meta property="og:image" content="https://billiard-factory-brand-hub.netlify.app/assets/social/og-template.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -176,6 +187,40 @@ section{ position:relative; }
 .logo-card .meta .us{ font-size:.74rem; color:rgba(31,36,33,.6); margin-top:.2rem; }
 .logo-card .dl{ flex:none; display:inline-flex; align-items:center; gap:.3rem; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--forest); border:1px solid var(--line-2); border-radius:4px; padding:.4rem .55rem; white-space:nowrap; transition:background .2s, border-color .2s, color .2s, transform .2s; }
 .logo-card .dl:hover{ background:var(--forest); border-color:var(--forest); color:var(--cream); transform:translateY(-1px); }
+
+/* ---------- the mark (v5) ---------- */
+.mark-hero{ display:grid; grid-template-columns:1fr 1.15fr; gap:clamp(1.5rem,4vw,4rem); align-items:stretch; margin-bottom:3.5rem; }
+@media(max-width:880px){ .mark-hero{ grid-template-columns:1fr; } }
+.mark-stages{ display:grid; grid-template-rows:1.4fr 1fr; gap:1rem; }
+.mark-stage{ border-radius:8px; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; padding:2rem; box-shadow:var(--sh-md); background:var(--paper); }
+.mark-stage.dark{ background:var(--forest); }
+.mark-stage img{ max-height:11rem; width:auto; }
+.mark-stage.dark img{ max-height:6.5rem; }
+.mark-copy .lede{ font-family:var(--serif); font-size:1.18rem; line-height:1.55; color:var(--ink); margin:.9rem 0 1rem; }
+.mark-copy p{ font-size:.95rem; color:rgba(31,36,33,.74); margin-bottom:.9rem; }
+.mark-construction{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.2rem 1.4rem; margin-top:1.2rem; font-family:var(--mono); font-size:.78rem; color:rgba(31,36,33,.78); box-shadow:var(--sh-sm); }
+.needs{ display:inline-flex; align-items:flex-start; gap:.55rem; background:rgba(240,86,12,.06); border:1px solid rgba(240,86,12,.35); border-radius:6px; padding:.7rem .9rem; font-family:var(--mono); font-size:.74rem; color:#8A3406; line-height:1.5; margin-top:1.1rem; }
+.needs::before{ content:"⚑"; color:var(--orange); }
+.dlrow{ display:flex; flex-wrap:wrap; gap:.45rem; }
+.dlrow a{ display:inline-flex; align-items:center; gap:.3rem; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--forest); border:1px solid var(--line-2); border-radius:4px; padding:.4rem .55rem; white-space:nowrap; transition:background .2s, border-color .2s, color .2s; }
+.dlrow a:hover{ background:var(--forest); border-color:var(--forest); color:var(--cream); }
+.reg-card{ background:var(--paper); border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:var(--sh-md); margin-bottom:3.5rem; display:grid; grid-template-columns:1.05fr .95fr; }
+@media(max-width:880px){ .reg-card{ grid-template-columns:1fr; } }
+.reg-card .stage{ display:flex; align-items:center; justify-content:center; padding:2.6rem; }
+.reg-card .stage img{ width:min(24rem,90%); }
+.reg-card .body{ padding:2rem; border-left:1px solid var(--line); display:flex; flex-direction:column; justify-content:center; }
+@media(max-width:880px){ .reg-card .body{ border-left:none; border-top:1px solid var(--line); } }
+.reg-badge{ display:inline-flex; align-self:flex-start; align-items:center; gap:.5rem; background:var(--forest); color:var(--cream); font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; border-radius:999px; padding:.45rem .9rem; margin-bottom:1rem; }
+.reg-badge::before{ content:"®"; font-size:.85rem; }
+.bgrow{ display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-top:2.5rem; }
+@media(max-width:880px){ .bgrow{ grid-template-columns:repeat(2,1fr); } }
+.bgrow .b{ border-radius:8px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--sh-sm); background:var(--paper); }
+.bgrow .b .stage{ aspect-ratio:5/3; display:flex; align-items:center; justify-content:center; padding:1.4rem; }
+.bgrow .b .stage img{ max-width:78%; }
+.bgrow .b .meta{ padding:.8rem 1rem 1rem; border-top:1px solid var(--line); font-size:.76rem; color:rgba(31,36,33,.66); }
+.bgrow .b .meta .nm{ font-weight:700; font-size:.8rem; color:var(--ink); margin-bottom:.15rem; }
+.favrow{ display:flex; flex-wrap:wrap; align-items:center; gap:1rem; background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.4rem 1.6rem; margin-top:2.5rem; box-shadow:var(--sh-sm); }
+.favrow img{ image-rendering:auto; border-radius:6px; }
 
 .logo-rules{ display:grid; grid-template-columns:1.2fr 1fr; gap:clamp(1.5rem,3vw,3rem); margin-top:2.5rem; align-items:stretch; }
 @media(max-width:880px){ .logo-rules{ grid-template-columns:1fr; } }
@@ -429,11 +474,32 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> Logo</span>
-        <h2 class="sec-title">One mark, twelve lockups.</h2>
+        <h2 class="sec-title">One mark, six lockups.</h2>
       </div>
       <p class="measure muted" id="logo-minsize"></p>
     </div>
+
+    <!-- The Mark (v5) -->
+    <div class="reveal" style="margin-bottom:1.2rem"><span class="eyebrow" style="color:var(--green)">The Mark · <span id="mark-name"></span></span></div>
+    <div class="mark-hero reveal">
+      <div class="mark-stages" id="mark-stages"></div>
+      <div class="mark-copy">
+        <div id="mark-story"></div>
+        <div class="mark-construction" id="mark-construction"></div>
+        <p class="muted" id="mark-colors" style="font-size:.88rem;margin-top:1rem"></p>
+        <p class="muted" id="mark-tm" style="font-size:.88rem;margin-top:.6rem"></p>
+        <div class="dlrow" id="mark-dl" style="margin-top:1.1rem"></div>
+        <div class="needs" id="mark-needs"></div>
+      </div>
+    </div>
+
+    <!-- Registration lockup (v5) -->
+    <div class="reg-card reveal" id="reg-card"></div>
+
     <div class="logo-wall reveal" id="logo-wall"></div>
+    <div class="bgrow reveal" id="logo-bgs"></div>
+    <p class="muted reveal" id="logo-bg-note" style="font-size:.82rem;margin-top:.9rem"></p>
+    <div class="favrow reveal" id="favicon-row"></div>
     <div class="logo-rules">
       <div class="clearspace reveal">
         <span class="eyebrow" style="color:var(--green)">Clear space</span>
@@ -666,11 +732,69 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.72); }
   const L=D.logo||{};
   txt('logo-minsize', L.minSize||'');
   txt('logo-clearspace', L.clearSpace||'');
-  set('logo-wall', (L.variations||[]).map(v=>`
+  // the mark (v5)
+  const dlLinks=(o,id,extra)=>['png','svg','eps'].filter(k=>o[k]).map(k=>
+    `<a href="${esc(o[k])}" download="${esc(id)}.${k}" aria-label="Download ${esc(id)} ${k.toUpperCase()}">↓ ${k.toUpperCase()}${extra||''}</a>`).join('');
+  const M=L.mark;
+  if(M){
+    txt('mark-name', M.name);
+    set('mark-stages', `
+      <div class="mark-stage"><img src="${esc(M.files[0].png)}" alt="${esc(M.name)} in Heritage Green" loading="lazy"/></div>
+      <div class="mark-stage dark felt"><img src="${esc(M.files[2].png)}" alt="${esc(M.name)} reversed in Cream on Heritage Green" loading="lazy"/></div>`);
+    set('mark-story', (M.story||[]).map((p,i)=>`<p class="${i?'':'lede'}">${esc(p)}</p>`).join(''));
+    txt('mark-construction', M.construction||'');
+    txt('mark-colors', M.colors||'');
+    txt('mark-tm', M.trademarkNote||'');
+    set('mark-dl', (M.files||[]).map(f=>['svg','eps','png'].map(k=>
+      `<a href="${esc(f[k])}" download aria-label="Download mark ${esc(f.label)} ${k.toUpperCase()}">↓ ${esc(f.label.split(' ')[0])} ${k.toUpperCase()}</a>`).join('')).join(''));
+    txt('mark-needs', 'NEEDS JOSHUA: '+(M.needsJoshua||''));
+  }
+  // registration lockup (v5)
+  const R=L.registration;
+  if(R){
+    set('reg-card', `
+      <div class="stage"><img src="${esc(R.files.png)}" alt="${esc(R.name)}" loading="lazy"/></div>
+      <div class="body">
+        <span class="reg-badge">${esc(R.badge)}</span>
+        <h3 style="font-size:1.35rem;margin-bottom:.6rem">${esc(R.name)}</h3>
+        <p class="muted" style="font-size:.92rem;margin-bottom:1rem">${esc(R.body)}</p>
+        <div class="dlrow">
+          <a href="${esc(R.files.svg)}" download>↓ SVG</a><a href="${esc(R.files.eps)}" download>↓ EPS</a><a href="${esc(R.files.png)}" download>↓ PNG</a>
+          <a href="${esc(R.files.svgWhite)}" download>↓ White SVG</a><a href="${esc(R.files.epsWhite)}" download>↓ White EPS</a><a href="${esc(R.files.pngWhite)}" download>↓ White PNG</a>
+        </div>
+      </div>`);
+  }
+  set('logo-wall', (L.variations||[]).map(v=>{
+    const w=v.white?['file','svg','eps'].filter(k=>v.white[k==='file'?'file':k]).map(k=>{
+      const key=k==='file'?'file':k, ext=k==='file'?'png':k;
+      return `<a href="${esc(v.white[key])}" download aria-label="Download ${esc(v.name)} white ${ext.toUpperCase()}">↓ W-${ext.toUpperCase()}</a>`;
+    }).join(''):'';
+    return `
     <div class="logo-card">
       <div class="stage ${v.bg==='dark'?'dark':''}"${v.stage?` style="background:${esc(v.stage)}"`:''}><img src="${esc(v.file)}" alt="${esc(v.name)}" loading="lazy" onerror="this.parentNode.innerHTML='<span class=&quot;eyebrow&quot; style=&quot;color:${v.bg==='dark'?'var(--cream)':'var(--ink)'}&quot;>${esc(v.name)}</span>'"/></div>
-      <div class="meta"><div><div class="nm">${esc(v.name)}</div><div class="us">${esc(v.use)}</div></div><a class="dl" href="${esc(v.file)}" download="${esc(v.id)}.png" aria-label="Download ${esc(v.name)} PNG">↓ PNG</a></div>
-    </div>`).join(''));
+      <div class="meta"><div><div class="nm">${esc(v.name)}</div><div class="us">${esc(v.use)}</div></div></div>
+      <div class="dlrow" style="padding:.15rem 1rem 1rem">${dlLinks({png:v.file,svg:v.svg,eps:v.eps},v.id)}${w}</div>
+    </div>`;
+  }).join(''));
+  // background usage row (v5)
+  if(L.backgrounds){
+    set('logo-bgs', (L.backgrounds.items||[]).map(b=>`
+      <div class="b">
+        <div class="stage" style="background:${esc(b.stage)}"><img src="${esc(b.file)}" alt="Lockup ${esc(b.name)}" loading="lazy"/></div>
+        <div class="meta"><div class="nm">${esc(b.name)}</div>${esc(b.rule)}</div>
+      </div>`).join(''));
+    txt('logo-bg-note', L.backgrounds.note||'');
+  }
+  // favicon + og row (v5)
+  if(L.favicons){
+    set('favicon-row',
+      `<span class="eyebrow" style="color:var(--green);flex-basis:100%">Favicons & share image</span>`+
+      `<img src="../assets/favicon-32.png" width="32" height="32" alt="favicon 32"/>`+
+      `<img src="../assets/favicon-192.png" width="48" height="48" alt="favicon 192"/>`+
+      `<img src="../assets/apple-touch-icon.png" width="48" height="48" alt="apple touch icon"/>`+
+      `<span class="muted" style="font-size:.8rem;flex:1;min-width:14rem">${esc(L.favicons.note||'')} ${esc((L.og&&L.og.spec)||'')}</span>`+
+      `<span class="dlrow">${(L.favicons.files||[]).map(f=>`<a href="${esc(f.file)}" download>↓ ${esc(f.label)}</a>`).join('')}${L.og?`<a href="${esc(L.og.file)}" download>↓ OG template 1200×630</a>`:''}</span>`);
+  }
   set('logo-misuse', (L.misuse||[]).map((m,i)=>`
     <div class="m"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(m)}</span></div>`).join(''));
 

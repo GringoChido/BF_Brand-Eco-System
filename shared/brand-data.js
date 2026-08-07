@@ -11,7 +11,7 @@ window.BF_DATA = {
     ],
     "tagline": "America's game room since 1975.",
     "pivotLine": "From the family game room to the curated social home.",
-    "positioning": "Billiard Factory has spent fifty years as one of the nation's largest billiard and game-room furniture retailers. We own manufacturing, we carry the best brands in the category, and we sell through our own showrooms: a vertically integrated house now curating the modern social home."
+    "positioning": "Billiard Factory has spent fifty years as one of the nation's largest billiard and game-room furniture retailers. Our owned brands are engineered, designed, and finished by our factories, we carry the best brands in the category, and we sell through our own showrooms: a family-owned house now curating the modern social home."
   },
   "brandFoundations": {
     "purpose": "Enabling families and friends to share priceless time together, one game room at a time.",
@@ -287,7 +287,7 @@ window.BF_DATA = {
   },
   "logo": {
     "primary": "bf-logo-full-black",
-    "clearSpace": "Keep clear space equal to the height of the cube mark on all four sides. Nothing (type, photo edge, or another logo) enters that zone.",
+    "clearSpace": "Keep clear space equal to the height of the rail-diamond inlay on all four sides. Nothing — type, photo edge, or another logo — enters that zone.",
     "minSize": "Full lockup: 32px tall on screen, 0.5in in print. Simple mark: 20px / 0.25in. Below that, use the simple mark.",
     "variations": [
       {
@@ -295,88 +295,74 @@ window.BF_DATA = {
         "name": "Full lockup · black",
         "use": "Default. Light backgrounds: Cream, Mist, white.",
         "file": "../assets/logos/bf-logo-full-black.png",
-        "bg": "light"
+        "svg": "../assets/logos/svg/bf-logo-full-black.svg",
+        "eps": "../assets/logos/eps/bf-logo-full-black.eps",
+        "bg": "light",
+        "white": {
+          "file": "../assets/logos/bf-logo-full-white.png",
+          "svg": "../assets/logos/svg/bf-logo-full-white.svg",
+          "eps": "../assets/logos/eps/bf-logo-full-white.eps"
+        }
       },
       {
         "id": "bf-logo-full-white",
         "name": "Full lockup · white",
         "use": "Reversed. Heritage Green, Pine, photography.",
         "file": "../assets/logos/bf-logo-full-white.png",
+        "svg": "../assets/logos/svg/bf-logo-full-white.svg",
+        "eps": "../assets/logos/eps/bf-logo-full-white.eps",
         "bg": "dark"
       },
       {
         "id": "bf-logo-simple-black",
         "name": "Simple mark · black",
-        "use": "Tight spaces, favicons, nav on light.",
+        "use": "Tight spaces, nav, documents on light.",
         "file": "../assets/logos/bf-logo-simple-black.png",
-        "bg": "light"
+        "svg": "../assets/logos/svg/bf-logo-simple-black.svg",
+        "eps": "../assets/logos/eps/bf-logo-simple-black.eps",
+        "bg": "light",
+        "white": {
+          "file": "../assets/logos/bf-logo-simple-white.png",
+          "svg": "../assets/logos/svg/bf-logo-simple-white.svg",
+          "eps": "../assets/logos/eps/bf-logo-simple-white.eps"
+        }
       },
       {
         "id": "bf-logo-simple-white",
         "name": "Simple mark · white",
         "use": "Tight spaces, nav on dark.",
         "file": "../assets/logos/bf-logo-simple-white.png",
+        "svg": "../assets/logos/svg/bf-logo-simple-white.svg",
+        "eps": "../assets/logos/eps/bf-logo-simple-white.eps",
         "bg": "dark"
       },
       {
-        "id": "bf-since1975-bar-black",
-        "name": "Since-1975 bar · black",
-        "use": "Provenance lockup, horizontal, on light.",
+        "id": "bf-since1975-bar",
+        "name": "Since-1975 bar · b/w",
+        "use": "Provenance lockup, horizontal. Black on light; white files ride along.",
         "file": "../assets/logos/bf-since1975-bar-black.png",
-        "bg": "light"
-      },
-      {
-        "id": "bf-since1975-bar-white",
-        "name": "Since-1975 bar · white",
-        "use": "Provenance lockup, horizontal, on dark.",
-        "file": "../assets/logos/bf-since1975-bar-white.png",
-        "bg": "dark"
-      },
-      {
-        "id": "bf-since1975-stories-black",
-        "name": "Since-1975 stamp · black",
-        "use": "Storytelling, editorial seals, on light.",
-        "file": "../assets/logos/bf-since1975-stories-black.png",
-        "bg": "light"
-      },
-      {
-        "id": "bf-since1975-stories-white",
-        "name": "Since-1975 stamp · white",
-        "use": "Storytelling seals, on dark.",
-        "file": "../assets/logos/bf-since1975-stories-white.png",
-        "bg": "dark"
-      },
-      {
-        "id": "bf-mark-on-white",
-        "name": "Simple mark · on white",
-        "use": "Plain mark on pure white: packaging, documents, co-branding.",
-        "file": "../assets/logos/bf-logo-simple-black.png",
+        "svg": "../assets/logos/svg/bf-since1975-bar-black.svg",
+        "eps": "../assets/logos/eps/bf-since1975-bar-black.eps",
         "bg": "light",
-        "stage": "#FFFFFF"
+        "white": {
+          "file": "../assets/logos/bf-since1975-bar-white.png",
+          "svg": "../assets/logos/svg/bf-since1975-bar-white.svg",
+          "eps": "../assets/logos/eps/bf-since1975-bar-white.eps"
+        }
       },
       {
-        "id": "bf-mark-on-black",
-        "name": "Simple mark · on black",
-        "use": "Plain mark reversed on black: apparel, dark packaging.",
-        "file": "../assets/logos/bf-logo-simple-white.png",
-        "bg": "dark",
-        "stage": "#122019"
-      },
-      {
-        "id": "bf-mark-on-green",
-        "name": "Simple mark · on Heritage Green",
-        "use": "Plain mark on the brand green: signage, vehicle, felt.",
-        "file": "../assets/logos/bf-logo-simple-white.png",
-        "bg": "dark",
-        "stage": "#185F43"
-      },
-      {
-        "id": "bf-mark-on-orange",
-        "name": "Simple mark · on Signal Orange",
-        "use": "Plain mark reversed on the accent: promo tags, event pieces.",
-        "file": "../assets/logos/bf-logo-simple-white.png",
-        "bg": "dark",
-        "stage": "#F0560C"
+        "id": "bf-since1975-stories",
+        "name": "Since-1975 stamp · b/w",
+        "use": "Storytelling seals, story templates. Black on light; white files ride along.",
+        "file": "../assets/logos/bf-since1975-stories-black.png",
+        "svg": "../assets/logos/svg/bf-since1975-stories-black.svg",
+        "eps": "../assets/logos/eps/bf-since1975-stories-black.eps",
+        "bg": "light",
+        "white": {
+          "file": "../assets/logos/bf-since1975-stories-white.png",
+          "svg": "../assets/logos/svg/bf-since1975-stories-white.svg",
+          "eps": "../assets/logos/eps/bf-since1975-stories-white.eps"
+        }
       }
     ],
     "misuse": [
@@ -385,8 +371,122 @@ window.BF_DATA = {
       "Don't add drop shadows, outlines, glows, or bevels.",
       "Don't place the black logo on a dark or busy photo, switch to white.",
       "Don't rotate the mark or rebuild it from other type.",
-      "Don't crowd the clear-space zone with text or graphics."
-    ]
+      "Don't crowd the clear-space zone with text or graphics.",
+      "Don't pair the mark with founding-date text in legal or registered contexts — EST. 1975 is marketing dress, never part of the filed artwork."
+    ],
+    "mark": {
+      "name": "The Rail Diamond",
+      "story": [
+        "Every pool table carries the same aiming system: diamond sights inlaid down the rails. Players learn the game by them — line up the diamonds, make the shot. The mark is that diamond, the one piece of geometry the whole category shares, drawn as a sight ring around a solid inlay.",
+        "It has been in the wordmark all along: the divider ornament under FACTORY is a hatched rail diamond. v5 promotes it from ornament to symbol, so the brand finally has a mark that works alone — on a favicon, an embroidered polo, a rail badge, a sign."
+      ],
+      "construction": "Drawn on a six-unit module. The sight ring runs from 6u to 7u — one unit thick, the sight line. The inlay spans 2u. The open field between is 4u. The diamond stands on its point by construction, never by rotation, and it is always level.",
+      "colors": "Heritage Green #185F43 on light surfaces. Cream #FAF8F3 reversed on Heritage Green, Pine, Ink, or photography. Ink #1F2421 where green is unavailable. Never gold — there is no gold in this brand.",
+      "trademarkNote": "The wordmark alone was refused as descriptive, so a distinctive standalone symbol is a legal requirement, not a taste note. The nested-diamond geometry in these fixed proportions is the artwork we protect.",
+      "needsJoshua": "Symbol decision — ratify the rail-diamond direction as the canonical mark. No cube mark exists in the assets; the clear-space rule's “cube mark” is the hatched diamond in the wordmark divider, which this mark formalizes.",
+      "files": [
+        {
+          "label": "Heritage Green",
+          "bg": "light",
+          "svg": "../assets/mark/bf-mark-green.svg",
+          "eps": "../assets/mark/bf-mark-green.eps",
+          "png": "../assets/mark/bf-mark-green.png"
+        },
+        {
+          "label": "Ink",
+          "bg": "light",
+          "svg": "../assets/mark/bf-mark-black.svg",
+          "eps": "../assets/mark/bf-mark-black.eps",
+          "png": "../assets/mark/bf-mark-black.png"
+        },
+        {
+          "label": "Cream · reversed",
+          "bg": "dark",
+          "svg": "../assets/mark/bf-mark-white.svg",
+          "eps": "../assets/mark/bf-mark-white.eps",
+          "png": "../assets/mark/bf-mark-white.png"
+        }
+      ]
+    },
+    "registration": {
+      "name": "Registration lockup",
+      "badge": "Canonical form — this exact artwork is what we file and police.",
+      "body": "Wordmark and rail diamond, no founding date. The USPTO treats founding dates as unregistrable informational matter, so EST. 1975 never appears in the registered artwork. The date stays available in the heritage lockups for marketing use.",
+      "files": {
+        "png": "../assets/logos/bf-registration-black.png",
+        "svg": "../assets/logos/svg/bf-registration-black.svg",
+        "eps": "../assets/logos/eps/bf-registration-black.eps",
+        "pngWhite": "../assets/logos/bf-registration-white.png",
+        "svgWhite": "../assets/logos/svg/bf-registration-white.svg",
+        "epsWhite": "../assets/logos/eps/bf-registration-white.eps"
+      }
+    },
+    "backgrounds": {
+      "note": "Background usage, not separate lockups: one artwork set, four demonstrated surfaces. Black artwork on light surfaces; white artwork on everything else.",
+      "items": [
+        {
+          "name": "On white",
+          "stage": "#FFFFFF",
+          "file": "../assets/logos/bf-logo-simple-black.png",
+          "rule": "Black artwork on white, Cream, and Mist."
+        },
+        {
+          "name": "On Ink",
+          "stage": "#1F2421",
+          "file": "../assets/logos/bf-logo-simple-white.png",
+          "rule": "White artwork on Ink, near-black, and dark photography."
+        },
+        {
+          "name": "On Heritage Green",
+          "stage": "#185F43",
+          "file": "../assets/logos/bf-logo-simple-white.png",
+          "rule": "White artwork on the brand green: signage, vehicles, felt."
+        },
+        {
+          "name": "On Signal Orange",
+          "stage": "#F0560C",
+          "file": "../assets/logos/bf-logo-simple-white.png",
+          "rule": "White artwork, promo surfaces only. Orange stays rare."
+        }
+      ]
+    },
+    "favicons": {
+      "note": "Generated from the canonical mark: Cream rail diamond on a Heritage Green tile. Rounded tile for browser favicons; full-bleed square for app and touch icons.",
+      "files": [
+        {
+          "label": "favicon.ico · 16/32/48",
+          "file": "../assets/favicon.ico"
+        },
+        {
+          "label": "16 px",
+          "file": "../assets/favicon-16.png"
+        },
+        {
+          "label": "32 px",
+          "file": "../assets/favicon-32.png"
+        },
+        {
+          "label": "180 px · apple-touch",
+          "file": "../assets/apple-touch-icon.png"
+        },
+        {
+          "label": "192 px",
+          "file": "../assets/favicon-192.png"
+        },
+        {
+          "label": "512 px",
+          "file": "../assets/favicon-512.png"
+        },
+        {
+          "label": "Tile master · SVG",
+          "file": "../assets/mark/bf-mark-tile.svg"
+        }
+      ]
+    },
+    "og": {
+      "spec": "1200 × 630 px. Heritage Green field, white registration lockup centered at 53% of frame width. Keep the outer 60 px clear on all sides — platforms crop edges. No founding date, no offer copy baked into the template.",
+      "file": "../assets/social/og-template.png"
+    }
   },
   "voice": {
     "summary": "Warm, confident, family-rooted, never stuffy. We sell the room a family gathers in, not a unit on a warehouse floor.",
@@ -397,7 +497,7 @@ window.BF_DATA = {
       },
       {
         "name": "Confident, never boastful",
-        "body": "Fifty years and owned manufacturing let us state facts plainly. Show the proof, skip the hype."
+        "body": "Fifty years and our own brands let us state facts plainly. Show the proof, skip the hype."
       },
       {
         "name": "Concrete over clever",
@@ -470,7 +570,7 @@ window.BF_DATA = {
     "founded": "1975",
     "founder": "Larry Stick",
     "origin": "A single store on Telephone Road in Houston, Texas, four employees and a workshop.",
-    "today": "One of the nation's largest billiard and game-room furniture retailers: 13 showrooms, multiple distribution centers, still family-owned.",
+    "today": "One of the nation's largest billiard and game-room furniture retailers: 11 showrooms, multiple distribution centers, still family-owned.",
     "anniversary": "2025 marked 50 years.",
     "timeline": [
       {
@@ -496,7 +596,7 @@ window.BF_DATA = {
       {
         "year": "2020s",
         "title": "One owner, one vision",
-        "body": "Ryan Stick assumes full ownership and begins integrating manufacturing, distribution, and retail into a single vertically integrated house."
+        "body": "Ryan Stick assumes full ownership and begins uniting the owned brands, distribution, and retail into a single house."
       },
       {
         "year": "2025",
@@ -556,11 +656,11 @@ window.BF_DATA = {
     ]
   },
   "verticalIntegration": {
-    "thesis": "Most retailers only sell. Billiard Factory manufactures, distributes, and retails, so there is no middleman between the workshop and your room.",
+    "thesis": "Most retailers only sell. Billiard Factory owns its brands and our factories build them, so there is no middleman between the workshop and your room.",
     "layers": [
       {
         "label": "We Make",
-        "body": "Owned brands engineered and finished in-house, protected margins, tournament tolerances, and a standard no reseller can match."
+        "body": "Owned and family brands engineered, designed, and finished by our factories, protected margins, tournament tolerances, and a standard no reseller can match."
       },
       {
         "label": "We Curate",
@@ -568,7 +668,7 @@ window.BF_DATA = {
       },
       {
         "label": "We Sell",
-        "body": "Thirteen showrooms and a national e-commerce store, and we own the relationship from the factory floor to the family room."
+        "body": "Eleven showrooms and a national e-commerce store, and we own the relationship from the factory floor to the family room."
       }
     ]
   },
@@ -621,7 +721,7 @@ window.BF_DATA = {
       "swatch": "charcoal",
       "image": "https://billiard-factory-brand-hub.netlify.app/assets/brands/brand-velocity.jpg",
       "copy": [
-        "The contemporary line, sleek, low, and engineered for modern, minimalist interiors where the table reads as built-in cabinetry, not recreation.",
+        "The contemporary line, sleek, low, and engineered for modern, minimalist interiors where the table reads as built-in cabinetry, not recreation. These are our competition tables, built for commercial use or the home.",
         "Designed for the loft and the glass-walled great room: a table that holds the sight line instead of interrupting it."
       ]
     },
@@ -706,14 +806,14 @@ window.BF_DATA = {
       "label": "Fifty years of game-room expertise, a brand story that sells itself."
     },
     {
-      "stat": "13",
+      "stat": "11",
       "unit": "showrooms",
       "label": "A real retail footprint plus national e-commerce and distribution centers."
     },
     {
       "stat": "0",
       "unit": "middlemen",
-      "label": "Owned manufacturing, factory-direct from the bench to the room."
+      "label": "Owned brands built by our factories, factory-direct from the bench to the room."
     },
     {
       "stat": "100%",
@@ -744,7 +844,7 @@ window.BF_DATA = {
     }
   ],
   "aiOps": {
-    "systemPrompt": "You are the copywriter for Billiard Factory, America's game room since 1975 and a vertically integrated house of game-room brands. Voice: warm, confident, family-rooted, never stuffy. We sell the room a family gathers in. Facts: founded 1975 by Larry Stick in Houston; 13 showrooms; family-owned; owned brands (Billiard Factory, C.L. Bailey, Level Best, Velocity, Golden West) plus the best carried brands (Brunswick, Olhausen, Presidential, and more). Mechanics: Oxford comma always; max one exclamation point; spell one–nine, figures for 10+ and all prices. Banned: man cave, game room toys, cheap, clearance, unit. If a claim isn't supported, ask or omit.",
+    "systemPrompt": "You are the copywriter for Billiard Factory, America's game room since 1975 and a family-owned house of game-room brands. Voice: warm, confident, family-rooted, never stuffy. We sell the room a family gathers in. Facts: founded 1975 by Larry Stick in Houston; 11 showrooms; family-owned; owned brands (Billiard Factory, C.L. Bailey, Level Best, Velocity, Golden West) plus the best carried brands (Brunswick, Olhausen, Presidential, and more). Mechanics: Oxford comma always; max one exclamation point; spell one–nine, figures for 10+ and all prices. Banned: man cave, game room toys, cheap, clearance, unit. If a claim isn't supported, ask or omit.",
     "banList": [
       "delve",
       "elevate",
