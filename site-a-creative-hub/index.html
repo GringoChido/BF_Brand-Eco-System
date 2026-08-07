@@ -369,6 +369,23 @@ section{ position:relative; }
 .cpn-ship li{ font-size:.9rem; color:rgba(250,248,243,.85); padding-left:2rem; position:relative; counter-increment:sc; }
 .cpn-ship li::before{ content:counter(sc,decimal-leading-zero); position:absolute; left:0; top:.05em; font-family:var(--mono); font-size:.7rem; color:var(--sage-2); }
 
+/* ---------- designer program (v5.2) ---------- */
+.dp-top{ display:grid; grid-template-columns:1.15fr .85fr; gap:1rem; }
+.dp-bottom{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+@media(max-width:920px){ .dp-top,.dp-bottom{ grid-template-columns:1fr; } }
+.dp-ref{ border-radius:6px; overflow:hidden; border:1px solid var(--line); margin-top:1rem; box-shadow:var(--sh-sm); max-width:20rem; }
+.dp-ref img{ width:100%; }
+.dp-tiers{ display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+@media(max-width:1080px){ .dp-tiers{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:640px){ .dp-tiers{ grid-template-columns:1fr; } }
+.dp-tiers .t{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.4rem 1.4rem 1.5rem; box-shadow:var(--sh-sm); display:flex; flex-direction:column; gap:.55rem; }
+.dp-tiers .t:last-child{ background:var(--forest); border-color:var(--forest); }
+.dp-tiers .t:last-child .tn, .dp-tiers .t:last-child .tb{ color:var(--cream); }
+.dp-tiers .t:last-child .ts{ color:var(--sage-2); }
+.dp-tiers .t .tn{ font-weight:700; font-size:.98rem; line-height:1.2; }
+.dp-tiers .t .ts{ font-family:var(--mono); font-size:.7rem; color:var(--forest); text-transform:uppercase; letter-spacing:.06em; }
+.dp-tiers .t .tb{ font-size:.8rem; color:rgba(31,36,33,.72); }
+
 /* ---------- legal & governance (v5) ---------- */
 .lg{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
 @media(max-width:880px){ .lg{ grid-template-columns:1fr; } }
@@ -569,9 +586,10 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
       <a href="#imagery"><span class="ix">08</span>Imagery</a>
       <a href="#apps"><span class="ix">09</span>Applications</a>
       <a href="#campaigns"><span class="ix">10</span>Campaigns</a>
-      <a href="#house"><span class="ix">11</span>House</a>
-      <a href="#range"><span class="ix">12</span>Range</a>
-      <a href="#legal"><span class="ix">13</span>Legal</a>
+      <a href="#trade"><span class="ix">11</span>Trade</a>
+      <a href="#house"><span class="ix">12</span>House</a>
+      <a href="#range"><span class="ix">13</span>Range</a>
+      <a href="#legal"><span class="ix">14</span>Legal</a>
     </nav>
     <a class="btn btn-forest" href="#logo">Brand Kit</a>
     <button class="nav-toggle" aria-label="Open section menu" aria-controls="tocMobile" aria-expanded="false"><span class="bars"><span></span></span> Menu</button>
@@ -587,9 +605,10 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     <a href="#imagery"><span class="ix">08</span>Imagery</a>
     <a href="#apps"><span class="ix">09</span>Applications</a>
     <a href="#campaigns"><span class="ix">10</span>Campaigns</a>
-    <a href="#house"><span class="ix">11</span>House of Brands</a>
-    <a href="#range"><span class="ix">12</span>The Range</a>
-    <a href="#legal"><span class="ix">13</span>Legal &amp; Governance</a>
+    <a href="#trade"><span class="ix">11</span>The Designer Program</a>
+    <a href="#house"><span class="ix">12</span>House of Brands</a>
+    <a href="#range"><span class="ix">13</span>The Range</a>
+    <a href="#legal"><span class="ix">14</span>Legal &amp; Governance</a>
   </nav>
 </header>
 
@@ -964,10 +983,57 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
   </div>
 </section>
 
-<!-- ===== 11 · HOUSE OF BRANDS / ARCHITECTURE ===== -->
+<!-- ===== 11 · THE DESIGNER PROGRAM (v5.2) ===== -->
+<section id="trade" class="is-mint pad">
+  <div class="wrap">
+    <div class="sec-mark reveal"><span class="no" data-secno>11</span><span class="ln"></span></div>
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker eyebrow"><span class="bar"></span> The Designer Program</span>
+        <h2 class="sec-title">To the trade.</h2>
+      </div>
+      <p class="measure muted" id="dp-intro"></p>
+    </div>
+
+    <div class="dp-top reveal">
+      <div class="g-card">
+        <span class="eyebrow" style="color:var(--forest)">The pitch — support first</span>
+        <p id="dp-law" style="margin-top:.7rem"></p>
+        <ul class="lg-list" id="dp-pillars"></ul>
+        <div class="needs" id="dp-name-needs"></div>
+      </div>
+      <div class="g-card">
+        <span class="eyebrow" style="color:var(--forest)">The treatment</span>
+        <div class="dp-ref"><img id="dp-ref-img" alt="Reference trade post — TO THE TRADE eyebrow, Ink headline, footer band with the designers URL" loading="lazy"/></div>
+        <p id="dp-treatment" style="margin-top:.9rem"></p>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin:3rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The partner tiers · offer facts for the Designer lane</span>
+      <p class="measure muted" id="dp-tiers-note" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <div class="dp-tiers reveal" id="dp-tiers"></div>
+    <div class="needs reveal" id="dp-tiers-needs"></div>
+
+    <div class="dp-bottom reveal" style="margin-top:3rem">
+      <div class="g-card">
+        <span class="eyebrow" style="color:var(--forest)">Vocabulary</span>
+        <ul class="lg-list" id="dp-vocab"></ul>
+      </div>
+      <div class="g-card">
+        <span class="eyebrow" style="color:var(--forest)">Touchpoints &amp; proof</span>
+        <ul class="lg-list" id="dp-touch"></ul>
+        <p id="dp-proof" style="margin-top:.9rem;font-size:.86rem;color:rgba(31,36,33,.72)"></p>
+        <div class="needs" id="dp-proof-needs"></div>
+        <div class="needs" id="dp-showrooms-needs"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12 · HOUSE OF BRANDS / ARCHITECTURE ===== -->
 <section id="house" class="is-mint pad">
   <div class="wrap">
-    <div class="sec-mark reveal"><span class="no">11</span><span class="ln"></span></div>
+    <div class="sec-mark reveal"><span class="no">12</span><span class="ln"></span></div>
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> Brand Architecture</span>
@@ -996,10 +1062,10 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
   </div>
 </section>
 
-<!-- ===== 12 · THE RANGE ===== -->
+<!-- ===== 13 · THE RANGE ===== -->
 <section id="range" class="pad">
   <div class="wrap">
-    <div class="sec-mark reveal"><span class="no">12</span><span class="ln"></span></div>
+    <div class="sec-mark reveal"><span class="no">13</span><span class="ln"></span></div>
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> The Range</span>
@@ -1014,7 +1080,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
 <!-- ===== LEGAL & GOVERNANCE (v5) ===== -->
 <section id="legal" class="pad">
   <div class="wrap">
-    <div class="sec-mark reveal"><span class="no" data-secno>13</span><span class="ln"></span></div>
+    <div class="sec-mark reveal"><span class="no" data-secno>14</span><span class="ln"></span></div>
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> Legal &amp; Governance</span>
@@ -1070,7 +1136,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     </div>
     <div class="col">
       <p class="eyebrow" style="color:var(--sage-2);margin-bottom:.8rem">Guidelines</p>
-      <p><a href="#brand">The Brand</a> · <a href="#logo">Logo</a> · <a href="#colour">Colour</a> · <a href="#type">Type</a> · <a href="#grid">Grid &amp; Data</a> · <a href="#motion">Motion</a> · <a href="#voice">Voice</a> · <a href="#imagery">Imagery</a> · <a href="#apps">Applications</a> · <a href="#campaigns">Campaigns</a> · <a href="#house">House of Brands</a> · <a href="#range">The Range</a> · <a href="#legal">Legal</a></p>
+      <p><a href="#brand">The Brand</a> · <a href="#logo">Logo</a> · <a href="#colour">Colour</a> · <a href="#type">Type</a> · <a href="#grid">Grid &amp; Data</a> · <a href="#motion">Motion</a> · <a href="#voice">Voice</a> · <a href="#imagery">Imagery</a> · <a href="#apps">Applications</a> · <a href="#campaigns">Campaigns</a> · <a href="#trade">Designer Program</a> · <a href="#house">House of Brands</a> · <a href="#range">The Range</a> · <a href="#legal">Legal</a></p>
     </div>
     <div class="col">
       <p class="eyebrow" style="color:var(--sage-2);margin-bottom:.8rem">Colophon</p>
@@ -1462,6 +1528,26 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     if(SH) set('cpn-ship', `<div class="h">Filing &amp; shipping</div><p>${esc(SH.path||'')}</p><p>${esc(SH.record||'')}</p><ol>${(SH.checklist||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ol>`);
   }
 
+  // ---- 11 · THE DESIGNER PROGRAM (v5.2) ----
+  const DP=D.designerProgram;
+  if(DP){
+    txt('dp-intro', DP.intro||'');
+    txt('dp-law', (DP.pitch&&DP.pitch.law)||'');
+    set('dp-pillars', ((DP.pitch&&DP.pitch.pillars)||[]).map(x=>`<li>${esc(x)}</li>`).join(''));
+    txt('dp-name-needs', 'NEEDS JOSHUA: '+(DP.nameNeedsJoshua||''));
+    const TR=DP.tiers||{};
+    txt('dp-tiers-note', TR.note||'');
+    set('dp-tiers', (TR.rows||[]).map(t=>`
+      <div class="t"><div class="ts">${esc(t.spend)}</div><div class="tn">${esc(t.tier)}</div><div class="tb">${esc(t.benefit)}</div></div>`).join(''));
+    txt('dp-tiers-needs', 'NEEDS JOSHUA: '+(TR.needsJoshua||''));
+    set('dp-vocab', (DP.vocabulary||[]).map(x=>`<li>${esc(x)}</li>`).join(''));
+    if(DP.treatment){ txt('dp-treatment', DP.treatment.spec||''); const ri=document.getElementById('dp-ref-img'); if(ri) ri.src=DP.treatment.img; }
+    set('dp-touch', (DP.touchpoints||[]).map(x=>`<li>${esc(x)}</li>`).join(''));
+    txt('dp-proof', (DP.proofPoints&&DP.proofPoints.note)||'');
+    txt('dp-proof-needs', 'NEEDS JOSHUA: '+((DP.proofPoints&&DP.proofPoints.needsJoshua)||''));
+    txt('dp-showrooms-needs', 'NEEDS JOSHUA: '+(DP.showroomsNeedsJoshua||''));
+  }
+
   // ---- LEGAL & GOVERNANCE (v5) ----
   const LG=D.legal;
   if(LG){
@@ -1509,7 +1595,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
 
   // ---- scroll-spy + back-to-top (one throttled passive listener) ----
   const links=document.querySelectorAll('.toc a, .toc-mobile a');
-  const spyIds=['brand','logo','colour','type','grid','motion','voice','imagery','apps','campaigns','house','range','legal'];
+  const spyIds=['brand','logo','colour','type','grid','motion','voice','imagery','apps','campaigns','trade','house','range','legal'];
   const top=document.getElementById('toTop');
   if(top) top.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   const spyEls=spyIds.map(id=>document.getElementById(id)).filter(Boolean);

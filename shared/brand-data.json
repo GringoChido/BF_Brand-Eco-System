@@ -1,7 +1,7 @@
 {
   "meta": {
     "ecosystem": "Billiard Factory · Living HTML Ecosystem",
-    "version": "5.1.0",
+    "version": "5.2.0",
     "lastUpdated": "2026-08-06",
     "sourceOfTruth": "Site A · Creative & Brand Hub",
     "consumedBy": [
@@ -1325,6 +1325,11 @@
     },
     "changelog": [
       {
+        "version": "5.2.0",
+        "date": "2026-08-06",
+        "notes": "New section 11 · The Designer Program: the trade pitch codified support-first, the four partner tiers as ratified offer facts, trade vocabulary, the TO THE TRADE visual treatment with reference plate, touchpoints, and three alignment flags (canonical name, showroom count, stat citations)."
+      },
+      {
         "version": "5.1.0",
         "date": "2026-08-06",
         "notes": "New section 10 · Campaigns: the campaign creative system codified from Season Opener + Labor Day — lane model, format grid, the three art systems (Ticket Ladder, Photo Scrim, Solid Field), the ten promo laws, and the shipping record."
@@ -1455,5 +1460,69 @@
         "Uploaded to the campaign's ImageKit folder and attached to its dated row."
       ]
     }
+  },
+  "designerProgram": {
+    "name": "The Designer Program",
+    "intro": "The trade audience has its own program, its own tiers, and its own register — codified here so every quote, post, and landing page speaks the same way. The live expression is billiardfactory.com/designers; this section is the source it derives from.",
+    "nameNeedsJoshua": "Ratify the canonical name — the live page says “trade program” in some places and “Design Partner” in the tier names. Recommendation: THE DESIGNER PROGRAM as the public name; tiers keep “…Design Partner.”",
+    "pitch": {
+      "law": "The program sells partnership and logistics, never discounts. Trade pricing is the entry benefit — the headline is always support: responsive, spec-ready, dependable, white-glove to the install. If a trade piece leads with a price, it's off-program.",
+      "pillars": [
+        "Trade-only pricing and partner incentives across the full catalog",
+        "A dedicated rep — fast quotes, spec help, project coordination",
+        "Spec-ready information: dimensions, finishes, planning tools",
+        "White-glove delivery and professional installation",
+        "Showrooms nationwide — bring the client, touch the product",
+        "Curated game-room expertise, from one table to the whole room"
+      ]
+    },
+    "tiers": {
+      "note": "The tier table is OFFER FACTS for the Designer lane — creative states these numbers and no others, exactly like the Sitewide tiers. Rebates are paid to the design firm, never the individual designer. Trade pricing itself is never published publicly — the tiers may be named in public creative; the prices may not.",
+      "rows": [
+        {
+          "tier": "Design Partner",
+          "spend": "$0 – 24,999 annual",
+          "benefit": "Trade pricing · dedicated showroom partner · quoting support · client showroom access"
+        },
+        {
+          "tier": "Preferred Design Partner",
+          "spend": "$25,000+ annual",
+          "benefit": "+ 2% annual rebate to the firm · priority quoting · Dallas Market VIP invitations · early collection previews"
+        },
+        {
+          "tier": "Elite Design Partner",
+          "spend": "$50,000+ annual",
+          "benefit": "+ 4% annual rebate to the firm · trade concierge · priority installation scheduling"
+        },
+        {
+          "tier": "Signature Design Partner",
+          "spend": "$100,000+ annual",
+          "benefit": "+ 5% annual rebate to the firm · invitation-only"
+        }
+      ],
+      "needsJoshua": "Tier facts are owned by Ryan — thresholds, rebate percentages, and benefits change only by ratified ruling, and the kit updates the same day the page does."
+    },
+    "vocabulary": [
+      "“To the trade” — the register's name; the eyebrow on every trade piece.",
+      "“Trade pricing,” never “discount” — the program is professional terms, not a sale.",
+      "“Your dedicated rep” at every tier; “trade concierge” belongs to Elite and above.",
+      "“Spec-ready” — the promise word: dimensions, finishes, and lead times a designer can put in a drawing set.",
+      "Rebates are “paid to the firm” — say it that way; it's a compliance fact, not a style choice."
+    ],
+    "treatment": {
+      "spec": "Trade creative runs the house look with the trade register: the TO THE TRADE eyebrow in Heritage Green, an Ink Helvetica headline speaking to the project (“Design it before the season starts.”), real-rooms photography, and a footer band carrying the wordmark and billiardfactory.com/designers. No tier numbers in feed creative — the page carries the math; the post carries the partnership.",
+      "img": "../assets/campaigns/trade-reference-post.png"
+    },
+    "proofPoints": {
+      "note": "The category-selling stats on the live page — 86% of homeowners on family time (AHFA), 73% of luxury buyers ranking a game room top-5 (NAHB), $25K–75K typical project value — are strong trade ammo, but the voice law requires sourced claims.",
+      "needsJoshua": "Verify the AHFA and NAHB citations (and the project-value range) before the kit blesses them as standing proof points; keep sources on file with the steward."
+    },
+    "touchpoints": [
+      "billiardfactory.com/designers — the application, resources, tiers, and FAQ",
+      "The Designer lane in every campaign (see Campaigns) — one trade post a week when the lane runs",
+      "Showrooms — client meetings on the floor are a named tier benefit",
+      "Dallas Market — VIP invitations are a Preferred-and-up benefit"
+    ],
+    "showroomsNeedsJoshua": "The live page says “12 showrooms nationwide”; the brand canon says eleven. One of them is wrong — fix the page or the canon, then align every surface."
   }
 }
