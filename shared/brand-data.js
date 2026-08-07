@@ -2,8 +2,8 @@
 window.BF_DATA = {
   "meta": {
     "ecosystem": "Billiard Factory · Living HTML Ecosystem",
-    "version": "4.2.0",
-    "lastUpdated": "2026-07-09",
+    "version": "5.0.0",
+    "lastUpdated": "2026-08-06",
     "sourceOfTruth": "Site A · Creative & Brand Hub",
     "consumedBy": [
       "Site A · Creative Hub",
