@@ -374,39 +374,56 @@ section{ position:relative; }
 .registers .rg p{ font-size:.83rem; color:rgba(31,36,33,.74); }
 .registers .rg .df{ font-family:var(--mono); font-size:.64rem; color:var(--forest); text-transform:uppercase; letter-spacing:.08em; margin-top:.7rem; }
 
-/* ---------- flight kits · dated recipes, not brand law (v5.3) ---------- */
-.kits{ display:grid; gap:1.4rem; }
-.kit-card{ background:var(--paper); border:1px solid var(--line); border-radius:8px; box-shadow:var(--sh-md); overflow:hidden; }
-.kit-card .kh{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.6rem 1rem; padding:1.2rem 1.5rem; border-bottom:1px solid var(--line); background:var(--mint); }
-.kit-card .kh .nm{ font-weight:700; font-size:1.06rem; }
-.kit-card .kh .dt, .kit-card .kh .st{ font-family:var(--mono); font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; }
+/* ---------- flight kits · a dated strip, not a chapter (v5.3) ----------
+   Deliberately compact: the durable social system lives in section 11.
+   A kit is a pointer to one flight's colour and its drift, nothing more. */
+.kits{ display:grid; gap:.8rem; }
+.kit-card{ background:var(--paper); border:1px solid var(--line); border-radius:8px; box-shadow:var(--sh-sm); padding:1.1rem 1.3rem 1.2rem; }
+.kit-card .kh{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.5rem .9rem; }
+.kit-card .kh .nm{ font-weight:700; font-size:.98rem; }
+.kit-card .kh .dt, .kit-card .kh .st{ font-family:var(--mono); font-size:.66rem; text-transform:uppercase; letter-spacing:.08em; }
 .kit-card .kh .dt{ color:rgba(31,36,33,.66); }
-.kit-card .kh .st{ color:var(--cream); background:var(--forest); border-radius:99px; padding:.25rem .6rem; }
-.kit-card .kb{ padding:1.4rem 1.5rem 1.6rem; }
-.kit-card .kb > .lbl{ font-family:var(--mono); font-size:.64rem; color:var(--forest); text-transform:uppercase; letter-spacing:.09em; display:block; margin:1.5rem 0 .7rem; }
-.kit-card .kb > .lbl:first-child{ margin-top:0; }
-.kit-card p.ki{ font-size:.88rem; color:rgba(31,36,33,.76); }
-.ktok{ display:flex; flex-wrap:wrap; gap:.6rem; }
-.ktok .tk{ display:flex; align-items:center; gap:.5rem; border:1px solid var(--line); border-radius:99px; padding:.3rem .8rem .3rem .35rem; font-family:var(--mono); font-size:.68rem; color:rgba(31,36,33,.78); }
-.ktok .tk i{ width:1.15rem; height:1.15rem; border-radius:50%; border:1px solid var(--line); display:block; }
-.kdev{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
-@media(max-width:1000px){ .kdev{ grid-template-columns:1fr; } }
-.kdev .dv{ border:1px solid var(--line); border-radius:8px; overflow:hidden; background:var(--cream); display:flex; flex-direction:column; }
-.kdev .dv .stage{ aspect-ratio:4/5; background:var(--mint); overflow:hidden; }
-.kdev .dv .stage img{ width:100%; height:100%; object-fit:cover; object-position:top; }
-.kdev .dv .bd{ padding:1rem 1.1rem 1.2rem; }
-.kdev .dv .nm{ font-weight:700; font-size:.92rem; }
-.kdev .dv .us{ font-family:var(--serif); font-style:italic; font-size:.8rem; color:var(--walnut); margin:.25rem 0 .5rem; }
-.kdev .dv p{ font-size:.78rem; color:rgba(31,36,33,.72); }
-.kphase{ width:100%; border-collapse:collapse; font-size:.8rem; }
-.kphase th, .kphase td{ text-align:left; padding:.55rem .7rem; border-bottom:1px solid var(--line); }
-.kphase th{ font-family:var(--mono); font-size:.63rem; text-transform:uppercase; letter-spacing:.08em; color:var(--forest); font-weight:400; }
-.kphase td:first-child{ font-weight:700; }
-.kdrift{ display:grid; gap:.6rem; }
-.kdrift .dr{ display:grid; grid-template-columns:auto 1fr; gap:.7rem; align-items:start; background:var(--cream); border:1px solid var(--line); border-left:3px solid #8A3406; border-radius:6px; padding:.8rem 1rem; }
-.kdrift .dr .tg{ font-family:var(--mono); font-size:.6rem; text-transform:uppercase; letter-spacing:.07em; color:#8A3406; padding-top:.15rem; white-space:nowrap; }
-.kdrift .dr .tx{ font-size:.81rem; color:rgba(31,36,33,.76); }
-.kdrift .dr .tx b{ font-weight:700; }
+.kit-card .kh .st{ color:var(--cream); background:var(--forest); border-radius:99px; padding:.2rem .55rem; }
+.kit-card .kh .ktok{ margin-left:auto; }
+.ktok{ display:flex; flex-wrap:wrap; gap:.35rem; }
+.ktok .tk{ width:1.15rem; height:1.15rem; border-radius:50%; border:1px solid rgba(31,36,33,.2); display:block; }
+.kit-card p.ki{ font-size:.83rem; color:rgba(31,36,33,.74); margin-top:.6rem; max-width:56em; }
+.kdrift{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.8rem; }
+.kdrift .dr{ font-family:var(--mono); font-size:.62rem; letter-spacing:.04em; border:1px solid var(--line); border-radius:99px; padding:.25rem .7rem; color:rgba(31,36,33,.72); background:var(--cream); }
+.kdrift .dr.warn{ border-color:rgba(138,52,6,.35); color:#8A3406; }
+.kdrift .dr b{ font-weight:700; }
+
+/* ---------- 11 · social (v5.3) ---------- */
+.arc{ display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; counter-reset:ph; }
+@media(max-width:1000px){ .arc{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:600px){ .arc{ grid-template-columns:1fr; } }
+.arc .ph{ background:var(--paper); border:1px solid var(--line); border-top:3px solid var(--forest); border-radius:8px; padding:1.2rem 1.3rem 1.4rem; box-shadow:var(--sh-sm); counter-increment:ph; position:relative; }
+.arc .ph .ix{ font-family:var(--mono); font-size:.62rem; color:var(--forest); letter-spacing:.09em; }
+.arc .ph .nm{ font-weight:700; font-size:1rem; margin:.3rem 0 .1rem; }
+.arc .ph .jb{ font-family:var(--serif); font-style:italic; font-size:.86rem; color:var(--walnut); margin-bottom:.6rem; }
+.arc .ph p{ font-size:.81rem; color:rgba(31,36,33,.74); }
+.arc .ph .cl{ display:block; font-family:var(--mono); font-size:.62rem; text-transform:uppercase; letter-spacing:.07em; color:var(--forest); margin-top:.8rem; padding-top:.7rem; border-top:1px solid var(--line); }
+.lanetbl{ width:100%; border-collapse:collapse; font-size:.83rem; background:var(--paper); border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:var(--sh-sm); }
+.lanetbl th, .lanetbl td{ text-align:left; padding:.7rem .9rem; border-bottom:1px solid var(--line); vertical-align:top; }
+.lanetbl tr:last-child td{ border-bottom:none; }
+.lanetbl th{ font-family:var(--mono); font-size:.62rem; text-transform:uppercase; letter-spacing:.08em; color:var(--forest); font-weight:400; background:var(--mint); white-space:nowrap; }
+.lanetbl td:first-child{ font-weight:700; white-space:nowrap; }
+.lanetbl .yes, .lanetbl .no{ font-family:var(--mono); font-size:.68rem; white-space:nowrap; }
+.lanetbl .yes{ color:var(--forest); }
+.lanetbl .no{ color:#8A3406; }
+.mirror{ display:grid; grid-template-columns:auto 1fr; gap:2.5rem; align-items:start; }
+@media(max-width:860px){ .mirror{ grid-template-columns:1fr; gap:1.6rem; } }
+.mir-art{ display:flex; gap:1.2rem; align-items:flex-end; }
+.mir-fig{ display:flex; flex-direction:column; gap:.5rem; }
+.mf-label{ font-family:var(--mono); font-size:.62rem; text-transform:uppercase; letter-spacing:.08em; color:var(--forest); }
+.mf-frame{ position:relative; background:var(--forest); border-radius:6px; box-shadow:var(--sh-md); overflow:hidden; }
+.mf-frame.post{ width:108px; height:135px; }
+.mf-frame.story{ width:96px; height:171px; }
+.mf-frame.post .mf-type{ position:absolute; left:12%; right:12%; bottom:14%; height:26%; background:var(--cream); border-radius:2px; opacity:.9; }
+.mf-ui{ position:absolute; left:0; right:0; background:repeating-linear-gradient(45deg,rgba(250,248,243,.16),rgba(250,248,243,.16) 3px,transparent 3px,transparent 6px); font-family:var(--mono); font-size:.42rem; color:rgba(250,248,243,.85); display:flex; align-items:center; justify-content:center; text-align:center; }
+.mf-ui.top{ top:0; height:11.5%; }
+.mf-ui.bot{ bottom:0; height:14.6%; }
+.mf-safe{ position:absolute; left:8%; right:8%; top:14%; bottom:17%; border:1px dashed rgba(250,248,243,.55); border-radius:2px; font-family:var(--mono); font-size:.42rem; color:rgba(250,248,243,.9); display:flex; align-items:center; justify-content:center; text-align:center; padding:.2rem; }
 
 /* ---------- designer program (v5.2) ---------- */
 .dp-top{ display:grid; grid-template-columns:1.15fr .85fr; gap:1rem; }
@@ -605,10 +622,11 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
       <a href="#imagery"><span class="ix">08</span>Imagery</a>
       <a href="#apps"><span class="ix">09</span>Applications</a>
       <a href="#campaigns"><span class="ix">10</span>Campaigns</a>
-      <a href="#trade"><span class="ix">11</span>Trade</a>
-      <a href="#house"><span class="ix">12</span>House</a>
-      <a href="#range"><span class="ix">13</span>Range</a>
-      <a href="#legal"><span class="ix">14</span>Legal</a>
+      <a href="#social"><span class="ix">11</span>Social</a>
+      <a href="#trade"><span class="ix">12</span>Trade</a>
+      <a href="#house"><span class="ix">13</span>House</a>
+      <a href="#range"><span class="ix">14</span>Range</a>
+      <a href="#legal"><span class="ix">15</span>Legal</a>
     </nav>
     <a class="btn btn-forest" href="#logo">Brand Kit</a>
     <button class="nav-toggle" aria-label="Open section menu" aria-controls="tocMobile" aria-expanded="false"><span class="bars"><span></span></span> Menu</button>
@@ -624,10 +642,11 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     <a href="#imagery"><span class="ix">08</span>Imagery</a>
     <a href="#apps"><span class="ix">09</span>Applications</a>
     <a href="#campaigns"><span class="ix">10</span>Campaigns</a>
-    <a href="#trade"><span class="ix">11</span>The Designer Program</a>
-    <a href="#house"><span class="ix">12</span>House of Brands</a>
-    <a href="#range"><span class="ix">13</span>The Range</a>
-    <a href="#legal"><span class="ix">14</span>Legal &amp; Governance</a>
+    <a href="#social"><span class="ix">11</span>Social</a>
+    <a href="#trade"><span class="ix">12</span>The Designer Program</a>
+    <a href="#house"><span class="ix">13</span>House of Brands</a>
+    <a href="#range"><span class="ix">14</span>The Range</a>
+    <a href="#legal"><span class="ix">15</span>Legal &amp; Governance</a>
   </nav>
 </header>
 
@@ -991,10 +1010,46 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
   </div>
 </section>
 
-<!-- ===== 11 · THE DESIGNER PROGRAM (v5.2) ===== -->
-<section id="trade" class="is-mint pad">
+<!-- ===== 11 · SOCIAL (v5.3) ===== -->
+<section id="social" class="is-mint pad">
   <div class="wrap">
     <div class="sec-mark reveal"><span class="no" data-secno>11</span><span class="ln"></span></div>
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker eyebrow"><span class="bar"></span> Social</span>
+        <h2 class="sec-title">One post, one story, every day.</h2>
+      </div>
+      <p class="measure muted" id="soc-intro"></p>
+    </div>
+
+    <div class="reveal" style="margin-bottom:1rem"><span class="eyebrow" style="color:var(--forest)">The phase arc · every flight runs these four</span>
+      <p class="measure muted" id="soc-arc-intro" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <div class="arc reveal" id="soc-arc"></div>
+
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The lanes · what each one owes and may say</span>
+      <p class="measure muted" id="soc-lanes-intro" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <div style="overflow-x:auto"><table class="lanetbl reveal" id="soc-lanes"></table></div>
+
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">Post &amp; story · the mirror</span></div>
+    <div class="mirror reveal">
+      <div class="mir-art">
+        <div class="mir-fig"><span class="mf-label">Post · 4:5</span><div class="mf-frame post"><span class="mf-type"></span></div></div>
+        <div class="mir-fig"><span class="mf-label">Story · 9:16</span><div class="mf-frame story">
+          <span class="mf-ui top">platform UI · 220px</span><span class="mf-safe">1080 × 1420 safe</span><span class="mf-ui bot">platform UI · 280px</span>
+        </div></div>
+      </div>
+      <div class="mir-copy"><ol class="gov-steps" id="soc-mirror"></ol></div>
+    </div>
+
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">Cadence · the run-sheet law</span></div>
+    <div class="reveal" id="soc-cadence" style="display:grid;gap:.7rem"></div>
+  </div>
+</section>
+
+<!-- ===== 12 · THE DESIGNER PROGRAM (v5.2) ===== -->
+<section id="trade" class="is-mint pad">
+  <div class="wrap">
+    <div class="sec-mark reveal"><span class="no" data-secno>12</span><span class="ln"></span></div>
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> The Designer Program</span>
@@ -1034,7 +1089,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
 <!-- ===== 12 · HOUSE OF BRANDS / ARCHITECTURE ===== -->
 <section id="house" class="is-mint pad">
   <div class="wrap">
-    <div class="sec-mark reveal"><span class="no">12</span><span class="ln"></span></div>
+    <div class="sec-mark reveal"><span class="no">13</span><span class="ln"></span></div>
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> Brand Architecture</span>
@@ -1066,7 +1121,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
 <!-- ===== 13 · THE RANGE ===== -->
 <section id="range" class="pad">
   <div class="wrap">
-    <div class="sec-mark reveal"><span class="no">13</span><span class="ln"></span></div>
+    <div class="sec-mark reveal"><span class="no">14</span><span class="ln"></span></div>
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> The Range</span>
@@ -1081,7 +1136,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
 <!-- ===== LEGAL & GOVERNANCE (v5) ===== -->
 <section id="legal" class="pad">
   <div class="wrap">
-    <div class="sec-mark reveal"><span class="no" data-secno>14</span><span class="ln"></span></div>
+    <div class="sec-mark reveal"><span class="no" data-secno>15</span><span class="ln"></span></div>
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> Legal &amp; Governance</span>
@@ -1518,29 +1573,44 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     txt('cpn-kits-intro', CP.flightKitsIntro||'');
     set('cpn-kits', `<div class="kits">${(CP.flightKits||[]).map(k=>`
       <div class="kit-card">
-        <div class="kh"><span class="nm">${esc(k.name)}</span><span class="dt">${esc(k.dates||'')}</span><span class="st">${esc(k.status||'')}</span></div>
-        <div class="kb">
-          ${k.brief?`<p class="ki">${esc(k.brief)}</p>`:''}
-          ${(k.tokens||[]).length?`<span class="lbl">The kit's colour</span><div class="ktok">${k.tokens.map(t=>
-            `<span class="tk"><i style="background:${esc(t.value)}"></i>${esc(t.role)} · ${esc(t.value)}</span>`).join('')}</div>`:''}
-          ${(k.devices||[]).length?`<span class="lbl">Its devices</span><div class="kdev">${k.devices.map(y=>`
-            <div class="dv">${y.img?`<div class="stage"><img src="${esc(y.img)}" alt="${esc(y.name)} reference piece" loading="lazy" onerror="this.parentNode.style.display='none'"/></div>`:''}
-              <div class="bd"><div class="nm">${esc(y.name)}</div><div class="us">${esc(y.use)}</div><p>${esc(y.spec)}</p></div>
-            </div>`).join('')}</div>`:''}
-          ${(k.phases||[]).length?`<span class="lbl">Geometry by phase</span><div style="overflow-x:auto"><table class="kphase">
-            <thead><tr><th>Phase</th><th>Geometry</th><th>Register</th></tr></thead>
-            <tbody>${k.phases.map(p=>`<tr><td>${esc(p.phase)}</td><td>${esc(p.geometry)}</td><td>${esc(p.register)}</td></tr>`).join('')}</tbody>
-          </table></div>`:''}
-          ${(k.drift||[]).length?`<span class="lbl">Drift log · what this flight did that brand law does not sanction</span><div class="kdrift">${k.drift.map(x=>
-            `<div class="dr"><span class="tg">${esc(x.verdict)}</span><span class="tx"><b>${esc(x.what)}</b> ${esc(x.note)}</span></div>`).join('')}</div>`:''}
-        </div>
+        <div class="kh"><span class="nm">${esc(k.name)}</span><span class="dt">${esc(k.dates||'')}</span><span class="st">${esc(k.status||'')}</span>
+          <span class="ktok">${(k.tokens||[]).map(t=>
+            `<i class="tk" style="background:${esc(t.value)}" title="${esc(t.role)} · ${esc(t.value)}"></i>`).join('')}</span></div>
+        ${k.brief?`<p class="ki">${esc(k.brief)}</p>`:''}
+        ${(k.drift||[]).length?`<div class="kdrift">${k.drift.map(x=>
+          `<span class="dr${/ratified/i.test(x.verdict)?'':' warn'}" title="${esc(x.note)}"><b>${esc(x.what.replace(/\.$/,''))}</b> · ${esc(x.verdict)}</span>`).join('')}</div>`:''}
       </div>`).join('')}</div>`);
 
     const SH=CP.shipping;
     if(SH) set('cpn-ship', `<div class="h">Filing &amp; shipping</div><p>${esc(SH.path||'')}</p><p>${esc(SH.record||'')}</p><ol>${(SH.checklist||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ol>`);
   }
 
-  // ---- 11 · THE DESIGNER PROGRAM (v5.2) ----
+  // ---- 11 · SOCIAL (v5.3) ----
+  const SO=D.social;
+  if(SO){
+    txt('soc-intro', SO.intro||'');
+    txt('soc-arc-intro', (SO.arc&&SO.arc.intro)||'');
+    set('soc-arc', ((SO.arc&&SO.arc.phases)||[]).map((p,i)=>`
+      <div class="ph"><span class="ix">${String(i+1).padStart(2,'0')} · ${esc(p.name)}</span>
+        <div class="nm">${esc(p.register)}</div>
+        <div class="jb">${esc(p.job)}</div>
+        <p>${esc(p.body)}</p>
+        <span class="cl">${esc(p.mayClaim)}</span></div>`).join(''));
+
+    txt('soc-lanes-intro', (SO.lanes&&SO.lanes.intro)||'');
+    const yn=v=>v===true?'<span class="yes">yes</span>':v===false?'<span class="no">never</span>':`<span class="yes">${esc(String(v))}</span>`;
+    set('soc-lanes',
+      `<thead><tr><th>Lane</th><th>Carries the offer</th><th>Story mirror</th><th>Cadence</th><th>What it sells</th></tr></thead><tbody>`+
+      ((SO.lanes&&SO.lanes.rows)||[]).map(l=>
+        `<tr><td>${esc(l.lane)}</td><td>${yn(l.offer)}</td><td>${yn(l.story)}</td><td>${esc(l.cadence)}</td><td>${esc(l.sells)}</td></tr>`).join('')+
+      `</tbody>`);
+
+    set('soc-mirror', (SO.mirror||[]).map(m=>`<li>${esc(m)}</li>`).join(''));
+    set('soc-cadence', (SO.cadence||[]).map((r,i)=>
+      `<div class="cmx-rule"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(r)}</span></div>`).join(''));
+  }
+
+  // ---- 12 · THE DESIGNER PROGRAM (v5.2) ----
   const DP=D.designerProgram;
   if(DP){
     txt('dp-intro', DP.intro||'');

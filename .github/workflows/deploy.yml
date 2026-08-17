@@ -1,0 +1,82 @@
+# Publish the brand hub to Netlify.
+#
+# Before this existed, deploys were manual: sync a second checkout, run the
+# Netlify MCP deploy-site operation, execute the returned npx command by hand
+# (see HANDOFF.md). Merging to main published nothing, which is how v5.3.0 sat
+# live-invisible on 2026-08-17.
+#
+# ONE-TIME SETUP — add a repo secret named NETLIFY_AUTH_TOKEN:
+#   1. Netlify → User settings → Applications → Personal access tokens → New
+#   2. GitHub → this repo → Settings → Secrets and variables → Actions →
+#      New repository secret → name NETLIFY_AUTH_TOKEN, paste the token
+# The site id is not secret and is pinned below.
+#
+# After that: every push to main publishes. Run it by hand any time from
+# Actions → "Deploy to Netlify" → Run workflow.
+
+name: Deploy to Netlify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: netlify-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # The hub is a static site — netlify.toml sets publish = "." so the repo
+      # root ships as-is. No build step, nothing to install.
+      - name: Verify the data file parses before shipping it
+        run: |
+          python3 -c "import json; d=json.load(open('shared/brand-data.json')); print('brand-data.json OK · v'+d['meta']['version'])"
+
+      # brand-data.js and the token files are generated from brand-data.json.
+      # If someone edited the JSON without running the tools, the page and the
+      # tokens disagree — fail here rather than publish a split brain.
+      - name: Check generated files are in step with the SSOT
+        run: |
+          python3 tools/sync-brand-data.py
+          python3 tools/build-tokens.py
+          if ! git diff --quiet; then
+            echo "::error::Generated files are stale. Run tools/sync-brand-data.py and tools/build-tokens.py, then commit."
+            git diff --stat
+            exit 1
+          fi
+          echo "generated files match the SSOT"
+
+      - name: Deploy
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: fc6abca4-6b04-49e3-9b4d-8b0e9372e655
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "::error::NETLIFY_AUTH_TOKEN secret is not set — see the setup notes at the top of this file."
+            exit 1
+          fi
+          npx -y netlify-cli@latest deploy --prod --dir . --site "$NETLIFY_SITE_ID" --message "${GITHUB_SHA::7} via GitHub Actions"
+
+      - name: Confirm the live site is serving the version we just shipped
+        run: |
+          expected=$(python3 -c "import json;print(json.load(open('shared/brand-data.json'))['meta']['version'])")
+          echo "expecting v$expected"
+          for i in $(seq 1 20); do
+            live=$(curl -sf "https://billiard-factory-brand-hub.netlify.app/shared/brand-data.json?cb=$i" \
+                   | python3 -c "import sys,json;print(json.load(sys.stdin)['meta']['version'])" 2>/dev/null || echo "?")
+            if [ "$live" = "$expected" ]; then echo "LIVE: v$live"; exit 0; fi
+            echo "  attempt $i: live is v$live — waiting"
+            sleep 15
+          done
+          echo "::error::Deploy reported success but the live site never served v$expected."
+          exit 1

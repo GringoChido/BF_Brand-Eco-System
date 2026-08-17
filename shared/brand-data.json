@@ -1,7 +1,7 @@
 {
   "meta": {
     "ecosystem": "Billiard Factory · Living HTML Ecosystem",
-    "version": "5.3.0",
+    "version": "5.4.0",
     "lastUpdated": "2026-08-17",
     "sourceOfTruth": "Site A · Creative & Brand Hub",
     "consumedBy": [
@@ -1433,13 +1433,13 @@
         "Uploaded to the campaign's ImageKit folder and attached to its dated row."
       ]
     },
-    "flightKitsIntro": "The laws above are house-wide and durable. A flight kit is a dated recipe — one campaign's accent, devices, and geometry, written down so the next producer can generate from it and so it can expire without anyone editing brand law. A device that outlives three flights is a candidate for promotion; until then it lives here.",
+    "flightKitsIntro": "The arc, the lanes, and the laws are house-wide. A flight kit is only what was true of one campaign — its accent, and its drift. Kits expire; nothing above them does.",
     "flightKits": [
       {
         "name": "Labor Day 2026 · the Sitewide Savings dressing",
         "dates": "Aug 17 – Sep 13 2026 · peak Sep 7",
         "status": "Shipped",
-        "brief": "The Labor Day offer IS the standing Sitewide Savings promotion, dressed for the holiday — the America 250 precedent. The mechanics never change; only the name and the artwork do. The occasion is the deadline, never the offer: Labor Day weekend genuinely ends, the savings do not, and the approved close is “The weekend ends. The savings don't.”",
+        "brief": "The Labor Day offer IS the standing Sitewide Savings promotion, dressed for the holiday — the America 250 precedent. Devices: the Ticket Ladder, the Photo Scrim, and the Ladder Card, run against the four-phase arc in Social. Full recipe and per-piece prompts live in the campaign packs.",
         "tokens": [
           {
             "role": "Accent · eyebrows, hairlines",
@@ -1456,48 +1456,6 @@
           {
             "role": "Money moment",
             "value": "#F0560C"
-          }
-        ],
-        "devices": [
-          {
-            "name": "The Ticket Ladder",
-            "use": "Evergreen promo graphics — the standing Sitewide Savings lane, and any offer that outlives a season.",
-            "spec": "Warm Cream paper with subtle grain — never gray, never white. Physical print-shop objects do the talking: layered tickets, stubs, receipts, rubber stamps, scorecards, with dashed perforations, one light source, and real shadows. Helvetica Neue bold carries headlines and dollar amounts, Fragment Mono the letterspaced spec labels, Vollkorn italic the one warm charm line. Ink and Walnut type; Signal Orange spent once, on the money. Black full lockup top centre. The standing footer, always: “No code. No hoops. Applied automatically online · honored in-store.” in Ink mono, then “America's game room since 1975.” in Vollkorn italic Walnut.",
-            "img": "../assets/campaigns/system-ticket-ladder.png"
-          },
-          {
-            "name": "The Photo Scrim",
-            "use": "Campaign lifestyle — the Main lane's launch and peak pieces, where the room sells the offer.",
-            "spec": "“Real rooms, real light” photography (or AI imagery cleared by the AI policy) with the lower band falling into a scrim: a letterspaced eyebrow in the campaign accent, a big display headline, then the offer plaque — a ticket-shaped FREE chip, the value line, and real cloth swatch chips when cloth is the offer. Campaign offers date on a gold ENDS bar at the foot; the photograph carries the brand's green so the type never has to.",
-            "img": "../assets/campaigns/system-photo-scrim.png"
-          },
-          {
-            "name": "The Ladder Card",
-            "use": "The tier table people screenshot — a reference asset, run three or four times across a flight, never as a drumbeat.",
-            "spec": "All five tiers in aligned columns on the flight's field, top tier in Signal Orange, everything else in cream. Title quiet, ladder large. Runs over photography only when the image is darkened to serve the table. Its solid-field sibling drops the photograph entirely: a deep field with a warm radial lift and faint grain — depth, not flatness, because a flat panel reads as an ad and gets scrolled past.",
-            "img": "../assets/campaigns/system-ladder-card.png"
-          }
-        ],
-        "phases": [
-          {
-            "phase": "Tease",
-            "geometry": "Split field — type left ~⅔, photo breathes right",
-            "register": "Room-forward, no number yet"
-          },
-          {
-            "phase": "Launch",
-            "geometry": "Bottom gradient",
-            "register": "The full claim"
-          },
-          {
-            "phase": "Peak",
-            "geometry": "Corner block — hard-edged panel, not a scrim",
-            "register": "Loudest; earns it at peak"
-          },
-          {
-            "phase": "Last chance",
-            "geometry": "Full wash ~80%",
-            "register": "Photo recedes; the line does the work"
           }
         ],
         "drift": [
@@ -1518,6 +1476,104 @@
           }
         ]
       }
+    ]
+  },
+  "social": {
+    "name": "Social",
+    "intro": "Social is where the brand actually runs — one post and one story every campaign day, across six lanes, for the length of every flight. Campaigns owns the offer machinery: the briefs, the facts, the laws. This section owns the shape of the feed: the arc a flight travels, what each lane owes, and how a post becomes a story.",
+    "arc": {
+      "intro": "Every flight runs the same four phases, whatever the occasion. The arc is the durable part — it governs what a piece is allowed to claim and how loud it plays. The specific art device assigned to each phase is a per-flight choice and belongs in that flight's kit, not here.",
+      "phases": [
+        {
+          "name": "Tease",
+          "register": "Room-forward",
+          "job": "Before there is a number.",
+          "body": "The room does the selling and the offer stays offscreen. Photography-led, generous negative space, the campaign's occasion implied rather than announced. This is the phase most often skipped and most often missed — it is what stops the launch reading as an ad arriving from nowhere.",
+          "mayClaim": "No figures · no dates · no “sale”"
+        },
+        {
+          "name": "Launch",
+          "register": "The full claim",
+          "job": "The offer, stated plainly, once.",
+          "body": "The complete claim in its clearest form — the headline figure and the proof beneath it. Everything the audience needs to act is on one piece. Load the launch window deliberately: work moved here from peak costs nothing in advance and is close to impossible to produce late.",
+          "mayClaim": "Ratified figures · the occasion"
+        },
+        {
+          "name": "Peak",
+          "register": "Loudest — it earns it",
+          "job": "Maximum volume, shortest window.",
+          "body": "The hardest-edged treatment of the flight, concentrated on the days that convert. Peak earns a register the rest of the flight may not use. Watch the load: a peak that carries most of the flight's pieces in a handful of days is the single biggest risk to a flight shipping at all.",
+          "mayClaim": "Ratified figures · the occasion · urgency"
+        },
+        {
+          "name": "Close",
+          "register": "The line does the work",
+          "job": "The occasion ends. The offer may not.",
+          "body": "Photography recedes and one line carries the piece. The deadline is always the occasion — the holiday, the weekend, the event — and never the offer, unless the offer genuinely has an end date in a ratified brief. An evergreen promotion has no last chance.",
+          "mayClaim": "The occasion's deadline only"
+        }
+      ]
+    },
+    "lanes": {
+      "intro": "Six lanes run in parallel. The distinction that matters most: only the offer lane does the math. Every other lane sells the room, the product, or the partnership — and the moment a category post starts quoting tiers, the feed reads as a circular instead of a brand.",
+      "rows": [
+        {
+          "lane": "Main",
+          "offer": true,
+          "story": true,
+          "cadence": "Every phase",
+          "sells": "The campaign's own offer — the hero push, and the only lane carrying an end date."
+        },
+        {
+          "lane": "Category",
+          "offer": false,
+          "story": true,
+          "cadence": "Steady through the flight",
+          "sells": "A table for every room — one category made covetable at a time."
+        },
+        {
+          "lane": "Product",
+          "offer": false,
+          "story": true,
+          "cadence": "Steady through the flight",
+          "sells": "One piece, its craft and its spec. Real PDP photography owns the product."
+        },
+        {
+          "lane": "Lifestyle",
+          "offer": false,
+          "story": true,
+          "cadence": "Steady through the flight",
+          "sells": "The room in use — hosting, the season, the reason people gather."
+        },
+        {
+          "lane": "Designer / Trade",
+          "offer": false,
+          "story": false,
+          "cadence": "One post a week when the lane runs",
+          "sells": "Partnership and logistics, never price. Trade is not story-native — the mirror is waived."
+        },
+        {
+          "lane": "Editorial · standing",
+          "offer": false,
+          "story": true,
+          "cadence": "One a day, self-running",
+          "sells": "The content desk. Runs underneath every flight and is never used to fill a campaign hole."
+        }
+      ]
+    },
+    "mirror": [
+      "A story is a re-composition, not a crop. Same photograph, same scene, same moment — recomposed for the frame. That shared frame is what makes the pair read as one campaign instead of two pieces.",
+      "Type moves up. A headline beautifully bottom-weighted at 4:5 must lift into the 1080 × 1420 safe band. Extending the gradient is not the fix.",
+      "The ladder abbreviates. Vertical rows compress — “$3,499+ · $150”, not the full band-and-discount row. Shrinking full rows to fit is the failure mode: they stop being legible on a phone.",
+      "One idea per story. If the post carries a headline and a ladder, the story carries the headline or the ladder. Not both.",
+      "Nothing lands in the top 220px or bottom 280px — that space belongs to platform UI, on every platform, always."
+    ],
+    "cadence": [
+      "One post and one story every campaign day, each slot carrying its date, its copy, and its finished art before the flight opens.",
+      "Stories are seeded as their own rows on the board, never implied by their posts — work that is not a row is work nobody can see slipping.",
+      "The ladder card — the piece people screenshot and send to a spouse — runs three to four times per flight. It is a reference, not a drumbeat.",
+      "Editorial runs underneath everything at one a day and never carries an offer. It is not campaign inventory.",
+      "Photography is the variety lever, not layout. Below roughly five scenes per lane a flight looks like four templates on repeat, however good the type is."
     ]
   },
   "designerProgram": {
