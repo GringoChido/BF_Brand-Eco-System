@@ -189,16 +189,6 @@ section{ position:relative; }
 .logo-card .dl:hover{ background:var(--forest); border-color:var(--forest); color:var(--cream); transform:translateY(-1px); }
 
 /* ---------- the mark (v5) ---------- */
-.mark-hero{ display:grid; grid-template-columns:1fr 1.15fr; gap:clamp(1.5rem,4vw,4rem); align-items:stretch; margin-bottom:3.5rem; }
-@media(max-width:880px){ .mark-hero{ grid-template-columns:1fr; } }
-.mark-stages{ display:grid; grid-template-rows:1.4fr 1fr; gap:1rem; }
-.mark-stage{ border-radius:8px; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; padding:2rem; box-shadow:var(--sh-md); background:var(--paper); }
-.mark-stage.dark{ background:var(--forest); }
-.mark-stage img{ max-height:11rem; width:auto; }
-.mark-stage.dark img{ max-height:6.5rem; }
-.mark-copy .lede{ font-family:var(--serif); font-size:1.18rem; line-height:1.55; color:var(--ink); margin:.9rem 0 1rem; }
-.mark-copy p{ font-size:.95rem; color:rgba(31,36,33,.74); margin-bottom:.9rem; }
-.mark-construction{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.2rem 1.4rem; margin-top:1.2rem; font-family:var(--mono); font-size:.78rem; color:rgba(31,36,33,.78); box-shadow:var(--sh-sm); }
 .needs{ display:inline-flex; align-items:flex-start; gap:.55rem; background:rgba(240,86,12,.06); border:1px solid rgba(240,86,12,.35); border-radius:6px; padding:.7rem .9rem; font-family:var(--mono); font-size:.74rem; color:#7C2F05; line-height:1.5; margin-top:1.1rem; }
 .needs::before{ content:"⚑"; color:var(--orange); }
 .dlrow{ display:flex; flex-wrap:wrap; gap:.45rem; }
@@ -350,16 +340,6 @@ section{ position:relative; }
 .cpn-fmt .f{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.1rem 1.2rem; box-shadow:var(--sh-sm); }
 .cpn-fmt .f .nm{ font-weight:700; font-size:.86rem; margin-bottom:.3rem; }
 .cpn-fmt .f .sp{ font-family:var(--mono); font-size:.72rem; color:rgba(31,36,33,.72); }
-.cpn-sys{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
-@media(max-width:1000px){ .cpn-sys{ grid-template-columns:1fr; } }
-.cpn-sys .sy{ background:var(--paper); border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:var(--sh-md); display:flex; flex-direction:column; }
-.cpn-sys .sy .stage{ aspect-ratio:4/5; background:var(--mint); overflow:hidden; }
-.cpn-sys .sy .stage img{ width:100%; height:100%; object-fit:cover; object-position:top; }
-.cpn-sys .sy .bd{ padding:1.3rem 1.4rem 1.5rem; }
-.cpn-sys .sy .nm{ font-weight:700; font-size:1.02rem; }
-.cpn-sys .sy .us{ font-family:var(--serif); font-style:italic; font-size:.88rem; color:var(--walnut); margin:.3rem 0 .6rem; }
-.cpn-sys .sy p{ font-size:.82rem; color:rgba(31,36,33,.72); }
-.cpn-sys .sy .ft{ font-family:var(--mono); font-size:.7rem; color:rgba(31,36,33,.72); background:var(--mint); border:1px solid var(--line); border-radius:6px; padding:.7rem .8rem; margin-top:.8rem; }
 .cpn-ship{ margin-top:3rem; background:var(--forest); color:var(--cream); border-radius:8px; padding:2rem 2.2rem; box-shadow:var(--sh-md); position:relative; overflow:hidden; }
 .cpn-ship::before{ content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(120% 80% at 22% 0%, rgba(255,255,255,.06), transparent 60%); }
 .cpn-ship > *{ position:relative; }
@@ -369,22 +349,71 @@ section{ position:relative; }
 .cpn-ship li{ font-size:.9rem; color:rgba(250,248,243,.85); padding-left:2rem; position:relative; counter-increment:sc; }
 .cpn-ship li::before{ content:counter(sc,decimal-leading-zero); position:absolute; left:0; top:.05em; font-family:var(--mono); font-size:.7rem; color:var(--sage-2); }
 
+/* ---------- law cards · a single ruling that has to stop a reader (v5.3) ---------- */
+.lawcard{ background:var(--paper); border:1px solid var(--line); border-left:3px solid var(--orange); border-radius:8px; padding:1.3rem 1.5rem; box-shadow:var(--sh-sm); }
+.lawcard .lc-h{ font-weight:700; font-size:.95rem; margin-bottom:.5rem; }
+.lawcard p{ font-size:.88rem; color:rgba(31,36,33,.76); }
+.lawcard p + p{ margin-top:.5rem; }
+
+/* ---------- the campaign accent log (v5.3) ---------- */
+.accents{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1rem; }
+.accents .ac{ background:var(--paper); border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:var(--sh-sm); }
+.accents .ac .chips{ display:flex; height:3.4rem; }
+.accents .ac .chips span{ flex:1; }
+.accents .ac .bd{ padding:.9rem 1rem 1.1rem; }
+.accents .ac .nm{ font-weight:700; font-size:.88rem; }
+.accents .ac .hx{ font-family:var(--mono); font-size:.68rem; color:rgba(31,36,33,.66); margin-top:.25rem; }
+.accents .ac p{ font-size:.79rem; color:rgba(31,36,33,.72); margin-top:.5rem; }
+
+/* ---------- imagery registers (v5.3) ---------- */
+.registers{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+@media(max-width:900px){ .registers{ grid-template-columns:1fr; } }
+.registers .rg{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.3rem 1.4rem 1.5rem; box-shadow:var(--sh-sm); }
+.registers .rg .nm{ font-weight:700; font-size:1rem; }
+.registers .rg .us{ font-family:var(--serif); font-style:italic; font-size:.86rem; color:var(--walnut); margin:.3rem 0 .7rem; }
+.registers .rg p{ font-size:.83rem; color:rgba(31,36,33,.74); }
+.registers .rg .df{ font-family:var(--mono); font-size:.64rem; color:var(--forest); text-transform:uppercase; letter-spacing:.08em; margin-top:.7rem; }
+
+/* ---------- flight kits · dated recipes, not brand law (v5.3) ---------- */
+.kits{ display:grid; gap:1.4rem; }
+.kit-card{ background:var(--paper); border:1px solid var(--line); border-radius:8px; box-shadow:var(--sh-md); overflow:hidden; }
+.kit-card .kh{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.6rem 1rem; padding:1.2rem 1.5rem; border-bottom:1px solid var(--line); background:var(--mint); }
+.kit-card .kh .nm{ font-weight:700; font-size:1.06rem; }
+.kit-card .kh .dt, .kit-card .kh .st{ font-family:var(--mono); font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; }
+.kit-card .kh .dt{ color:rgba(31,36,33,.66); }
+.kit-card .kh .st{ color:var(--cream); background:var(--forest); border-radius:99px; padding:.25rem .6rem; }
+.kit-card .kb{ padding:1.4rem 1.5rem 1.6rem; }
+.kit-card .kb > .lbl{ font-family:var(--mono); font-size:.64rem; color:var(--forest); text-transform:uppercase; letter-spacing:.09em; display:block; margin:1.5rem 0 .7rem; }
+.kit-card .kb > .lbl:first-child{ margin-top:0; }
+.kit-card p.ki{ font-size:.88rem; color:rgba(31,36,33,.76); }
+.ktok{ display:flex; flex-wrap:wrap; gap:.6rem; }
+.ktok .tk{ display:flex; align-items:center; gap:.5rem; border:1px solid var(--line); border-radius:99px; padding:.3rem .8rem .3rem .35rem; font-family:var(--mono); font-size:.68rem; color:rgba(31,36,33,.78); }
+.ktok .tk i{ width:1.15rem; height:1.15rem; border-radius:50%; border:1px solid var(--line); display:block; }
+.kdev{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+@media(max-width:1000px){ .kdev{ grid-template-columns:1fr; } }
+.kdev .dv{ border:1px solid var(--line); border-radius:8px; overflow:hidden; background:var(--cream); display:flex; flex-direction:column; }
+.kdev .dv .stage{ aspect-ratio:4/5; background:var(--mint); overflow:hidden; }
+.kdev .dv .stage img{ width:100%; height:100%; object-fit:cover; object-position:top; }
+.kdev .dv .bd{ padding:1rem 1.1rem 1.2rem; }
+.kdev .dv .nm{ font-weight:700; font-size:.92rem; }
+.kdev .dv .us{ font-family:var(--serif); font-style:italic; font-size:.8rem; color:var(--walnut); margin:.25rem 0 .5rem; }
+.kdev .dv p{ font-size:.78rem; color:rgba(31,36,33,.72); }
+.kphase{ width:100%; border-collapse:collapse; font-size:.8rem; }
+.kphase th, .kphase td{ text-align:left; padding:.55rem .7rem; border-bottom:1px solid var(--line); }
+.kphase th{ font-family:var(--mono); font-size:.63rem; text-transform:uppercase; letter-spacing:.08em; color:var(--forest); font-weight:400; }
+.kphase td:first-child{ font-weight:700; }
+.kdrift{ display:grid; gap:.6rem; }
+.kdrift .dr{ display:grid; grid-template-columns:auto 1fr; gap:.7rem; align-items:start; background:var(--cream); border:1px solid var(--line); border-left:3px solid #8A3406; border-radius:6px; padding:.8rem 1rem; }
+.kdrift .dr .tg{ font-family:var(--mono); font-size:.6rem; text-transform:uppercase; letter-spacing:.07em; color:#8A3406; padding-top:.15rem; white-space:nowrap; }
+.kdrift .dr .tx{ font-size:.81rem; color:rgba(31,36,33,.76); }
+.kdrift .dr .tx b{ font-weight:700; }
+
 /* ---------- designer program (v5.2) ---------- */
 .dp-top{ display:grid; grid-template-columns:1.15fr .85fr; gap:1rem; }
 .dp-bottom{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
 @media(max-width:920px){ .dp-top,.dp-bottom{ grid-template-columns:1fr; } }
 .dp-ref{ border-radius:6px; overflow:hidden; border:1px solid var(--line); margin-top:1rem; box-shadow:var(--sh-sm); max-width:20rem; }
 .dp-ref img{ width:100%; }
-.dp-tiers{ display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
-@media(max-width:1080px){ .dp-tiers{ grid-template-columns:repeat(2,1fr); } }
-@media(max-width:640px){ .dp-tiers{ grid-template-columns:1fr; } }
-.dp-tiers .t{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:1.4rem 1.4rem 1.5rem; box-shadow:var(--sh-sm); display:flex; flex-direction:column; gap:.55rem; }
-.dp-tiers .t:last-child{ background:var(--forest); border-color:var(--forest); }
-.dp-tiers .t:last-child .tn, .dp-tiers .t:last-child .tb{ color:var(--cream); }
-.dp-tiers .t:last-child .ts{ color:var(--sage-2); }
-.dp-tiers .t .tn{ font-weight:700; font-size:.98rem; line-height:1.2; }
-.dp-tiers .t .ts{ font-family:var(--mono); font-size:.7rem; color:var(--forest); text-transform:uppercase; letter-spacing:.06em; }
-.dp-tiers .t .tb{ font-size:.8rem; color:rgba(31,36,33,.72); }
 
 /* ---------- legal & governance (v5) ---------- */
 .lg{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
@@ -428,16 +457,6 @@ section{ position:relative; }
 .mo{ display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
 @media(max-width:880px){ .mo{ grid-template-columns:1fr; } }
 .mo .g-card p{ margin-top:.8rem; }
-.mo-demo{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; width:100%; margin-top:1rem; background:var(--forest); border:none; border-radius:8px; padding:2.2rem 1rem 1.4rem; cursor:pointer; position:relative; }
-.mo-ring{ width:5.4rem; height:5.4rem; display:block; }
-.mo-word{ font-family:var(--sans); font-weight:700; letter-spacing:.14em; color:var(--cream); font-size:1rem; }
-.mo-hint{ font-family:var(--mono); font-size:.6rem; color:rgba(250,248,243,.8); }
-.mo-demo.play .mo-i{ animation:moInlay 200ms cubic-bezier(.2,.7,.2,1) both; }
-.mo-demo.play .mo-r{ stroke-dasharray:222; stroke-dashoffset:222; animation:moRing 400ms cubic-bezier(.2,.7,.2,1) 200ms both; }
-.mo-demo.play .mo-word{ animation:moWord 700ms cubic-bezier(.2,.7,.2,1) 450ms both; }
-@keyframes moInlay{ from{ opacity:0; transform:scale(.92); transform-origin:center; } to{ opacity:1; transform:none; } }
-@keyframes moRing{ to{ stroke-dashoffset:0; } }
-@keyframes moWord{ from{ opacity:0; transform:translateY(20px); } to{ opacity:1; transform:none; } }
 .mo-tok{ display:grid; gap:.4rem; margin-top:1rem; font-family:var(--mono); font-size:.76rem; color:rgba(31,36,33,.8); }
 .mo-tok .t{ display:flex; justify-content:space-between; gap:1rem; border-bottom:1px solid var(--line); padding:.45rem 0; }
 .mo-end{ margin-top:1rem; aspect-ratio:16/9; background:var(--forest); border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.8rem; position:relative; }
@@ -670,23 +689,9 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     <div class="sec-head reveal">
       <div>
         <span class="kicker eyebrow"><span class="bar"></span> Logo</span>
-        <h2 class="sec-title">One mark, six lockups.</h2>
+        <h2 class="sec-title">One wordmark, six lockups.</h2>
       </div>
       <p class="measure muted" id="logo-minsize"></p>
-    </div>
-
-    <!-- The Mark (v5) -->
-    <div class="reveal" style="margin-bottom:1.2rem"><span class="eyebrow" style="color:var(--forest)">The Mark · <span id="mark-name"></span></span></div>
-    <div class="mark-hero reveal">
-      <div class="mark-stages" id="mark-stages"></div>
-      <div class="mark-copy">
-        <div id="mark-story"></div>
-        <div class="mark-construction" id="mark-construction"></div>
-        <p class="muted" id="mark-colors" style="font-size:.88rem;margin-top:1rem"></p>
-        <p class="muted" id="mark-tm" style="font-size:.88rem;margin-top:.6rem"></p>
-        <div class="dlrow" id="mark-dl" style="margin-top:1.1rem"></div>
-        <div class="needs" id="mark-needs"></div>
-      </div>
     </div>
 
     <!-- Registration lockup (v5) -->
@@ -695,7 +700,6 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     <div class="logo-wall reveal" id="logo-wall"></div>
     <div class="bgrow reveal" id="logo-bgs"></div>
     <p class="muted reveal" id="logo-bg-note" style="font-size:.82rem;margin-top:.9rem"></p>
-    <div class="favrow reveal" id="favicon-row"></div>
     <div class="logo-rules">
       <div class="clearspace reveal">
         <span class="eyebrow" style="color:var(--forest)">Clear space</span>
@@ -733,6 +737,12 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
       <div class="bar" id="prop-bar" style="margin:1rem 0 0"></div>
       <div class="legend" id="prop-legend"></div>
     </div>
+
+    <!-- Campaign accent + the dressing rule (v5.3) -->
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The campaign accent · how a flight may dress</span>
+      <p class="measure muted" id="accent-intro" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <div class="reveal" id="accent-rules" style="display:grid;gap:.7rem"></div>
+    <div class="accents reveal" id="accent-log" style="margin-top:1.4rem"></div>
 
     <!-- Materials: the physical world (v5) -->
     <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">Materials · the colour off-screen</span>
@@ -780,6 +790,9 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     </div>
     <div class="scale reveal" id="scale"></div>
     <p class="muted reveal" id="leading-rule" style="font-size:.88rem;margin-top:1.4rem;max-width:52em"></p>
+
+    <!-- Promo has no face of its own (v5.3) -->
+    <div class="reveal lawcard" id="promo-type" style="margin:3rem 0 0"></div>
 
     <!-- Licensing & fallbacks (v5) -->
     <div class="reveal" style="margin:3rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">Licensing & fallbacks · so decks stop freelancing</span></div>
@@ -840,18 +853,6 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
       <p class="measure muted" id="motion-intro"></p>
     </div>
     <div class="mo reveal">
-      <div class="g-card mo-demo-card">
-        <span class="eyebrow" style="color:var(--forest)">Logo reveal</span>
-        <button class="mo-demo" id="mo-demo" type="button" aria-label="Replay the logo reveal">
-          <span class="mo-ring"><svg viewBox="0 0 96 96" fill="none" aria-hidden="true">
-            <path class="mo-r" d="M48 9 L87 48 L48 87 L9 48 Z" stroke="#FAF8F3" stroke-width="6.5"/>
-            <path class="mo-i" d="M48 35 L61 48 L48 61 L35 48 Z" fill="#FAF8F3"/>
-          </svg></span>
-          <span class="mo-word">BILLIARD FACTORY</span>
-          <span class="mo-hint">Click to replay</span>
-        </button>
-        <p id="mo-reveal"></p>
-      </div>
       <div class="g-card"><span class="eyebrow" style="color:var(--forest)">Durations &amp; easing</span>
         <div class="mo-tok" id="mo-tok"></div><p id="mo-toknote"></p></div>
       <div class="g-card"><span class="eyebrow" style="color:var(--forest)">Video end card</span>
@@ -924,6 +925,12 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
         <p class="neg" id="neg-prompt"></p>
       </div>
     </div>
+
+    <!-- The two lighting registers (v5.3) -->
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The two registers · daylight and after dark</span>
+      <p class="measure muted" id="reg-intro" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <div class="registers reveal" id="registers"></div>
+    <div class="reveal lawcard" id="contrast-floor" style="margin-top:1.4rem"></div>
   </div>
 </section>
 
@@ -973,15 +980,12 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     <div class="cpn-fmt reveal" id="cpn-formats"></div>
     <p class="measure muted reveal" id="cpn-fmt-note" style="font-size:.9rem;margin-top:1rem"></p>
 
-    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The three art systems</span></div>
-    <div class="cpn-sys reveal" id="cpn-systems"></div>
-
-    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The ten promo laws</span></div>
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The promo laws</span></div>
     <div class="reveal" id="cpn-laws" style="display:grid;gap:.7rem"></div>
 
-    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">How a piece gets made</span>
-      <p class="measure muted" id="cpn-wf-intro" style="margin-top:.6rem;font-size:.92rem"></p></div>
-    <ol class="gov-steps reveal" id="cpn-wf" style="max-width:52em"></ol>
+    <div class="reveal" style="margin:3.5rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">Flight kits · the dated recipes</span>
+      <p class="measure muted" id="cpn-kits-intro" style="margin-top:.6rem;font-size:.92rem"></p></div>
+    <div class="reveal" id="cpn-kits"></div>
 
     <div class="cpn-ship reveal" id="cpn-ship"></div>
   </div>
@@ -1013,11 +1017,6 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
       </div>
     </div>
 
-    <div class="reveal" style="margin:3rem 0 1rem"><span class="eyebrow" style="color:var(--forest)">The partner tiers · offer facts for the Designer lane</span>
-      <p class="measure muted" id="dp-tiers-note" style="margin-top:.6rem;font-size:.92rem"></p></div>
-    <div class="dp-tiers reveal" id="dp-tiers"></div>
-    <div class="needs reveal" id="dp-tiers-needs"></div>
-
     <div class="dp-bottom reveal" style="margin-top:3rem">
       <div class="g-card">
         <span class="eyebrow" style="color:var(--forest)">Vocabulary</span>
@@ -1026,9 +1025,7 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
       <div class="g-card">
         <span class="eyebrow" style="color:var(--forest)">Touchpoints &amp; proof</span>
         <ul class="lg-list" id="dp-touch"></ul>
-        <p id="dp-proof" style="margin-top:.9rem;font-size:.86rem;color:rgba(31,36,33,.72)"></p>
-        <div class="needs" id="dp-proof-needs"></div>
-        <div class="needs" id="dp-showrooms-needs"></div>
+        <div class="needs" id="dp-open"></div>
       </div>
     </div>
   </div>
@@ -1195,23 +1192,8 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
   const L=D.logo||{};
   txt('logo-minsize', L.minSize||'');
   txt('logo-clearspace', L.clearSpace||'');
-  // the mark (v5)
   const dlLinks=(o,id,extra)=>['png','svg','eps'].filter(k=>o[k]).map(k=>
     `<a href="${esc(o[k])}" download="${esc(id)}.${k}" aria-label="Download ${esc(id)} ${k.toUpperCase()}">↓ ${k.toUpperCase()}${extra||''}</a>`).join('');
-  const M=L.mark;
-  if(M){
-    txt('mark-name', M.name);
-    set('mark-stages', `
-      <div class="mark-stage"><img src="${esc(M.files[0].png)}" alt="${esc(M.name)} in Heritage Green" loading="lazy"/></div>
-      <div class="mark-stage dark felt"><img src="${esc(M.files[2].png)}" alt="${esc(M.name)} reversed in Cream on Heritage Green" loading="lazy"/></div>`);
-    set('mark-story', (M.story||[]).map((p,i)=>`<p class="${i?'':'lede'}">${esc(p)}</p>`).join(''));
-    txt('mark-construction', M.construction||'');
-    txt('mark-colors', M.colors||'');
-    txt('mark-tm', M.trademarkNote||'');
-    set('mark-dl', (M.files||[]).map(f=>['svg','eps','png'].map(k=>
-      `<a href="${esc(f[k])}" download aria-label="Download mark ${esc(f.label)} ${k.toUpperCase()}">↓ ${esc(f.label.split(' ')[0])} ${k.toUpperCase()}</a>`).join('')).join(''));
-    txt('mark-needs', 'NEEDS JOSHUA: '+(M.needsJoshua||''));
-  }
   // registration lockup (v5)
   const R=L.registration;
   if(R){
@@ -1247,16 +1229,6 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
         <div class="meta"><div class="nm">${esc(b.name)}</div>${esc(b.rule)}</div>
       </div>`).join(''));
     txt('logo-bg-note', L.backgrounds.note||'');
-  }
-  // favicon + og row (v5)
-  if(L.favicons){
-    set('favicon-row',
-      `<span class="eyebrow" style="color:var(--forest);flex-basis:100%">Favicons & share image</span>`+
-      `<img src="../assets/favicon-32.png" width="32" height="32" alt="favicon 32"/>`+
-      `<img src="../assets/favicon-192.png" width="48" height="48" alt="favicon 192"/>`+
-      `<img src="../assets/apple-touch-icon.png" width="48" height="48" alt="apple touch icon"/>`+
-      `<span class="muted" style="font-size:.8rem;flex:1;min-width:14rem">${esc(L.favicons.note||'')} ${esc((L.og&&L.og.spec)||'')}</span>`+
-      `<span class="dlrow">${(L.favicons.files||[]).map(f=>`<a href="${esc(f.file)}" download>↓ ${esc(f.label)}</a>`).join('')}${L.og?`<a href="${esc(L.og.file)}" download>↓ OG template 1200×630</a>`:''}</span>`);
   }
   set('logo-misuse', (L.misuse||[]).map((m,i)=>`
     <div class="m"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(m)}</span></div>`).join(''));
@@ -1344,6 +1316,17 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     set('cmx', head+body);
     set('cmx-rules', (X.rules||[]).map((r,i)=>`<div class="cmx-rule"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(r)}</span></div>`).join(''));
   }
+  // the campaign accent + the dressing rule (v5.3)
+  const AC=D.tokens.campaignAccent;
+  if(AC){
+    txt('accent-intro', AC.intro||'');
+    set('accent-rules', (AC.rules||[]).map((r,i)=>`<div class="cmx-rule"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(r)}</span></div>`).join(''));
+    set('accent-log', (AC.ratified||[]).map(a=>`
+      <div class="ac">
+        <div class="chips">${(a.swatches||[]).map(s=>`<span style="background:${esc(s)}"></span>`).join('')}</div>
+        <div class="bd"><div class="nm">${esc(a.flight)}</div><div class="hx">${esc((a.swatches||[]).join(' · '))}</div><p>${esc(a.note||'')}</p></div>
+      </div>`).join(''));
+  }
   if(D.tokens.downloads){
     set('tokens-row',
       `<span class="eyebrow" style="color:var(--forest);flex-basis:100%">Design tokens · one source, every build</span>`+
@@ -1376,6 +1359,8 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
           <dt>Office apps</dt><dd>${esc(l.office)}</dd>
         </dl>
         ${l.needsJoshua?`<div class="needs">NEEDS JOSHUA: ${esc(l.needsJoshua)}</div>`:''}</div>`).join(''));
+    if(TY.promoRule) set('promo-type',
+      `<div class="lc-h">${esc(TY.promoRule.title)}</div>`+(TY.promoRule.body||[]).map(p=>`<p>${esc(p)}</p>`).join(''));
   }
 
   // ---- GRID, ICONS & DATA (v5) ----
@@ -1412,17 +1397,11 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
   const MO=D.motion;
   if(MO){
     txt('motion-intro', MO.intro||'');
-    txt('mo-reveal', MO.logoReveal||''); txt('mo-toknote', MO.tokensNote||'');
+    txt('mo-toknote', MO.tokensNote||'');
     txt('mo-end-note', MO.endCard||''); txt('mo-lt-note', MO.lowerThird||''); txt('mo-safe-note', MO.storySafe||'');
     const mt=D.tokens.motion||{};
     set('mo-tok', Object.entries(mt.durations||{}).map(([k,v])=>`<span class="t"><span>--bf-dur-${esc(k)}</span><b>${esc(v)}</b></span>`).join('')+
                   Object.entries(mt.easings||{}).map(([k,v])=>`<span class="t"><span>--bf-ease-${esc(k)}</span><b>${esc(v)}</b></span>`).join(''));
-    const demo=document.getElementById('mo-demo');
-    if(demo){
-      const play=()=>{ demo.classList.remove('play'); void demo.offsetWidth; demo.classList.add('play'); };
-      demo.addEventListener('click',play);
-      new IntersectionObserver((es,o)=>{ if(es[0].isIntersecting){ play(); o.disconnect(); } },{threshold:.5}).observe(demo);
-    }
   }
 
   // ---- 05 · VOICE ----
@@ -1452,6 +1431,16 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
   set('img-do', (I.do||[]).map(x=>`<li>${esc(x)}</li>`).join(''));
   set('img-dont', (I.dont||[]).map(x=>`<li>${esc(x)}</li>`).join(''));
   txt('neg-prompt', I.negativePrompt||'');
+  // the two lighting registers (v5.3)
+  if(I.registers){
+    txt('reg-intro', I.registers.intro||'');
+    set('registers', (I.registers.list||[]).map(r=>`
+      <div class="rg"><div class="nm">${esc(r.name)}</div><div class="us">${esc(r.use)}</div><p>${esc(r.spec)}</p>
+        <div class="df">${esc(r.status)}</div></div>`).join(''));
+    if(I.registers.contrastFloor) set('contrast-floor',
+      `<div class="lc-h">${esc(I.registers.contrastFloor.title)}</div>`+
+      (I.registers.contrastFloor.body||[]).map(p=>`<p>${esc(p)}</p>`).join(''));
+  }
 
   // ---- APPLICATIONS (v5) ----
   const AP=D.applications;
@@ -1523,15 +1512,30 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     }).join(''));
     set('cpn-formats', (CP.formats||[]).map(f=>`<div class="f"><div class="nm">${esc(f.name)}</div><div class="sp">${esc(f.spec)}</div></div>`).join(''));
     txt('cpn-fmt-note', CP.formatsNote||'');
-    set('cpn-systems', (CP.systems||[]).map(y=>`
-      <div class="sy"><div class="stage"><img src="${esc(y.img)}" alt="${esc(y.name)} reference piece" loading="lazy" onerror="this.parentNode.style.display='none'"/></div>
-        <div class="bd"><div class="nm">${esc(y.name)}</div><div class="us">${esc(y.use)}</div><p>${esc(y.spec)}</p>
-        ${y.footer?`<div class="ft">${esc(y.footer)}</div>`:''}</div></div>`).join(''));
     set('cpn-laws', (CP.laws||[]).map((r,i)=>`<div class="cmx-rule"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(r)}</span></div>`).join(''));
-    if(CP.workflow){
-      txt('cpn-wf-intro', CP.workflow.intro||'');
-      set('cpn-wf', (CP.workflow.steps||[]).map(w=>`<li>${esc(w)}</li>`).join(''));
-    }
+
+    // flight kits — dated recipes, expire without touching brand law (v5.3)
+    txt('cpn-kits-intro', CP.flightKitsIntro||'');
+    set('cpn-kits', `<div class="kits">${(CP.flightKits||[]).map(k=>`
+      <div class="kit-card">
+        <div class="kh"><span class="nm">${esc(k.name)}</span><span class="dt">${esc(k.dates||'')}</span><span class="st">${esc(k.status||'')}</span></div>
+        <div class="kb">
+          ${k.brief?`<p class="ki">${esc(k.brief)}</p>`:''}
+          ${(k.tokens||[]).length?`<span class="lbl">The kit's colour</span><div class="ktok">${k.tokens.map(t=>
+            `<span class="tk"><i style="background:${esc(t.value)}"></i>${esc(t.role)} · ${esc(t.value)}</span>`).join('')}</div>`:''}
+          ${(k.devices||[]).length?`<span class="lbl">Its devices</span><div class="kdev">${k.devices.map(y=>`
+            <div class="dv">${y.img?`<div class="stage"><img src="${esc(y.img)}" alt="${esc(y.name)} reference piece" loading="lazy" onerror="this.parentNode.style.display='none'"/></div>`:''}
+              <div class="bd"><div class="nm">${esc(y.name)}</div><div class="us">${esc(y.use)}</div><p>${esc(y.spec)}</p></div>
+            </div>`).join('')}</div>`:''}
+          ${(k.phases||[]).length?`<span class="lbl">Geometry by phase</span><div style="overflow-x:auto"><table class="kphase">
+            <thead><tr><th>Phase</th><th>Geometry</th><th>Register</th></tr></thead>
+            <tbody>${k.phases.map(p=>`<tr><td>${esc(p.phase)}</td><td>${esc(p.geometry)}</td><td>${esc(p.register)}</td></tr>`).join('')}</tbody>
+          </table></div>`:''}
+          ${(k.drift||[]).length?`<span class="lbl">Drift log · what this flight did that brand law does not sanction</span><div class="kdrift">${k.drift.map(x=>
+            `<div class="dr"><span class="tg">${esc(x.verdict)}</span><span class="tx"><b>${esc(x.what)}</b> ${esc(x.note)}</span></div>`).join('')}</div>`:''}
+        </div>
+      </div>`).join('')}</div>`);
+
     const SH=CP.shipping;
     if(SH) set('cpn-ship', `<div class="h">Filing &amp; shipping</div><p>${esc(SH.path||'')}</p><p>${esc(SH.record||'')}</p><ol>${(SH.checklist||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ol>`);
   }
@@ -1543,17 +1547,10 @@ footer .col p{ font-size:.82rem; line-height:1.8; color:rgba(250,248,243,.8); }
     txt('dp-law', (DP.pitch&&DP.pitch.law)||'');
     set('dp-pillars', ((DP.pitch&&DP.pitch.pillars)||[]).map(x=>`<li>${esc(x)}</li>`).join(''));
     txt('dp-name-needs', 'NEEDS JOSHUA: '+(DP.nameNeedsJoshua||''));
-    const TR=DP.tiers||{};
-    txt('dp-tiers-note', TR.note||'');
-    set('dp-tiers', (TR.rows||[]).map(t=>`
-      <div class="t"><div class="ts">${esc(t.spend)}</div><div class="tn">${esc(t.tier)}</div><div class="tb">${esc(t.benefit)}</div></div>`).join(''));
-    txt('dp-tiers-needs', 'NEEDS JOSHUA: '+(TR.needsJoshua||''));
     set('dp-vocab', (DP.vocabulary||[]).map(x=>`<li>${esc(x)}</li>`).join(''));
     if(DP.treatment){ txt('dp-treatment', DP.treatment.spec||''); const ri=document.getElementById('dp-ref-img'); if(ri) ri.src=DP.treatment.img; }
     set('dp-touch', (DP.touchpoints||[]).map(x=>`<li>${esc(x)}</li>`).join(''));
-    txt('dp-proof', (DP.proofPoints&&DP.proofPoints.note)||'');
-    txt('dp-proof-needs', 'NEEDS JOSHUA: '+((DP.proofPoints&&DP.proofPoints.needsJoshua)||''));
-    txt('dp-showrooms-needs', 'NEEDS JOSHUA: '+(DP.showroomsNeedsJoshua||''));
+    set('dp-open', (DP.openQuestions||[]).map(q=>`NEEDS JOSHUA: ${esc(q)}`).join('<br>'));
   }
 
   // ---- LEGAL & GOVERNANCE (v5) ----
