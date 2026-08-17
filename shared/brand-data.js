@@ -2,8 +2,8 @@
 window.BF_DATA = {
   "meta": {
     "ecosystem": "Billiard Factory · Living HTML Ecosystem",
-    "version": "5.2.1",
-    "lastUpdated": "2026-08-06",
+    "version": "5.3.0",
+    "lastUpdated": "2026-08-17",
     "sourceOfTruth": "Site A · Creative & Brand Hub",
     "consumedBy": [
       "Site A · Creative Hub",
@@ -214,6 +214,28 @@ window.BF_DATA = {
         "swatch": "orange"
       }
     ],
+    "campaignAccent": {
+      "intro": "Promo law already refers to “the campaign accent” and already runs promo graphics greenless. This is where that accent is defined and logged. A flight may name one accent of its own and run a field colour that is not in the house palette — that is dressing, and the rules below are what keep a dressed flight recognisable as Billiard Factory.",
+      "rules": [
+        "One accent per flight, named in the flight kit before the first piece is generated. A flight that discovers its accent halfway through has two.",
+        "Signal Orange is never the flight accent. It stays the money moment — the price, the saving, the one figure the piece is about — and no campaign colour may take that job.",
+        "Dressing applies to promo artwork only. Site chrome, navigation, footers, category pages, the Designer Program, and every editorial surface stay on the house palette, always. A dressed flight is a costume, not a rebrand.",
+        "Inside a dressed flight the wordmark lockup and the footer band stay house-correct — Cream, Ink, or Heritage Green per the logo rules. The dressing never touches the mark.",
+        "A partner's own identity may run inside a bounded band. Gameroom Furniture Partners' gold on the Dallas Market strip is the precedent: their colour lives in their band and nowhere else on the page.",
+        "The accent is logged below when the flight ships, with its hexes. An accent that is not in this log was never ratified."
+      ],
+      "ratified": [
+        {
+          "flight": "Labor Day 2026 · antique gold",
+          "swatches": [
+            "#B08D3A",
+            "#16110E",
+            "#F0560C"
+          ],
+          "note": "Gold accent and hairlines over a warm near-black field, Signal Orange held for the money. Ratified 2026-08-17, and it retires the old “there is no gold in this brand” line that went out with the unratified mark."
+        }
+      ]
+    },
     "type": {
       "sans": {
         "stack": "'Helvetica Neue', Helvetica, Arial, sans-serif",
@@ -408,7 +430,15 @@ window.BF_DATA = {
           "web": "fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1",
           "office": "Install from Google Fonts; Consolas or Menlo substitute in office apps."
         }
-      ]
+      ],
+      "promoRule": {
+        "title": "Promo has no face of its own.",
+        "body": [
+          "Headlines are Helvetica Neue Heavy at −30 tracking on every surface, promo included. A flight may dress its colour; it may not commission a typeface.",
+          "This is a correction, on the record. The Labor Day 2026 packs specified a high-contrast display serif at its heaviest cut, tracking −0.035em, and explicitly forbade a grotesque — the exact inverse of this rule. Roughly eighty pieces shipped in a face this hub does not name, does not license, and cannot reproduce. The next flight unwinds it.",
+          "Vollkorn stays editorial: story, pull quotes, the one warm charm line. It is a reading serif, not the promo display voice, and substituting it is not the fix either."
+        ]
+      }
     },
     "grid": {
       "web": "12 columns · max width 86rem (1376px) · outer margin clamp(1.25rem, 4vw, 4.5rem) · gutter 1.5rem. Cards and panels snap to column edges; nothing floats between columns.",
@@ -451,7 +481,7 @@ window.BF_DATA = {
   },
   "logo": {
     "primary": "bf-logo-full-black",
-    "clearSpace": "Keep clear space equal to the height of the rail-diamond inlay on all four sides. Nothing — type, photo edge, or another logo — enters that zone.",
+    "clearSpace": "Keep clear space equal to the height of the hatched diamond ornament in the wordmark's divider on all four sides. Nothing — type, photo edge, or another logo — enters that zone.",
     "minSize": "Full lockup: 32px tall on screen, 0.5in in print. Simple mark: 20px / 0.25in. Below that, use the simple mark.",
     "variations": [
       {
@@ -538,40 +568,6 @@ window.BF_DATA = {
       "Don't crowd the clear-space zone with text or graphics.",
       "Don't pair the mark with founding-date text in legal or registered contexts — EST. 1975 is marketing dress, never part of the filed artwork."
     ],
-    "mark": {
-      "name": "The Rail Diamond",
-      "story": [
-        "Every pool table carries the same aiming system: diamond sights inlaid down the rails. Players learn the game by them — line up the diamonds, make the shot. The mark is that diamond, the one piece of geometry the whole category shares, drawn as a sight ring around a solid inlay.",
-        "It has been in the wordmark all along: the divider ornament under FACTORY is a hatched rail diamond. v5 promotes it from ornament to symbol, so the brand finally has a mark that works alone — on a favicon, an embroidered polo, a rail badge, a sign."
-      ],
-      "construction": "Drawn on a six-unit module. The sight ring runs from 6u to 7u — one unit thick, the sight line. The inlay spans 2u. The open field between is 4u. The diamond stands on its point by construction, never by rotation, and it is always level.",
-      "colors": "Heritage Green #185F43 on light surfaces. Cream #FAF8F3 reversed on Heritage Green, Pine, Ink, or photography. Ink #1F2421 where green is unavailable. Never gold — there is no gold in this brand.",
-      "trademarkNote": "The wordmark alone was refused as descriptive, so a distinctive standalone symbol is a legal requirement, not a taste note. The nested-diamond geometry in these fixed proportions is the artwork we protect.",
-      "needsJoshua": "Symbol decision — ratify the rail-diamond direction as the canonical mark. No cube mark exists in the assets; the clear-space rule's “cube mark” is the hatched diamond in the wordmark divider, which this mark formalizes.",
-      "files": [
-        {
-          "label": "Heritage Green",
-          "bg": "light",
-          "svg": "../assets/mark/bf-mark-green.svg",
-          "eps": "../assets/mark/bf-mark-green.eps",
-          "png": "../assets/mark/bf-mark-green.png"
-        },
-        {
-          "label": "Ink",
-          "bg": "light",
-          "svg": "../assets/mark/bf-mark-black.svg",
-          "eps": "../assets/mark/bf-mark-black.eps",
-          "png": "../assets/mark/bf-mark-black.png"
-        },
-        {
-          "label": "Cream · reversed",
-          "bg": "dark",
-          "svg": "../assets/mark/bf-mark-white.svg",
-          "eps": "../assets/mark/bf-mark-white.eps",
-          "png": "../assets/mark/bf-mark-white.png"
-        }
-      ]
-    },
     "registration": {
       "name": "Registration lockup",
       "badge": "Canonical form — this exact artwork is what we file and police.",
@@ -613,43 +609,6 @@ window.BF_DATA = {
           "rule": "White artwork, promo surfaces only. Orange stays rare."
         }
       ]
-    },
-    "favicons": {
-      "note": "Generated from the canonical mark: Cream rail diamond on a Heritage Green tile. Rounded tile for browser favicons; full-bleed square for app and touch icons.",
-      "files": [
-        {
-          "label": "favicon.ico · 16/32/48",
-          "file": "../assets/favicon.ico"
-        },
-        {
-          "label": "16 px",
-          "file": "../assets/favicon-16.png"
-        },
-        {
-          "label": "32 px",
-          "file": "../assets/favicon-32.png"
-        },
-        {
-          "label": "180 px · apple-touch",
-          "file": "../assets/apple-touch-icon.png"
-        },
-        {
-          "label": "192 px",
-          "file": "../assets/favicon-192.png"
-        },
-        {
-          "label": "512 px",
-          "file": "../assets/favicon-512.png"
-        },
-        {
-          "label": "Tile master · SVG",
-          "file": "../assets/mark/bf-mark-tile.svg"
-        }
-      ]
-    },
-    "og": {
-      "spec": "1200 × 630 px. Heritage Green field, white registration lockup centered at 53% of frame width. Keep the outer 60 px clear on all sides — platforms crop edges. No founding date, no offer copy baked into the template.",
-      "file": "../assets/social/og-template.png"
     }
   },
   "voice": {
@@ -766,7 +725,31 @@ window.BF_DATA = {
       "No man-cave neon, plastic finishes, or CGI sheen.",
       "No warped perspective, cartoon, or stock-photo staging."
     ],
-    "negativePrompt": "--no cold studio strobe, white seamless background, clinical catalog cutout, oversaturated showroom lighting, man-cave neon, plastic finish, warped perspective, cartoon, CGI sheen"
+    "negativePrompt": "--no cold studio strobe, white seamless background, clinical catalog cutout, oversaturated showroom lighting, man-cave neon, plastic finish, warped perspective, cartoon, CGI sheen",
+    "registers": {
+      "intro": "The brand shoots in two lighting registers. Daylight is the default and carries the brand. After dark exists to carry type, and it earned its place on Labor Day 2026, when cream headlines needed a field dark enough to clear AA.",
+      "list": [
+        {
+          "name": "Daylight · the default",
+          "use": "Brand, editorial, product, applications — anywhere the room itself is the message.",
+          "spec": "Warm, lived-in, architectural. Golden, directional, late-afternoon light. Real materials, the product framed as furniture first, the room reading as a place a family actually gathers. Wood grain and felt are the textures; green and walnut are the tones.",
+          "status": "Ratified · the house register"
+        },
+        {
+          "name": "After dark · the type carrier",
+          "use": "Promo pieces that set type over photography — scrims, ladder cards, hero claims.",
+          "spec": "The same rooms at night: one warm island of light, frame edges falling to near-black, chiaroscuro rather than flat fill. Amber on near-black, a cool note held in a far window. The darkness is deliberate — it is where the type sits. Still real rooms and real light; a lamp at ten o'clock is natural light too. Not a man-cave, not neon, and people are still welcome in frame — an empty room is a choice this register does not require.",
+          "status": "Ratified · promo only"
+        }
+      ],
+      "contrastFloor": {
+        "title": "The contrast floor — a spec, not a preference.",
+        "body": [
+          "Type over photography needs a dark photograph or a darkening floor of at least 40%. Cream on a field 40% dark or deeper clears WCAG AA for large text; ten small numbers over a bright room fail fast.",
+          "The floor exists so a brighter scene can never break a layout that was designed on a dark one. Measure it — do not eyeball it — on any piece where type sits over a lit area."
+        ]
+      }
+    }
   },
   "history": {
     "founded": "1975",
@@ -1162,7 +1145,6 @@ window.BF_DATA = {
   "motion": {
     "intro": "Motion is restraint at 24 frames a second: three durations, one easing family, and nothing that bounces, spins, or sparkles. If an animation would embarrass a fifty-year-old furniture maker, it's off-brand.",
     "tokensNote": "Quick (200ms) for hovers and fades · Standard (400ms) for panels and slides · Reveal (700ms) for entrances. Everything runs the ease-out family — objects arrive decisively and settle softly. Durations over 700ms are reserved for the logo reveal alone.",
-    "logoReveal": "The inlay lands first: a 200ms fade with a settle from 92% scale. The sight ring follows over 400ms. The wordmark fades up last across 700ms, rising 20px. Under 1.2 seconds end to end, then everything holds still.",
     "endCard": "The last 2.5 seconds of every video: Heritage Green field, the registration lockup centered at 40% of frame width, arriving on the standard 400ms fade. The URL sits 90px from the bottom in Fragment Mono, Cream. No sting, no confetti, no QR code unless the media is print-adjacent (a screen in a showroom).",
     "lowerThird": "Name in Helvetica Neue 700, role in Fragment Mono, on a Cream panel carrying the 2px Signal Orange kicker bar. Lower-left, inside safe margins; enters with a 400ms slide from the left, exits on a 200ms fade. Never animated per word.",
     "storySafe": "Reels and Stories (1080 × 1920): keep type and logos inside the centre 1080 × 1420 zone — the top 220px and bottom 280px belong to platform UI. 60px side margins. The Since-1975 stamp anchors story templates top-centre, inside the zone."
@@ -1225,6 +1207,12 @@ window.BF_DATA = {
       {
         "name": "Invoice",
         "spec": "Letterhead base with the line-item table in Fragment Mono 9pt, hairline rules only. The totals band floods Heritage Green with Cream figures; the amount due is the document's single Signal Orange element."
+      },
+      {
+        "name": "Share image · the OG template",
+        "spec": "1200 × 630 px. Heritage Green field, white registration lockup centered at 53% of frame width. Keep the outer 60 px clear on all sides — platforms crop edges. No founding date, no offer copy baked into the template.",
+        "img": "../assets/social/og-template.png",
+        "note": "Moved here from the Logo section — it is a wordmark-and-green template, not a mark derivative."
       }
     ],
     "campaign": {
@@ -1419,30 +1407,6 @@ window.BF_DATA = {
       }
     ],
     "formatsNote": "A story is a re-composition of the post, never a crop. A mobile hero is a re-set of the desktop, never a shrink. Five ascending figures don't survive 1080px wide — compress the ladder to two rungs and say “…and three tiers between.”",
-    "systems": [
-      {
-        "id": "ticket-ladder",
-        "name": "The Ticket Ladder",
-        "use": "Evergreen promo graphics — the standing Sitewide Savings lane, and any offer that outlives a season.",
-        "spec": "Warm Cream paper with subtle grain — never gray, never white. Physical print-shop objects do the talking: layered tickets, stubs, receipts, rubber stamps, scorecards, with dashed perforations, one light source, and real shadows. Helvetica Neue bold carries headlines and dollar amounts, Fragment Mono the letterspaced spec labels, Vollkorn italic the one warm charm line. Ink and Walnut type; Signal Orange spent once, on the money. Black full lockup top centre.",
-        "footer": "The standing footer, always: “No code. No hoops. Applied automatically online · honored in-store.” in Ink mono, then “America's game room since 1975.” in Vollkorn italic Walnut.",
-        "img": "../assets/campaigns/system-ticket-ladder.png"
-      },
-      {
-        "id": "photo-scrim",
-        "name": "The Photo Scrim",
-        "use": "Campaign lifestyle — the Main lane's launch and peak pieces, where the room sells the offer.",
-        "spec": "“Real rooms, real light” photography (or AI imagery cleared by the AI policy) with the lower band falling into a scrim: a letterspaced eyebrow in the campaign accent, a big display headline, then the offer plaque — a ticket-shaped FREE chip, the value line, and real cloth swatch chips when cloth is the offer. Campaign offers date on a gold ENDS bar at the foot; the photograph carries the brand's green so the type never has to.",
-        "img": "../assets/campaigns/system-photo-scrim.png"
-      },
-      {
-        "id": "solid-field",
-        "name": "The Solid Field & the Ladder Card",
-        "use": "Type-led graphic pieces — introductions before photography exists, and the tier table people screenshot.",
-        "spec": "A deep near-black field with a warm radial lift and faint grain — depth, not flatness; a flat panel reads as an ad and gets scrolled past. Cream display serif at its heaviest cut, antique-gold eyebrows and hairlines, the tier staircase making the type itself the picture. The ladder card sets all five tiers in aligned columns, top tier in orange, and runs over photography only when the image is darkened to serve the table.",
-        "img": "../assets/campaigns/system-ladder-card.png"
-      }
-    ],
     "laws": [
       "Offer facts are law. Creative states only what a ratified brief carries — verbatim tiers, nothing implied below the threshold, every number checked digit by digit before export. $1,000 always takes the comma.",
       "Signal Orange appears exactly once per piece, on the money moment — the headline figure or the top tier row, never both.",
@@ -1453,7 +1417,11 @@ window.BF_DATA = {
       "The wordmark rides social pieces and never web heroes — the site header already carries it.",
       "Story type stays inside the centre 1080 × 1420 band; the top 220px and bottom 280px belong to platform UI.",
       "AI imagery follows the AI policy: hands, never faces; overlay zones reserved as clean negative space; every headline composed in post — the model never renders the money.",
-      "Misses become revisions in writing. Every pack documents its rescue levers, and a failed render earns a REV with the fix stated — the system learns on paper, not in memory."
+      "Misses become revisions in writing. Every pack documents its rescue levers, and a failed render earns a REV with the fix stated — the system learns on paper, not in memory.",
+      "Dressing stops at the promo. A flight may take its own accent and field and run greenless (law 04), but site chrome, navigation, footers, category pages, and the Designer Program stay on the house palette — the 60 · 30 · 7 · 3 proportion law governs those surfaces and is not suspended by a holiday.",
+      "Seasonal motifs stay engraved, never clip-art. Stars, bunting, and stripes are permitted under law 05 as line or solid geometry in the flight's own palette — one motif per piece, never on or touching the wordmark, and never a literal red-white-and-blue.",
+      "Offer language lives in the offer lane only. Product, Category, Lifestyle, and Designer carry no tiers, no dollar amounts, and no “sale” — the room sells, and the Main lane does the math.",
+      "A story is a re-composition, not a crop. Same photograph and same scene as its post, but the type lifts into the centre band and the ladder abbreviates; shrinking full rows to fit is the failure mode. One idea per story — headline or ladder, never both."
     ],
     "shipping": {
       "path": "Finished art lives on ImageKit under estoris/Pushes/<Campaign>/<lane folder>/ — filenames carry the piece, the pixel size, @2x for social, and the run date. Working layered files go to the Google Drive working-source tier, never the repo.",
@@ -1466,22 +1434,96 @@ window.BF_DATA = {
         "Uploaded to the campaign's ImageKit folder and attached to its dated row."
       ]
     },
-    "workflow": {
-      "title": "How a piece gets made",
-      "intro": "The production loop behind every post, story, and banner — the part that makes the system repeatable by someone who isn't its author.",
-      "steps": [
-        "Start from the brief. The lane's ratified offer facts are the input — if the brief doesn't carry a number, a date, or a claim, the piece doesn't say it.",
-        "Write the pack. Every flight gets a dated pack document: the system block, per-piece prompts with run dates, copy variants, the hard checks, and the open blockers. The pack is the flight's recipe — anyone on the team can generate from it.",
-        "Generate system-block-first. The approved system block pastes at the top of every piece prompt, so each generation inherits the style instead of reinventing it. Photo pieces reserve their overlay zone as clean negative space; the headline is composed in post — the model never renders the money.",
-        "Check, then rescue. After every render, the money copy is verified digit by digit against the brief. A miss gets one of the pack's rescue levers; a failed layout becomes a written REV with the fix stated — the two-zone law itself was born as a REV.",
-        "Ship on the record. Export to the format grid's exact sizes, file to the campaign's ImageKit folder, and attach the art to its dated row — the checklist below closes every piece."
-      ]
-    }
+    "flightKitsIntro": "The laws above are house-wide and durable. A flight kit is a dated recipe — one campaign's accent, devices, and geometry, written down so the next producer can generate from it and so it can expire without anyone editing brand law. A device that outlives three flights is a candidate for promotion; until then it lives here.",
+    "flightKits": [
+      {
+        "name": "Labor Day 2026 · the Sitewide Savings dressing",
+        "dates": "Aug 17 – Sep 13 2026 · peak Sep 7",
+        "status": "Shipped",
+        "brief": "The Labor Day offer IS the standing Sitewide Savings promotion, dressed for the holiday — the America 250 precedent. The mechanics never change; only the name and the artwork do. The occasion is the deadline, never the offer: Labor Day weekend genuinely ends, the savings do not, and the approved close is “The weekend ends. The savings don't.”",
+        "tokens": [
+          {
+            "role": "Accent · eyebrows, hairlines",
+            "value": "#B08D3A"
+          },
+          {
+            "role": "Field",
+            "value": "#16110E"
+          },
+          {
+            "role": "Type",
+            "value": "#F3EFE4"
+          },
+          {
+            "role": "Money moment",
+            "value": "#F0560C"
+          }
+        ],
+        "devices": [
+          {
+            "name": "The Ticket Ladder",
+            "use": "Evergreen promo graphics — the standing Sitewide Savings lane, and any offer that outlives a season.",
+            "spec": "Warm Cream paper with subtle grain — never gray, never white. Physical print-shop objects do the talking: layered tickets, stubs, receipts, rubber stamps, scorecards, with dashed perforations, one light source, and real shadows. Helvetica Neue bold carries headlines and dollar amounts, Fragment Mono the letterspaced spec labels, Vollkorn italic the one warm charm line. Ink and Walnut type; Signal Orange spent once, on the money. Black full lockup top centre. The standing footer, always: “No code. No hoops. Applied automatically online · honored in-store.” in Ink mono, then “America's game room since 1975.” in Vollkorn italic Walnut.",
+            "img": "../assets/campaigns/system-ticket-ladder.png"
+          },
+          {
+            "name": "The Photo Scrim",
+            "use": "Campaign lifestyle — the Main lane's launch and peak pieces, where the room sells the offer.",
+            "spec": "“Real rooms, real light” photography (or AI imagery cleared by the AI policy) with the lower band falling into a scrim: a letterspaced eyebrow in the campaign accent, a big display headline, then the offer plaque — a ticket-shaped FREE chip, the value line, and real cloth swatch chips when cloth is the offer. Campaign offers date on a gold ENDS bar at the foot; the photograph carries the brand's green so the type never has to.",
+            "img": "../assets/campaigns/system-photo-scrim.png"
+          },
+          {
+            "name": "The Ladder Card",
+            "use": "The tier table people screenshot — a reference asset, run three or four times across a flight, never as a drumbeat.",
+            "spec": "All five tiers in aligned columns on the flight's field, top tier in Signal Orange, everything else in cream. Title quiet, ladder large. Runs over photography only when the image is darkened to serve the table. Its solid-field sibling drops the photograph entirely: a deep field with a warm radial lift and faint grain — depth, not flatness, because a flat panel reads as an ad and gets scrolled past.",
+            "img": "../assets/campaigns/system-ladder-card.png"
+          }
+        ],
+        "phases": [
+          {
+            "phase": "Tease",
+            "geometry": "Split field — type left ~⅔, photo breathes right",
+            "register": "Room-forward, no number yet"
+          },
+          {
+            "phase": "Launch",
+            "geometry": "Bottom gradient",
+            "register": "The full claim"
+          },
+          {
+            "phase": "Peak",
+            "geometry": "Corner block — hard-edged panel, not a scrim",
+            "register": "Loudest; earns it at peak"
+          },
+          {
+            "phase": "Last chance",
+            "geometry": "Full wash ~80%",
+            "register": "Photo recedes; the line does the work"
+          }
+        ],
+        "drift": [
+          {
+            "verdict": "unwind next flight",
+            "what": "The display serif.",
+            "note": "Every pack specified a high-contrast display serif at its heaviest cut and forbade a grotesque. Brand law gives headlines to Helvetica Neue Heavy — see “Promo has no face of its own” in Typography. About eighty pieces shipped in an unnamed face."
+          },
+          {
+            "verdict": "use the house value",
+            "what": "Two stray creams.",
+            "note": "The packs ran #F3EFE4 for type and the web banner ran #FAF6EB for the bunting, against house Cream #FAF8F3. Three creams in one flight is exactly the drift that shows up side by side in feed."
+          },
+          {
+            "verdict": "ratified",
+            "what": "The gold, the greenless field, and the Americana.",
+            "note": "All three were live questions during the build and are now settled: gold is a logged campaign accent, promo has been greenless by standing law all along, and seasonal motifs are permitted engraved and in-palette."
+          }
+        ]
+      }
+    ]
   },
   "designerProgram": {
     "name": "The Designer Program",
     "intro": "The trade audience has its own program, its own tiers, and its own register — codified here so every quote, post, and landing page speaks the same way. The live expression is billiardfactory.com/designers; this section is the source it derives from.",
-    "nameNeedsJoshua": "Ratify the canonical name — the live page says “trade program” in some places and “Design Partner” in the tier names. Recommendation: THE DESIGNER PROGRAM as the public name; tiers keep “…Design Partner.”",
     "pitch": {
       "law": "The program sells partnership and logistics, never discounts. Trade pricing is the entry benefit — the headline is always support: responsive, spec-ready, dependable, white-glove to the install. If a trade piece leads with a price, it's off-program.",
       "pillars": [
@@ -1492,32 +1534,6 @@ window.BF_DATA = {
         "Showrooms nationwide — bring the client, touch the product",
         "Curated game-room expertise, from one table to the whole room"
       ]
-    },
-    "tiers": {
-      "note": "The tier table is OFFER FACTS for the Designer lane — creative states these numbers and no others, exactly like the Sitewide tiers. Rebates are paid to the design firm, never the individual designer. Trade pricing itself is never published publicly — the tiers may be named in public creative; the prices may not.",
-      "rows": [
-        {
-          "tier": "Design Partner",
-          "spend": "$0 – 24,999 annual",
-          "benefit": "Trade pricing · dedicated showroom partner · quoting support · client showroom access"
-        },
-        {
-          "tier": "Preferred Design Partner",
-          "spend": "$25,000+ annual",
-          "benefit": "+ 2% annual rebate to the firm · priority quoting · Dallas Market VIP invitations · early collection previews"
-        },
-        {
-          "tier": "Elite Design Partner",
-          "spend": "$50,000+ annual",
-          "benefit": "+ 4% annual rebate to the firm · trade concierge · priority installation scheduling"
-        },
-        {
-          "tier": "Signature Design Partner",
-          "spend": "$100,000+ annual",
-          "benefit": "+ 5% annual rebate to the firm · invitation-only"
-        }
-      ],
-      "needsJoshua": "Tier facts are owned by Ryan — thresholds, rebate percentages, and benefits change only by ratified ruling, and the kit updates the same day the page does."
     },
     "vocabulary": [
       "“To the trade” — the register's name; the eyebrow on every trade piece.",
@@ -1530,16 +1546,17 @@ window.BF_DATA = {
       "spec": "Trade creative runs the house look with the trade register: the TO THE TRADE eyebrow in Heritage Green, an Ink Helvetica headline speaking to the project (“Design it before the season starts.”), real-rooms photography, and a footer band carrying the wordmark and billiardfactory.com/designers. No tier numbers in feed creative — the page carries the math; the post carries the partnership.",
       "img": "../assets/campaigns/trade-reference-post.png"
     },
-    "proofPoints": {
-      "note": "The category-selling stats on the live page — 86% of homeowners on family time (AHFA), 73% of luxury buyers ranking a game room top-5 (NAHB), $25K–75K typical project value — are strong trade ammo, but the voice law requires sourced claims.",
-      "needsJoshua": "Verify the AHFA and NAHB citations (and the project-value range) before the kit blesses them as standing proof points; keep sources on file with the steward."
-    },
     "touchpoints": [
       "billiardfactory.com/designers — the application, resources, tiers, and FAQ",
       "The Designer lane in every campaign (see Campaigns) — one trade post a week when the lane runs",
       "Showrooms — client meetings on the floor are a named tier benefit",
       "Dallas Market — VIP invitations are a Preferred-and-up benefit"
     ],
-    "showroomsNeedsJoshua": "The live page says “12 showrooms nationwide”; the brand canon says eleven. One of them is wrong — fix the page or the canon, then align every surface."
+    "openQuestions": [
+      "Ratify the canonical program name — the live page says “trade program” in places and “Design Partner” in the tier names. Recommendation: THE DESIGNER PROGRAM as the public name.",
+      "The partner tier table was removed from this hub on 2026-08-17: it was never discussed and the facts are Ryan's to ratify. Thresholds, rebate percentages, and benefits return here only by ruling — and the kit updates the same day the page does.",
+      "The category-selling stats on the live page (AHFA family-time, NAHB luxury-buyer, project-value range) were removed as unverified. The voice law requires sourced claims; verify and keep sources on file with the steward before they come back.",
+      "Showroom count: the live page says twelve, brand canon says eleven. One is wrong — fix the page or the canon, then align every surface. No number is published here until then."
+    ]
   }
 };
